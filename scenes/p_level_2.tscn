@@ -1,21 +1,21 @@
-[gd_scene load_steps=30 format=3 uid="uid://dfjkxjjym532g"]
+[gd_scene load_steps=30 format=3 uid="uid://krs087n8yi0y"]
 
-[ext_resource type="Texture2D" uid="uid://cvh3qfx5hoimn" path="res://assets/sun.png" id="1_0a5ag"]
-[ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_1ofay"]
-[ext_resource type="PackedScene" uid="uid://byyyexo4e4kop" path="res://scenes/player_platformer.tscn" id="1_7uo4m"]
-[ext_resource type="Texture2D" uid="uid://doyfrmal4p0kn" path="res://assets/clouds/cloud0.png" id="1_kqrsl"]
-[ext_resource type="Texture2D" uid="uid://c60iqolxdbyr" path="res://assets/clouds/cloud1.png" id="2_0a5ag"]
-[ext_resource type="Texture2D" uid="uid://bhnmlt1xwr8rl" path="res://assets/brackey/sprites/world_tileset.png" id="2_o1uv7"]
-[ext_resource type="PackedScene" uid="uid://jyw84s43iw3w" path="res://scenes/platform.tscn" id="3_bs2ip"]
-[ext_resource type="Texture2D" uid="uid://c7uv1xkqq7gyh" path="res://assets/clouds/cloud2.png" id="3_v5f0u"]
-[ext_resource type="Texture2D" uid="uid://bdr0tgbf1emmg" path="res://assets/clouds/cloud3.png" id="4_1ofay"]
-[ext_resource type="PackedScene" uid="uid://j3hd2b06ok3d" path="res://scenes/coin.tscn" id="4_k3v11"]
-[ext_resource type="PackedScene" uid="uid://b5geq5n0tlmfj" path="res://scenes/killzone.tscn" id="5_t3gwi"]
-[ext_resource type="PackedScene" uid="uid://c52etx4cornmc" path="res://scenes/trap.tscn" id="6_6pu31"]
-[ext_resource type="PackedScene" uid="uid://c2tqnky1jk71i" path="res://scenes/coin_tree.tscn" id="7_3s02y"]
-[ext_resource type="PackedScene" uid="uid://c5nscqmqpj63y" path="res://scenes/slime_enemy.tscn" id="8_pfjqn"]
-[ext_resource type="AudioStream" uid="uid://bhlh4nphgdd6o" path="res://assets/brackey/music/time_for_adventure.mp3" id="14_v5f0u"]
-[ext_resource type="PackedScene" uid="uid://0khi164sjtqt" path="res://scenes/portail_magique.tscn" id="16_33irq"]
+[ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_esw31"]
+[ext_resource type="Texture2D" uid="uid://cvh3qfx5hoimn" path="res://assets/sun.png" id="2_hos35"]
+[ext_resource type="Texture2D" uid="uid://doyfrmal4p0kn" path="res://assets/clouds/cloud0.png" id="3_6bqcr"]
+[ext_resource type="Texture2D" uid="uid://c60iqolxdbyr" path="res://assets/clouds/cloud1.png" id="4_7humc"]
+[ext_resource type="Texture2D" uid="uid://c7uv1xkqq7gyh" path="res://assets/clouds/cloud2.png" id="5_3jwsg"]
+[ext_resource type="Texture2D" uid="uid://bdr0tgbf1emmg" path="res://assets/clouds/cloud3.png" id="6_wavvf"]
+[ext_resource type="PackedScene" uid="uid://byyyexo4e4kop" path="res://scenes/player_platformer.tscn" id="7_6plo0"]
+[ext_resource type="PackedScene" uid="uid://b5geq5n0tlmfj" path="res://scenes/killzone.tscn" id="8_nosd3"]
+[ext_resource type="PackedScene" uid="uid://j3hd2b06ok3d" path="res://scenes/coin.tscn" id="9_3lw5p"]
+[ext_resource type="PackedScene" uid="uid://jyw84s43iw3w" path="res://scenes/platform.tscn" id="10_t05uy"]
+[ext_resource type="PackedScene" uid="uid://c52etx4cornmc" path="res://scenes/trap.tscn" id="11_wohjl"]
+[ext_resource type="Texture2D" uid="uid://bhnmlt1xwr8rl" path="res://assets/brackey/sprites/world_tileset.png" id="12_m0fes"]
+[ext_resource type="PackedScene" uid="uid://c2tqnky1jk71i" path="res://scenes/coin_tree.tscn" id="13_qe0qo"]
+[ext_resource type="PackedScene" uid="uid://c5nscqmqpj63y" path="res://scenes/slime_enemy.tscn" id="14_tcof6"]
+[ext_resource type="AudioStream" uid="uid://bhlh4nphgdd6o" path="res://assets/brackey/music/time_for_adventure.mp3" id="15_lrrtd"]
+[ext_resource type="PackedScene" uid="uid://0khi164sjtqt" path="res://scenes/portail_magique.tscn" id="16_tkmfp"]
 
 [sub_resource type="Animation" id="Animation_1ofay"]
 length = 0.001
@@ -137,7 +137,7 @@ _data = {
 }
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bs2ip"]
-texture = ExtResource("2_o1uv7")
+texture = ExtResource("12_m0fes")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -319,13 +319,13 @@ sources/2 = SubResource("TileSetAtlasSource_bs2ip")
 
 [node name="PLevel1" type="Node2D"]
 position = Vector2(-286, 15)
-script = ExtResource("1_1ofay")
+script = ExtResource("1_esw31")
 
 [node name="SunSprite" type="Sprite2D" parent="."]
 z_as_relative = false
 position = Vector2(150, -441)
 scale = Vector2(0.7, 0.7)
-texture = ExtResource("1_0a5ag")
+texture = ExtResource("2_hos35")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SunSprite"]
 libraries = {
@@ -345,7 +345,7 @@ motion_offset = Vector2(0, -112)
 motion_mirroring = Vector2(686, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-texture = ExtResource("1_kqrsl")
+texture = ExtResource("3_6bqcr")
 offset = Vector2(0, -105)
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -356,7 +356,7 @@ motion_offset = Vector2(0, -161)
 motion_mirroring = Vector2(871, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-texture = ExtResource("2_0a5ag")
+texture = ExtResource("4_7humc")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
 texture_repeat = 2
@@ -366,7 +366,7 @@ motion_offset = Vector2(0, -111)
 motion_mirroring = Vector2(1133, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
-texture = ExtResource("3_v5f0u")
+texture = ExtResource("5_3jwsg")
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
 texture_repeat = 2
@@ -375,10 +375,10 @@ position = Vector2(4, 0)
 motion_mirroring = Vector2(743, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
-texture = ExtResource("4_1ofay")
+texture = ExtResource("6_wavvf")
 offset = Vector2(0, -7)
 
-[node name="Player" parent="." instance=ExtResource("1_7uo4m")]
+[node name="Player" parent="." instance=ExtResource("7_6plo0")]
 position = Vector2(284, -34)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -387,7 +387,7 @@ zoom = Vector2(4, 4)
 limit_bottom = 112
 position_smoothing_enabled = true
 
-[node name="Killzone" parent="." instance=ExtResource("5_t3gwi")]
+[node name="Killzone" parent="." instance=ExtResource("8_nosd3")]
 position = Vector2(50, 69)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
@@ -396,36 +396,36 @@ shape = SubResource("WorldBoundaryShape2D_6pu31")
 
 [node name="Coins" type="Node" parent="."]
 
-[node name="Coin" parent="Coins" instance=ExtResource("4_k3v11")]
+[node name="Coin" parent="Coins" instance=ExtResource("9_3lw5p")]
 position = Vector2(-98, -28)
 
-[node name="Coin2" parent="Coins" instance=ExtResource("4_k3v11")]
+[node name="Coin2" parent="Coins" instance=ExtResource("9_3lw5p")]
 position = Vector2(-340, -95)
 
-[node name="Coin3" parent="Coins" instance=ExtResource("4_k3v11")]
+[node name="Coin3" parent="Coins" instance=ExtResource("9_3lw5p")]
 position = Vector2(615, -58)
 
-[node name="Coin4" parent="Coins" instance=ExtResource("4_k3v11")]
+[node name="Coin4" parent="Coins" instance=ExtResource("9_3lw5p")]
 position = Vector2(9, -253)
 
-[node name="Coin5" parent="Coins" instance=ExtResource("4_k3v11")]
+[node name="Coin5" parent="Coins" instance=ExtResource("9_3lw5p")]
 position = Vector2(322, -174)
 
-[node name="Coin6" parent="Coins" instance=ExtResource("4_k3v11")]
+[node name="Coin6" parent="Coins" instance=ExtResource("9_3lw5p")]
 position = Vector2(564, -181)
 
 [node name="Platforms" type="Node" parent="."]
 
-[node name="Platform" parent="Platforms" instance=ExtResource("3_bs2ip")]
+[node name="Platform" parent="Platforms" instance=ExtResource("10_t05uy")]
 position = Vector2(-61, -5)
 
-[node name="Platform3" parent="Platforms" instance=ExtResource("3_bs2ip")]
+[node name="Platform3" parent="Platforms" instance=ExtResource("10_t05uy")]
 position = Vector2(-48, -77)
 
-[node name="Platform4" parent="Platforms" instance=ExtResource("3_bs2ip")]
+[node name="Platform4" parent="Platforms" instance=ExtResource("10_t05uy")]
 position = Vector2(-80, -109)
 
-[node name="AnimatedPlatform1" parent="Platforms" instance=ExtResource("3_bs2ip")]
+[node name="AnimatedPlatform1" parent="Platforms" instance=ExtResource("10_t05uy")]
 position = Vector2(433, -12)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/AnimatedPlatform1"]
@@ -434,16 +434,16 @@ libraries = {
 }
 autoplay = "move"
 
-[node name="Platform5" parent="Platforms" instance=ExtResource("3_bs2ip")]
+[node name="Platform5" parent="Platforms" instance=ExtResource("10_t05uy")]
 position = Vector2(-101, -42)
 
-[node name="Platform2" parent="Platforms" instance=ExtResource("3_bs2ip")]
+[node name="Platform2" parent="Platforms" instance=ExtResource("10_t05uy")]
 position = Vector2(77, -254)
 
-[node name="Platform6" parent="Platforms" instance=ExtResource("3_bs2ip")]
+[node name="Platform6" parent="Platforms" instance=ExtResource("10_t05uy")]
 position = Vector2(472, -88)
 
-[node name="Platform7" parent="Platforms" instance=ExtResource("3_bs2ip")]
+[node name="Platform7" parent="Platforms" instance=ExtResource("10_t05uy")]
 position = Vector2(-208, -314)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform7"]
@@ -452,10 +452,10 @@ libraries = {
 }
 autoplay = "move"
 
-[node name="Platform8" parent="Platforms" instance=ExtResource("3_bs2ip")]
+[node name="Platform8" parent="Platforms" instance=ExtResource("10_t05uy")]
 position = Vector2(-252, -337)
 
-[node name="Trap" parent="Platforms" instance=ExtResource("6_6pu31")]
+[node name="Trap" parent="Platforms" instance=ExtResource("11_wohjl")]
 position = Vector2(-54, -242)
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -470,52 +470,52 @@ layer_1/tile_data = PackedInt32Array(196606, 2, 0, 196607, 2, 0, 131072, 2, 0, 1
 
 [node name="Traps" type="Node" parent="."]
 
-[node name="Trap" parent="Traps" instance=ExtResource("6_6pu31")]
+[node name="Trap" parent="Traps" instance=ExtResource("11_wohjl")]
 position = Vector2(506, -62)
 
-[node name="Trap2" parent="Traps" instance=ExtResource("6_6pu31")]
+[node name="Trap2" parent="Traps" instance=ExtResource("11_wohjl")]
 position = Vector2(429, -103)
 
-[node name="Trap3" parent="Traps" instance=ExtResource("6_6pu31")]
+[node name="Trap3" parent="Traps" instance=ExtResource("11_wohjl")]
 position = Vector2(-97, -262)
 
-[node name="Trap4" parent="Traps" instance=ExtResource("6_6pu31")]
+[node name="Trap4" parent="Traps" instance=ExtResource("11_wohjl")]
 position = Vector2(-142, -285)
 
 [node name="CoinsTrees" type="Node" parent="."]
 
-[node name="CoinTree" parent="CoinsTrees" instance=ExtResource("7_3s02y")]
+[node name="CoinTree" parent="CoinsTrees" instance=ExtResource("13_qe0qo")]
 position = Vector2(-340, -558)
 
-[node name="CoinTree2" parent="CoinsTrees" instance=ExtResource("7_3s02y")]
+[node name="CoinTree2" parent="CoinsTrees" instance=ExtResource("13_qe0qo")]
 position = Vector2(-324, -559)
 
-[node name="CoinTree3" parent="CoinsTrees" instance=ExtResource("7_3s02y")]
+[node name="CoinTree3" parent="CoinsTrees" instance=ExtResource("13_qe0qo")]
 position = Vector2(-307, -559)
 
-[node name="CoinTree4" parent="CoinsTrees" instance=ExtResource("7_3s02y")]
+[node name="CoinTree4" parent="CoinsTrees" instance=ExtResource("13_qe0qo")]
 position = Vector2(-290, -559)
 
-[node name="CoinTree5" parent="CoinsTrees" instance=ExtResource("7_3s02y")]
+[node name="CoinTree5" parent="CoinsTrees" instance=ExtResource("13_qe0qo")]
 position = Vector2(-274, -568)
 
-[node name="CoinTree6" parent="CoinsTrees" instance=ExtResource("7_3s02y")]
+[node name="CoinTree6" parent="CoinsTrees" instance=ExtResource("13_qe0qo")]
 position = Vector2(-256, -577)
 
-[node name="CoinTree7" parent="CoinsTrees" instance=ExtResource("7_3s02y")]
+[node name="CoinTree7" parent="CoinsTrees" instance=ExtResource("13_qe0qo")]
 position = Vector2(-238, -587)
 
-[node name="CoinTree8" parent="CoinsTrees" instance=ExtResource("7_3s02y")]
+[node name="CoinTree8" parent="CoinsTrees" instance=ExtResource("13_qe0qo")]
 position = Vector2(-222, -590)
 
-[node name="SlimeEnemy2" parent="." instance=ExtResource("8_pfjqn")]
+[node name="SlimeEnemy2" parent="." instance=ExtResource("14_tcof6")]
 position = Vector2(1162, -35)
 
 [node name="MusicAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("14_v5f0u")
+stream = ExtResource("15_lrrtd")
 volume_db = -13.602
 autoplay = true
 parameters/looping = true
 
-[node name="PortailMagique" parent="." instance=ExtResource("16_33irq")]
+[node name="PortailMagique" parent="." instance=ExtResource("16_tkmfp")]
 position = Vector2(1342, -64)
