@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dfjkxjjym532g"]
+[gd_scene load_steps=32 format=3 uid="uid://dfjkxjjym532g"]
 
 [ext_resource type="Texture2D" uid="uid://cvh3qfx5hoimn" path="res://assets/sun.png" id="1_0a5ag"]
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_1ofay"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://c5nscqmqpj63y" path="res://scenes/slime_enemy.tscn" id="8_pfjqn"]
 [ext_resource type="AudioStream" uid="uid://bhlh4nphgdd6o" path="res://assets/brackey/music/time_for_adventure.mp3" id="14_v5f0u"]
 [ext_resource type="PackedScene" uid="uid://0khi164sjtqt" path="res://scenes/portail_magique.tscn" id="16_33irq"]
+[ext_resource type="PackedScene" uid="uid://cctwmuyah45p6" path="res://scenes/healing_vial.tscn" id="18_dv5ru"]
 
 [sub_resource type="Animation" id="Animation_1ofay"]
 length = 0.001
@@ -526,3 +527,6 @@ parameters/looping = true
 
 [node name="PortailMagique" parent="." instance=ExtResource("16_33irq")]
 position = Vector2(1342, -64)
+
+[node name="HealingVial" parent="." instance=ExtResource("18_dv5ru")]
+position = Vector2(225, -34)

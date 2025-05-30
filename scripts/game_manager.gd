@@ -41,6 +41,9 @@ func reset_counters():
 func coin_fetched():
 	num_of_coins += 1	
 
+func live_fetched():
+	num_of_lives += 1
+
 func injured():
 	if(immunity):
 		return
@@ -58,6 +61,7 @@ func injured():
 		
 func killed():
 	print("killed using game manager")
+	num_of_coins = 0
 	num_of_lives -= 1
 	num_of_injuries_allowed = INITIAL_NUM_OF_INJURIES_ALLOWED
 	
