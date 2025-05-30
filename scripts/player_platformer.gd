@@ -5,11 +5,18 @@ const JUMP_VELOCITY = -350.0
 
 func _ready() -> void:
 	GameManagerSingleton.connect("player_injured", _on_player_injured)
+	GameManagerSingleton.connect("player_killed", _on_player_killed)
 
 func _on_player_injured() -> void:
 	print("player injured callback")
 	$AnimatedSprite2D/InjuredAnimationPlayer.play("injured")
-	$AudioStreamPlayer.play()
+	$InjuryAudioStreamPlayer.play()
+	
+func _on_player_killed() -> void:
+	print("player killed callback")
+	#$AnimatedSprite2D/InjuredAnimationPlayer.play("injured")
+	$DyingAudioStreamPlayer.play()
+	$CollisionShape2D.queue_free()
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.

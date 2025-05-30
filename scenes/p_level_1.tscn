@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dfjkxjjym532g"]
+[gd_scene load_steps=28 format=3 uid="uid://dfjkxjjym532g"]
 
 [ext_resource type="Texture2D" uid="uid://cvh3qfx5hoimn" path="res://assets/sun.png" id="1_0a5ag"]
 [ext_resource type="PackedScene" uid="uid://byyyexo4e4kop" path="res://scenes/player_platformer.tscn" id="1_7uo4m"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://c52etx4cornmc" path="res://scenes/trap.tscn" id="6_6pu31"]
 [ext_resource type="PackedScene" uid="uid://c2tqnky1jk71i" path="res://scenes/coin_tree.tscn" id="7_3s02y"]
 [ext_resource type="PackedScene" uid="uid://c5nscqmqpj63y" path="res://scenes/slime_enemy.tscn" id="8_pfjqn"]
+[ext_resource type="AudioStream" uid="uid://bhlh4nphgdd6o" path="res://assets/brackey/music/time_for_adventure.mp3" id="14_v5f0u"]
 
 [sub_resource type="Animation" id="Animation_1ofay"]
 length = 0.001
@@ -506,3 +507,8 @@ position = Vector2(-222, -590)
 
 [node name="SlimeEnemy2" parent="." instance=ExtResource("8_pfjqn")]
 position = Vector2(1162, -35)
+
+[node name="MusicAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_v5f0u")
+volume_db = -13.602
+autoplay = true

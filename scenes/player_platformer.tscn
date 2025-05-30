@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://byyyexo4e4kop"]
+[gd_scene load_steps=14 format=3 uid="uid://byyyexo4e4kop"]
 
 [ext_resource type="Texture2D" uid="uid://0asjwwjlao3i" path="res://assets/brackey/sprites/knight.png" id="1_10x2q"]
 [ext_resource type="Script" uid="uid://bdy8blwppg202" path="res://scripts/player_platformer.gd" id="1_e5rie"]
-[ext_resource type="AudioStream" uid="uid://ddx4w41gfaxwe" path="res://assets/brackey/sounds/hurt.wav" id="3_ekqba"]
+[ext_resource type="AudioStream" uid="uid://bap4rn64gfbvt" path="res://assets/sounds/injury-scream-86808.mp3" id="3_ekqba"]
+[ext_resource type="AudioStream" uid="uid://cg26oer33s2at" path="res://assets/sounds/man-death-scream-186763.mp3" id="4_moqhw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e5rie"]
 atlas = ExtResource("1_10x2q")
@@ -101,5 +102,8 @@ libraries = {
 position = Vector2(0, 4)
 shape = SubResource("CapsuleShape2D_10x2q")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="InjuryAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_ekqba")
+
+[node name="DyingAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_moqhw")
