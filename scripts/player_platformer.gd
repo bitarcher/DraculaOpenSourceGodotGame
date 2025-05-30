@@ -8,7 +8,8 @@ func _ready() -> void:
 
 func _on_player_injured() -> void:
 	print("player injured callback")
-	# TODO
+	$AnimatedSprite2D/InjuredAnimationPlayer.play("injured")
+	$AudioStreamPlayer.play()
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.

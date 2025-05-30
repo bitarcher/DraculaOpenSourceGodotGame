@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://byyyexo4e4kop"]
+[gd_scene load_steps=13 format=3 uid="uid://byyyexo4e4kop"]
 
 [ext_resource type="Texture2D" uid="uid://0asjwwjlao3i" path="res://assets/brackey/sprites/knight.png" id="1_10x2q"]
 [ext_resource type="Script" uid="uid://bdy8blwppg202" path="res://scripts/player_platformer.gd" id="1_e5rie"]
+[ext_resource type="AudioStream" uid="uid://ddx4w41gfaxwe" path="res://assets/brackey/sounds/hurt.wav" id="3_ekqba"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e5rie"]
 atlas = ExtResource("1_10x2q")
@@ -39,6 +40,43 @@ animations = [{
 "speed": 3.0
 }]
 
+[sub_resource type="Animation" id="Animation_e5rie"]
+resource_name = "injured"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.633333, 1, 1.3, 1.66667, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.196078), Color(1, 1, 1, 0.839216), Color(1, 1, 1, 0.235294), Color(1, 1, 1, 1), Color(1, 1, 1, 0.219608), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ekqba"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_moqhw"]
+_data = {
+&"RESET": SubResource("Animation_ekqba"),
+&"injured": SubResource("Animation_e5rie")
+}
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_10x2q"]
 radius = 5.0
 height = 16.0
@@ -54,6 +92,14 @@ animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.792548
 
+[node name="InjuredAnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D"]
+libraries = {
+&"": SubResource("AnimationLibrary_moqhw")
+}
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4)
 shape = SubResource("CapsuleShape2D_10x2q")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ekqba")
