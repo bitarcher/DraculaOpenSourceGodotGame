@@ -1,7 +1,8 @@
 extends Node
 
 @export var num_of_lives: int
-var num_of_injuries_allowed 
+var num_of_injuries_allowed
+@export var num_of_coins: int 
 
 var immunity: bool = false
 
@@ -33,9 +34,13 @@ func _process(delta: float) -> void:
 	pass
 	
 func reset_counters():
+	num_of_coins = 0
 	num_of_lives = INITIAL_NUM_OF_LIVES
 	num_of_injuries_allowed = INITIAL_NUM_OF_INJURIES_ALLOWED
-	
+
+func coin_fetched():
+	num_of_coins += 1	
+
 func injured():
 	if(immunity):
 		return
