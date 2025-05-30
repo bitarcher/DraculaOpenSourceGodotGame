@@ -1,6 +1,7 @@
-[gd_scene load_steps=28 format=3 uid="uid://dfjkxjjym532g"]
+[gd_scene load_steps=29 format=3 uid="uid://dfjkxjjym532g"]
 
 [ext_resource type="Texture2D" uid="uid://cvh3qfx5hoimn" path="res://assets/sun.png" id="1_0a5ag"]
+[ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_1ofay"]
 [ext_resource type="PackedScene" uid="uid://byyyexo4e4kop" path="res://scenes/player_platformer.tscn" id="1_7uo4m"]
 [ext_resource type="Texture2D" uid="uid://doyfrmal4p0kn" path="res://assets/clouds/cloud0.png" id="1_kqrsl"]
 [ext_resource type="Texture2D" uid="uid://c60iqolxdbyr" path="res://assets/clouds/cloud1.png" id="2_0a5ag"]
@@ -317,6 +318,7 @@ sources/2 = SubResource("TileSetAtlasSource_bs2ip")
 
 [node name="PLevel1" type="Node2D"]
 position = Vector2(-286, 15)
+script = ExtResource("1_1ofay")
 
 [node name="SunSprite" type="Sprite2D" parent="."]
 z_as_relative = false
