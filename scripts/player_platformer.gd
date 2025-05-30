@@ -1,9 +1,14 @@
 extends CharacterBody2D
 
-
 const SPEED = 200.0
 const JUMP_VELOCITY = -350.0
 
+func _ready() -> void:
+	GameManagerSingleton.connect("player_injured", _on_player_injured)
+
+func _on_player_injured() -> void:
+	print("player injured callback")
+	# TODO
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.

@@ -1,11 +1,10 @@
-[gd_scene load_steps=28 format=3 uid="uid://dfjkxjjym532g"]
+[gd_scene load_steps=27 format=3 uid="uid://dfjkxjjym532g"]
 
 [ext_resource type="Texture2D" uid="uid://cvh3qfx5hoimn" path="res://assets/sun.png" id="1_0a5ag"]
 [ext_resource type="PackedScene" uid="uid://byyyexo4e4kop" path="res://scenes/player_platformer.tscn" id="1_7uo4m"]
 [ext_resource type="Texture2D" uid="uid://doyfrmal4p0kn" path="res://assets/clouds/cloud0.png" id="1_kqrsl"]
 [ext_resource type="Texture2D" uid="uid://c60iqolxdbyr" path="res://assets/clouds/cloud1.png" id="2_0a5ag"]
 [ext_resource type="Texture2D" uid="uid://bhnmlt1xwr8rl" path="res://assets/brackey/sprites/world_tileset.png" id="2_o1uv7"]
-[ext_resource type="PackedScene" uid="uid://cxteuyv8d0d11" path="res://scenes/game_manager.tscn" id="2_v5f0u"]
 [ext_resource type="PackedScene" uid="uid://jyw84s43iw3w" path="res://scenes/platform.tscn" id="3_bs2ip"]
 [ext_resource type="Texture2D" uid="uid://c7uv1xkqq7gyh" path="res://assets/clouds/cloud2.png" id="3_v5f0u"]
 [ext_resource type="Texture2D" uid="uid://bdr0tgbf1emmg" path="res://assets/clouds/cloud3.png" id="4_1ofay"]
@@ -329,8 +328,6 @@ libraries = {
 &"": SubResource("AnimationLibrary_33irq")
 }
 autoplay = "rotate"
-
-[node name="GameManager" parent="." instance=ExtResource("2_v5f0u")]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 offset = Vector2(543, -180)

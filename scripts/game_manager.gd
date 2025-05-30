@@ -3,6 +3,8 @@ extends Node
 @export var num_of_lives: int
 var num_of_injuries_allowed 
 
+signal player_injured() 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	reset_counters()
@@ -23,7 +25,9 @@ func injured():
 	
 	if(num_of_injuries_allowed <= 0):
 		killed()
-	
+	else:
+		emit_signal("player_injured")
+		
 func killed():
 	print("killed using game manager")
 	num_of_lives -= 1
