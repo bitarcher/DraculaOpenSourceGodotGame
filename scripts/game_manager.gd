@@ -5,6 +5,7 @@ var num_of_injuries_allowed
 @export var num_of_coins: int 
 
 var immunity: bool = false
+var num_of_coins_before_killed : int = 0
 
 signal player_injured() 
 signal player_killed() 
@@ -12,7 +13,7 @@ signal player_killed()
 var immunity_lost_timer: Timer
 var killed_timer: Timer
 
-const NUM_OF_LEVELS: int = 4
+const NUM_OF_LEVELS: int = 5
 
 var _levels_resources: Array[Resource] = []
 
@@ -21,7 +22,8 @@ func _init_level_resources():
 		preload("res://scenes/p_level_0.tscn"),
 		preload("res://scenes/p_level_1.tscn"),
 		preload("res://scenes/p_level_2.tscn"),
-		preload("res://scenes/p_level_3.tscn")
+		preload("res://scenes/p_level_3.tscn"),
+		preload("res://scenes/p_level_4.tscn")
 	]
 	print(str(_levels_resources.size()) + " levels loaded")
 	
@@ -58,6 +60,7 @@ func _goto_level():
 		get_tree().change_scene_to_packed(scene_res)
 		
 func next_level():
+	num_of_coins_before_killed = num_of_coins
 	if(num_of_lives < 4):
 		num_of_lives += 2
 	else:
@@ -69,6 +72,7 @@ func next_level():
 	print("next level")
 	
 func reset_counters():
+	num_of_coins_before_killed = 0
 	num_of_coins = 0
 	num_of_lives = INITIAL_NUM_OF_LIVES
 	num_of_injuries_allowed = INITIAL_NUM_OF_INJURIES_ALLOWED
@@ -96,7 +100,7 @@ func injured():
 		
 func killed():
 	print("killed using game manager")
-	num_of_coins = 0
+	num_of_coins = num_of_coins_before_killed
 	num_of_lives -= 1
 	num_of_injuries_allowed = INITIAL_NUM_OF_INJURIES_ALLOWED
 	
