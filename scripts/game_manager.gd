@@ -4,6 +4,8 @@ extends Node
 var num_of_injuries_allowed
 @export var num_of_coins: int 
 
+@export var level_start_ticks: int
+
 var immunity: bool = false
 var num_of_coins_before_killed : int = 0
 
@@ -29,6 +31,7 @@ func _init_level_resources():
 	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	level_start_ticks = Time.get_ticks_msec()
 	_init_level_resources()
 	reset_counters()
 	immunity_lost_timer = Timer.new()
@@ -53,6 +56,7 @@ func _process(delta: float) -> void:
 	pass
 	
 func _goto_level():
+	level_start_ticks = Time.get_ticks_msec()
 	if(current_level >= NUM_OF_LEVELS):
 		print("END OF GAME : bravo")
 	else:
