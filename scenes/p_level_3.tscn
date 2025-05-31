@@ -281,7 +281,7 @@ texture = ExtResource("13_ev1eb")
 physics_layer_0/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_bs2ip")
 
-[node name="PLevel1" type="Node2D"]
+[node name="PLevel3" type="Node2D"]
 position = Vector2(-286, 15)
 script = ExtResource("1_x2nyf")
 
