@@ -292,14 +292,14 @@ position = Vector2(48, 29)
 scale = Vector2(0.3, 0.3)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-offset = Vector2(543, -180)
-transform = Transform2D(1, 0, 0, 1, 543, -180)
+offset = Vector2(-436, -323.04)
+transform = Transform2D(1, 0, 0, 1, -436, -323.04)
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 texture_repeat = 2
 material = SubResource("CanvasItemMaterial_pfjqn")
 motion_scale = Vector2(0.4, 1)
-motion_offset = Vector2(0, -112)
+motion_offset = Vector2(0, -171)
 motion_mirroring = Vector2(686, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]

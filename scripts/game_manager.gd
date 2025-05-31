@@ -12,8 +12,22 @@ signal player_killed()
 var immunity_lost_timer: Timer
 var killed_timer: Timer
 
+const NUM_OF_LEVELS: int = 4
+
+var _levels_resources: Array[Resource] = []
+
+func _init_level_resources():
+	_levels_resources = [
+		preload("res://scenes/p_level_0.tscn"),
+		preload("res://scenes/p_level_1.tscn"),
+		preload("res://scenes/p_level_2.tscn"),
+		preload("res://scenes/p_level_3.tscn")
+	]
+	print(str(_levels_resources.size()) + " levels loaded")
+	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	_init_level_resources()
 	reset_counters()
 	immunity_lost_timer = Timer.new()
 	add_child(immunity_lost_timer)
@@ -29,9 +43,30 @@ func _ready() -> void:
 const INITIAL_NUM_OF_LIVES = 5
 const INITIAL_NUM_OF_INJURIES_ALLOWED = 3
 
+var current_level = 1
+@onready var level_1 = preload("res://scripts/p_level_1.gd")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+	
+func _goto_level():
+	if(current_level >= NUM_OF_LEVELS):
+		print("END OF GAME : bravo")
+	else:
+		print("NEW LEVEL IS " + str(current_level))
+		var scene_res = _levels_resources[current_level]
+		get_tree().change_scene_to_packed(scene_res)
+		
+func next_level():
+	if(num_of_lives < 4):
+		num_of_lives += 2
+	else:
+		num_of_lives += 1
+	current_level +=1 
+	
+	_goto_level()
+	
+	print("next level")
 	
 func reset_counters():
 	num_of_coins = 0
@@ -73,6 +108,7 @@ func killed():
 	
 func game_over():
 	print("game over")
+	print("total coins:" + str(num_of_coins))
 	#TODO
 
 
