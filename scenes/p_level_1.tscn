@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dfjkxjjym532g"]
+[gd_scene load_steps=31 format=3 uid="uid://dfjkxjjym532g"]
 
 [ext_resource type="Texture2D" uid="uid://cvh3qfx5hoimn" path="res://assets/sun.png" id="1_0a5ag"]
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_1ofay"]
@@ -13,10 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://b5geq5n0tlmfj" path="res://scenes/killzone.tscn" id="5_t3gwi"]
 [ext_resource type="PackedScene" uid="uid://c52etx4cornmc" path="res://scenes/trap.tscn" id="6_6pu31"]
 [ext_resource type="PackedScene" uid="uid://c2tqnky1jk71i" path="res://coin_tree.tscn" id="7_3s02y"]
-[ext_resource type="PackedScene" uid="uid://c8fgcnhdy6mk2" path="res://scenes/level_ui.tscn" id="8_oqhks"]
 [ext_resource type="PackedScene" uid="uid://c5nscqmqpj63y" path="res://scenes/slime_enemy.tscn" id="8_pfjqn"]
-[ext_resource type="AudioStream" uid="uid://bhlh4nphgdd6o" path="res://assets/brackey/music/time_for_adventure.mp3" id="14_v5f0u"]
 [ext_resource type="PackedScene" uid="uid://0khi164sjtqt" path="res://scenes/portail_magique.tscn" id="16_33irq"]
+[ext_resource type="PackedScene" uid="uid://d062hkuxa4g7y" path="res://scenes/p_level_const.tscn" id="17_oqhks"]
 [ext_resource type="PackedScene" uid="uid://cctwmuyah45p6" path="res://scenes/healing_vial.tscn" id="18_dv5ru"]
 
 [sub_resource type="Animation" id="Animation_1ofay"]
@@ -323,12 +322,6 @@ sources/2 = SubResource("TileSetAtlasSource_bs2ip")
 position = Vector2(-286, 15)
 script = ExtResource("1_1ofay")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="LevelUi" parent="CanvasLayer" instance=ExtResource("8_oqhks")]
-position = Vector2(48, 29)
-scale = Vector2(0.3, 0.3)
-
 [node name="SunSprite" type="Sprite2D" parent="."]
 z_as_relative = false
 position = Vector2(150, -441)
@@ -519,14 +512,10 @@ position = Vector2(-222, -590)
 [node name="SlimeEnemy2" parent="." instance=ExtResource("8_pfjqn")]
 position = Vector2(1162, -35)
 
-[node name="MusicAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("14_v5f0u")
-volume_db = -13.602
-autoplay = true
-parameters/looping = true
-
 [node name="PortailMagique" parent="." instance=ExtResource("16_33irq")]
 position = Vector2(1342, -64)
 
 [node name="HealingVial" parent="." instance=ExtResource("18_dv5ru")]
 position = Vector2(225, -34)
+
+[node name="LevelConst" parent="." instance=ExtResource("17_oqhks")]
