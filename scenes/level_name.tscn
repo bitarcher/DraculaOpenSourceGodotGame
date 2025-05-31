@@ -1,10 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://wodbsbtp5pxn"]
+[gd_scene load_steps=4 format=3 uid="uid://wodbsbtp5pxn"]
 
-[ext_resource type="Script" uid="uid://brkjqikjybv5d" path="res://scripts/level_ui.gd" id="1_5kpii"]
-[ext_resource type="Texture2D" uid="uid://b75fivt2kymv2" path="res://assets/sprites/coin_for_ui.png" id="2_8udn0"]
+[ext_resource type="Script" uid="uid://bwxho71rtpmuj" path="res://scripts/level_name.gd" id="1_5n82r"]
 [ext_resource type="FontFile" uid="uid://cuehm46302bmh" path="res://assets/brackey/fonts/PixelOperator8.ttf" id="3_he6jd"]
-[ext_resource type="Texture2D" uid="uid://cf7i5bjlmsfxb" path="res://assets/sprites/heart_for_ui.png" id="4_y2py4"]
-[ext_resource type="Script" uid="uid://cl01260fibxlq" path="res://scripts/lives_label.gd" id="5_m8bg0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mb5y1"]
 bg_color = Color(0, 0, 0, 0.592157)
@@ -13,86 +10,23 @@ corner_radius_top_right = 14
 corner_radius_bottom_right = 14
 corner_radius_bottom_left = 14
 
-[node name="LevelUi" type="Node2D"]
-script = ExtResource("1_5kpii")
+[node name="LevelName" type="Node2D"]
+script = ExtResource("1_5n82r")
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 552.0
 offset_bottom = 104.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_mb5y1")
 
-[node name="GridContainer" type="GridContainer" parent="Panel"]
+[node name="Label" type="Label" parent="Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -8.0
-offset_bottom = 16.0
 grow_horizontal = 2
 grow_vertical = 2
-columns = 4
-
-[node name="MarginContainer" type="MarginContainer" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(30, 30)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/margin_left = 6
-theme_override_constants/margin_top = 6
-theme_override_constants/margin_right = 6
-theme_override_constants/margin_bottom = 6
-
-[node name="TextureRectCoin" type="TextureRect" parent="Panel/GridContainer/MarginContainer"]
-layout_mode = 2
-texture = ExtResource("2_8udn0")
-
-[node name="MarginContainer2" type="MarginContainer" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(30, 30)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/margin_left = 6
-theme_override_constants/margin_top = 6
-theme_override_constants/margin_right = 6
-theme_override_constants/margin_bottom = 6
-
-[node name="CoinsLabel" type="Label" parent="Panel/GridContainer/MarginContainer2"]
-layout_mode = 2
 theme_override_fonts/font = ExtResource("3_he6jd")
-theme_override_font_sizes/font_size = 64
-text = "268"
+theme_override_font_sizes/font_size = 57
+text = "Level 1"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="MarginContainer3" type="MarginContainer" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(30, 30)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/margin_left = 6
-theme_override_constants/margin_top = 6
-theme_override_constants/margin_right = 6
-theme_override_constants/margin_bottom = 6
-
-[node name="TextureRectCoin" type="TextureRect" parent="Panel/GridContainer/MarginContainer3"]
-layout_mode = 2
-texture = ExtResource("4_y2py4")
-
-[node name="MarginContainer4" type="MarginContainer" parent="Panel/GridContainer"]
-custom_minimum_size = Vector2(30, 30)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/margin_left = 6
-theme_override_constants/margin_top = 6
-theme_override_constants/margin_right = 6
-theme_override_constants/margin_bottom = 6
-
-[node name="LivesLabel" type="Label" parent="Panel/GridContainer/MarginContainer4"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_he6jd")
-theme_override_font_sizes/font_size = 64
-text = "5"
-horizontal_alignment = 1
-vertical_alignment = 1
-script = ExtResource("5_m8bg0")
