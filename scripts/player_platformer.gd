@@ -1,3 +1,4 @@
+class_name PlayerPlatformer
 extends CharacterBody2D
 
 const SPEED = 200.0
@@ -17,6 +18,13 @@ func _on_player_killed() -> void:
 	#$AnimatedSprite2D/InjuredAnimationPlayer.play("injured")
 	$DyingAudioStreamPlayer.play()
 	$CollisionShape2D.queue_free()
+	
+func enter_vortex():
+	$AnimatedSprite2D/AnimationPlayer.play("enter_vortex")
+	
+func get_out_from_vortex():
+	$AnimatedSprite2D.rotation_degrees = 0
+	$AnimatedSprite2D.scale = Vector2(1.0, 1.0)
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.

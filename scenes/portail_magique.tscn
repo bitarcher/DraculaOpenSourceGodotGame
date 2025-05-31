@@ -1,7 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://0khi164sjtqt"]
+[gd_scene load_steps=22 format=3 uid="uid://0khi164sjtqt"]
 
 [ext_resource type="Texture2D" uid="uid://dlmdjnwi87b4e" path="res://assets/sprites/portail_magique.png" id="1_0jhvt"]
 [ext_resource type="Script" uid="uid://cros36wqqtpcw" path="res://scripts/portail_magique.gd" id="1_0ril3"]
+[ext_resource type="AudioStream" uid="uid://g75oj5d87fbb" path="res://assets/sounds/8-bit-video-game-win-level-sound-version-1-145827.mp3" id="3_3ibfv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0ril3"]
 atlas = ExtResource("1_0jhvt")
@@ -139,5 +140,9 @@ frame_progress = 0.394669
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_mlu1v")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_3ibfv")
+volume_db = -17.333
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

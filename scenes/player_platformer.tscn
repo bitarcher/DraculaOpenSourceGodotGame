@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://byyyexo4e4kop"]
+[gd_scene load_steps=17 format=3 uid="uid://byyyexo4e4kop"]
 
 [ext_resource type="Texture2D" uid="uid://0asjwwjlao3i" path="res://assets/brackey/sprites/knight.png" id="1_10x2q"]
 [ext_resource type="Script" uid="uid://bdy8blwppg202" path="res://scripts/player_platformer.gd" id="1_e5rie"]
@@ -78,11 +78,72 @@ _data = {
 &"injured": SubResource("Animation_e5rie")
 }
 
+[sub_resource type="Animation" id="Animation_vsirv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_moqhw"]
+resource_name = "enter_vortex"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.1, 0.1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u6mks"]
+_data = {
+&"RESET": SubResource("Animation_vsirv"),
+&"enter_vortex": SubResource("Animation_moqhw")
+}
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_10x2q"]
 radius = 5.0
 height = 16.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 z_index = 5
 collision_layer = 2
 script = ExtResource("1_e5rie")
@@ -96,6 +157,11 @@ frame_progress = 0.792548
 [node name="InjuredAnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D"]
 libraries = {
 &"": SubResource("AnimationLibrary_moqhw")
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D"]
+libraries = {
+&"": SubResource("AnimationLibrary_u6mks")
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
