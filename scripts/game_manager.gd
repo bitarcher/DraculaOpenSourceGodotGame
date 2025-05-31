@@ -40,6 +40,7 @@ func _ready() -> void:
 	killed_timer = Timer.new()
 	add_child(killed_timer)
 	killed_timer.wait_time = 2.0
+	killed_timer.ignore_time_scale = true
 	killed_timer.connect("timeout", _on_killed_timer_timeout)
 
 const INITIAL_NUM_OF_LIVES = 5
@@ -99,6 +100,7 @@ func injured():
 		emit_signal("player_injured")
 		
 func killed():
+	Engine.time_scale = 0.3
 	print("killed using game manager")
 	num_of_coins = num_of_coins_before_killed
 	num_of_lives -= 1
@@ -122,6 +124,7 @@ func _on_immunity_lost_timer_timeout() -> void:
 	immunity_lost_timer.stop()
 
 func _on_killed_timer_timeout() -> void:
+	Engine.time_scale = 1.0
 	killed_timer.stop()
 	
 	if(num_of_lives <= 0):
