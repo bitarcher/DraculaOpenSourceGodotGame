@@ -20,3 +20,9 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 
 
 pixabay licensing rules: https://pixabay.com/fr/service/license-summary/
+
+
+*Tutorials*
+
+* Special thanks also for other youtube tutorial providers: *
+- Saving and loading games with Godot https://www.youtube.com/watch?v=43BZsLZheA4

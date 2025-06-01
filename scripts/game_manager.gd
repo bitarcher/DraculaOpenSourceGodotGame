@@ -1,13 +1,15 @@
 extends Node
 
 @export var num_of_lives: int
-var num_of_injuries_allowed
+@export var num_of_injuries_allowed: int
 @export var num_of_coins: int 
 
 @export var level_start_ticks: int
+var num_of_coins_before_killed : int = 0
+
 
 var immunity: bool = false
-var num_of_coins_before_killed : int = 0
+
 
 signal player_injured() 
 signal player_killed() 
