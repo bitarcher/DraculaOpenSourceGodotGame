@@ -18,6 +18,7 @@ var killed_timer: Timer
 const NUM_OF_LEVELS: int = 5
 
 var _levels_resources: Array[Resource] = []
+var _menu_resource: Resource
 
 func _init_level_resources():
 	_levels_resources = [
@@ -31,6 +32,7 @@ func _init_level_resources():
 	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	_menu_resource = preload("res://scenes/menu.tscn")
 	level_start_ticks = Time.get_ticks_msec()
 	_init_level_resources()
 	reset_counters()
@@ -81,12 +83,24 @@ func reset_counters():
 	num_of_coins = 0
 	num_of_lives = INITIAL_NUM_OF_LIVES
 	num_of_injuries_allowed = INITIAL_NUM_OF_INJURIES_ALLOWED
+	
+func resume_game():
+	_goto_level()
+	# TODO
+	
+func show_menu():
+	get_tree().change_scene_to_packed(_menu_resource)
 
 func coin_fetched():
 	num_of_coins += 1	
 
 func live_fetched():
 	num_of_lives += 1
+	
+func new_game():
+	# TODO change with level 0 when it is ready
+	current_level = 1
+	_goto_level()
 
 func injured():
 	if(immunity):

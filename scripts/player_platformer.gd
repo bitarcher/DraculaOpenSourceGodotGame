@@ -35,6 +35,9 @@ func _physics_process(delta: float) -> void:
 
 	var is_jumping: bool 
 
+	if Input.is_action_just_pressed("escape"):
+		GameManagerSingleton.show_menu()
+
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY

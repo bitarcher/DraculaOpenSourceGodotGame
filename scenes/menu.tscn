@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://c2ssrukfk8tsk"]
+[gd_scene load_steps=12 format=3 uid="uid://c2ssrukfk8tsk"]
 
+[ext_resource type="Script" uid="uid://da2pg11vwra5q" path="res://scenes/menu.gd" id="1_g3eks"]
 [ext_resource type="Texture2D" uid="uid://yd7jf4w0d6m2" path="res://assets/menu_background.jpeg" id="1_yqeox"]
 [ext_resource type="PackedScene" uid="uid://b66k164kttfjr" path="res://scenes/main_menu.tscn" id="3_con2f"]
 [ext_resource type="Texture2D" uid="uid://bj1oqi34tihw" path="res://assets/sprites/dracula_title.png" id="3_mhnvy"]
 [ext_resource type="AudioStream" uid="uid://d1vqb7fehwtv2" path="res://assets/sounds/muahaha-evil-laughter-83217.mp3" id="4_mhnvy"]
-[ext_resource type="AudioStream" uid="uid://b2kk01evpkbph" path="res://assets/sounds/Dracula_2020_-_V4mpiR.mp3" id="5_4ytvr"]
+[ext_resource type="AudioStream" uid="uid://crsvqoccx3y5s" path="res://assets/sounds/vampire-189047.mp3" id="5_4ytvr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ytvr"]
 atlas = ExtResource("3_mhnvy")
@@ -43,6 +44,7 @@ animations = [{
 }]
 
 [node name="Menu" type="Node2D"]
+script = ExtResource("1_g3eks")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -67,5 +69,6 @@ autoplay = true
 
 [node name="MusicAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_4ytvr")
-autoplay = true
 parameters/looping = true
+
+[connection signal="finished" from="LaughAudioStreamPlayer" to="." method="_on_laugh_audio_stream_player_finished"]

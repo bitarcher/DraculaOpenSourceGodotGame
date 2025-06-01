@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://b66k164kttfjr"]
+[gd_scene load_steps=4 format=3 uid="uid://b66k164kttfjr"]
 
+[ext_resource type="Script" uid="uid://bwwidbq8xk2qm" path="res://scripts/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Theme" uid="uid://dhrx32e2kxpct" path="res://themes/menu_button_theme.tres" id="1_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://bhiaxb7cuq6if" path="res://assets/paper.png" id="1_l6cm7"]
 
 [node name="MainMenu" type="Node2D"]
+script = ExtResource("1_bqqt6")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 anchors_preset = -1
@@ -50,3 +52,6 @@ text = "New game"
 [node name="ResumeGameButton" type="Button" parent="NinePatchRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Resume game"
+
+[connection signal="pressed" from="NinePatchRect/MarginContainer/VBoxContainer/NewGameButton" to="." method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="NinePatchRect/MarginContainer/VBoxContainer/ResumeGameButton" to="." method="_on_resume_game_button_pressed"]
