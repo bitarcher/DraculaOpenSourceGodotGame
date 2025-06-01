@@ -380,6 +380,7 @@ texture = ExtResource("7_qwgdl")
 offset = Vector2(0, -7)
 
 [node name="Player" parent="." instance=ExtResource("8_6vw2f")]
+unique_name_in_owner = true
 position = Vector2(284, -34)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]

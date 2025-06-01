@@ -80,6 +80,10 @@ func next_level():
 	
 	print("next level")
 	
+func load_level(level: int):
+	current_level = level
+	_goto_level()
+	
 func reset_counters():
 	num_of_coins_before_killed = 0
 	num_of_coins = 0
@@ -87,10 +91,12 @@ func reset_counters():
 	num_of_injuries_allowed = INITIAL_NUM_OF_INJURIES_ALLOWED
 	
 func resume_game():
-	_goto_level()
-	# TODO
+	#_goto_level()
+	
+	SaverLoaderSingleton.load_game()
 	
 func show_menu():
+	SaverLoaderSingleton.save_game()
 	get_tree().change_scene_to_packed(_menu_resource)
 
 func coin_fetched():
@@ -100,7 +106,7 @@ func live_fetched():
 	num_of_lives += 1
 	
 func new_game():
-	# TODO change with level 0 when it is ready
+	print("NEW GAME REQUESTED")
 	current_level = 1
 	_goto_level()
 
@@ -151,3 +157,20 @@ func _on_killed_timer_timeout() -> void:
 		game_over()
 	else:
 		get_tree().reload_current_scene()
+
+
+func dump_scene_tree(node: Node = get_tree().root, indent_level: int = 0):
+	var indent = ""
+	
+	for i in range(0, indent_level):
+		indent += "	 "
+	
+	var node_name = node.name
+	var node_type = node.get_class()
+	var node_path = node.get_path()
+
+	print(indent + "- " + node_name + " (" + node_type + ") [" + str(node_path) + "]")
+
+	# Itérer sur les enfants du nœud et appeler récursivement la fonction
+	for child in node.get_children():
+		dump_scene_tree(child, indent_level + 1)
