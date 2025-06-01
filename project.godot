@@ -13,6 +13,7 @@ config_version=5
 config/name="DraculaOpenSourceGodotGame"
 run/main_scene="uid://dfjkxjjym532g"
 config/features=PackedStringArray("4.4", "GL Compatibility")
+boot_splash/image="uid://yd7jf4w0d6m2"
 config/icon="res://icon.svg"
 
 [autoload]
@@ -34,6 +35,10 @@ version_control/autoload_on_startup=true
 [global_group]
 
 Player=""
+
+[gui]
+
+theme/custom_font="uid://cuehm46302bmh"
 
 [input]
 

@@ -1,0 +1,71 @@
+[gd_scene load_steps=11 format=3 uid="uid://c2ssrukfk8tsk"]
+
+[ext_resource type="Texture2D" uid="uid://yd7jf4w0d6m2" path="res://assets/menu_background.jpeg" id="1_yqeox"]
+[ext_resource type="PackedScene" uid="uid://b66k164kttfjr" path="res://scenes/main_menu.tscn" id="3_con2f"]
+[ext_resource type="Texture2D" uid="uid://bj1oqi34tihw" path="res://assets/sprites/dracula_title.png" id="3_mhnvy"]
+[ext_resource type="AudioStream" uid="uid://d1vqb7fehwtv2" path="res://assets/sounds/muahaha-evil-laughter-83217.mp3" id="4_mhnvy"]
+[ext_resource type="AudioStream" uid="uid://b2kk01evpkbph" path="res://assets/sounds/Dracula_2020_-_V4mpiR.mp3" id="5_4ytvr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ytvr"]
+atlas = ExtResource("3_mhnvy")
+region = Rect2(0, 0, 250, 123)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3eks"]
+atlas = ExtResource("3_mhnvy")
+region = Rect2(250, 0, 250, 123)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v86rl"]
+atlas = ExtResource("3_mhnvy")
+region = Rect2(0, 123, 250, 123)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13sgg"]
+atlas = ExtResource("3_mhnvy")
+region = Rect2(250, 123, 250, 123)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i6lef"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ytvr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3eks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v86rl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13sgg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="Menu" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(656, 272)
+scale = Vector2(1.31641, 1.03125)
+texture = ExtResource("1_yqeox")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer"]
+position = Vector2(632, 112)
+scale = Vector2(1.744, 1.00813)
+sprite_frames = SubResource("SpriteFrames_i6lef")
+autoplay = "default"
+frame_progress = 0.444053
+
+[node name="main_menu" parent="CanvasLayer" instance=ExtResource("3_con2f")]
+position = Vector2(688, 304)
+
+[node name="LaughAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_mhnvy")
+autoplay = true
+
+[node name="MusicAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_4ytvr")
+autoplay = true
+parameters/looping = true
