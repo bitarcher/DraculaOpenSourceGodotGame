@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkwrluhtssyu1"]
+
+[ext_resource type="Script" uid="uid://b6xvdq6pyvvyf" path="res://scripts/persist/coin_serializable_component.gd" id="1_g4xwi"]
+
+[node name="CoinSerializableComponent" type="Node2D" groups=["Serializable"]]
+script = ExtResource("1_g4xwi")

@@ -82,7 +82,7 @@ func load_game(address: String = DEFAULT_STORE_PATH):
 			var test_nodes = ToolsSingleton.get_nodes_in_group_from_node(restored_node, "Serializable")
 			#print("Nœuds Serializable trouvés: ", test_nodes.size())
 			for node in test_nodes:
-				print("- ", node.name, " (", node.get_script().get_global_name() if node.get_script() else "no script", ")")
+				#print("- ", node.name, " (", node.get_script().get_global_name() if node.get_script() else "no script", ")")
 				var serializable_component = node as ASerializableComponent
 				assert(serializable_component != null)
 				serializable_component.on_load_game(item)
