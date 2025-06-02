@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://6hdn2b1ki1oc"]
+
+[ext_resource type="Script" uid="uid://tun04t5q7nhq" path="res://scripts/persist/slide_enemy_serializable_component.gd" id="1_xee53"]
+
+[node name="SlideEnemySerializableComponent" type="Node2D" groups=["Serializable"]]
+script = ExtResource("1_xee53")

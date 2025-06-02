@@ -32,13 +32,25 @@ func save_game(address: String = DEFAULT_STORE_PATH):
 	
 	var saved_datas: Array[SavedData] = []
 	
+	var test_nodes = GameManagerSingleton.get_tree().get_nodes_in_group("Serializable")
+	print("Nœuds Serializable trouvés: ", test_nodes.size())
+	for node in test_nodes:
+		print("- ", node.name, " (", node.get_script().get_global_name() if node.get_script() else "no script", ")")
+		var serializable_component = node as ASerializableComponent
+		serializable_component.on_save_game(saved_datas)
+	
+	#GameManagerSingleton.get_tree().call_group("Serializable", "on_save_game", saved_datas)	
+	
+	if(test_nodes.size() == 0):
+		GameManagerSingleton.dump_scene_tree()
+	
+	
 	var player = await _get_player()
 	
 	assert(player!=null)
 	var player_platformer_serializable_component: PlayerPlatformerSerializableComponent = PlayerPlatformerSerializableComponent.new(player)
 	player_platformer_serializable_component.on_save_game(saved_datas)
 	
-	GameManagerSingleton.get_tree().call_group("Serializable", "on_save_game", saved_datas)
 	saved_game.saved_datas = saved_datas
 	
 	ResourceSaver.save(saved_game, address)
@@ -72,7 +84,15 @@ func load_game(address: String = DEFAULT_STORE_PATH):
 		if(not item.scene_path.is_empty()):
 			var scene = load(item.scene_path) as PackedScene
 			var restored_node = scene.instantiate()
-			GameManagerSingleton.get_tree().root.add_child(restored_node)
-			var serializable_component = restored_node.get_node("SerializableComponent") as ASerializableComponent
-			assert(serializable_component != null)
-			serializable_component.on_load_game(item)
+			GameManagerSingleton.get_tree().current_scene.add_child(restored_node)
+			var test_nodes = ToolsSingleton.get_nodes_in_group_from_node(restored_node, "Serializable")
+			print("Nœuds Serializable trouvés: ", test_nodes.size())
+			for node in test_nodes:
+				print("- ", node.name, " (", node.get_script().get_global_name() if node.get_script() else "no script", ")")
+				var serializable_component = node as ASerializableComponent
+				assert(serializable_component != null)
+				serializable_component.on_load_game(item)
+				
+	print("scene after loading")
+	
+	ToolsSingleton.dump_scene_tree()

@@ -56,7 +56,7 @@ const INITIAL_NUM_OF_INJURIES_ALLOWED = 3
 var current_level = 1
 @onready var level_1 = preload("res://scripts/p_level_1.gd")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 	
 func _goto_level():
@@ -157,20 +157,3 @@ func _on_killed_timer_timeout() -> void:
 		game_over()
 	else:
 		get_tree().reload_current_scene()
-
-
-func dump_scene_tree(node: Node = get_tree().root, indent_level: int = 0):
-	var indent = ""
-	
-	for i in range(0, indent_level):
-		indent += "	 "
-	
-	var node_name = node.name
-	var node_type = node.get_class()
-	var node_path = node.get_path()
-
-	print(indent + "- " + node_name + " (" + node_type + ") [" + str(node_path) + "]")
-
-	# Itérer sur les enfants du nœud et appeler récursivement la fonction
-	for child in node.get_children():
-		dump_scene_tree(child, indent_level + 1)

@@ -1,21 +1,29 @@
-[gd_resource type="Resource" script_class="SavedGame" load_steps=5 format=3]
+[gd_resource type="Resource" script_class="SavedGame" load_steps=7 format=3]
 
-[ext_resource type="Script" path="res://scripts/persist/saved_data.gd" id="1_dq7hq"]
-[ext_resource type="Script" path="res://scripts/persist/saved_game.gd" id="1_lhbgx"]
-[ext_resource type="Script" path="res://scripts/persist/player_platformer_saved_data.gd" id="2_ylfeg"]
+[ext_resource type="Script" path="res://scripts/persist/saved_data.gd" id="1_ylfeg"]
+[ext_resource type="Script" path="res://scripts/persist/slime_enemy_saved_data.gd" id="2_yx36p"]
+[ext_resource type="Script" path="res://scripts/persist/player_platformer_saved_data.gd" id="3_wvo7i"]
+[ext_resource type="Script" path="res://scripts/persist/saved_game.gd" id="4_ovts1"]
+
+[sub_resource type="Resource" id="Resource_ylfeg"]
+script = ExtResource("2_yx36p")
+direction = -1
+flip_h = true
+position = Vector2(1175.17, -35)
+scene_path = "res://scenes/slime_enemy.tscn"
 
 [sub_resource type="Resource" id="Resource_yx36p"]
-script = ExtResource("2_ylfeg")
+script = ExtResource("3_wvo7i")
 num_of_lives = 5
 num_of_injuries_allowed = 3
 num_of_coins = 0
-level_start_ticks = 2349
+level_start_ticks = 8038
 num_of_coins_before_killed = 0
-pause_ticks = 4787
-position = Vector2(507.336, -20.0007)
+pause_ticks = 51288
+position = Vector2(1127.95, -52.0193)
 scene_path = ""
 
 [resource]
-script = ExtResource("1_lhbgx")
-current_level = 0
-saved_datas = Array[ExtResource("1_dq7hq")]([SubResource("Resource_yx36p")])
+script = ExtResource("4_ovts1")
+current_level = 1
+saved_datas = Array[ExtResource("1_ylfeg")]([SubResource("Resource_ylfeg"), SubResource("Resource_yx36p")])

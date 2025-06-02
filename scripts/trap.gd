@@ -9,6 +9,6 @@ func end_of_trap():
 	print("end of trap")
 
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
+func _on_area_2d_body_entered(_body: Node2D) -> void:
 	if($AnimationPlayer != null):
 		$AnimationPlayer.play("launch_trap")
