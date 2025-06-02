@@ -33,7 +33,7 @@ func save_game(address: String = DEFAULT_STORE_PATH):
 	var saved_datas: Array[SavedData] = []
 	
 	var test_nodes = GameManagerSingleton.get_tree().get_nodes_in_group("Serializable")
-	print("Nœuds Serializable trouvés: ", test_nodes.size())
+	#print("Nœuds Serializable trouvés: ", test_nodes.size())
 	for node in test_nodes:
 		print("- ", node.name, " (", node.get_script().get_global_name() if node.get_script() else "no script", ")")
 		var serializable_component = node as ASerializableComponent
@@ -80,7 +80,7 @@ func load_game(address: String = DEFAULT_STORE_PATH):
 			var restored_node = scene.instantiate()
 			GameManagerSingleton.get_tree().current_scene.add_child(restored_node)
 			var test_nodes = ToolsSingleton.get_nodes_in_group_from_node(restored_node, "Serializable")
-			print("Nœuds Serializable trouvés: ", test_nodes.size())
+			#print("Nœuds Serializable trouvés: ", test_nodes.size())
 			for node in test_nodes:
 				print("- ", node.name, " (", node.get_script().get_global_name() if node.get_script() else "no script", ")")
 				var serializable_component = node as ASerializableComponent

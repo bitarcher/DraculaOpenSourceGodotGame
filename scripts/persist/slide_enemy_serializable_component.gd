@@ -5,7 +5,6 @@ func _get_slime_enemy() -> SlimeEnemy:
 	return get_parent()
 	
 func on_save_game(saved_datas):
-	print("on_save_game appelée pour SlideEnemySerializableComponent")
 	var slime_enemy = _get_slime_enemy()
 	var my_data = SlimeEnemySavedData.new()
 	my_data.scene_path = "res://scenes/slime_enemy.tscn"
