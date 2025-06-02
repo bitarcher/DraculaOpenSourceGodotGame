@@ -56,3 +56,10 @@ func get_nodes_from_class(node: Node, search_class_name: String) -> Array[Node]:
 		found_nodes.append_array(get_nodes_from_class(child, search_class_name))
 
 	return found_nodes
+
+func get_node_from_class(node: Node, search_class_name: String) -> Node:
+	var nodes = get_nodes_from_class(node, search_class_name)
+	if(len(nodes) > 0):
+		return nodes[0]
+	else:
+		return null

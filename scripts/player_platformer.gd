@@ -6,6 +6,9 @@ const JUMP_VELOCITY = -350.0
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
+@export var air_rotation_return_speed: float = 5 # Degrees per second, adjust as needed
+@export var air_rotation_speed: float = 20 
+
 func _ready() -> void:
 	GameManagerSingleton.connect("player_injured", _on_player_injured)
 	GameManagerSingleton.connect("player_killed", _on_player_killed)
@@ -54,11 +57,18 @@ func _physics_process(delta: float) -> void:
 		animated_sprite_2d.flip_h = true
 	elif direction > 0:
 		animated_sprite_2d.flip_h = false
+
 	
 	
-	if is_jumping:
+	if not is_on_floor():
 		animated_sprite_2d.play("jump")
+		if(direction != 0):
+			animated_sprite_2d.rotate(air_rotation_speed * direction * delta)
+		else:
+			animated_sprite_2d.rotation = lerp_angle(animated_sprite_2d.rotation, 0.0, air_rotation_return_speed * delta)
 	else:
+		
+		animated_sprite_2d.rotation_degrees = 0
 		if direction == 0:
 			animated_sprite_2d.play("idle")
 		else:
