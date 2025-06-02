@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="SavedGame" load_steps=15 format=3]
+[gd_resource type="Resource" script_class="SavedGame" load_steps=7 format=3]
 
 [ext_resource type="Script" path="res://scripts/persist/saved_data.gd" id="1_ylfeg"]
 [ext_resource type="Script" path="res://scripts/persist/slime_enemy_saved_data.gd" id="2_yx36p"]
@@ -7,79 +7,23 @@
 
 [sub_resource type="Resource" id="Resource_ylfeg"]
 script = ExtResource("2_yx36p")
-direction = -1
-flip_h = true
-position = Vector2(-104.832, -5)
+direction = 1
+flip_h = false
+position = Vector2(874.98, -20)
 scene_path = "res://scenes/slime_enemy.tscn"
 
 [sub_resource type="Resource" id="Resource_yx36p"]
-script = ExtResource("2_yx36p")
-direction = 1
-flip_h = false
-position = Vector2(-31.1675, -5)
-scene_path = "res://scenes/slime_enemy.tscn"
-
-[sub_resource type="Resource" id="Resource_wvo7i"]
-script = ExtResource("2_yx36p")
-direction = 1
-flip_h = false
-position = Vector2(-143.167, -5)
-scene_path = "res://scenes/slime_enemy.tscn"
-
-[sub_resource type="Resource" id="Resource_ovts1"]
-script = ExtResource("2_yx36p")
-direction = 1
-flip_h = false
-position = Vector2(-159.167, -5)
-scene_path = "res://scenes/slime_enemy.tscn"
-
-[sub_resource type="Resource" id="Resource_s0uye"]
-script = ExtResource("2_yx36p")
-direction = -1
-flip_h = true
-position = Vector2(462.829, -165)
-scene_path = "res://scenes/slime_enemy.tscn"
-
-[sub_resource type="Resource" id="Resource_y5jvc"]
-script = ExtResource("2_yx36p")
-direction = 1
-flip_h = false
-position = Vector2(440.836, -165)
-scene_path = "res://scenes/slime_enemy.tscn"
-
-[sub_resource type="Resource" id="Resource_wg0a7"]
-script = ExtResource("2_yx36p")
-direction = -1
-flip_h = true
-position = Vector2(-116.498, -325)
-scene_path = "res://scenes/slime_enemy.tscn"
-
-[sub_resource type="Resource" id="Resource_kth4n"]
-script = ExtResource("2_yx36p")
-direction = 1
-flip_h = false
-position = Vector2(-131.499, -325)
-scene_path = "res://scenes/slime_enemy.tscn"
-
-[sub_resource type="Resource" id="Resource_62fp6"]
-script = ExtResource("2_yx36p")
-direction = -1
-flip_h = true
-position = Vector2(-196.158, -325)
-scene_path = "res://scenes/slime_enemy.tscn"
-
-[sub_resource type="Resource" id="Resource_p724h"]
 script = ExtResource("3_wvo7i")
-num_of_lives = 12
-num_of_injuries_allowed = 1
-num_of_coins = 328
-level_start_ticks = 371964
-num_of_coins_before_killed = 158
-pause_ticks = 460474
-position = Vector2(-158.561, -516.001)
+num_of_lives = 5
+num_of_injuries_allowed = 3
+num_of_coins = 1
+level_start_ticks = 3675
+num_of_coins_before_killed = 0
+pause_ticks = 26444
+position = Vector2(1127.92, -52.0669)
 scene_path = ""
 
 [resource]
 script = ExtResource("4_ovts1")
-current_level = 4
-saved_datas = Array[ExtResource("1_ylfeg")]([SubResource("Resource_ylfeg"), SubResource("Resource_yx36p"), SubResource("Resource_wvo7i"), SubResource("Resource_ovts1"), SubResource("Resource_s0uye"), SubResource("Resource_y5jvc"), SubResource("Resource_wg0a7"), SubResource("Resource_kth4n"), SubResource("Resource_62fp6"), SubResource("Resource_p724h")])
+current_level = 1
+saved_datas = Array[ExtResource("1_ylfeg")]([SubResource("Resource_ylfeg"), SubResource("Resource_yx36p")])

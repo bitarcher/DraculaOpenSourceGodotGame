@@ -33,13 +33,13 @@ func save_game(address: String = DEFAULT_STORE_PATH):
 	var saved_datas: Array[SavedData] = []
 	
 	var test_nodes = GameManagerSingleton.get_tree().get_nodes_in_group("Serializable")
-	#print("Nœuds Serializable trouvés: ", test_nodes.size())
-	for node in test_nodes:
-		print("- ", node.name, " (", node.get_script().get_global_name() if node.get_script() else "no script", ")")
-		var serializable_component = node as ASerializableComponent
-		serializable_component.on_save_game(saved_datas)
+	#print("Serializable nodes found : ", test_nodes.size())
+	#for node in test_nodes:
+		#print("- ", node.name, " (", node.get_script().get_global_name() if node.get_script() else "no script", ")")
+	#	var serializable_component = node as ASerializableComponent
+	#	serializable_component.on_save_game(saved_datas)
 	
-	#GameManagerSingleton.get_tree().call_group("Serializable", "on_save_game", saved_datas)	
+	GameManagerSingleton.get_tree().call_group("Serializable", "on_save_game", saved_datas)	
 	
 	if(test_nodes.size() == 0):
 		GameManagerSingleton.dump_scene_tree()
