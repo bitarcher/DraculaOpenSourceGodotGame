@@ -61,82 +61,6 @@ _data = {
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6pu31"]
 distance = 29.0
 
-[sub_resource type="Animation" id="Animation_k3v11"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(433, -12)]
-}
-
-[sub_resource type="Animation" id="Animation_bs2ip"]
-resource_name = "move"
-length = 3.0
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(433, -12), Vector2(562, -49)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_t3gwi"]
-_data = {
-&"RESET": SubResource("Animation_k3v11"),
-&"move": SubResource("Animation_bs2ip")
-}
-
-[sub_resource type="Animation" id="Animation_3s02y"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-208, -314)]
-}
-
-[sub_resource type="Animation" id="Animation_6pu31"]
-resource_name = "move"
-length = 5.0
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-208, -314), Vector2(-71, -355)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_pfjqn"]
-_data = {
-&"RESET": SubResource("Animation_3s02y"),
-&"move": SubResource("Animation_6pu31")
-}
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bs2ip"]
 texture = ExtResource("2_o1uv7")
 0:0/0 = 0
@@ -318,6 +242,82 @@ texture = ExtResource("2_o1uv7")
 physics_layer_0/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_bs2ip")
 
+[sub_resource type="Animation" id="Animation_k3v11"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(433, -12)]
+}
+
+[sub_resource type="Animation" id="Animation_bs2ip"]
+resource_name = "move"
+length = 3.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(433, -12), Vector2(562, -49)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t3gwi"]
+_data = {
+&"RESET": SubResource("Animation_k3v11"),
+&"move": SubResource("Animation_bs2ip")
+}
+
+[sub_resource type="Animation" id="Animation_3s02y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-208, -314)]
+}
+
+[sub_resource type="Animation" id="Animation_6pu31"]
+resource_name = "move"
+length = 5.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-208, -314), Vector2(-71, -355)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pfjqn"]
+_data = {
+&"RESET": SubResource("Animation_3s02y"),
+&"move": SubResource("Animation_6pu31")
+}
+
 [node name="PLevel1" type="Node2D"]
 position = Vector2(-286, 15)
 script = ExtResource("1_1ofay")
@@ -427,15 +427,6 @@ position = Vector2(-48, -77)
 [node name="Platform4" parent="Platforms" instance=ExtResource("3_bs2ip")]
 position = Vector2(-80, -109)
 
-[node name="AnimatedPlatform1" parent="Platforms" instance=ExtResource("3_bs2ip")]
-position = Vector2(433, -12)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/AnimatedPlatform1"]
-libraries = {
-&"": SubResource("AnimationLibrary_t3gwi")
-}
-autoplay = "move"
-
 [node name="Platform5" parent="Platforms" instance=ExtResource("3_bs2ip")]
 position = Vector2(-101, -42)
 
@@ -444,15 +435,6 @@ position = Vector2(77, -254)
 
 [node name="Platform6" parent="Platforms" instance=ExtResource("3_bs2ip")]
 position = Vector2(472, -88)
-
-[node name="Platform7" parent="Platforms" instance=ExtResource("3_bs2ip")]
-position = Vector2(-208, -314)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform7"]
-libraries = {
-&"": SubResource("AnimationLibrary_pfjqn")
-}
-autoplay = "move"
 
 [node name="Platform8" parent="Platforms" instance=ExtResource("3_bs2ip")]
 position = Vector2(-252, -337)
@@ -520,3 +502,23 @@ position = Vector2(1342, -64)
 position = Vector2(225, -34)
 
 [node name="LevelConst" parent="." instance=ExtResource("17_oqhks")]
+
+[node name="AnimatedPlatforms" type="Node" parent="."]
+
+[node name="AnimatedPlatform1" parent="AnimatedPlatforms" instance=ExtResource("3_bs2ip")]
+position = Vector2(433, -12)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedPlatforms/AnimatedPlatform1"]
+libraries = {
+&"": SubResource("AnimationLibrary_t3gwi")
+}
+autoplay = "move"
+
+[node name="Platform7" parent="AnimatedPlatforms" instance=ExtResource("3_bs2ip")]
+position = Vector2(-208, -314)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedPlatforms/Platform7"]
+libraries = {
+&"": SubResource("AnimationLibrary_pfjqn")
+}
+autoplay = "move"

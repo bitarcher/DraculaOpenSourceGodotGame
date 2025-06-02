@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://jyw84s43iw3w"]
+[gd_scene load_steps=4 format=3 uid="uid://jyw84s43iw3w"]
 
 [ext_resource type="Texture2D" uid="uid://dlapce6a0nfa1" path="res://assets/brackey/sprites/platforms.png" id="1_ba0x2"]
+[ext_resource type="PackedScene" uid="uid://db0qnm2vasu34" path="res://scenes/persist/platform_serializable_component.tscn" id="2_nlgqw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ba0x2"]
 size = Vector2(32, 8)
@@ -15,3 +16,5 @@ region_rect = Rect2(16, 0, 32, 9)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_ba0x2")
 one_way_collision = true
+
+[node name="PlatformSerializableComponent" parent="." instance=ExtResource("2_nlgqw")]
