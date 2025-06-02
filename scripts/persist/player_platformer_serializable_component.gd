@@ -28,7 +28,7 @@ func on_load_game(saved_data: SavedData):
 	if(saved_data is PlayerPlatformerSavedData):
 		var my_data = saved_data as PlayerPlatformerSavedData
 		GameManagerSingleton.num_of_lives = my_data.num_of_lives
-		GameManagerSingleton.num_of_injuries_allowe = my_data.num_of_injuries_allowed
+		GameManagerSingleton.num_of_injuries_allowed = my_data.num_of_injuries_allowed
 		GameManagerSingleton.num_of_coins = my_data.num_of_coins
 		var now_ticks = Time.get_ticks_msec()
 		var diff_ticks = my_data.pause_ticks - my_data.level_start_ticks

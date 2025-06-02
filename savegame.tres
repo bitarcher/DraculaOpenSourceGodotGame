@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="SavedGame" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/persist/saved_data.gd" id="1_dq7hq"]
+[ext_resource type="Script" path="res://scripts/persist/saved_game.gd" id="1_lhbgx"]
+[ext_resource type="Script" path="res://scripts/persist/player_platformer_saved_data.gd" id="2_ylfeg"]
+
+[sub_resource type="Resource" id="Resource_yx36p"]
+script = ExtResource("2_ylfeg")
+num_of_lives = 5
+num_of_injuries_allowed = 3
+num_of_coins = 0
+level_start_ticks = 2349
+num_of_coins_before_killed = 0
+pause_ticks = 4787
+position = Vector2(507.336, -20.0007)
+scene_path = ""
+
+[resource]
+script = ExtResource("1_lhbgx")
+current_level = 0
+saved_datas = Array[ExtResource("1_dq7hq")]([SubResource("Resource_yx36p")])
