@@ -9,7 +9,7 @@ func on_save_game(saved_datas):
 	var slime_enemy = _get_slime_enemy()
 	var my_data = SlimeEnemySavedData.new()
 	my_data.scene_path = "res://scenes/slime_enemy.tscn"
-	my_data.position = slime_enemy.position
+	my_data.position = slime_enemy.global_position
 	my_data.direction = slime_enemy.direction
 	my_data.flip_h = slime_enemy.animated_sprite.flip_h
 	
@@ -23,7 +23,7 @@ func on_before_load_game():
 func on_load_game(saved_data):
 	var my_saved_data = saved_data as SavedData
 	var slime_enemy = _get_slime_enemy()
-	slime_enemy.position = my_saved_data.position
+	slime_enemy.global_position = my_saved_data.position
 	
 	if(my_saved_data is SlimeEnemySavedData):
 		var my_data = my_saved_data as SlimeEnemySavedData

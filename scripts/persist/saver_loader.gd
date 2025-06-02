@@ -67,16 +67,10 @@ func load_game(address: String = DEFAULT_STORE_PATH):
 	
 	GameManagerSingleton.load_level(saved_game.current_level)
 	
-	
-	
 	var player = await _get_player()
 	assert(player != null)
 	var player_platformer_serializable_component: PlayerPlatformerSerializableComponent = PlayerPlatformerSerializableComponent.new(player)
 	
-	for sd in saved_game.saved_datas:
-		if sd is PlayerPlatformerSavedData:
-			var ppsd = sd as PlayerPlatformerSavedData
-			player_platformer_serializable_component.on_load_game(ppsd)
 	
 	GameManagerSingleton.get_tree().call_group("Serializable", "on_before_load_game")
 	
@@ -92,7 +86,9 @@ func load_game(address: String = DEFAULT_STORE_PATH):
 				var serializable_component = node as ASerializableComponent
 				assert(serializable_component != null)
 				serializable_component.on_load_game(item)
+
+	for sd in saved_game.saved_datas:
+		if sd is PlayerPlatformerSavedData:
+			var ppsd = sd as PlayerPlatformerSavedData
+			player_platformer_serializable_component.on_load_game(ppsd)
 				
-	print("scene after loading")
-	
-	ToolsSingleton.dump_scene_tree()

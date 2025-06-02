@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="SavedGame" load_steps=7 format=3]
+[gd_resource type="Resource" script_class="SavedGame" load_steps=11 format=3]
 
 [ext_resource type="Script" path="res://scripts/persist/saved_data.gd" id="1_ylfeg"]
 [ext_resource type="Script" path="res://scripts/persist/slime_enemy_saved_data.gd" id="2_yx36p"]
@@ -7,23 +7,51 @@
 
 [sub_resource type="Resource" id="Resource_ylfeg"]
 script = ExtResource("2_yx36p")
-direction = -1
-flip_h = true
-position = Vector2(1175.17, -35)
+direction = 1
+flip_h = false
+position = Vector2(882.984, 91)
 scene_path = "res://scenes/slime_enemy.tscn"
 
 [sub_resource type="Resource" id="Resource_yx36p"]
+script = ExtResource("2_yx36p")
+direction = -1
+flip_h = true
+position = Vector2(860.016, 91)
+scene_path = "res://scenes/slime_enemy.tscn"
+
+[sub_resource type="Resource" id="Resource_wvo7i"]
+script = ExtResource("2_yx36p")
+direction = -1
+flip_h = true
+position = Vector2(212.001, -36)
+scene_path = "res://scenes/slime_enemy.tscn"
+
+[sub_resource type="Resource" id="Resource_ovts1"]
+script = ExtResource("2_yx36p")
+direction = -1
+flip_h = true
+position = Vector2(-116.002, 27)
+scene_path = "res://scenes/slime_enemy.tscn"
+
+[sub_resource type="Resource" id="Resource_s0uye"]
+script = ExtResource("2_yx36p")
+direction = -1
+flip_h = true
+position = Vector2(459.004, -163)
+scene_path = "res://scenes/slime_enemy.tscn"
+
+[sub_resource type="Resource" id="Resource_y5jvc"]
 script = ExtResource("3_wvo7i")
 num_of_lives = 5
 num_of_injuries_allowed = 3
-num_of_coins = 0
-level_start_ticks = 8038
-num_of_coins_before_killed = 0
-pause_ticks = 51288
-position = Vector2(1127.95, -52.0193)
+num_of_coins = 1
+level_start_ticks = 32533
+num_of_coins_before_killed = 1
+pause_ticks = 40277
+position = Vector2(273.133, -20.009)
 scene_path = ""
 
 [resource]
 script = ExtResource("4_ovts1")
-current_level = 1
-saved_datas = Array[ExtResource("1_ylfeg")]([SubResource("Resource_ylfeg"), SubResource("Resource_yx36p")])
+current_level = 2
+saved_datas = Array[ExtResource("1_ylfeg")]([SubResource("Resource_ylfeg"), SubResource("Resource_yx36p"), SubResource("Resource_wvo7i"), SubResource("Resource_ovts1"), SubResource("Resource_s0uye"), SubResource("Resource_y5jvc")])
