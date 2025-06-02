@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://jyw84s43iw3w" path="res://scenes/platform.tscn" id="11_wsqdu"]
 [ext_resource type="PackedScene" uid="uid://c52etx4cornmc" path="res://scenes/trap.tscn" id="12_r7hpy"]
 [ext_resource type="Texture2D" uid="uid://bhnmlt1xwr8rl" path="res://assets/brackey/sprites/world_tileset.png" id="13_oh6rx"]
-[ext_resource type="PackedScene" uid="uid://c2tqnky1jk71i" path="res://coin_tree.tscn" id="14_3cumw"]
+[ext_resource type="PackedScene" uid="uid://c2tqnky1jk71i" path="res://scenes/coin_tree.tscn" id="14_3cumw"]
 [ext_resource type="PackedScene" uid="uid://c5nscqmqpj63y" path="res://scenes/slime_enemy.tscn" id="15_ao783"]
 [ext_resource type="PackedScene" uid="uid://d062hkuxa4g7y" path="res://scenes/p_level_const.tscn" id="17_gnmoc"]
 [ext_resource type="PackedScene" uid="uid://0khi164sjtqt" path="res://scenes/portail_magique.tscn" id="17_jjvvp"]

@@ -38,6 +38,8 @@ layout_mode = 2
 [node name="Label" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 text = "Main Menu"
 
 [node name="ColorRect" type="ColorRect" parent="NinePatchRect/MarginContainer/VBoxContainer"]

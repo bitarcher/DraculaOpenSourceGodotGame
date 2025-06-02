@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://jyw84s43iw3w" path="res://scenes/platform.tscn" id="10_t05uy"]
 [ext_resource type="PackedScene" uid="uid://c52etx4cornmc" path="res://scenes/trap.tscn" id="11_wohjl"]
 [ext_resource type="Texture2D" uid="uid://bhnmlt1xwr8rl" path="res://assets/brackey/sprites/world_tileset.png" id="12_m0fes"]
-[ext_resource type="PackedScene" uid="uid://c2tqnky1jk71i" path="res://coin_tree.tscn" id="13_qe0qo"]
+[ext_resource type="PackedScene" uid="uid://c2tqnky1jk71i" path="res://scenes/coin_tree.tscn" id="13_qe0qo"]
 [ext_resource type="PackedScene" uid="uid://7r7xqq1udtgj" path="res://scenes/coins_5x5.tscn" id="14_lgyd3"]
 [ext_resource type="PackedScene" uid="uid://c5nscqmqpj63y" path="res://scenes/slime_enemy.tscn" id="14_tcof6"]
 [ext_resource type="PackedScene" uid="uid://hkis3pmnouwy" path="res://scenes/coins_3x3.tscn" id="15_esw31"]
