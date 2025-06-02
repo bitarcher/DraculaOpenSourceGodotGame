@@ -18,11 +18,9 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 - bloodlust-176915: Nightcast https://pixabay.com/fr/music/mystere-bloodlust-176915/
 - castle-of-athanasius-151010 : Spencer_YK https://pixabay.com/fr/music/jeux-video-castle-of-athanasius-151010/
 
-
 pixabay licensing rules: https://pixabay.com/fr/service/license-summary/
-
 
 *Tutorials*
 
 * Special thanks also for other youtube tutorial providers: *
-- Saving and loading games with Godot https://www.youtube.com/watch?v=43BZsLZheA4
+- Saving and loading games with Godot https://www.youtube.com/watch?v=43BZsLZheA4 but in the program in is used via ASerializableComponent

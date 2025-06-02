@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlno25wwdy0j4"]
+
+[ext_resource type="Script" uid="uid://du0l87t4l8f4l" path="res://scripts/persist/trap_serializable_component.gd" id="1_djigr"]
+
+[node name="TrapSerializableComponent" type="Node2D" groups=["Serializable"]]
+script = ExtResource("1_djigr")

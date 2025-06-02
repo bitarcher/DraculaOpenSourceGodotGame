@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://c2ssrukfk8tsk"]
 
-[ext_resource type="Script" uid="uid://da2pg11vwra5q" path="res://scenes/menu.gd" id="1_g3eks"]
+[ext_resource type="Script" uid="uid://da2pg11vwra5q" path="res://scripts/menu.gd" id="1_g3eks"]
 [ext_resource type="Texture2D" uid="uid://yd7jf4w0d6m2" path="res://assets/menu_background.jpeg" id="1_yqeox"]
 [ext_resource type="PackedScene" uid="uid://b66k164kttfjr" path="res://scenes/main_menu.tscn" id="3_con2f"]
 [ext_resource type="Texture2D" uid="uid://bj1oqi34tihw" path="res://assets/sprites/dracula_title.png" id="3_mhnvy"]
