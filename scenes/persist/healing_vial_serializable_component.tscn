@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b20f3urxma4uj"]
+
+[ext_resource type="Script" uid="uid://dhxkxj5c0083b" path="res://scripts/persist/healing_vial_serializable_component.gd" id="1_ef7ji"]
+
+[node name="HealingVialSerializableComponent" type="Node2D" groups=["Serializable"]]
+script = ExtResource("1_ef7ji")

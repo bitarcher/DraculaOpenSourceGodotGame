@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://cctwmuyah45p6"]
+[gd_scene load_steps=12 format=3 uid="uid://cctwmuyah45p6"]
 
 [ext_resource type="Script" uid="uid://bf1fuxv2kwsav" path="res://scripts/healing_vial.gd" id="1_841va"]
 [ext_resource type="Texture2D" uid="uid://bfndm7u2uedki" path="res://assets/sprites/healing_vial.png" id="2_841va"]
 [ext_resource type="AudioStream" uid="uid://dym0f5ff8x4yw" path="res://assets/brackey/sounds/power_up.wav" id="3_841va"]
+[ext_resource type="PackedScene" uid="uid://b20f3urxma4uj" path="res://scenes/persist/healing_vial_serializable_component.tscn" id="4_0ja6p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0ja6p"]
 atlas = ExtResource("2_841va")
@@ -69,6 +70,8 @@ shape = SubResource("CircleShape2D_rwqht")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_841va")
 volume_db = -12.629
+
+[node name="HealingVialSerializableComponent" parent="." instance=ExtResource("4_0ja6p")]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
