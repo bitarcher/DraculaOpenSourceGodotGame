@@ -58,14 +58,12 @@ func _physics_process(delta: float) -> void:
 	elif direction > 0:
 		animated_sprite_2d.flip_h = false
 
-	
-	
 	if not is_on_floor():
 		animated_sprite_2d.play("jump")
-		if(direction != 0):
-			animated_sprite_2d.rotate(air_rotation_speed * direction * delta)
-		else:
-			animated_sprite_2d.rotation = lerp_angle(animated_sprite_2d.rotation, 0.0, air_rotation_return_speed * delta)
+		##if(direction != 0):
+		#	animated_sprite_2d.rotate(air_rotation_speed * direction * delta)
+		#else:
+		#	animated_sprite_2d.rotation = lerp_angle(animated_sprite_2d.rotation, 0.0, air_rotation_return_speed * delta)
 	else:
 		
 		animated_sprite_2d.rotation_degrees = 0

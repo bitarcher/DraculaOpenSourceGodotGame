@@ -301,3 +301,6 @@ stream = ExtResource("3_ekqba")
 
 [node name="DyingAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_moqhw")
+
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+current = true

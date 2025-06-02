@@ -17,6 +17,7 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 - thetower-328520 : WelbornWorks https://pixabay.com/fr/music/ambiant-thetower-328520/
 - bloodlust-176915: Nightcast https://pixabay.com/fr/music/mystere-bloodlust-176915/
 - castle-of-athanasius-151010 : Spencer_YK https://pixabay.com/fr/music/jeux-video-castle-of-athanasius-151010/
+- elf singing : https://pixabay.com/fr/sound-effects/elf-singing-89296/
 
 pixabay licensing rules: https://pixabay.com/fr/service/license-summary/
 
