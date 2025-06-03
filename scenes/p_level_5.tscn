@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://itb5rfqkwus"]
+[gd_scene load_steps=23 format=3 uid="uid://itb5rfqkwus"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_v65e4"]
 [ext_resource type="Texture2D" uid="uid://doyfrmal4p0kn" path="res://assets/clouds/cloud0.png" id="2_220f6"]
@@ -16,6 +16,8 @@
 [ext_resource type="PackedScene" uid="uid://c5nscqmqpj63y" path="res://scenes/slime_enemy.tscn" id="14_2r20n"]
 [ext_resource type="PackedScene" uid="uid://cctwmuyah45p6" path="res://scenes/healing_vial.tscn" id="15_s1k2q"]
 [ext_resource type="PackedScene" uid="uid://d062hkuxa4g7y" path="res://scenes/p_level_const.tscn" id="17_nsdc7"]
+[ext_resource type="PackedScene" uid="uid://0khi164sjtqt" path="res://scenes/portail_magique.tscn" id="17_v65e4"]
+[ext_resource type="AudioStream" uid="uid://bhlh4nphgdd6o" path="res://assets/brackey/music/time_for_adventure.mp3" id="18_220f6"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pfjqn"]
 
@@ -374,3 +376,12 @@ position = Vector2(125, 23)
 
 [node name="Coins3x5" parent="." instance=ExtResource("9_h21nf")]
 position = Vector2(172, 23)
+
+[node name="PortailMagique" parent="." instance=ExtResource("17_v65e4")]
+position = Vector2(1095, -101)
+
+[node name="MusicAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_220f6")
+volume_db = -13.602
+autoplay = true
+parameters/looping = true

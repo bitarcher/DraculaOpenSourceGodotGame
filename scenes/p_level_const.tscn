@@ -1,12 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://d062hkuxa4g7y"]
 
+[ext_resource type="Script" uid="uid://3c5e38a6a81m" path="res://scripts/p_level_const.gd" id="1_mfnrs"]
 [ext_resource type="PackedScene" uid="uid://c8fgcnhdy6mk2" path="res://scenes/level_ui.tscn" id="2_hlhvv"]
-[ext_resource type="AudioStream" uid="uid://bhlh4nphgdd6o" path="res://assets/brackey/music/time_for_adventure.mp3" id="3_mfnrs"]
 [ext_resource type="PackedScene" uid="uid://wodbsbtp5pxn" path="res://scenes/level_name.tscn" id="4_hlhvv"]
 [ext_resource type="PackedScene" uid="uid://dhypwyvccqm4w" path="res://scenes/level_time.tscn" id="4_mfnrs"]
 
 [node name="LevelConst" type="Node2D"]
 position = Vector2(-286, 15)
+script = ExtResource("1_mfnrs")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -21,9 +22,3 @@ scale = Vector2(0.3, 0.3)
 [node name="LevelName2" parent="CanvasLayer" instance=ExtResource("4_mfnrs")]
 position = Vector2(960, 15)
 scale = Vector2(0.3, 0.3)
-
-[node name="MusicAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_mfnrs")
-volume_db = -13.602
-autoplay = true
-parameters/looping = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dt0scbtd8tmyn"]
+[gd_scene load_steps=30 format=3 uid="uid://dt0scbtd8tmyn"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_x2nyf"]
 [ext_resource type="Texture2D" uid="uid://doyfrmal4p0kn" path="res://assets/clouds/cloud0.png" id="4_egy2r"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://0khi164sjtqt" path="res://scenes/portail_magique.tscn" id="17_rbgqx"]
 [ext_resource type="PackedScene" uid="uid://cfcrm7kedeekn" path="res://scenes/dwarf.tscn" id="18_x2nyf"]
 [ext_resource type="PackedScene" uid="uid://cctwmuyah45p6" path="res://scenes/healing_vial.tscn" id="18_xb2ig"]
+[ext_resource type="AudioStream" uid="uid://bhlh4nphgdd6o" path="res://assets/brackey/music/time_for_adventure.mp3" id="19_fr1fx"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pfjqn"]
 
@@ -584,3 +585,9 @@ position = Vector2(379, -117)
 
 [node name="Dwarf" parent="." instance=ExtResource("18_x2nyf")]
 position = Vector2(524, -347)
+
+[node name="MusicAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_fr1fx")
+volume_db = -13.602
+autoplay = true
+parameters/looping = true
