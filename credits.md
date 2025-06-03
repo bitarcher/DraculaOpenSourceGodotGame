@@ -26,6 +26,7 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 - bloodlust-176915: Nightcast https://pixabay.com/fr/music/mystere-bloodlust-176915/
 - castle-of-athanasius-151010 : Spencer_YK https://pixabay.com/fr/music/jeux-video-castle-of-athanasius-151010/
 - elf singing : https://pixabay.com/fr/sound-effects/elf-singing-89296/
+- wolf howling : Universfield, https://pixabay.com/fr/sound-effects/wolf-howling-140235/
 
 pixabay licensing rules: https://pixabay.com/fr/service/license-summary/
 
