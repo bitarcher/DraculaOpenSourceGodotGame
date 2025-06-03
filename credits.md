@@ -13,6 +13,7 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 * graphics *
 
 - loup-garou : https://www.gifimili.com/image-2433-loup-garou/
+- wasp : © 2005-2013 Julien Jorge julien.jorge@stuff-o-matic.com https://opengameart.org/content/animated-wasp-wearing-a-scarf-and-aviator-glasses 
 
 *Assets*
 

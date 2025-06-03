@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://d2gx81nw0ll2u"]
+
+[ext_resource type="Texture2D" uid="uid://btt177xkisxi2" path="res://assets/sprites/toxic_gaz.png" id="1_dku7w"]
+[ext_resource type="PackedScene" uid="uid://bqhlm5rolw1xo" path="res://scenes/injury_zone.tscn" id="2_sexf0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fnca1"]
+atlas = ExtResource("1_dku7w")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gxg88"]
+atlas = ExtResource("1_dku7w")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_31bf2"]
+atlas = ExtResource("1_dku7w")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5api"]
+atlas = ExtResource("1_dku7w")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qk0pw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fnca1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gxg88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_31bf2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5api")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5kp8y"]
+radius = 14.0357
+
+[node name="ToxicGaz" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qk0pw")
+autoplay = "default"
+frame_progress = 0.0798321
+
+[node name="InjuryZone" parent="AnimatedSprite2D" instance=ExtResource("2_sexf0")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D"]
+position = Vector2(-2, 2)
+shape = SubResource("CircleShape2D_5kp8y")
