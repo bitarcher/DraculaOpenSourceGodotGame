@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmvp7280t0att"]
+
+[ext_resource type="Texture2D" uid="uid://c5gt1msq5vg1v" path="res://assets/moon_graveyard/brush.png" id="1_1yov6"]
+
+[node name="Brush" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(327, 227)
+scale = Vector2(2.92727, 4.52525)
+texture = ExtResource("1_1yov6")
+region_enabled = true
+region_rect = Rect2(2, -3, 220, 99)

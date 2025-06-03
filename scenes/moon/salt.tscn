@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6ob13d8k7hd"]
+
+[ext_resource type="Texture2D" uid="uid://bgr1kpft8du4l" path="res://assets/moon_graveyard/Salt.png" id="1_p3vdo"]
+
+[node name="Salt" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+texture = ExtResource("1_p3vdo")

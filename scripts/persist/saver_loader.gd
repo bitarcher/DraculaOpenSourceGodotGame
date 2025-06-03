@@ -42,7 +42,7 @@ func save_game(address: String = DEFAULT_STORE_PATH):
 	GameManagerSingleton.get_tree().call_group("Serializable", "on_save_game", saved_datas)	
 	
 	if(test_nodes.size() == 0):
-		GameManagerSingleton.dump_scene_tree()
+		ToolsSingleton.dump_scene_tree()
 	
 	
 	var player = await _get_player()

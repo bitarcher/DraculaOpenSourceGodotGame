@@ -1,17 +1,18 @@
-[gd_scene load_steps=15 format=4 uid="uid://cfg40f7tjot7e"]
+[gd_scene load_steps=17 format=4 uid="uid://cfg40f7tjot7e"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_dniw7"]
 [ext_resource type="PackedScene" uid="uid://d062hkuxa4g7y" path="res://scenes/p_level_const.tscn" id="2_4ig4f"]
+[ext_resource type="Texture2D" uid="uid://7pdlekvxbajt" path="res://assets/moon_graveyard/Background_0.png" id="3_5c64v"]
 [ext_resource type="Texture2D" uid="uid://doyfrmal4p0kn" path="res://assets/clouds/cloud0.png" id="3_qk33k"]
-[ext_resource type="Texture2D" uid="uid://c60iqolxdbyr" path="res://assets/clouds/cloud1.png" id="4_5p1gx"]
-[ext_resource type="Texture2D" uid="uid://c7uv1xkqq7gyh" path="res://assets/clouds/cloud2.png" id="5_6exph"]
-[ext_resource type="Texture2D" uid="uid://bdr0tgbf1emmg" path="res://assets/clouds/cloud3.png" id="6_pet2d"]
+[ext_resource type="Texture2D" uid="uid://bddswt0sep4vc" path="res://assets/moon_graveyard/Background_1.png" id="4_jupmm"]
+[ext_resource type="PackedScene" uid="uid://f5q1qs0pa8tt" path="res://scenes/moon/grass_background_1.tscn" id="5_kef34"]
 [ext_resource type="PackedScene" uid="uid://byyyexo4e4kop" path="res://scenes/player_platformer.tscn" id="7_vfc7t"]
 [ext_resource type="PackedScene" uid="uid://b5geq5n0tlmfj" path="res://scenes/killzone.tscn" id="8_u5lfx"]
 [ext_resource type="AudioStream" uid="uid://bjf01qq7y2rui" path="res://assets/sounds/bloodlust-176915.mp3" id="10_5c64v"]
 [ext_resource type="Texture2D" uid="uid://dqw76yo602t5f" path="res://assets/moon_graveyard/Tiles.png" id="10_5plfh"]
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pfjqn"]
+[ext_resource type="PackedScene" uid="uid://ct2u7y2pqkkb2" path="res://scenes/moon/grass_background_2.tscn" id="11_5plfh"]
+[ext_resource type="PackedScene" uid="uid://c6ob13d8k7hd" path="res://scenes/moon/salt.tscn" id="12_8bgh3"]
+[ext_resource type="PackedScene" uid="uid://bmvp7280t0att" path="res://scenes/moon/brush.tscn" id="13_sphp0"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6pu31"]
 distance = 29.0
@@ -192,55 +193,31 @@ script = ExtResource("1_dniw7")
 [node name="LevelConst" parent="." instance=ExtResource("2_4ig4f")]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-offset = Vector2(-436, -183.04)
-transform = Transform2D(1, 0, 0, 1, -436, -183.04)
+offset = Vector2(-436, -21.04)
+transform = Transform2D(1, 0, 0, 1, -436, -21.04)
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-modulate = Color(1, 1, 1, 0.439216)
-texture_repeat = 2
-material = SubResource("CanvasItemMaterial_pfjqn")
-motion_scale = Vector2(0.4, 7)
-motion_offset = Vector2(0, -117.07)
-motion_mirroring = Vector2(686, 0)
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(768, 416)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-texture = ExtResource("3_qk33k")
-offset = Vector2(0, -105)
+texture = ExtResource("3_5c64v")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
-modulate = Color(1, 1, 1, 0.411765)
-texture_repeat = 2
-material = SubResource("CanvasItemMaterial_pfjqn")
-motion_scale = Vector2(0.7, 1)
-motion_offset = Vector2(0, -117.07)
-motion_mirroring = Vector2(871, 0)
+modulate = Color(0.0154005, 0.11994, 0.334314, 0.545098)
+motion_scale = Vector2(0.3, 0.3)
+motion_offset = Vector2(0, -112)
+motion_mirroring = Vector2(686, 200)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-texture = ExtResource("4_5p1gx")
+texture = ExtResource("3_qk33k")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
-visible = false
-modulate = Color(1, 1, 1, 0.372549)
-texture_repeat = 2
-material = SubResource("CanvasItemMaterial_pfjqn")
-motion_scale = Vector2(0.9, 1)
-motion_offset = Vector2(0, -111)
-motion_mirroring = Vector2(1133, 0)
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(768, 416)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
-texture = ExtResource("5_6exph")
-
-[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
-visible = false
-modulate = Color(1, 1, 1, 0.27451)
-texture_repeat = 2
-material = SubResource("CanvasItemMaterial_pfjqn")
-position = Vector2(4, 0)
-motion_mirroring = Vector2(743, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
-texture = ExtResource("6_pet2d")
-offset = Vector2(0, -7)
+texture = ExtResource("4_jupmm")
 
 [node name="Player" parent="." instance=ExtResource("7_vfc7t")]
 unique_name_in_owner = true
@@ -280,3 +257,20 @@ parameters/looping = true
 [node name="Ground" type="TileMapLayer" parent="TileMaps"]
 tile_map_data = PackedByteArray("AAD8//z/AAAEAAAAAAD8//3/AAAEAAEAAAD9//z/AAAFAAAAAAD9//3/AAAFAAEAAAD+//z/AAAGAAAAAAD+//3/AAAGAAEAAAD///z/AAAEAAAAAAD///3/AAAEAAEAAAAAAPz/AAAFAAAAAAAAAP3/AAAFAAEAAAABAPz/AAAGAAAAAAABAP3/AAAGAAEAAAACAPz/AAAEAAAAAAACAP3/AAAEAAEAAAADAPz/AAAFAAAAAAADAP3/AAAFAAEAAAAEAPz/AAAGAAAAAAAEAP3/AAAGAAEAAAAFAPz/AAAEAAAAAAAFAP3/AAAEAAEAAAAGAPz/AAAFAAAAAAAGAP3/AAAFAAEAAAAHAPz/AAAGAAAAAAAHAP3/AAAGAAEAAAAIAPz/AAAEAAAAAAAIAP3/AAAEAAEAAAAJAPz/AAAFAAAAAAAJAP3/AAAFAAEAAAAKAPz/AAAFAAIAAAAKAP3/AAAFAAMAAAALAPz/AAAGAAIAAAALAP3/AAAGAAMAAAAMAPv/AAAHAAEAAAAMAPz/AAAHAAIAAAAMAP3/AAAHAAMAAAANAPv/AAAIAAEAAAANAPz/AAAIAAIAAAANAP3/AAAIAAMAAAANAPr/AAAFAAkAAAAOAPz/AAAFAAUAAAAOAP3/AAAFAAYAAAAPAPv/AAAGAAQAAAAPAPz/AAAGAAUAAAAPAP3/AAAGAAYAAAAQAPv/AAAHAAQAAAAQAPz/AAAHAAUAAAAQAP3/AAAHAAYAAAARAPv/AAAIAAQAAAARAPz/AAAIAAUAAAARAP3/AAAIAAYAAAASAPz/AAAJAAUAAAASAP3/AAAJAAYAAAATAPz/AAAEAAAAAAATAP3/AAAEAAEAAAAUAPz/AAAFAAAAAAAUAP3/AAAFAAEAAAAVAPz/AAAGAAAAAAAVAP3/AAAGAAEAAAAWAPz/AAAEAAAAAAAWAP3/AAAEAAEAAAAXAPz/AAAFAAAAAAAXAP3/AAAFAAEAAAAYAPz/AAAEAAAAAAAYAP3/AAAEAAEAAAAZAPz/AAAFAAAAAAAZAP3/AAAFAAEAAAAaAPz/AAAGAAAAAAAaAP3/AAAGAAEAAAAbAPz/AAAEAAAAAAAbAP3/AAAEAAEAAAAcAPz/AAAFAAAAAAAcAP3/AAAFAAEAAAAdAPz/AAAEAAAAAAAdAP3/AAAEAAEAAAAeAPz/AAAFAAAAAAAeAP3/AAAFAAEAAAAfAPz/AAAGAAAAAAAfAP3/AAAGAAEAAAAgAPz/AAAEAAAAAAAgAP3/AAAEAAEAAAAhAPz/AAAFAAUAAAAhAP3/AAAFAAYAAAAiAPv/AAAGAAQAAAAiAPz/AAAGAAUAAAAiAP3/AAAGAAYAAAAjAPv/AAAFAAUAAAAjAPz/AAAFAAYAAAAkAPr/AAAGAAQAAAAkAPv/AAAGAAUAAAAkAPz/AAAGAAYAAAAlAPr/AAAFAAUAAAAlAPv/AAAFAAYAAAAmAPn/AAAGAAQAAAAmAPr/AAAGAAUAAAAmAPv/AAAGAAYAAAAnAPn/AAAFAAUAAAAnAPr/AAAFAAYAAAAoAPj/AAAGAAQAAAAoAPn/AAAGAAUAAAAoAPr/AAAGAAYAAAApAPj/AAAFAAUAAAApAPn/AAAFAAYAAAAqAPf/AAAGAAQAAAAqAPj/AAAGAAUAAAAqAPn/AAAGAAYAAAArAPf/AAAHAAQAAAArAPj/AAAHAAUAAAArAPn/AAAHAAYAAAAsAPf/AAAHAAQAAAAsAPj/AAAHAAUAAAAsAPn/AAAHAAYAAAAtAPf/AAAHAAQAAAAtAPj/AAAHAAUAAAAtAPn/AAAHAAYAAAAuAPf/AAAFAAIAAAAuAPj/AAAFAAMAAAAvAPf/AAAGAAIAAAAvAPj/AAAGAAMAAAAwAPb/AAAHAAEAAAAwAPf/AAAHAAIAAAAwAPj/AAAHAAMAAAAxAPf/AAAFAAIAAAAxAPj/AAAFAAMAAAAyAPf/AAAFAAIAAAAyAPj/AAAFAAMAAAAzAPf/AAAGAAIAAAAzAPj/AAAGAAMAAAA=")
 tile_set = SubResource("TileSet_kef34")
+
+[node name="GrassBackground1" parent="." instance=ExtResource("5_kef34")]
+z_as_relative = false
+position = Vector2(821, -191)
+
+[node name="GrassBackground2" parent="." instance=ExtResource("11_5plfh")]
+position = Vector2(469, -188)
+
+[node name="GrassBackground3" parent="." instance=ExtResource("5_kef34")]
+position = Vector2(123, -189)
+
+[node name="Salt" parent="." instance=ExtResource("12_8bgh3")]
+position = Vector2(1021, -202)
+
+[node name="Brush" parent="." instance=ExtResource("13_sphp0")]
+position = Vector2(-96, -231)
+scale = Vector2(0.3, 0.3)
