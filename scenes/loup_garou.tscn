@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://c50xxeppc76hx"]
+
+[ext_resource type="Script" uid="uid://bs7i1bnk2jta1" path="res://scripts/loup_garou.gd" id="1_3q3ya"]
+[ext_resource type="PackedScene" uid="uid://bqhlm5rolw1xo" path="res://scenes/injury_zone.tscn" id="2_qdy35"]
+[ext_resource type="Texture2D" uid="uid://ierca8moa4hs" path="res://assets/sprites/loup-garoup.png" id="3_qdy35"]
+[ext_resource type="PackedScene" uid="uid://cm307wgnonjp8" path="res://scenes/persist/loup_garou_serializable_component.tscn" id="4_3q3ya"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c78co"]
+radius = 16.0
+height = 52.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwge8"]
+atlas = ExtResource("3_qdy35")
+region = Rect2(0, 0, 200, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h34o4"]
+atlas = ExtResource("3_qdy35")
+region = Rect2(200, 0, 200, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xs27a"]
+atlas = ExtResource("3_qdy35")
+region = Rect2(400, 0, 200, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sa2jo"]
+atlas = ExtResource("3_qdy35")
+region = Rect2(600, 0, 200, 166)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j0w84"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mwge8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h34o4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xs27a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sa2jo")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="LoupGarou" type="Node2D"]
+script = ExtResource("1_3q3ya")
+
+[node name="InjuryZone" parent="." instance=ExtResource("2_qdy35")]
+position = Vector2(0, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InjuryZone"]
+position = Vector2(0, -5)
+shape = SubResource("CapsuleShape2D_c78co")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_j0w84")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame = 3
+frame_progress = 0.72314
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+position = Vector2(0, 16)
+target_position = Vector2(16, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+position = Vector2(0, 16)
+target_position = Vector2(-24, 0)
+
+[node name="LoupGarouSerializableComponent" parent="." instance=ExtResource("4_3q3ya")]

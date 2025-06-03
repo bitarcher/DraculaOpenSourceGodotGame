@@ -10,6 +10,10 @@ https://www.gnu.org/licenses/gpl-3.0.fr.html
 Special thanks to Brackleys, for it's youtube video "How to make a Video Game - Godot Beginner Tutorial"
 https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 
+* graphics *
+
+- loup-garou : https://www.gifimili.com/image-2433-loup-garou/
+
 *Assets*
 
 - moon graveyard: https://anokolisa.itch.io/moon-graveyard
