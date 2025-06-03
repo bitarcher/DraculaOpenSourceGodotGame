@@ -8,7 +8,8 @@ const SPEED = 50.0 # Augmenté un peu pour un mouvement plus visible
 @onready var ray_cast_right: RayCast2D = $RayCastRight
 @onready var ray_cast_left: RayCast2D = $RayCastLeft
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+@onready var audio_stream_player_2d_howling: AudioStreamPlayer2D = $AudioStreamPlayer2D
+@onready var breathing_audio_stream_player_2d: AudioStreamPlayer2D = $BreathingAudioStreamPlayer2D
 
 enum State {
 	WALKING,
@@ -54,23 +55,25 @@ func _change_state(new_state: State) -> void:
 		State.WALKING:
 			# ICI LE CHANGEMENT : On relance l'animation de marche
 			animated_sprite.play("walk")
+			breathing_audio_stream_player_2d.play()
 			_update_sprite_direction()
 		State.HOWLING:
+			breathing_audio_stream_player_2d.stop()
 			animated_sprite.play("howling") # Arrête l'animation de marche
 			# Optionnel: Changer l'animation pour un hurlement si vous en avez une
 			# animated_sprite.play("howl")
 
-			if audio_stream_player_2d.stream != null:
-				audio_stream_player_2d.play()
-				if not audio_stream_player_2d.is_connected("finished", _on_audio_finished):
-					audio_stream_player_2d.connect("finished", _on_audio_finished)
+			if audio_stream_player_2d_howling.stream != null:
+				audio_stream_player_2d_howling.play()
+				if not audio_stream_player_2d_howling.is_connected("finished", _on_audio_finished):
+					audio_stream_player_2d_howling.connect("finished", _on_audio_finished)
 			else:
 				print("LoupGarou: AudioStreamPlayer2D n'a pas de stream assigné pour le hurlement.")
 				_on_audio_finished()
 
 func _on_audio_finished() -> void:
-	if audio_stream_player_2d.is_connected("finished", _on_audio_finished):
-		audio_stream_player_2d.disconnect("finished", _on_audio_finished)
+	if audio_stream_player_2d_howling.is_connected("finished", _on_audio_finished):
+		audio_stream_player_2d_howling.disconnect("finished", _on_audio_finished)
 
 	# Inverse la direction après le hurlement
 	current_direction *= -1
