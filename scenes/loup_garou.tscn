@@ -117,7 +117,7 @@ shape = SubResource("CapsuleShape2D_c78co")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_j0w84")
-animation = &"start_howling"
+animation = &"end_howling"
 autoplay = "walk"
 
 [node name="RayCastRight" type="RayCast2D" parent="."]

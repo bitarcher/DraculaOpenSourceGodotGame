@@ -56,7 +56,7 @@ func _change_state(new_state: State) -> void:
 			animated_sprite.play("walk")
 			_update_sprite_direction()
 		State.HOWLING:
-			animated_sprite.pause() # Arrête l'animation de marche
+			animated_sprite.play("howling") # Arrête l'animation de marche
 			# Optionnel: Changer l'animation pour un hurlement si vous en avez une
 			# animated_sprite.play("howl")
 
