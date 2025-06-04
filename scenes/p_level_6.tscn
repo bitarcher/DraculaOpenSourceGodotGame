@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://cfg40f7tjot7e"]
+[gd_scene load_steps=33 format=4 uid="uid://cfg40f7tjot7e"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_dniw7"]
 [ext_resource type="PackedScene" uid="uid://d062hkuxa4g7y" path="res://scenes/p_level_const.tscn" id="2_4ig4f"]
@@ -64,6 +64,44 @@ tracks/0/keys = {
 _data = {
 &"RESET": SubResource("Animation_6exph"),
 &"move": SubResource("Animation_5p1gx")
+}
+
+[sub_resource type="Animation" id="Animation_u5lfx"]
+resource_name = "move"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(5485, -18), Vector2(5485, -235)]
+}
+
+[sub_resource type="Animation" id="Animation_18wvt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(5485, -18)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_35q7p"]
+_data = {
+&"RESET": SubResource("Animation_18wvt"),
+&"move": SubResource("Animation_u5lfx")
 }
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8bgh3"]
@@ -493,7 +531,7 @@ position = Vector2(4545, -195)
 position = Vector2(4409, -198)
 
 [node name="PortailMagique" parent="Other" instance=ExtResource("8_18wvt")]
-position = Vector2(5560, 208)
+position = Vector2(5486, -315)
 
 [node name="Salt" parent="Other" instance=ExtResource("12_8bgh3")]
 position = Vector2(4432, -304)
@@ -515,6 +553,72 @@ position = Vector2(1670, 93)
 
 [node name="Brush6" parent="Other" instance=ExtResource("13_sphp0")]
 position = Vector2(1510, 271)
+
+[node name="Trap" parent="Other" instance=ExtResource("10_2ned3")]
+position = Vector2(5493, 172)
+
+[node name="Trap2" parent="Other" instance=ExtResource("10_2ned3")]
+position = Vector2(5435, 155)
+
+[node name="Trap3" parent="Other" instance=ExtResource("10_2ned3")]
+position = Vector2(5582, 160)
+
+[node name="Trap4" parent="Other" instance=ExtResource("10_2ned3")]
+position = Vector2(5625, 136)
+
+[node name="Trap5" parent="Other" instance=ExtResource("10_2ned3")]
+position = Vector2(5668, 64)
+
+[node name="Trap6" parent="Other" instance=ExtResource("10_2ned3")]
+position = Vector2(5608, 43)
+
+[node name="Trap7" parent="Other" instance=ExtResource("10_2ned3")]
+position = Vector2(5556, 15)
+
+[node name="Platform" parent="Other" instance=ExtResource("8_qk33k")]
+position = Vector2(5485, -18)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Other/Platform"]
+libraries = {
+&"": SubResource("AnimationLibrary_35q7p")
+}
+autoplay = "move"
+
+[node name="Platform2" parent="Other" instance=ExtResource("8_qk33k")]
+position = Vector2(5406, 134)
+
+[node name="Platform3" parent="Other" instance=ExtResource("8_qk33k")]
+position = Vector2(5647, 99)
+
+[node name="Trap8" parent="Other" instance=ExtResource("10_2ned3")]
+position = Vector2(5383, 106)
+
+[node name="Trap9" parent="Other" instance=ExtResource("10_2ned3")]
+position = Vector2(5363, 85)
+
+[node name="Trap10" parent="Other" instance=ExtResource("10_2ned3")]
+position = Vector2(5342, 52)
+
+[node name="Platform4" parent="Other" instance=ExtResource("8_qk33k")]
+position = Vector2(5312, -5)
+
+[node name="Platform5" parent="Other" instance=ExtResource("8_qk33k")]
+position = Vector2(5373, 17)
+
+[node name="ToxicGaz7" parent="Other" instance=ExtResource("11_pet2d")]
+position = Vector2(5377, 6)
+
+[node name="Trap11" parent="Other" instance=ExtResource("10_2ned3")]
+position = Vector2(5259, -24)
+
+[node name="Trap12" parent="Other" instance=ExtResource("10_2ned3")]
+position = Vector2(5199, 10)
+
+[node name="Trap13" parent="Other" instance=ExtResource("10_2ned3")]
+position = Vector2(5155, 49)
+
+[node name="SlimeEnemy" parent="Other" instance=ExtResource("11_dniw7")]
+position = Vector2(5242, 252)
 
 [node name="MusicAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_5c64v")
@@ -620,3 +724,12 @@ position = Vector2(6199, 522)
 
 [node name="PortailMagique" parent="." instance=ExtResource("8_18wvt")]
 position = Vector2(6199, 494)
+
+[node name="Platform2" parent="." instance=ExtResource("8_qk33k")]
+position = Vector2(5772, -1)
+
+[node name="Platform3" parent="." instance=ExtResource("8_qk33k")]
+position = Vector2(5770, -298)
+
+[node name="Platform4" parent="." instance=ExtResource("8_qk33k")]
+position = Vector2(5827, 173)
