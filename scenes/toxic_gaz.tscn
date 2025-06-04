@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://d2gx81nw0ll2u"]
+[gd_scene load_steps=10 format=3 uid="uid://d2gx81nw0ll2u"]
 
 [ext_resource type="Texture2D" uid="uid://btt177xkisxi2" path="res://assets/sprites/toxic_gaz.png" id="1_dku7w"]
+[ext_resource type="Script" uid="uid://d0tbhuiqvov56" path="res://scripts/toxic_gaz.gd" id="1_sexf0"]
 [ext_resource type="PackedScene" uid="uid://bqhlm5rolw1xo" path="res://scenes/injury_zone.tscn" id="2_sexf0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fnca1"]
@@ -39,18 +40,21 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_5kp8y"]
-radius = 14.0357
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dku7w"]
 
 [node name="ToxicGaz" type="Node2D"]
+script = ExtResource("1_sexf0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.572549, 1, 0.631373, 0.607843)
+scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_qk0pw")
 autoplay = "default"
-frame_progress = 0.0798321
+frame = 3
+frame_progress = 0.79904
 
 [node name="InjuryZone" parent="AnimatedSprite2D" instance=ExtResource("2_sexf0")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D"]
-position = Vector2(-2, 2)
-shape = SubResource("CircleShape2D_5kp8y")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/InjuryZone"]
+position = Vector2(-6, 4)
+shape = SubResource("CapsuleShape2D_dku7w")
