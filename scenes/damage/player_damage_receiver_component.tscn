@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7hhwsv2ywf8j"]
+
+[sub_resource type="GDScript" id="GDScript_ri4sw"]
+script/source = "class_name PlayerDamageReceiverComponent
+extends ADamageReceiverComponent
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="PlayerDamageReceiverComponent" type="Node2D"]
+script = SubResource("GDScript_ri4sw")
+metadata/_custom_type_script = "uid://b4p36kf7vor4c"

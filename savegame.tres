@@ -1,21 +1,1638 @@
-[gd_resource type="Resource" script_class="SavedGame" load_steps=5 format=3]
+[gd_resource type="Resource" script_class="SavedGame" load_steps=239 format=3]
 
-[ext_resource type="Script" path="res://scripts/persist/saved_data.gd" id="1_dq7hq"]
-[ext_resource type="Script" path="res://scripts/persist/player_platformer_saved_data.gd" id="2_ylfeg"]
-[ext_resource type="Script" path="res://scripts/persist/saved_game.gd" id="3_yx36p"]
+[ext_resource type="Script" path="res://scripts/persist/saved_data.gd" id="1_yx36p"]
+[ext_resource type="Script" path="res://scripts/persist/slime_enemy_saved_data.gd" id="2_wvo7i"]
+[ext_resource type="Script" path="res://scripts/persist/trap_saved_data.gd" id="3_ovts1"]
+[ext_resource type="Script" path="res://scripts/persist/player_platformer_saved_data.gd" id="4_s0uye"]
+[ext_resource type="Script" path="res://scripts/persist/saved_game.gd" id="5_y5jvc"]
+
+[sub_resource type="Resource" id="Resource_yx36p"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(215, 48)
+scene_path = "res://scenes/coin.tscn"
 
 [sub_resource type="Resource" id="Resource_wvo7i"]
-script = ExtResource("2_ylfeg")
-num_of_lives = 5
-num_of_injuries_allowed = 3
-num_of_coins = 0
-level_start_ticks = 377
-num_of_coins_before_killed = 0
-pause_ticks = 331853
-position = Vector2(929.551, -108.066)
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(230, 48)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_ovts1"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(247, 48)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_s0uye"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(263, 48)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_y5jvc"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(215, 30)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_wg0a7"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(663, 126)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_kth4n"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(663, 110)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_62fp6"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(663, 94)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_p724h"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(663, 78)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_yxken"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(663, 62)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_bmlv7"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(663, 46)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_l4488"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(647, 142)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_kcjkb"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(647, 126)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_le0g5"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(647, 110)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_70mnr"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(647, 94)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_ri03i"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(647, 78)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_7n2nk"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(647, 62)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_oa0kt"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(631, 159)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_56h6r"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(631, 143)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_1m5yl"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(631, 127)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_uk4s6"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(631, 111)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_vnpuv"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(631, 95)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_x21a1"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(631, 79)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_b72gn"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(614, 79)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_xtq0e"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(519, 93)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_x47m2"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(519, 77)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_b11eu"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(519, 61)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_0dhtm"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(519, 45)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_bwbp8"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(519, 29)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_4yles"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(519, 13)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_luk6w"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(502, 93)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_g6di6"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(502, 77)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_gxir8"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(502, 61)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_xh4q2"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(502, 45)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_g4dra"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(502, 29)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_8l3q3"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(502, 13)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_b2m5b"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(535, 93)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_nxwjf"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(535, 77)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_ofljg"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(535, 61)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_qhjm5"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(535, 45)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_i1ge8"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(535, 29)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_e0215"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(535, 13)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_jo48r"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(247, -35)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_p8yff"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(839, -17)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_2mjxg"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(839, -1)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_p8n6d"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(839, 15)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_gjgl2"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(855, -17)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_ajldq"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(871, -17)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_ocus5"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(887, -17)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_72tji"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(903, -17)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_j1txa"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(855, -1)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_63whr"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(871, -1)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_jvusq"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(887, -1)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_r4wny"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(903, -1)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_0y6i0"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(855, 15)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_dqy6q"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(871, 15)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_cltoa"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(887, 15)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_yi0ga"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(903, 15)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_bl7ou"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(839, 31)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_o5ta6"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(855, 31)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_b1vjx"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(871, 31)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_gbjtg"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(887, 31)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_l4f6b"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(903, 31)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_87brk"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(839, 47)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_dcgy8"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(855, 47)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_c51pb"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(871, 47)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_ox1kh"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(887, 47)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_7dmdo"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(903, 47)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_6vycp"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(839, -63)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_4y8tn"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(839, -47)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_n4g5a"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(839, -31)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_hoqxu"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(855, -63)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_ykvl1"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(871, -63)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_3tova"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(855, -47)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_yh1km"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(871, -47)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_2a6gn"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(855, -31)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_un7dl"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(871, -31)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_psiu4"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(887, -64)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_66tt2"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(887, -48)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_jm5od"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(887, -32)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_amqcg"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(903, -64)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_epfi6"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(919, -64)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_82fub"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(903, -48)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_tpq7v"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(919, -48)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_7odul"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(903, -32)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_u7mm7"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(919, -32)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_diil7"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(282, 80)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_v3q8f"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(282, 96)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_kcgso"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(282, 112)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_7ihjs"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(298, 80)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_1ckpd"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(314, 80)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_dsvbr"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(298, 96)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_k55w2"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(314, 96)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_mc6a8"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(298, 112)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_gyqbc"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(314, 112)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_qywmv"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(343, 81)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_6sonr"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(343, 97)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_vbt8i"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(343, 113)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_857xp"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(359, 81)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_1tjth"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(375, 81)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_cg0bq"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(359, 97)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_etf65"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(375, 97)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_gjndf"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(359, 113)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_squos"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(375, 113)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_0dd78"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-121, 79)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_nxe0g"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-121, 95)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_35hx5"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-121, 111)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_i71t4"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-105, 79)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_1vh0v"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-89, 79)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_1o7cx"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-105, 95)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_pvis2"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-89, 95)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_2vji6"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-105, 111)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_rnuka"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-89, 111)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_xxsuv"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-68, 79)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_p6lmv"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-68, 95)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_ei7wr"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-68, 111)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_r1u14"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-52, 79)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_4r3c4"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-36, 79)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_l3qu4"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-52, 95)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_s3s7m"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-36, 95)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_uan6i"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-52, 111)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_lcs7l"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-36, 111)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_dlod5"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-15, 79)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_nuhwa"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-15, 95)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_55aef"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-15, 111)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_gchna"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(1, 79)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_ghfhy"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(17, 79)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_j4atb"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(1, 95)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_odxmx"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(17, 95)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_hi0xa"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(1, 111)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_c0xsx"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(17, 111)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_ry8ef"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(473, 68)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_345jd"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(473, 84)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_cgh3b"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(473, 100)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_etk6b"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(489, 68)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_47whb"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(505, 68)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_rqv67"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(489, 84)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_2hyt8"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(505, 84)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_poru8"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(489, 100)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_24707"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(505, 100)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_l58oy"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-360, -240)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_i8sik"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-360, -224)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_hguxj"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-360, -208)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_7vi5x"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-344, -240)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_qxus1"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-328, -240)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_yey6d"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-312, -240)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_a7wr0"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-296, -240)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_3rsep"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-344, -224)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_3lhi5"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-328, -224)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_nq4xs"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-312, -224)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_hcdvb"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-296, -224)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_q3w8w"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-344, -208)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_pq66a"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-328, -208)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_euplj"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-312, -208)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_ov1dd"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-296, -208)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_dpk1f"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-360, -192)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_xmbke"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-344, -192)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_v5axb"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-328, -192)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_3d4o0"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-312, -192)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_nr0n0"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-296, -192)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_2hpt7"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-360, -176)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_a18ia"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-344, -176)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_oew1m"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-328, -176)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_12mmn"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-312, -176)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_143yh"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-296, -176)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_b5nsa"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-280, -208)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_8r1y0"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-280, -192)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_ufxa2"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-280, -176)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_kskpx"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-264, -208)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_q3n3d"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-248, -208)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_sbf2w"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-264, -192)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_m7yvx"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-248, -192)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_64h4c"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-264, -176)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_5nbyt"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-248, -176)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_ue7q0"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-40, -288)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_13b6n"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-40, -272)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_g213q"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-40, -256)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_munoq"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-24, -288)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_4n78h"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-8, -288)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_0x6vv"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-24, -272)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_had7k"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-8, -272)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_ywqpt"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-24, -256)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_v60yw"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(-8, -256)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_bc7nl"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(24, -320)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_levl4"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(24, -304)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_2jar2"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(24, -288)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_81tah"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(40, -320)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_typ68"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(56, -320)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_7g0hu"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(40, -304)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_7fht6"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(56, -304)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_wmk54"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(40, -288)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_eeqpd"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(56, -288)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_b6kr0"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(8, -272)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_rwsbv"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(8, -288)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_yvvb6"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(8, -304)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_c6808"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(72, -304)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_f13sq"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(72, -288)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_yg7en"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(72, -272)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_57ql8"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(88, -304)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_0r0r8"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(104, -304)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_174qb"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(88, -288)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_2cmqa"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(104, -288)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_bqhp2"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(88, -272)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_jbpkm"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(104, -272)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_c7if6"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(104, -256)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_u06ii"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(472, -80)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_v3o8a"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(488, -96)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_wwx7f"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(504, -96)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_c8kao"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(383, -88)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_cdrc1"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(383, -72)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_kkixc"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(383, -56)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_cq5mj"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(399, -88)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_smwes"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(415, -88)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_2iq23"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(399, -72)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_y5f7d"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(415, -72)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_xqjb4"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(399, -56)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_qsv5i"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(415, -56)
+scene_path = "res://scenes/coin.tscn"
+
+[sub_resource type="Resource" id="Resource_yc2wa"]
+script = ExtResource("2_wvo7i")
+direction = 1
+flip_h = false
+position = Vector2(859.184, 91)
+scene_path = "res://scenes/slime_enemy.tscn"
+
+[sub_resource type="Resource" id="Resource_1c8s1"]
+script = ExtResource("2_wvo7i")
+direction = -1
+flip_h = true
+position = Vector2(884.155, 91)
+scene_path = "res://scenes/slime_enemy.tscn"
+
+[sub_resource type="Resource" id="Resource_ndumk"]
+script = ExtResource("2_wvo7i")
+direction = -1
+flip_h = true
+position = Vector2(235.851, -36)
+scene_path = "res://scenes/slime_enemy.tscn"
+
+[sub_resource type="Resource" id="Resource_pb3j1"]
+script = ExtResource("2_wvo7i")
+direction = -1
+flip_h = true
+position = Vector2(-91.8445, 27)
+scene_path = "res://scenes/slime_enemy.tscn"
+
+[sub_resource type="Resource" id="Resource_2veun"]
+script = ExtResource("2_wvo7i")
+direction = 1
+flip_h = false
+position = Vector2(461.183, -163)
+scene_path = "res://scenes/slime_enemy.tscn"
+
+[sub_resource type="Resource" id="Resource_m084w"]
+script = ExtResource("3_ovts1")
+consumed = false
+position = Vector2(-129, -131)
+scene_path = "res://scenes/trap.tscn"
+
+[sub_resource type="Resource" id="Resource_rkgye"]
+script = ExtResource("3_ovts1")
+consumed = false
+position = Vector2(-161, -131)
+scene_path = "res://scenes/trap.tscn"
+
+[sub_resource type="Resource" id="Resource_qrb7b"]
+script = ExtResource("3_ovts1")
+consumed = false
+position = Vector2(-192, -131)
+scene_path = "res://scenes/trap.tscn"
+
+[sub_resource type="Resource" id="Resource_08ng2"]
+script = ExtResource("3_ovts1")
+consumed = false
+position = Vector2(-224, -131)
+scene_path = "res://scenes/trap.tscn"
+
+[sub_resource type="Resource" id="Resource_tagfs"]
+script = ExtResource("3_ovts1")
+consumed = false
+position = Vector2(511, -163)
+scene_path = "res://scenes/trap.tscn"
+
+[sub_resource type="Resource" id="Resource_etssk"]
+script = ExtResource("3_ovts1")
+consumed = false
+position = Vector2(543, -163)
+scene_path = "res://scenes/trap.tscn"
+
+[sub_resource type="Resource" id="Resource_g3ufe"]
+script = ExtResource("3_ovts1")
+consumed = false
+position = Vector2(575, -156)
+scene_path = "res://scenes/trap.tscn"
+
+[sub_resource type="Resource" id="Resource_bkdiq"]
+script = ExtResource("3_ovts1")
+consumed = false
+position = Vector2(576, -108)
+scene_path = "res://scenes/trap.tscn"
+
+[sub_resource type="Resource" id="Resource_xhfau"]
+script = ExtResource("3_ovts1")
+consumed = false
+position = Vector2(614, -132)
+scene_path = "res://scenes/trap.tscn"
+
+[sub_resource type="Resource" id="Resource_neex5"]
+script = ExtResource("2_wvo7i")
+direction = 0
+flip_h = false
+position = Vector2(824, -98)
+scene_path = "res://scenes/healing_vial.tscn"
+
+[sub_resource type="Resource" id="Resource_qihi3"]
+script = ExtResource("4_s0uye")
+num_of_lives = 6
+num_of_injuries_allowed = 1
+num_of_coins = 165
+level_start_ticks = 154177
+num_of_coins_before_killed = 165
+pause_ticks = 159504
+position = Vector2(176, 11.9904)
 scene_path = ""
 
 [resource]
-script = ExtResource("3_yx36p")
-current_level = 1
-saved_datas = Array[ExtResource("1_dq7hq")]([SubResource("Resource_wvo7i")])
+script = ExtResource("5_y5jvc")
+current_level = 2
+saved_datas = Array[ExtResource("1_yx36p")]([SubResource("Resource_yx36p"), SubResource("Resource_wvo7i"), SubResource("Resource_ovts1"), SubResource("Resource_s0uye"), SubResource("Resource_y5jvc"), SubResource("Resource_wg0a7"), SubResource("Resource_kth4n"), SubResource("Resource_62fp6"), SubResource("Resource_p724h"), SubResource("Resource_yxken"), SubResource("Resource_bmlv7"), SubResource("Resource_l4488"), SubResource("Resource_kcjkb"), SubResource("Resource_le0g5"), SubResource("Resource_70mnr"), SubResource("Resource_ri03i"), SubResource("Resource_7n2nk"), SubResource("Resource_oa0kt"), SubResource("Resource_56h6r"), SubResource("Resource_1m5yl"), SubResource("Resource_uk4s6"), SubResource("Resource_vnpuv"), SubResource("Resource_x21a1"), SubResource("Resource_b72gn"), SubResource("Resource_xtq0e"), SubResource("Resource_x47m2"), SubResource("Resource_b11eu"), SubResource("Resource_0dhtm"), SubResource("Resource_bwbp8"), SubResource("Resource_4yles"), SubResource("Resource_luk6w"), SubResource("Resource_g6di6"), SubResource("Resource_gxir8"), SubResource("Resource_xh4q2"), SubResource("Resource_g4dra"), SubResource("Resource_8l3q3"), SubResource("Resource_b2m5b"), SubResource("Resource_nxwjf"), SubResource("Resource_ofljg"), SubResource("Resource_qhjm5"), SubResource("Resource_i1ge8"), SubResource("Resource_e0215"), SubResource("Resource_jo48r"), SubResource("Resource_p8yff"), SubResource("Resource_2mjxg"), SubResource("Resource_p8n6d"), SubResource("Resource_gjgl2"), SubResource("Resource_ajldq"), SubResource("Resource_ocus5"), SubResource("Resource_72tji"), SubResource("Resource_j1txa"), SubResource("Resource_63whr"), SubResource("Resource_jvusq"), SubResource("Resource_r4wny"), SubResource("Resource_0y6i0"), SubResource("Resource_dqy6q"), SubResource("Resource_cltoa"), SubResource("Resource_yi0ga"), SubResource("Resource_bl7ou"), SubResource("Resource_o5ta6"), SubResource("Resource_b1vjx"), SubResource("Resource_gbjtg"), SubResource("Resource_l4f6b"), SubResource("Resource_87brk"), SubResource("Resource_dcgy8"), SubResource("Resource_c51pb"), SubResource("Resource_ox1kh"), SubResource("Resource_7dmdo"), SubResource("Resource_6vycp"), SubResource("Resource_4y8tn"), SubResource("Resource_n4g5a"), SubResource("Resource_hoqxu"), SubResource("Resource_ykvl1"), SubResource("Resource_3tova"), SubResource("Resource_yh1km"), SubResource("Resource_2a6gn"), SubResource("Resource_un7dl"), SubResource("Resource_psiu4"), SubResource("Resource_66tt2"), SubResource("Resource_jm5od"), SubResource("Resource_amqcg"), SubResource("Resource_epfi6"), SubResource("Resource_82fub"), SubResource("Resource_tpq7v"), SubResource("Resource_7odul"), SubResource("Resource_u7mm7"), SubResource("Resource_diil7"), SubResource("Resource_v3q8f"), SubResource("Resource_kcgso"), SubResource("Resource_7ihjs"), SubResource("Resource_1ckpd"), SubResource("Resource_dsvbr"), SubResource("Resource_k55w2"), SubResource("Resource_mc6a8"), SubResource("Resource_gyqbc"), SubResource("Resource_qywmv"), SubResource("Resource_6sonr"), SubResource("Resource_vbt8i"), SubResource("Resource_857xp"), SubResource("Resource_1tjth"), SubResource("Resource_cg0bq"), SubResource("Resource_etf65"), SubResource("Resource_gjndf"), SubResource("Resource_squos"), SubResource("Resource_0dd78"), SubResource("Resource_nxe0g"), SubResource("Resource_35hx5"), SubResource("Resource_i71t4"), SubResource("Resource_1vh0v"), SubResource("Resource_1o7cx"), SubResource("Resource_pvis2"), SubResource("Resource_2vji6"), SubResource("Resource_rnuka"), SubResource("Resource_xxsuv"), SubResource("Resource_p6lmv"), SubResource("Resource_ei7wr"), SubResource("Resource_r1u14"), SubResource("Resource_4r3c4"), SubResource("Resource_l3qu4"), SubResource("Resource_s3s7m"), SubResource("Resource_uan6i"), SubResource("Resource_lcs7l"), SubResource("Resource_dlod5"), SubResource("Resource_nuhwa"), SubResource("Resource_55aef"), SubResource("Resource_gchna"), SubResource("Resource_ghfhy"), SubResource("Resource_j4atb"), SubResource("Resource_odxmx"), SubResource("Resource_hi0xa"), SubResource("Resource_c0xsx"), SubResource("Resource_ry8ef"), SubResource("Resource_345jd"), SubResource("Resource_cgh3b"), SubResource("Resource_etk6b"), SubResource("Resource_47whb"), SubResource("Resource_rqv67"), SubResource("Resource_2hyt8"), SubResource("Resource_poru8"), SubResource("Resource_24707"), SubResource("Resource_l58oy"), SubResource("Resource_i8sik"), SubResource("Resource_hguxj"), SubResource("Resource_7vi5x"), SubResource("Resource_qxus1"), SubResource("Resource_yey6d"), SubResource("Resource_a7wr0"), SubResource("Resource_3rsep"), SubResource("Resource_3lhi5"), SubResource("Resource_nq4xs"), SubResource("Resource_hcdvb"), SubResource("Resource_q3w8w"), SubResource("Resource_pq66a"), SubResource("Resource_euplj"), SubResource("Resource_ov1dd"), SubResource("Resource_dpk1f"), SubResource("Resource_xmbke"), SubResource("Resource_v5axb"), SubResource("Resource_3d4o0"), SubResource("Resource_nr0n0"), SubResource("Resource_2hpt7"), SubResource("Resource_a18ia"), SubResource("Resource_oew1m"), SubResource("Resource_12mmn"), SubResource("Resource_143yh"), SubResource("Resource_b5nsa"), SubResource("Resource_8r1y0"), SubResource("Resource_ufxa2"), SubResource("Resource_kskpx"), SubResource("Resource_q3n3d"), SubResource("Resource_sbf2w"), SubResource("Resource_m7yvx"), SubResource("Resource_64h4c"), SubResource("Resource_5nbyt"), SubResource("Resource_ue7q0"), SubResource("Resource_13b6n"), SubResource("Resource_g213q"), SubResource("Resource_munoq"), SubResource("Resource_4n78h"), SubResource("Resource_0x6vv"), SubResource("Resource_had7k"), SubResource("Resource_ywqpt"), SubResource("Resource_v60yw"), SubResource("Resource_bc7nl"), SubResource("Resource_levl4"), SubResource("Resource_2jar2"), SubResource("Resource_81tah"), SubResource("Resource_typ68"), SubResource("Resource_7g0hu"), SubResource("Resource_7fht6"), SubResource("Resource_wmk54"), SubResource("Resource_eeqpd"), SubResource("Resource_b6kr0"), SubResource("Resource_rwsbv"), SubResource("Resource_yvvb6"), SubResource("Resource_c6808"), SubResource("Resource_f13sq"), SubResource("Resource_yg7en"), SubResource("Resource_57ql8"), SubResource("Resource_0r0r8"), SubResource("Resource_174qb"), SubResource("Resource_2cmqa"), SubResource("Resource_bqhp2"), SubResource("Resource_jbpkm"), SubResource("Resource_c7if6"), SubResource("Resource_u06ii"), SubResource("Resource_v3o8a"), SubResource("Resource_wwx7f"), SubResource("Resource_c8kao"), SubResource("Resource_cdrc1"), SubResource("Resource_kkixc"), SubResource("Resource_cq5mj"), SubResource("Resource_smwes"), SubResource("Resource_2iq23"), SubResource("Resource_y5f7d"), SubResource("Resource_xqjb4"), SubResource("Resource_qsv5i"), SubResource("Resource_yc2wa"), SubResource("Resource_1c8s1"), SubResource("Resource_ndumk"), SubResource("Resource_pb3j1"), SubResource("Resource_2veun"), SubResource("Resource_m084w"), SubResource("Resource_rkgye"), SubResource("Resource_qrb7b"), SubResource("Resource_08ng2"), SubResource("Resource_tagfs"), SubResource("Resource_etssk"), SubResource("Resource_g3ufe"), SubResource("Resource_bkdiq"), SubResource("Resource_xhfau"), SubResource("Resource_neex5"), SubResource("Resource_qihi3")])

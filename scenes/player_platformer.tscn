@@ -1,9 +1,10 @@
-[gd_scene load_steps=34 format=3 uid="uid://byyyexo4e4kop"]
+[gd_scene load_steps=35 format=3 uid="uid://byyyexo4e4kop"]
 
 [ext_resource type="Texture2D" uid="uid://0asjwwjlao3i" path="res://assets/brackey/sprites/knight.png" id="1_10x2q"]
 [ext_resource type="Script" uid="uid://bdy8blwppg202" path="res://scripts/player_platformer.gd" id="1_e5rie"]
 [ext_resource type="AudioStream" uid="uid://bap4rn64gfbvt" path="res://assets/sounds/injury-scream-86808.mp3" id="3_ekqba"]
 [ext_resource type="AudioStream" uid="uid://cg26oer33s2at" path="res://assets/sounds/man-death-scream-186763.mp3" id="4_moqhw"]
+[ext_resource type="PackedScene" uid="uid://gra5myrijv4y" path="res://scenes/damage/damage_receiver_component.tscn" id="5_vsirv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e5rie"]
 atlas = ExtResource("1_10x2q")
@@ -304,3 +305,8 @@ stream = ExtResource("4_moqhw")
 
 [node name="AudioListener2D" type="AudioListener2D" parent="."]
 current = true
+
+[node name="DamageReceiverComponent" parent="." instance=ExtResource("5_vsirv")]
+position = Vector2(-8, -18)
+initial_life_counter = 90.0
+current_life_counter = 30.0
