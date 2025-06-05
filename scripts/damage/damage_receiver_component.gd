@@ -42,9 +42,9 @@ var _current_life_counter : float
 			if life_value_label: # Check if label reference is valid too
 				# THIS IS WHERE THE LABEL TEXT IS SET
 				# It will show an integer (no decimal) because of round() and str()
-				life_value_label.text = str(round(_current_life_counter))
+				life_value_label.text = str(_current_life_counter as int)
 				# Optional: For debugging, print what's being set
-				# print(name, ": Label text updated to: ", life_value_label.text)
+				print(name, ": Label text updated to: ", life_value_label.text)
 
 		# Emit damage_received signal if life actually changed and decreased
 		if _current_life_counter != old_life:

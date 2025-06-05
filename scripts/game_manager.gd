@@ -11,7 +11,7 @@ var num_of_coins_before_killed : int = 0
 var immunity: bool = false
 
 
-signal player_injured() 
+signal player_injured(strength: float) 
 signal player_killed() 
 
 var immunity_lost_timer: Timer
@@ -112,7 +112,7 @@ func new_game():
 	current_level = 1
 	_goto_level()
 
-func injured():
+func injured(strength: float):
 	if(immunity):
 		return
 		
@@ -124,8 +124,7 @@ func injured():
 		print("start of immunity")
 		immunity = true
 		immunity_lost_timer.start()
-		
-		emit_signal("player_injured")
+		player_injured.emit(strength)
 		
 func killed():
 	Engine.time_scale = 0.3

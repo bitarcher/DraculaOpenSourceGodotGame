@@ -13,16 +13,18 @@ func _ready() -> void:
 	GameManagerSingleton.connect("player_injured", _on_player_injured)
 	GameManagerSingleton.connect("player_killed", _on_player_killed)
 
-func _on_player_injured() -> void:
+func _on_player_injured(strength: float) -> void:
 	print("player injured callback")
 	$AnimatedSprite2D/InjuredAnimationPlayer.play("injured")
 	$InjuryAudioStreamPlayer.play()
+	$DamageReceiverComponent.take_damage(strength)
 	
 func _on_player_killed() -> void:
 	print("player killed callback")
 	#$AnimatedSprite2D/InjuredAnimationPlayer.play("injured")
 	$DyingAudioStreamPlayer.play()
 	$CollisionShape2D.queue_free()
+	$DamageReceiverComponent.take_damage(100000000000000000)
 	
 func enter_vortex():
 	$AnimatedSprite2D/AnimationPlayer.play("enter_vortex")
