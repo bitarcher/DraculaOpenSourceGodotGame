@@ -1,0 +1,49 @@
+[gd_scene load_steps=10 format=3 uid="uid://n3o5anvhaglu"]
+
+[ext_resource type="Texture2D" uid="uid://cqxx5vraa6dbp" path="res://assets/sprites/windmill/windmill_0.png" id="1_x2vvo"]
+[ext_resource type="Texture2D" uid="uid://fv76q5we0jpd" path="res://assets/sprites/windmill/windmill_1.png" id="2_7k7fv"]
+[ext_resource type="Texture2D" uid="uid://dicjtl8dqxlej" path="res://assets/sprites/windmill/windmill_2.png" id="3_6268u"]
+[ext_resource type="Texture2D" uid="uid://bnwptqae5dlt7" path="res://assets/sprites/windmill/windmill_3.png" id="4_gapfo"]
+[ext_resource type="Texture2D" uid="uid://dr8qn6gojmt0g" path="res://assets/sprites/windmill/windmill_4.png" id="5_gp6o4"]
+[ext_resource type="Texture2D" uid="uid://c3ggdm5wbdprb" path="res://assets/sprites/windmill/windmill_5.png" id="6_qo0qp"]
+[ext_resource type="Texture2D" uid="uid://nqv4m4a2aeic" path="res://assets/sprites/windmill/windmill_6.png" id="7_6vx6c"]
+[ext_resource type="Texture2D" uid="uid://ompbqjuyf8qq" path="res://assets/sprites/windmill/windmill_7.png" id="8_48ns5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_matt8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_x2vvo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7k7fv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6268u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gapfo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gp6o4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qo0qp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6vx6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_48ns5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Windmill" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_matt8")
+autoplay = "default"
+frame_progress = 0.19121

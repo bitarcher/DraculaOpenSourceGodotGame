@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=4 uid="uid://nr4swxj1bu2k"]
+[gd_scene load_steps=49 format=4 uid="uid://nr4swxj1bu2k"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_inlsu"]
 [ext_resource type="PackedScene" uid="uid://d062hkuxa4g7y" path="res://scenes/p_level_const.tscn" id="2_dhfkl"]
@@ -26,9 +26,25 @@
 [ext_resource type="PackedScene" uid="uid://f5q1qs0pa8tt" path="res://scenes/moon/grass_background_1.tscn" id="22_depr2"]
 [ext_resource type="PackedScene" uid="uid://cctwmuyah45p6" path="res://scenes/healing_vial.tscn" id="22_n1e6r"]
 [ext_resource type="PackedScene" uid="uid://ct2u7y2pqkkb2" path="res://scenes/moon/grass_background_2.tscn" id="23_q6slc"]
+[ext_resource type="PackedScene" uid="uid://n3o5anvhaglu" path="res://scenes/windmill.tscn" id="27_vk8sw"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6pu31"]
 distance = 29.0
+
+[sub_resource type="Animation" id="Animation_vbo6f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(356, 185)]
+}
 
 [sub_resource type="Animation" id="Animation_qr5va"]
 resource_name = "move"
@@ -46,7 +62,13 @@ tracks/0/keys = {
 "values": [Vector2(356, 185), Vector2(356, 70)]
 }
 
-[sub_resource type="Animation" id="Animation_vbo6f"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_57khf"]
+_data = {
+&"RESET": SubResource("Animation_vbo6f"),
+&"move": SubResource("Animation_qr5va")
+}
+
+[sub_resource type="Animation" id="Animation_oobl1"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -58,13 +80,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(356, 185)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_57khf"]
-_data = {
-&"RESET": SubResource("Animation_vbo6f"),
-&"move": SubResource("Animation_qr5va")
+"values": [Vector2(1152, -115)]
 }
 
 [sub_resource type="Animation" id="Animation_o88y5"]
@@ -84,7 +100,13 @@ tracks/0/keys = {
 "values": [Vector2(1152, -115), Vector2(783, -177)]
 }
 
-[sub_resource type="Animation" id="Animation_oobl1"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4p6gh"]
+_data = {
+&"RESET": SubResource("Animation_oobl1"),
+&"move": SubResource("Animation_o88y5")
+}
+
+[sub_resource type="Animation" id="Animation_lchq7"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -96,13 +118,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1152, -115)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_4p6gh"]
-_data = {
-&"RESET": SubResource("Animation_oobl1"),
-&"move": SubResource("Animation_o88y5")
+"values": [Vector2(783, -233)]
 }
 
 [sub_resource type="Animation" id="Animation_4p6gh"]
@@ -122,7 +138,13 @@ tracks/0/keys = {
 "values": [Vector2(783, -233), Vector2(944, -254)]
 }
 
-[sub_resource type="Animation" id="Animation_lchq7"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rulhy"]
+_data = {
+&"RESET": SubResource("Animation_lchq7"),
+&"move": SubResource("Animation_4p6gh")
+}
+
+[sub_resource type="Animation" id="Animation_pwpcy"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -134,13 +156,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(783, -233)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_rulhy"]
-_data = {
-&"RESET": SubResource("Animation_lchq7"),
-&"move": SubResource("Animation_4p6gh")
+"values": [Vector2(1151, -277)]
 }
 
 [sub_resource type="Animation" id="Animation_dhfkl"]
@@ -160,7 +176,13 @@ tracks/0/keys = {
 "values": [Vector2(1151, -277), Vector2(1385, -156)]
 }
 
-[sub_resource type="Animation" id="Animation_pwpcy"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n1e6r"]
+_data = {
+&"RESET": SubResource("Animation_pwpcy"),
+&"move": SubResource("Animation_dhfkl")
+}
+
+[sub_resource type="Animation" id="Animation_vk8sw"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -172,13 +194,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1151, -277)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_n1e6r"]
-_data = {
-&"RESET": SubResource("Animation_pwpcy"),
-&"move": SubResource("Animation_dhfkl")
+"values": [Vector2(1605, -159)]
 }
 
 [sub_resource type="Animation" id="Animation_n1e6r"]
@@ -198,7 +214,13 @@ tracks/0/keys = {
 "values": [Vector2(1605, -159), Vector2(1605, -159)]
 }
 
-[sub_resource type="Animation" id="Animation_vk8sw"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kdj6y"]
+_data = {
+&"RESET": SubResource("Animation_vk8sw"),
+&"move": SubResource("Animation_n1e6r")
+}
+
+[sub_resource type="Animation" id="Animation_topdr"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -210,13 +232,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1605, -159)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_kdj6y"]
-_data = {
-&"RESET": SubResource("Animation_vk8sw"),
-&"move": SubResource("Animation_n1e6r")
+"values": [Vector2(5766, 548)]
 }
 
 [sub_resource type="Animation" id="Animation_kdj6y"]
@@ -234,21 +250,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(5766, 548), Vector2(5766, 283)]
-}
-
-[sub_resource type="Animation" id="Animation_topdr"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(5766, 548)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fq16q"]
@@ -795,6 +796,12 @@ position = Vector2(4036, 104)
 
 [node name="Brush5" parent="Other" instance=ExtResource("19_4b7k5")]
 position = Vector2(5054, -8)
+
+[node name="Windmill" parent="Other" instance=ExtResource("27_vk8sw")]
+modulate = Color(0.332881, 0.332881, 0.332881, 1)
+z_index = -1
+position = Vector2(-166, -81)
+scale = Vector2(3, 3)
 
 [node name="MusicAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("20_5ee3l")
