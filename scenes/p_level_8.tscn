@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://cfjoc4rebnaso"]
+[gd_scene load_steps=30 format=3 uid="uid://cfjoc4rebnaso"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_j10bp"]
 [ext_resource type="PackedScene" uid="uid://d062hkuxa4g7y" path="res://scenes/p_level_const.tscn" id="2_nm4hp"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://7r7xqq1udtgj" path="res://scenes/coins_5x5.tscn" id="11_80lcj"]
 [ext_resource type="PackedScene" uid="uid://jyw84s43iw3w" path="res://scenes/platform.tscn" id="11_juy4v"]
 [ext_resource type="PackedScene" uid="uid://j3hd2b06ok3d" path="res://scenes/coin.tscn" id="12_fdmvc"]
+[ext_resource type="PackedScene" uid="uid://c2rxg4yil67wj" path="res://scenes/blue_diamond.tscn" id="13_vjwcf"]
 [ext_resource type="PackedScene" uid="uid://d2gx81nw0ll2u" path="res://scenes/toxic_gaz.tscn" id="14_cdfen"]
 [ext_resource type="PackedScene" uid="uid://c52etx4cornmc" path="res://scenes/trap.tscn" id="14_qqmoj"]
 [ext_resource type="PackedScene" uid="uid://cctwmuyah45p6" path="res://scenes/healing_vial.tscn" id="15_gk75w"]
@@ -410,10 +411,10 @@ position = Vector2(76, 6)
 position = Vector2(618, -389)
 
 [node name="Trap8" parent="." instance=ExtResource("14_qqmoj")]
-position = Vector2(584, -456)
+position = Vector2(582, -446)
 
 [node name="Trap9" parent="." instance=ExtResource("14_qqmoj")]
-position = Vector2(618, -527)
+position = Vector2(592, -496)
 
 [node name="Trap10" parent="." instance=ExtResource("14_qqmoj")]
 position = Vector2(523, -533)
@@ -443,19 +444,19 @@ position = Vector2(246, -531)
 position = Vector2(140, -624)
 
 [node name="Trap19" parent="." instance=ExtResource("14_qqmoj")]
-position = Vector2(138, -696)
+position = Vector2(140, -688)
 
 [node name="Trap20" parent="." instance=ExtResource("14_qqmoj")]
-position = Vector2(137, -765)
+position = Vector2(143, -748)
 
 [node name="Trap21" parent="." instance=ExtResource("14_qqmoj")]
-position = Vector2(136, -837)
+position = Vector2(139, -808)
 
 [node name="Trap22" parent="." instance=ExtResource("14_qqmoj")]
-position = Vector2(99, -882)
+position = Vector2(100, -857)
 
 [node name="Trap23" parent="." instance=ExtResource("14_qqmoj")]
-position = Vector2(49, -912)
+position = Vector2(50, -907)
 
 [node name="Trap24" parent="." instance=ExtResource("14_qqmoj")]
 position = Vector2(-9, -938)
@@ -573,3 +574,12 @@ position = Vector2(-589, -628)
 
 [node name="SlimeEnemy7" parent="." instance=ExtResource("10_5yt0f")]
 position = Vector2(-476, -628)
+
+[node name="coins5x10" parent="." instance=ExtResource("11_80lcj")]
+position = Vector2(-675, -852)
+
+[node name="BlueDiamond" parent="." instance=ExtResource("13_vjwcf")]
+position = Vector2(-479, -622)
+
+[node name="BlueDiamond2" parent="." instance=ExtResource("13_vjwcf")]
+position = Vector2(241, -551)
