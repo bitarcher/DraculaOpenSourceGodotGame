@@ -77,3 +77,4 @@ texture = ExtResource("1_37cqs")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(303, 173)
 sprite_frames = SubResource("SpriteFrames_74onq")
+autoplay = "default"
