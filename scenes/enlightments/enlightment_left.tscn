@@ -1,0 +1,83 @@
+[gd_scene load_steps=12 format=3 uid="uid://r6oc82kbd3e8"]
+
+[ext_resource type="Texture2D" uid="uid://bkcrqrghgkvwn" path="res://assets/sprites/enlightment_right.png" id="1_v6qy8"]
+[ext_resource type="Texture2D" uid="uid://cy6unc4w0whu7" path="res://assets/sprites/torch.png" id="2_tf1w5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5kpb"]
+atlas = ExtResource("2_tf1w5")
+region = Rect2(0, 0, 96, 212)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_62xiy"]
+atlas = ExtResource("2_tf1w5")
+region = Rect2(96, 0, 96, 212)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wcsp"]
+atlas = ExtResource("2_tf1w5")
+region = Rect2(192, 0, 96, 212)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofxbi"]
+atlas = ExtResource("2_tf1w5")
+region = Rect2(288, 0, 96, 212)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1auu1"]
+atlas = ExtResource("2_tf1w5")
+region = Rect2(384, 0, 96, 212)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_684kx"]
+atlas = ExtResource("2_tf1w5")
+region = Rect2(480, 0, 96, 212)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1eafc"]
+atlas = ExtResource("2_tf1w5")
+region = Rect2(576, 0, 96, 212)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vehhw"]
+atlas = ExtResource("2_tf1w5")
+region = Rect2(672, 0, 96, 212)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_74onq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k5kpb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_62xiy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4wcsp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofxbi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1auu1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_684kx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1eafc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vehhw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="EnlightmentLeft" type="Node2D"]
+scale = Vector2(0.1, 0.1)
+
+[node name="EnlightmentRight" type="Sprite2D" parent="."]
+position = Vector2(491, 201)
+texture = ExtResource("1_v6qy8")
+flip_h = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(401, 161)
+sprite_frames = SubResource("SpriteFrames_74onq")
+autoplay = "default"
+frame = 5
+frame_progress = 0.950226

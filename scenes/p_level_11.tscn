@@ -1,23 +1,23 @@
 [gd_scene load_steps=17 format=4 uid="uid://dx6oo2vpdlcb8"]
 
-[ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_o2uke"]
-[ext_resource type="PackedScene" uid="uid://d062hkuxa4g7y" path="res://scenes/p_level_const.tscn" id="2_l7025"]
-[ext_resource type="Texture2D" uid="uid://doyfrmal4p0kn" path="res://assets/clouds/cloud0.png" id="3_ug8p7"]
-[ext_resource type="Texture2D" uid="uid://c60iqolxdbyr" path="res://assets/clouds/cloud1.png" id="4_0535v"]
-[ext_resource type="Texture2D" uid="uid://c7uv1xkqq7gyh" path="res://assets/clouds/cloud2.png" id="5_l2qk6"]
-[ext_resource type="PackedScene" uid="uid://byyyexo4e4kop" path="res://scenes/player_platformer.tscn" id="7_eiy7p"]
-[ext_resource type="PackedScene" uid="uid://b5geq5n0tlmfj" path="res://scenes/killzone.tscn" id="8_kcivw"]
-[ext_resource type="Texture2D" uid="uid://m3hefxcmtneu" path="res://assets/sprites/oak_woods_v1.0/oak_woods_tileset.png" id="10_dmi4g"]
-[ext_resource type="AudioStream" uid="uid://bhlh4nphgdd6o" path="res://assets/brackey/music/time_for_adventure.mp3" id="10_umvk4"]
-[ext_resource type="Texture2D" uid="uid://clwey0bnxsfhf" path="res://assets/sprites/oak_woods_v1.0/background/background_layer_1.png" id="11_svvka"]
-[ext_resource type="Texture2D" uid="uid://dkgc2256718h0" path="res://assets/sprites/oak_woods_v1.0/background/background_layer_2.png" id="12_t017y"]
-[ext_resource type="Texture2D" uid="uid://ck0neurtygvvr" path="res://assets/sprites/oak_woods_v1.0/background/background_layer_3.png" id="13_exs5c"]
+[ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_dstnm"]
+[ext_resource type="PackedScene" uid="uid://d062hkuxa4g7y" path="res://scenes/p_level_const.tscn" id="2_obevh"]
+[ext_resource type="PackedScene" uid="uid://byyyexo4e4kop" path="res://scenes/player_platformer.tscn" id="3_lyha1"]
+[ext_resource type="PackedScene" uid="uid://b5geq5n0tlmfj" path="res://scenes/killzone.tscn" id="4_htgss"]
+[ext_resource type="AudioStream" uid="uid://bhlh4nphgdd6o" path="res://assets/brackey/music/time_for_adventure.mp3" id="5_8x7qi"]
+[ext_resource type="Texture2D" uid="uid://m3hefxcmtneu" path="res://assets/sprites/oak_woods_v1.0/oak_woods_tileset.png" id="6_lko81"]
+[ext_resource type="Texture2D" uid="uid://doyfrmal4p0kn" path="res://assets/clouds/cloud0.png" id="7_8gfv8"]
+[ext_resource type="Texture2D" uid="uid://dkgc2256718h0" path="res://assets/sprites/oak_woods_v1.0/background/background_layer_2.png" id="8_axbmg"]
+[ext_resource type="Texture2D" uid="uid://clwey0bnxsfhf" path="res://assets/sprites/oak_woods_v1.0/background/background_layer_1.png" id="9_i0ib1"]
+[ext_resource type="Texture2D" uid="uid://c7uv1xkqq7gyh" path="res://assets/clouds/cloud2.png" id="10_b2668"]
+[ext_resource type="Texture2D" uid="uid://c60iqolxdbyr" path="res://assets/clouds/cloud1.png" id="11_1kxer"]
+[ext_resource type="Texture2D" uid="uid://ck0neurtygvvr" path="res://assets/sprites/oak_woods_v1.0/background/background_layer_3.png" id="12_dm4ni"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6pu31"]
 distance = 29.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q12mf"]
-texture = ExtResource("10_dmi4g")
+texture = ExtResource("6_lko81")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -835,11 +835,11 @@ sources/1 = SubResource("TileSetAtlasSource_q12mf")
 
 [node name="PLevel10" type="Node2D"]
 position = Vector2(-286, 15)
-script = ExtResource("1_o2uke")
+script = ExtResource("1_dstnm")
 
-[node name="LevelConst" parent="." instance=ExtResource("2_l7025")]
+[node name="LevelConst" parent="." instance=ExtResource("2_obevh")]
 
-[node name="Player" parent="." instance=ExtResource("7_eiy7p")]
+[node name="Player" parent="." instance=ExtResource("3_lyha1")]
 unique_name_in_owner = true
 position = Vector2(-164, -243)
 
@@ -849,7 +849,7 @@ zoom = Vector2(4, 4)
 limit_bottom = 112
 position_smoothing_enabled = true
 
-[node name="Killzone" parent="." instance=ExtResource("8_kcivw")]
+[node name="Killzone" parent="." instance=ExtResource("4_htgss")]
 position = Vector2(50, 69)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
@@ -867,7 +867,7 @@ shape = SubResource("WorldBoundaryShape2D_6pu31")
 [node name="Other" type="Node" parent="."]
 
 [node name="MusicAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("10_umvk4")
+stream = ExtResource("5_8x7qi")
 volume_db = -13.602
 parameters/looping = true
 
@@ -890,7 +890,7 @@ motion_mirroring = Vector2(686, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 modulate = Color(1, 0.705882, 1, 0.639216)
-texture = ExtResource("3_ug8p7")
+texture = ExtResource("7_8gfv8")
 offset = Vector2(0, -105)
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -902,7 +902,7 @@ motion_offset = Vector2(-483, 0)
 motion_mirroring = Vector2(320, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
-texture = ExtResource("12_t017y")
+texture = ExtResource("8_axbmg")
 offset = Vector2(0, -7)
 
 [node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -914,7 +914,7 @@ motion_offset = Vector2(-483, 0)
 motion_mirroring = Vector2(320, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer7"]
-texture = ExtResource("11_svvka")
+texture = ExtResource("9_i0ib1")
 offset = Vector2(0, -7)
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -926,7 +926,7 @@ motion_mirroring = Vector2(1133, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
 modulate = Color(1, 0.713726, 0.690196, 0.596078)
-texture = ExtResource("5_l2qk6")
+texture = ExtResource("10_b2668")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
 texture_repeat = 2
@@ -937,7 +937,7 @@ motion_mirroring = Vector2(871, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
 modulate = Color(0.537255, 0.247059, 1, 0.631373)
-texture = ExtResource("4_0535v")
+texture = ExtResource("11_1kxer")
 
 [node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
 texture_repeat = 2
@@ -948,5 +948,5 @@ motion_offset = Vector2(-483, 0)
 motion_mirroring = Vector2(320, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
-texture = ExtResource("13_exs5c")
+texture = ExtResource("12_dm4ni")
 offset = Vector2(0, -7)

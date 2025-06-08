@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://d2gx81nw0ll2u" path="res://scenes/toxic_gaz.tscn" id="10_cmqut"]
 [ext_resource type="PackedScene" uid="uid://jyw84s43iw3w" path="res://scenes/platform.tscn" id="11_fv4df"]
 [ext_resource type="PackedScene" uid="uid://c52etx4cornmc" path="res://scenes/trap.tscn" id="12_84bxp"]
-[ext_resource type="PackedScene" uid="uid://hkis3pmnouwy" path="res://scenes/damage/coins_3x3.tscn" id="12_dhfkl"]
+[ext_resource type="PackedScene" uid="uid://hkis3pmnouwy" path="res://scenes/coins_3x3.tscn" id="12_dhfkl"]
 [ext_resource type="PackedScene" uid="uid://c5nscqmqpj63y" path="res://scenes/slime_enemy.tscn" id="13_s63gn"]
 [ext_resource type="PackedScene" uid="uid://c50xxeppc76hx" path="res://scenes/loup_garou.tscn" id="14_ox6ri"]
 [ext_resource type="PackedScene" uid="uid://8mdiwoi1esdv" path="res://scenes/moon/brush_2.tscn" id="15_isjyy"]

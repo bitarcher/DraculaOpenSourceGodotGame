@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://byyyexo4e4kop" path="res://scenes/player_platformer.tscn" id="8_taomf"]
 [ext_resource type="PackedScene" uid="uid://b5geq5n0tlmfj" path="res://scenes/killzone.tscn" id="9_eontf"]
 [ext_resource type="PackedScene" uid="uid://j3hd2b06ok3d" path="res://scenes/coin.tscn" id="10_na31n"]
-[ext_resource type="PackedScene" uid="uid://hkis3pmnouwy" path="res://scenes/damage/coins_3x3.tscn" id="11_k47ul"]
+[ext_resource type="PackedScene" uid="uid://hkis3pmnouwy" path="res://scenes/coins_3x3.tscn" id="11_k47ul"]
 [ext_resource type="PackedScene" uid="uid://jyw84s43iw3w" path="res://scenes/platform.tscn" id="11_w1tsg"]
 [ext_resource type="PackedScene" uid="uid://c52etx4cornmc" path="res://scenes/trap.tscn" id="12_ig3tt"]
 [ext_resource type="Texture2D" uid="uid://bhnmlt1xwr8rl" path="res://assets/brackey/sprites/world_tileset.png" id="13_ev1eb"]

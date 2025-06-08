@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://d2gx81nw0ll2u" path="res://scenes/toxic_gaz.tscn" id="14_cdfen"]
 [ext_resource type="PackedScene" uid="uid://c52etx4cornmc" path="res://scenes/trap.tscn" id="14_qqmoj"]
 [ext_resource type="PackedScene" uid="uid://cctwmuyah45p6" path="res://scenes/healing_vial.tscn" id="15_gk75w"]
-[ext_resource type="PackedScene" uid="uid://hkis3pmnouwy" path="res://scenes/damage/coins_3x3.tscn" id="16_hj2a2"]
+[ext_resource type="PackedScene" uid="uid://hkis3pmnouwy" path="res://scenes/coins_3x3.tscn" id="16_hj2a2"]
 [ext_resource type="PackedScene" uid="uid://n3o5anvhaglu" path="res://scenes/windmill.tscn" id="17_7okfg"]
 [ext_resource type="PackedScene" uid="uid://0khi164sjtqt" path="res://scenes/portail_magique.tscn" id="17_w6rwb"]
 [ext_resource type="AudioStream" uid="uid://bhlh4nphgdd6o" path="res://assets/brackey/music/time_for_adventure.mp3" id="18_437c8"]
