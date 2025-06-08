@@ -15,7 +15,7 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 - loup-garou : https://www.gifimili.com/image-2433-loup-garou/
 - wasp : © 2005-2013 Julien Jorge julien.jorge@stuff-o-matic.com https://opengameart.org/content/animated-wasp-wearing-a-scarf-and-aviator-glasses 
 - windmill: carchagui, https://www.deviantart.com/carchagui/art/Windmill-animation-sheet-875418472
-
+- oak woods: brullov, https://brullov.itch.io/oak-woods
 *Assets*
 
 - moon graveyard: https://anokolisa.itch.io/moon-graveyard
