@@ -17,7 +17,7 @@ signal player_killed()
 var immunity_lost_timer: Timer
 var killed_timer: Timer
 
-const NUM_OF_LEVELS: int = 12
+const NUM_OF_LEVELS: int = 13
 
 var _levels_resources: Array[Resource] = []
 var _menu_resource: Resource
@@ -35,7 +35,8 @@ func _init_level_resources():
 		preload("res://scenes/p_level_8.tscn"),
 		preload("res://scenes/p_level_9.tscn"),
 		preload("res://scenes/p_level_10.tscn"),
-		preload("res://scenes/p_level_11.tscn")
+		preload("res://scenes/p_level_11.tscn"),
+		preload("res://scenes/p_level_12.tscn")
 	]
 	print(str(_levels_resources.size()) + " levels loaded")
 	
