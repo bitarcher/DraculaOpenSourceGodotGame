@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvrao1jsojrg8"]
+
+[ext_resource type="PackedScene" uid="uid://db0m6md1wl07b" path="res://scenes/rotating_platform.tscn" id="1_wlmdw"]
+
+[node name="RotatingPlatforms" type="Node2D"]
+
+[node name="RotatingPlatform" parent="." instance=ExtResource("1_wlmdw")]
+position = Vector2(16, 5)
+
+[node name="RotatingPlatform2" parent="." instance=ExtResource("1_wlmdw")]
+position = Vector2(62, 41)
+
+[node name="RotatingPlatform3" parent="." instance=ExtResource("1_wlmdw")]
+position = Vector2(39, 23)
+
+[node name="RotatingPlatform4" parent="." instance=ExtResource("1_wlmdw")]
+position = Vector2(85, 59)
+
+[node name="RotatingPlatform5" parent="." instance=ExtResource("1_wlmdw")]
+position = Vector2(108, 77)
