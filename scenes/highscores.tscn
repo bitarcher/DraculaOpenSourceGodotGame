@@ -1,0 +1,93 @@
+[gd_scene load_steps=12 format=3 uid="uid://ci8g8mhddqosq"]
+
+[ext_resource type="Script" uid="uid://cqipsb2xjpxnc" path="res://scripts/highscores.gd" id="1_t7c4g"]
+[ext_resource type="Texture2D" uid="uid://yd7jf4w0d6m2" path="res://assets/menu_background.jpeg" id="2_dojaf"]
+[ext_resource type="Texture2D" uid="uid://bj1oqi34tihw" path="res://assets/sprites/dracula_title.png" id="3_eod6m"]
+[ext_resource type="Theme" uid="uid://dhrx32e2kxpct" path="res://themes/menu_button_theme.tres" id="4_vhqkv"]
+[ext_resource type="Texture2D" uid="uid://bhiaxb7cuq6if" path="res://assets/paper.png" id="5_dojaf"]
+[ext_resource type="AudioStream" uid="uid://nlacdh081wdm" path="res://assets/music/cinematic-music-session-01-suspense-133397.mp3" id="5_t7c4g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ytvr"]
+atlas = ExtResource("3_eod6m")
+region = Rect2(0, 0, 250, 123)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3eks"]
+atlas = ExtResource("3_eod6m")
+region = Rect2(250, 0, 250, 123)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v86rl"]
+atlas = ExtResource("3_eod6m")
+region = Rect2(0, 123, 250, 123)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13sgg"]
+atlas = ExtResource("3_eod6m")
+region = Rect2(250, 123, 250, 123)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i6lef"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ytvr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3eks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v86rl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13sgg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="Highscores" type="Node2D"]
+script = ExtResource("1_t7c4g")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(664, 240)
+scale = Vector2(1.31641, 1.03125)
+texture = ExtResource("2_dojaf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer"]
+position = Vector2(609, 88)
+scale = Vector2(1.744, 1.00813)
+sprite_frames = SubResource("SpriteFrames_i6lef")
+autoplay = "default"
+frame_progress = 0.444053
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 0.069
+anchor_bottom = 0.111
+offset_left = 57.0
+offset_top = 161.0
+offset_right = 1012.0
+offset_bottom = 524.0
+theme = ExtResource("4_vhqkv")
+texture = ExtResource("5_dojaf")
+patch_margin_left = 60
+patch_margin_top = 60
+patch_margin_right = 60
+patch_margin_bottom = 60
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="MusicAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_t7c4g")
+autoplay = true
+parameters/looping = true

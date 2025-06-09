@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://byyyexo4e4kop" path="res://scenes/player_platformer.tscn" id="7_eiy7p"]
 [ext_resource type="PackedScene" uid="uid://b5geq5n0tlmfj" path="res://scenes/killzone.tscn" id="8_kcivw"]
 [ext_resource type="Texture2D" uid="uid://bhnmlt1xwr8rl" path="res://assets/brackey/sprites/world_tileset.png" id="9_o2uke"]
-[ext_resource type="AudioStream" uid="uid://bhlh4nphgdd6o" path="res://assets/brackey/music/time_for_adventure.mp3" id="10_umvk4"]
 [ext_resource type="PackedScene" uid="uid://0khi164sjtqt" path="res://scenes/portail_magique.tscn" id="12_ug8p7"]
 [ext_resource type="PackedScene" uid="uid://7r7xqq1udtgj" path="res://scenes/coins_5x5.tscn" id="13_0535v"]
 [ext_resource type="PackedScene" uid="uid://d2gx81nw0ll2u" path="res://scenes/toxic_gaz.tscn" id="14_l2qk6"]
@@ -17,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://c52etx4cornmc" path="res://scenes/trap.tscn" id="16_eiy7p"]
 [ext_resource type="PackedScene" uid="uid://n3o5anvhaglu" path="res://scenes/windmill.tscn" id="17_kcivw"]
 [ext_resource type="PackedScene" uid="uid://cctwmuyah45p6" path="res://scenes/healing_vial.tscn" id="19_umvk4"]
+[ext_resource type="AudioStream" uid="uid://bisk8lrbaapkf" path="res://assets/music/night-dies-with-us-gothic-and-vampiric-piano-music-247462.mp3" id="19_un8ah"]
 [ext_resource type="PackedScene" uid="uid://hkis3pmnouwy" path="res://scenes/coins_3x3.tscn" id="20_18xqd"]
 [ext_resource type="PackedScene" uid="uid://j3hd2b06ok3d" path="res://scenes/coin.tscn" id="21_pmd1o"]
 [ext_resource type="PackedScene" uid="uid://c2rxg4yil67wj" path="res://scenes/blue_diamond.tscn" id="22_800ld"]
@@ -423,7 +423,7 @@ scale = Vector2(0.998459, 0.988073)
 [node name="Other" type="Node" parent="."]
 
 [node name="MusicAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("10_umvk4")
+stream = ExtResource("19_un8ah")
 volume_db = -13.602
 autoplay = true
 parameters/looping = true

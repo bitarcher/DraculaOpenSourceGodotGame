@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://7pdlekvxbajt" path="res://assets/moon_graveyard/Background_0.png" id="3_ylvts"]
 [ext_resource type="Texture2D" uid="uid://bddswt0sep4vc" path="res://assets/moon_graveyard/Background_1.png" id="5_buymg"]
 [ext_resource type="PackedScene" uid="uid://byyyexo4e4kop" path="res://scenes/player_platformer.tscn" id="7_eiy7p"]
+[ext_resource type="AudioStream" uid="uid://crsvqoccx3y5s" path="res://assets/music/vampire-189047.mp3" id="8_buymg"]
 [ext_resource type="PackedScene" uid="uid://b5geq5n0tlmfj" path="res://scenes/killzone.tscn" id="8_kcivw"]
 [ext_resource type="PackedScene" uid="uid://7r7xqq1udtgj" path="res://scenes/coins_5x5.tscn" id="8_sg88h"]
 [ext_resource type="PackedScene" uid="uid://j3hd2b06ok3d" path="res://scenes/coin.tscn" id="9_qgvfq"]
@@ -26,7 +27,6 @@
 [ext_resource type="PackedScene" uid="uid://c2rxg4yil67wj" path="res://scenes/blue_diamond.tscn" id="23_iwdv2"]
 [ext_resource type="PackedScene" uid="uid://0khi164sjtqt" path="res://scenes/portail_magique.tscn" id="24_0x8ap"]
 [ext_resource type="PackedScene" uid="uid://n3o5anvhaglu" path="res://scenes/windmill.tscn" id="25_e1rqi"]
-[ext_resource type="AudioStream" uid="uid://bjf01qq7y2rui" path="res://assets/sounds/bloodlust-176915.mp3" id="26_wb5lt"]
 [ext_resource type="Texture2D" uid="uid://dqw76yo602t5f" path="res://assets/moon_graveyard/Tiles.png" id="27_ngd67"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6pu31"]
@@ -303,7 +303,7 @@ shape = SubResource("WorldBoundaryShape2D_6pu31")
 [node name="Other" type="Node" parent="."]
 
 [node name="MusicAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("26_wb5lt")
+stream = ExtResource("8_buymg")
 volume_db = -13.602
 autoplay = true
 parameters/looping = true

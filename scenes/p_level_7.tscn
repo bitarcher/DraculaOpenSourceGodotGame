@@ -20,12 +20,12 @@
 [ext_resource type="PackedScene" uid="uid://0khi164sjtqt" path="res://scenes/portail_magique.tscn" id="17_ct78c"]
 [ext_resource type="PackedScene" uid="uid://c6ob13d8k7hd" path="res://scenes/moon/salt.tscn" id="18_71xri"]
 [ext_resource type="PackedScene" uid="uid://bmvp7280t0att" path="res://scenes/moon/brush.tscn" id="19_4b7k5"]
-[ext_resource type="AudioStream" uid="uid://bjf01qq7y2rui" path="res://assets/sounds/bloodlust-176915.mp3" id="20_5ee3l"]
 [ext_resource type="PackedScene" uid="uid://cfcrm7kedeekn" path="res://scenes/dwarf.tscn" id="21_pwpcy"]
 [ext_resource type="Texture2D" uid="uid://dqw76yo602t5f" path="res://assets/moon_graveyard/Tiles.png" id="21_r2ktl"]
 [ext_resource type="PackedScene" uid="uid://f5q1qs0pa8tt" path="res://scenes/moon/grass_background_1.tscn" id="22_depr2"]
 [ext_resource type="PackedScene" uid="uid://cctwmuyah45p6" path="res://scenes/healing_vial.tscn" id="22_n1e6r"]
 [ext_resource type="PackedScene" uid="uid://ct2u7y2pqkkb2" path="res://scenes/moon/grass_background_2.tscn" id="23_q6slc"]
+[ext_resource type="AudioStream" uid="uid://c01qgw58dwiv5" path="res://assets/music/moonlight-walzer-gothic-and-vampiric-piano-music-247460.mp3" id="26_vk8sw"]
 [ext_resource type="PackedScene" uid="uid://n3o5anvhaglu" path="res://scenes/windmill.tscn" id="27_vk8sw"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6pu31"]
@@ -804,7 +804,7 @@ position = Vector2(-166, -81)
 scale = Vector2(3, 3)
 
 [node name="MusicAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("20_5ee3l")
+stream = ExtResource("26_vk8sw")
 volume_db = -13.602
 autoplay = true
 parameters/looping = true

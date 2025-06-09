@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://b5geq5n0tlmfj" path="res://scenes/killzone.tscn" id="8_u5lfx"]
 [ext_resource type="PackedScene" uid="uid://7r7xqq1udtgj" path="res://scenes/coins_5x5.tscn" id="9_vfc7t"]
 [ext_resource type="PackedScene" uid="uid://c52etx4cornmc" path="res://scenes/trap.tscn" id="10_2ned3"]
-[ext_resource type="AudioStream" uid="uid://bjf01qq7y2rui" path="res://assets/sounds/bloodlust-176915.mp3" id="10_5c64v"]
+[ext_resource type="AudioStream" uid="uid://bjf01qq7y2rui" path="res://assets/music/bloodlust-176915.mp3" id="10_5c64v"]
 [ext_resource type="Texture2D" uid="uid://dqw76yo602t5f" path="res://assets/moon_graveyard/Tiles.png" id="10_5plfh"]
 [ext_resource type="PackedScene" uid="uid://ct2u7y2pqkkb2" path="res://scenes/moon/grass_background_2.tscn" id="11_5plfh"]
 [ext_resource type="PackedScene" uid="uid://c5nscqmqpj63y" path="res://scenes/slime_enemy.tscn" id="11_dniw7"]
@@ -402,15 +402,6 @@ position = Vector2(5088, 445)
 
 [node name="coins5x7" parent="Coins" instance=ExtResource("9_vfc7t")]
 position = Vector2(5168, 444)
-
-[node name="coins5x8" parent="Coins" instance=ExtResource("9_vfc7t")]
-position = Vector2(10014, 888)
-
-[node name="coins5x9" parent="Coins" instance=ExtResource("9_vfc7t")]
-position = Vector2(10095, 889)
-
-[node name="coins5x10" parent="Coins" instance=ExtResource("9_vfc7t")]
-position = Vector2(10175, 888)
 
 [node name="coins5x11" parent="Coins" instance=ExtResource("9_vfc7t")]
 position = Vector2(5246, 445)

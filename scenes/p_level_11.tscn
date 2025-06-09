@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://byyyexo4e4kop" path="res://scenes/player_platformer.tscn" id="3_lyha1"]
 [ext_resource type="PackedScene" uid="uid://b5geq5n0tlmfj" path="res://scenes/killzone.tscn" id="4_htgss"]
 [ext_resource type="Texture2D" uid="uid://bdr0tgbf1emmg" path="res://assets/clouds/cloud3.png" id="5_8gfv8"]
-[ext_resource type="AudioStream" uid="uid://bhlh4nphgdd6o" path="res://assets/brackey/music/time_for_adventure.mp3" id="5_8x7qi"]
+[ext_resource type="AudioStream" uid="uid://bhlh4nphgdd6o" path="res://assets/music/time_for_adventure.mp3" id="5_8x7qi"]
 [ext_resource type="Texture2D" uid="uid://doyfrmal4p0kn" path="res://assets/clouds/cloud0.png" id="7_8gfv8"]
 [ext_resource type="PackedScene" uid="uid://7r7xqq1udtgj" path="res://scenes/coins_5x5.tscn" id="8_axbmg"]
 [ext_resource type="PackedScene" uid="uid://hkis3pmnouwy" path="res://scenes/coins_3x3.tscn" id="9_i0ib1"]

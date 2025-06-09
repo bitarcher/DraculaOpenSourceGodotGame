@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://dee8fy6jnmnt7"]
+
+[ext_resource type="Script" uid="uid://iwgrxgfkgofa" path="res://scripts/highscores/ui/ordered_highscore_item_ui.gd" id="1_6541n"]
+
+[node name="OrderedHighscoreItemUi" type="HBoxContainer"]
+offset_right = 339.0
+offset_bottom = 29.0
+script = ExtResource("1_6541n")
+
+[node name="RankLabel" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_stretch_ratio = 0.1
+text = "1"
+
+[node name="NameLabel" type="Label" parent="."]
+layout_mode = 2
+text = "Joueur"
+
+[node name="CoinsLabel" type="Label" parent="."]
+layout_mode = 2
+size_flags_stretch_ratio = 0.2
+text = "999 coins"
+
+[node name="LevelLabel" type="Label" parent="."]
+layout_mode = 2
+size_flags_stretch_ratio = 0.15
+text = "Levl. 16"
+
+[node name="LivesLabel" type="Label" parent="."]
+layout_mode = 2
+size_flags_stretch_ratio = 0.15
+text = "Lives: 3"

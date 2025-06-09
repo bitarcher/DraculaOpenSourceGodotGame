@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://c5nscqmqpj63y" path="res://scenes/slime_enemy.tscn" id="8_pfjqn"]
 [ext_resource type="PackedScene" uid="uid://0khi164sjtqt" path="res://scenes/portail_magique.tscn" id="16_33irq"]
 [ext_resource type="PackedScene" uid="uid://d062hkuxa4g7y" path="res://scenes/p_level_const.tscn" id="17_oqhks"]
-[ext_resource type="AudioStream" uid="uid://bhlh4nphgdd6o" path="res://assets/brackey/music/time_for_adventure.mp3" id="18_7771x"]
+[ext_resource type="AudioStream" uid="uid://bhlh4nphgdd6o" path="res://assets/music/time_for_adventure.mp3" id="18_7771x"]
 [ext_resource type="PackedScene" uid="uid://cctwmuyah45p6" path="res://scenes/healing_vial.tscn" id="18_dv5ru"]
 
 [sub_resource type="Animation" id="Animation_1ofay"]

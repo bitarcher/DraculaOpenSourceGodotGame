@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://pn3s2hcvet10"]
+[gd_scene load_steps=33 format=3 uid="uid://pn3s2hcvet10"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_eas7d"]
 [ext_resource type="Texture2D" uid="uid://doyfrmal4p0kn" path="res://assets/clouds/cloud0.png" id="3_rrvga"]
@@ -10,14 +10,15 @@
 [ext_resource type="PackedScene" uid="uid://hkis3pmnouwy" path="res://scenes/coins_3x3.tscn" id="9_oh8q0"]
 [ext_resource type="PackedScene" uid="uid://j3hd2b06ok3d" path="res://scenes/coin.tscn" id="10_a0suf"]
 [ext_resource type="PackedScene" uid="uid://7r7xqq1udtgj" path="res://scenes/coins_5x5.tscn" id="11_klsx7"]
+[ext_resource type="PackedScene" uid="uid://c2rxg4yil67wj" path="res://scenes/blue_diamond.tscn" id="11_p4qfb"]
 [ext_resource type="PackedScene" uid="uid://jyw84s43iw3w" path="res://scenes/platform.tscn" id="12_fvoot"]
 [ext_resource type="Texture2D" uid="uid://bhnmlt1xwr8rl" path="res://assets/brackey/sprites/world_tileset.png" id="13_ivjtv"]
 [ext_resource type="PackedScene" uid="uid://c52etx4cornmc" path="res://scenes/trap.tscn" id="14_u6ifu"]
 [ext_resource type="PackedScene" uid="uid://c5nscqmqpj63y" path="res://scenes/slime_enemy.tscn" id="16_ipt3p"]
 [ext_resource type="PackedScene" uid="uid://cctwmuyah45p6" path="res://scenes/healing_vial.tscn" id="17_2xc1v"]
 [ext_resource type="PackedScene" uid="uid://d062hkuxa4g7y" path="res://scenes/p_level_const.tscn" id="17_hl06d"]
-[ext_resource type="AudioStream" uid="uid://bhlh4nphgdd6o" path="res://assets/brackey/music/time_for_adventure.mp3" id="18_eas7d"]
 [ext_resource type="PackedScene" uid="uid://0khi164sjtqt" path="res://scenes/portail_magique.tscn" id="18_wd3qt"]
+[ext_resource type="AudioStream" uid="uid://skhqynohyvro" path="res://assets/music/halloween-background-music-scary-horror-thriller-creepy-249667.mp3" id="19_p4qfb"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pfjqn"]
 
@@ -424,7 +425,7 @@ position = Vector2(556, -16.96)
 position = Vector2(333, -652)
 
 [node name="Coins3x7" parent="Coins" instance=ExtResource("9_oh8q0")]
-position = Vector2(458, -634)
+position = Vector2(460, -644)
 
 [node name="Coins3x8" parent="Coins" instance=ExtResource("9_oh8q0")]
 position = Vector2(581, -616)
@@ -439,16 +440,16 @@ position = Vector2(521, -707)
 position = Vector2(544, -451)
 
 [node name="Coin4" parent="Coins" instance=ExtResource("10_a0suf")]
-position = Vector2(404, -599)
+position = Vector2(405, -610)
 
 [node name="Coin5" parent="Coins" instance=ExtResource("10_a0suf")]
-position = Vector2(453, -637)
+position = Vector2(453, -638)
 
 [node name="Coin6" parent="Coins" instance=ExtResource("10_a0suf")]
 position = Vector2(407, -653)
 
 [node name="Coin7" parent="Coins" instance=ExtResource("10_a0suf")]
-position = Vector2(564, -591)
+position = Vector2(567, -594)
 
 [node name="Coin8" parent="Coins" instance=ExtResource("10_a0suf")]
 position = Vector2(566, -625)
@@ -488,6 +489,12 @@ position = Vector2(-44, -69)
 
 [node name="Coin20" parent="Coins" instance=ExtResource("10_a0suf")]
 position = Vector2(-123, -322)
+
+[node name="BlueDiamond" parent="Coins" instance=ExtResource("11_p4qfb")]
+position = Vector2(-125, -321)
+
+[node name="BlueDiamond2" parent="Coins" instance=ExtResource("11_p4qfb")]
+position = Vector2(533, -610)
 
 [node name="Platforms" type="Node" parent="."]
 
@@ -621,7 +628,7 @@ position = Vector2(534, -611)
 [node name="LevelConst" parent="." instance=ExtResource("17_hl06d")]
 
 [node name="MusicAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("18_eas7d")
+stream = ExtResource("19_p4qfb")
 volume_db = -13.602
 autoplay = true
 parameters/looping = true
