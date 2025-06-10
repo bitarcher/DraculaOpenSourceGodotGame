@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ci8g8mhddqosq"]
+[gd_scene load_steps=13 format=3 uid="uid://ci8g8mhddqosq"]
 
 [ext_resource type="Script" uid="uid://cqipsb2xjpxnc" path="res://scripts/highscores.gd" id="1_t7c4g"]
 [ext_resource type="Texture2D" uid="uid://yd7jf4w0d6m2" path="res://assets/menu_background.jpeg" id="2_dojaf"]
@@ -6,6 +6,7 @@
 [ext_resource type="Theme" uid="uid://dhrx32e2kxpct" path="res://themes/menu_button_theme.tres" id="4_vhqkv"]
 [ext_resource type="Texture2D" uid="uid://bhiaxb7cuq6if" path="res://assets/paper.png" id="5_dojaf"]
 [ext_resource type="AudioStream" uid="uid://nlacdh081wdm" path="res://assets/music/cinematic-music-session-01-suspense-133397.mp3" id="5_t7c4g"]
+[ext_resource type="PackedScene" uid="uid://b32ifucvywdjn" path="res://scenes/highscores/ui/high_scores_display.tscn" id="6_dojaf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ytvr"]
 atlas = ExtResource("3_eod6m")
@@ -86,6 +87,9 @@ theme_override_constants/margin_left = 50
 theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
+
+[node name="HighScoresDisplay" parent="CanvasLayer/NinePatchRect/MarginContainer" instance=ExtResource("6_dojaf")]
+layout_mode = 2
 
 [node name="MusicAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_t7c4g")

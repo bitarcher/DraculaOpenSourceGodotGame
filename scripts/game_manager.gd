@@ -21,6 +21,7 @@ const NUM_OF_LEVELS: int = 14
 
 var _levels_resources: Array[Resource] = []
 var _menu_resource: Resource
+var _highscore_resource: Resource
 
 func _init_level_resources():
 	_levels_resources = [
@@ -44,6 +45,7 @@ func _init_level_resources():
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	_menu_resource = preload("res://scenes/menu.tscn")
+	_highscore_resource = preload("res://scenes/highscores.tscn")
 	level_start_ticks = Time.get_ticks_msec()
 	_init_level_resources()
 	reset_counters()
@@ -165,3 +167,6 @@ func _on_killed_timer_timeout() -> void:
 		game_over()
 	else:
 		get_tree().reload_current_scene()
+
+func show_highscore():
+	get_tree().change_scene_to_packed(_highscore_resource)

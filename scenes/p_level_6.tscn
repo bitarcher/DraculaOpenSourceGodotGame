@@ -310,6 +310,7 @@ texture = ExtResource("4_jupmm")
 
 [node name="Player" parent="." instance=ExtResource("7_vfc7t")]
 unique_name_in_owner = true
+z_index = 13
 position = Vector2(78, -166)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]

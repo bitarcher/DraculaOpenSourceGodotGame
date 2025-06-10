@@ -17,8 +17,10 @@ high_score_data = SubResource("Resource_gv1l2")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+theme_override_constants/separation = 14
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+layout_mode = 2
 
 [node name="TitleLabel" type="Label" parent="VBoxContainer"]
 layout_mode = 2
@@ -28,11 +30,14 @@ horizontal_alignment = 1
 
 [node name="HeaderContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_constants/separation = 84
+
+[node name="Padding" type="Control" parent="VBoxContainer/HeaderContainer"]
+layout_mode = 2
 
 [node name="RankHeader" type="Label" parent="VBoxContainer/HeaderContainer"]
 layout_mode = 2
-size_flags_horizontal = 8
-size_flags_stretch_ratio = 0.1
+size_flags_stretch_ratio = 5.0
 text = "Rank"
 
 [node name="NameHeader" type="Label" parent="VBoxContainer/HeaderContainer"]

@@ -22,3 +22,7 @@ func _on_new_game_button_pressed() -> void:
 	
 func _on_resume_game_button_pressed() -> void:
 	GameManagerSingleton.resume_game()
+
+
+func _on_highscore_game_button_pressed() -> void:
+	GameManagerSingleton.show_highscore()

@@ -18,7 +18,7 @@ func _get_player() -> PlayerPlatformer:
 	
 	
 	if(result == null):
-		GameManagerSingleton.dump_scene_tree()
+		ToolsSingleton.dump_scene_tree()
 		print("could not fetch player")
 		
 	return result	

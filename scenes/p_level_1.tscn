@@ -382,6 +382,7 @@ offset = Vector2(0, -7)
 
 [node name="Player" parent="." instance=ExtResource("1_7uo4m")]
 unique_name_in_owner = true
+z_index = 13
 position = Vector2(284, -34)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
