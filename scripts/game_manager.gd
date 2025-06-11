@@ -13,6 +13,7 @@ var immunity: bool = false
 
 signal player_injured(strength: float) 
 signal player_killed() 
+signal player_name_requested_for_saving_new_highscore(context: SavingPlayerContext)
 
 var immunity_lost_timer: Timer
 var killed_timer: Timer
@@ -152,8 +153,21 @@ func killed():
 func game_over():
 	print("game over")
 	print("total coins:" + str(num_of_coins))
-	#TODO
-
+	
+	var highscore_items: HighScoreItems = HighScoreItems.load()
+	var player_high_score_item: HighScoreItem = HighScoreItem.new("John Woo", num_of_coins, current_level, num_of_lives)
+	
+	var can_add = highscore_items.add_highscore_item_if_possible(player_high_score_item)
+	
+	if(can_add):
+		var context: SavingPlayerContext = SavingPlayerContext.new()
+		context.highscore_items = highscore_items
+		context.player_highscore_item = player_high_score_item
+		player_name_requested_for_saving_new_highscore.emit(context)
+	else:
+		# TODO
+		pass
+	
 
 func _on_immunity_lost_timer_timeout() -> void:
 	print("end of immunity")
