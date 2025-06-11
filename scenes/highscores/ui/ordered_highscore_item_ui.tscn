@@ -5,29 +5,35 @@
 [node name="OrderedHighscoreItemUi" type="HBoxContainer"]
 offset_right = 339.0
 offset_bottom = 29.0
+theme_override_constants/separation = 80
 script = ExtResource("1_6541n")
 
 [node name="RankLabel" type="Label" parent="."]
+unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 8
+size_flags_vertical = 1
 size_flags_stretch_ratio = 0.1
 text = "1"
 
 [node name="NameLabel" type="Label" parent="."]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Joueur"
 
 [node name="CoinsLabel" type="Label" parent="."]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_stretch_ratio = 0.2
 text = "999 coins"
 
 [node name="LevelLabel" type="Label" parent="."]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_stretch_ratio = 0.15
 text = "Levl. 16"
 
 [node name="LivesLabel" type="Label" parent="."]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_stretch_ratio = 0.15
 text = "Lives: 3"

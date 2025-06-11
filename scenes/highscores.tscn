@@ -89,6 +89,7 @@ theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
 [node name="HighScoresDisplay" parent="CanvasLayer/NinePatchRect/MarginContainer" instance=ExtResource("6_dojaf")]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="MusicAudioStreamPlayer" type="AudioStreamPlayer" parent="."]

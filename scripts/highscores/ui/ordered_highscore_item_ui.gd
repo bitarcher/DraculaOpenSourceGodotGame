@@ -15,9 +15,9 @@ func set_item_data(ordered_item: OrderedHighScoreItem) -> void:
 	if ordered_item and ordered_item.item:
 		rank_label.text = str(ordered_item.get_position_one_based()) + "." # Rang 1-basé
 		name_label.text = ordered_item.item.player_name
-		coins_label.text = "%d pièces" % ordered_item.item.num_of_coins
-		level_label.text = "Niv. %d" % ordered_item.item.max_level
-		lives_label.text = "Vie: %d" % ordered_item.item.remaining_lives
+		coins_label.text = "%d coins" % ordered_item.item.num_of_coins
+		level_label.text = "Lev. %d" % ordered_item.item.max_level
+		lives_label.text = "%d liv." % ordered_item.item.remaining_lives
 	else:
 		# En cas de données invalides ou manquantes, afficher un état par défaut.
 		rank_label.text = ""

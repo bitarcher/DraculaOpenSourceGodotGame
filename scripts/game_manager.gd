@@ -106,8 +106,9 @@ func resume_game():
 	
 	SaverLoaderSingleton.load_game()
 	
-func show_menu():
-	SaverLoaderSingleton.save_game()
+func show_menu(save_game_also=true):
+	if(save_game_also):
+		SaverLoaderSingleton.save_game()
 	get_tree().change_scene_to_packed(_menu_resource)
 
 func coin_fetched():

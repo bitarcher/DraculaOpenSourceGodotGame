@@ -5,6 +5,39 @@ const MAX_SAVED_NUM_OF_ITEM = 10 # Définit le nombre maximum d'éléments de sc
 
 @export var items: Array[HighScoreItem] = []
 
+static func get_default_highscore_items() -> HighScoreItems:
+	var result = HighScoreItems.new()
+	
+	var player_names = ["Arthur Belmont", "Victor Alucard", "Lena Croft", "Maximilian Cross", "Seraphina Van Helsing",
+		"Elias Blackwood", "Isabella Faust", "Gabriel Richter", "Celeste Nightshade", "Johannes Harker"]
+	
+	var level = 4
+	var coins = 100
+	var lives = 1
+	
+	for i in range(0, len(player_names)):
+		var highscore_item = HighScoreItem.new(player_names[i], coins, level, lives)
+		result.add_highscore_item_if_possible(highscore_item)
+		
+		level += 1
+		coins += 80
+		lives = randi() % 8 + 1
+	
+	return result
+	
+const SAVE_PATH = "res://highscore.tres"
+
+static func load() -> HighScoreItems:
+	var result: HighScoreItems = load(SAVE_PATH) as HighScoreItems
+	
+	if(result == null):
+		result = get_default_highscore_items()
+		
+	return result
+	
+func save():
+	ResourceSaver.save(self, SAVE_PATH)
+
 func get_ordered_highscore_items() -> Array[OrderedHighScoreItem]:
 	# Crée une copie superficielle du tableau pour ne pas modifier l'original.
 	var items_to_sort: Array[HighScoreItem] = items.duplicate()

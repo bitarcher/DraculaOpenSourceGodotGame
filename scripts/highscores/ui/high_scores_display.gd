@@ -11,7 +11,7 @@ extends PanelContainer
 # Chemin vers la scène UI d'un seul élément de score.
 # IMPORTANT : ASSUREZ-VOUS QUE CE CHEMIN CORRESPOND BIEN À L'EMPLACEMENT
 # DE VOTRE FICHIER ordered_highscore_item_ui.tscn DANS VOTRE PROJET !
-const HIGH_SCORE_ITEM_UI_PATH = "res://scenes/ordered_highscore_item_ui.tscn"
+const HIGH_SCORE_ITEM_UI_PATH = "res://scenes/highscores/ui/ordered_highscore_item_ui.tscn"
 
 var high_score_item_ui_scene: PackedScene # Variable pour stocker la scène chargée.
 
