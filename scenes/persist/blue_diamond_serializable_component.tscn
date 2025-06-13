@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://du7w5rapheu48"]
+
+[ext_resource type="Script" uid="uid://qpu8chyucwk3" path="res://scripts/persist/blue_diamond_serializable_component.gd" id="1_yotpa"]
+
+[node name="BlueDiamondSerializableComponent" type="Node2D" groups=["Serializable"]]
+script = ExtResource("1_yotpa")

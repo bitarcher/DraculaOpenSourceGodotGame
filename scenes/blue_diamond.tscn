@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://kjkoe3spblwm" path="res://scripts/blue_diamond.gd" id="1_852vy"]
 [ext_resource type="Texture2D" uid="uid://knp3q5apo6ha" path="res://assets/sprites/blue_diamond.png" id="2_3i22g"]
-[ext_resource type="AudioStream" uid="uid://ek6cp1kn5jim" path="res://assets/brackey/sounds/coin.wav" id="3_2bf7u"]
-[ext_resource type="PackedScene" uid="uid://dkwrluhtssyu1" path="res://scenes/persist/coin_serializable_component.tscn" id="4_qrj4x"]
+[ext_resource type="AudioStream" uid="uid://h01meys0eg0n" path="res://assets/sounds/diamond-found-190255.mp3" id="3_852vy"]
+[ext_resource type="PackedScene" uid="uid://du7w5rapheu48" path="res://scenes/persist/blue_diamond_serializable_component.tscn" id="4_852vy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_852vy"]
 atlas = ExtResource("2_3i22g")
@@ -76,14 +76,15 @@ animation = &"new_animation"
 autoplay = "new_animation"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(1, 0)
 shape = SubResource("CircleShape2D_rwqht")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_2bf7u")
+stream = ExtResource("3_852vy")
 volume_db = -12.629
 
-[node name="CoinSerializableComponent" parent="." instance=ExtResource("4_qrj4x")]
+[node name="BlueDiamondSerializableComponent" parent="." instance=ExtResource("4_852vy")]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

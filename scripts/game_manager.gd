@@ -3,6 +3,7 @@ extends Node
 @export var num_of_lives: int
 @export var num_of_injuries_allowed: int
 @export var num_of_coins: int 
+@export var num_of_diamonds: int
 
 @export var level_start_ticks: int
 var num_of_coins_before_killed : int = 0
@@ -118,6 +119,9 @@ func coin_fetched():
 
 func live_fetched():
 	num_of_lives += 1
+	
+func blue_diamond_fetched():
+	num_of_diamonds += 1
 	
 func new_game():
 	print("NEW GAME REQUESTED")

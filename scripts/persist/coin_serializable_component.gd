@@ -10,7 +10,7 @@ func on_save_game(saved_datas):
 	if not coin.visible:
 		return
 		
-	var my_data = SlimeEnemySavedData.new()
+	var my_data = SavedData.new()
 	my_data.scene_path = "res://scenes/coin.tscn"
 	my_data.position = coin.global_position
 	

@@ -605,3 +605,6 @@ parameters/looping = true
 
 [node name="BlueDiamond" parent="." instance=ExtResource("20_3jwsg")]
 position = Vector2(1221, -32)
+
+[node name="BlueDiamond2" parent="." instance=ExtResource("20_3jwsg")]
+position = Vector2(300, 49)
