@@ -7,6 +7,7 @@ extends Node
 
 @export var level_start_ticks: int
 var num_of_coins_before_killed : int = 0
+var num_of_blue_diamonds_before_killed: int = 0
 
 
 var immunity: bool = false
@@ -85,6 +86,7 @@ func _goto_level():
 		
 func next_level():
 	num_of_coins_before_killed = num_of_coins
+	num_of_blue_diamonds_before_killed = num_of_diamonds
 	if(num_of_lives < 2):
 		num_of_lives += 1
 	
@@ -100,6 +102,7 @@ func load_level(level: int):
 	
 func reset_counters():
 	num_of_coins_before_killed = 0
+	num_of_blue_diamonds_before_killed = 0
 	num_of_coins = 0
 	num_of_lives = INITIAL_NUM_OF_LIVES
 	num_of_injuries_allowed = INITIAL_NUM_OF_INJURIES_ALLOWED
@@ -147,14 +150,13 @@ func killed():
 	Engine.time_scale = 0.3
 	print("killed using game manager")
 	num_of_coins = num_of_coins_before_killed
+	num_of_diamonds = num_of_blue_diamonds_before_killed
 	num_of_lives -= 1
 	num_of_injuries_allowed = INITIAL_NUM_OF_INJURIES_ALLOWED
 	
 	emit_signal("player_killed")
 	
 	killed_timer.start()
-	
-	
 	
 func game_over():
 	print("game over")
