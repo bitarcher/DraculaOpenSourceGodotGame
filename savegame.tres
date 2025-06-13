@@ -418,7 +418,7 @@ scene_path = "res://scenes/coin.tscn"
 script = ExtResource("2_wvo7i")
 direction = 1
 flip_h = false
-position = Vector2(886.497, -20)
+position = Vector2(889.83, -20)
 scene_path = "res://scenes/slime_enemy.tscn"
 
 [sub_resource type="Resource" id="Resource_c51pb"]
@@ -430,12 +430,12 @@ scene_path = "res://scenes/healing_vial.tscn"
 
 [sub_resource type="Resource" id="Resource_ox1kh"]
 script = ExtResource("4_s0uye")
-num_of_lives = 5
+num_of_lives = 4
 num_of_injuries_allowed = 3
 num_of_coins = 0
-level_start_ticks = 150733
+level_start_ticks = 4327
 num_of_coins_before_killed = 0
-pause_ticks = 151806
+pause_ticks = 23317
 position = Vector2(284, 43.9917)
 scene_path = ""
 
