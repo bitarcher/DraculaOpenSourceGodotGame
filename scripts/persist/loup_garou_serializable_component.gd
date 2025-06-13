@@ -7,7 +7,7 @@ func _get_loup_garou() -> LoupGarou:
 func on_save_game(saved_datas):
 	var loup_garou = _get_loup_garou()
 	var my_data = SlimeEnemySavedData.new()
-	my_data.scene_path = "res://scenes/slime_enemy.tscn"
+	my_data.scene_path = "res://scenes/loup_garou.tscn"
 	my_data.position = loup_garou.global_position
 	my_data.direction = loup_garou.direction
 	my_data.flip_h = loup_garou.animated_sprite.flip_h
