@@ -3,7 +3,7 @@ extends Node
 @export var num_of_lives: int
 @export var num_of_injuries_allowed: int
 @export var num_of_coins: int 
-@export var num_of_diamonds: int
+@export var num_of_diamonds: int = 50
 
 @export var level_start_ticks: int
 var num_of_coins_before_killed : int = 0
@@ -20,7 +20,7 @@ signal player_name_requested_for_saving_new_highscore(context: SavingPlayerConte
 var immunity_lost_timer: Timer
 var killed_timer: Timer
 
-const NUM_OF_LEVELS: int = 13
+const NUM_OF_LEVELS: int = 14
 
 var _levels_resources: Array[Resource] = []
 var _menu_resource: Resource
@@ -42,7 +42,7 @@ func _init_level_resources():
 		preload("res://scenes/p_level_10.tscn"),
 		preload("res://scenes/p_level_11.tscn"),
 		preload("res://scenes/p_level_12.tscn"),
-		#preload("res://scenes/p_level_13.tscn")
+		preload("res://scenes/p_level_13.tscn")
 	]
 	print(str(_levels_resources.size()) + " levels loaded")
 	
@@ -103,6 +103,7 @@ func load_level(level: int):
 func reset_counters():
 	num_of_coins_before_killed = 0
 	num_of_blue_diamonds_before_killed = 0
+	num_of_diamonds = 0
 	num_of_coins = 0
 	num_of_lives = INITIAL_NUM_OF_LIVES
 	num_of_injuries_allowed = INITIAL_NUM_OF_INJURIES_ALLOWED
