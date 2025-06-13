@@ -1,10 +1,11 @@
-[gd_scene load_steps=35 format=3 uid="uid://byyyexo4e4kop"]
+[gd_scene load_steps=41 format=3 uid="uid://byyyexo4e4kop"]
 
 [ext_resource type="Texture2D" uid="uid://0asjwwjlao3i" path="res://assets/brackey/sprites/knight.png" id="1_10x2q"]
 [ext_resource type="Script" uid="uid://bdy8blwppg202" path="res://scripts/player_platformer.gd" id="1_e5rie"]
 [ext_resource type="AudioStream" uid="uid://bap4rn64gfbvt" path="res://assets/sounds/injury-scream-86808.mp3" id="3_ekqba"]
 [ext_resource type="AudioStream" uid="uid://cg26oer33s2at" path="res://assets/sounds/man-death-scream-186763.mp3" id="4_moqhw"]
 [ext_resource type="PackedScene" uid="uid://gra5myrijv4y" path="res://scenes/damage/damage_receiver_component.tscn" id="5_vsirv"]
+[ext_resource type="Texture2D" uid="uid://b6gftkn6mdbya" path="res://assets/sprites/blood_drop.png" id="6_u6mks"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e5rie"]
 atlas = ExtResource("1_10x2q")
@@ -273,6 +274,45 @@ _data = {
 radius = 5.0
 height = 16.0
 
+[sub_resource type="Curve" id="Curve_u6mks"]
+_data = [Vector2(0, 0.370787), 0.0, 0.0, 0, 0, Vector2(0.443946, 0.483146), 0.0, 0.0, 0, 0, Vector2(1, 0.134832), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_r2f70"]
+width = 32
+curve = SubResource("Curve_u6mks")
+
+[sub_resource type="Curve" id="Curve_r2f70"]
+_limits = [0.539326, 0.977528, 0.0, 1.0]
+_data = [Vector2(0, 0.819972), 0.0, 0.0, 0, 0, Vector2(1, 0.539326), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_h60gl"]
+width = 32
+curve = SubResource("Curve_r2f70")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1gb8q"]
+particle_flag_disable_z = true
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 1.0
+emission_ring_inner_radius = 0.0
+emission_ring_cone_angle = 90.0
+spread = 152.143
+initial_velocity_min = 18.52
+initial_velocity_max = 42.15
+gravity = Vector3(0, 98, 0)
+scale_curve = SubResource("CurveTexture_r2f70")
+scale_over_velocity_curve = SubResource("CurveTexture_h60gl")
+hue_variation_min = -0.08
+hue_variation_max = 0.18
+anim_offset_max = 0.0367
+turbulence_enabled = true
+collision_mode = 1
+collision_friction = 0.0
+collision_bounce = 0.0
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 z_index = 5
 collision_layer = 2
@@ -310,3 +350,10 @@ current = true
 position = Vector2(-8, -18)
 initial_life_counter = 90.0
 current_life_counter = 30.0
+
+[node name="BloodParticles" type="GPUParticles2D" parent="."]
+unique_name_in_owner = true
+emitting = false
+texture = ExtResource("6_u6mks")
+one_shot = true
+process_material = SubResource("ParticleProcessMaterial_1gb8q")

@@ -5,6 +5,7 @@ const SPEED = 200.0
 const JUMP_VELOCITY = -350.0
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var blood_particles: GPUParticles2D = %BloodParticles
 
 @export var air_rotation_return_speed: float = 5 # Degrees per second, adjust as needed
 @export var air_rotation_speed: float = 20 
@@ -18,6 +19,7 @@ func _on_player_injured(strength: float) -> void:
 	$AnimatedSprite2D/InjuredAnimationPlayer.play("injured")
 	$InjuryAudioStreamPlayer.play()
 	$DamageReceiverComponent.take_damage(strength)
+	blood_particles.emitting = true
 	
 func _on_player_killed() -> void:
 	print("player killed callback")
