@@ -66,13 +66,13 @@ max_level = 5
 remaining_lives = 7
 player_name = "Victor Alucard"
 
-[sub_resource type="Resource" id="Resource_jj2a2"]
+[sub_resource type="Resource" id="Resource_e7nr4"]
 script = ExtResource("1_e7nr4")
-num_of_coins = 18
+num_of_coins = 28
 max_level = 2
 remaining_lives = 0
-player_name = "Papa"
+player_name = "PapaAgain"
 
 [resource]
 script = ExtResource("2_0hr3b")
-items = Array[ExtResource("1_e7nr4")]([SubResource("Resource_6tcs5"), SubResource("Resource_tx7t4"), SubResource("Resource_7lpr4"), SubResource("Resource_jdmfu"), SubResource("Resource_f2gpn"), SubResource("Resource_0mvx3"), SubResource("Resource_t8jek"), SubResource("Resource_n7vnp"), SubResource("Resource_iq2uh"), SubResource("Resource_jj2a2")])
+items = Array[ExtResource("1_e7nr4")]([SubResource("Resource_6tcs5"), SubResource("Resource_tx7t4"), SubResource("Resource_7lpr4"), SubResource("Resource_jdmfu"), SubResource("Resource_f2gpn"), SubResource("Resource_0mvx3"), SubResource("Resource_t8jek"), SubResource("Resource_n7vnp"), SubResource("Resource_iq2uh"), SubResource("Resource_e7nr4")])

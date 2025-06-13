@@ -26,3 +26,11 @@ func _on_resume_game_button_pressed() -> void:
 
 func _on_highscore_game_button_pressed() -> void:
 	GameManagerSingleton.show_highscore()
+
+
+func _on_credits_pressed() -> void:
+	GameManagerSingleton.show_credits()
+
+
+func _on_exit_pressed() -> void:
+	get_tree().quit()

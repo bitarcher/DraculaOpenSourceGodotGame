@@ -23,6 +23,7 @@ const NUM_OF_LEVELS: int = 14
 var _levels_resources: Array[Resource] = []
 var _menu_resource: Resource
 var _highscore_resource: Resource
+var _credits_resource: Resource
 
 func _init_level_resources():
 	_levels_resources = [
@@ -47,6 +48,7 @@ func _init_level_resources():
 func _ready() -> void:
 	_menu_resource = preload("res://scenes/menu.tscn")
 	_highscore_resource = preload("res://scenes/highscores.tscn")
+	_credits_resource = preload("res://scenes/credits.tscn")
 	level_start_ticks = Time.get_ticks_msec()
 	_init_level_resources()
 	reset_counters()
@@ -207,3 +209,6 @@ func _on_killed_timer_timeout() -> void:
 
 func show_highscore():
 	get_tree().change_scene_to_packed(_highscore_resource)
+	
+func show_credits():
+	get_tree().change_scene_to_packed(_credits_resource)
