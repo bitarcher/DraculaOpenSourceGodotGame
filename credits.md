@@ -42,6 +42,8 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 - elf singing : https://pixabay.com/fr/sound-effects/elf-singing-89296/
 - wolf howling : Universfield, https://pixabay.com/fr/sound-effects/wolf-howling-140235/
 - werewolf breathing : https://pixabay.com/fr/sound-effects/022619-werewolf-breathing-and-sniffing-73868/
+- game start: Sound Effect by <a href="https://pixabay.com/fr/users/foxboytails-49447089/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=317318">FoxBoyTails</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=317318">Pixabay</a>
+- game end: Sound Effect by <a href="https://pixabay.com/fr/users/universfield-28281460/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=276688">Universfield</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=276688">Pixabay</a>
 
 pixabay licensing rules: https://pixabay.com/fr/service/license-summary/
 

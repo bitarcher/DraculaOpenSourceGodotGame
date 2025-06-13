@@ -12,7 +12,7 @@ static func get_default_highscore_items() -> HighScoreItems:
 		"Elias Blackwood", "Isabella Faust", "Gabriel Richter", "Celeste Nightshade", "Johannes Harker"]
 	
 	var level = 4
-	var coins = 100
+	var coins = 10
 	var lives = 1
 	
 	for i in range(0, len(player_names)):

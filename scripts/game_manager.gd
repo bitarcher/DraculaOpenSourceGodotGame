@@ -82,10 +82,9 @@ func _goto_level():
 		
 func next_level():
 	num_of_coins_before_killed = num_of_coins
-	if(num_of_lives < 4):
-		num_of_lives += 2
-	else:
+	if(num_of_lives < 2):
 		num_of_lives += 1
+	
 	current_level +=1 
 	
 	_goto_level()
@@ -120,6 +119,7 @@ func live_fetched():
 	
 func new_game():
 	print("NEW GAME REQUESTED")
+	reset_counters()
 	current_level = 1
 	_goto_level()
 
@@ -159,20 +159,42 @@ func game_over():
 	
 	var can_add = highscore_items.add_highscore_item_if_possible(player_high_score_item)
 	
+	var context: SavingPlayerContext = null
+	
 	if(can_add):
-		var context: SavingPlayerContext = SavingPlayerContext.new()
+		context = SavingPlayerContext.new()
 		context.highscore_items = highscore_items
 		context.player_highscore_item = player_high_score_item
 		player_name_requested_for_saving_new_highscore.emit(context)
-	else:
-		# TODO
-		pass
+		
+	var level_const: LevelConst = get_tree().get_first_node_in_group("LevelConst")
+	level_const.game_over_done.connect(_on_level_const_game_over_done.bind(level_const, context))
+	level_const.show_game_over()
+
+func _on_level_const_game_over_done(level_const: LevelConst, maybeSavingPlayerContext: SavingPlayerContext):
+	print(_on_level_const_game_over_done)
 	
+	if(maybeSavingPlayerContext == null):
+		reset_counters()
+		show_menu(false)
+		return
+	
+	level_const.player_name_entered.connect(_on_level_const_player_name_entered.bind(level_const, maybeSavingPlayerContext))
+	level_const.show_enter_player_name()
+
+func _on_level_const_player_name_entered(player_name: String, level_const: LevelConst, savingPlayerContext: SavingPlayerContext):
+	print("_on_level_const_player_name_entered")
+	savingPlayerContext.player_highscore_item.player_name = player_name
+	savingPlayerContext.highscore_items.save()
+	reset_counters()
+	show_highscore()
+
 
 func _on_immunity_lost_timer_timeout() -> void:
 	print("end of immunity")
 	immunity = false
 	immunity_lost_timer.stop()
+	
 
 func _on_killed_timer_timeout() -> void:
 	Engine.time_scale = 1.0

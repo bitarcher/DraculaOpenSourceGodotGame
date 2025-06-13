@@ -1,3 +1,61 @@
-[gd_scene format=3 uid="uid://c6qcukaf852ik"]
+[gd_scene load_steps=4 format=3 uid="uid://c6qcukaf852ik"]
 
-[node name="EnterPlayerName" type="Node2D"]
+[ext_resource type="Script" uid="uid://ofo3a0yglagu" path="res://scripts/highscores/ui/enter_player_name.gd" id="1_13hv0"]
+[ext_resource type="Theme" uid="uid://dhrx32e2kxpct" path="res://themes/menu_button_theme.tres" id="1_uw7fa"]
+[ext_resource type="Texture2D" uid="uid://bhiaxb7cuq6if" path="res://assets/paper.png" id="2_13hv0"]
+
+[node name="EnterPlayerName" type="Panel"]
+anchors_preset = -1
+anchor_right = 0.432
+anchor_bottom = 0.338
+offset_right = -497.664
+offset_bottom = -219.024
+script = ExtResource("1_13hv0")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_right = 432.0
+offset_bottom = 162.0
+theme = ExtResource("1_uw7fa")
+texture = ExtResource("2_13hv0")
+patch_margin_left = 60
+patch_margin_top = 60
+patch_margin_right = 60
+patch_margin_bottom = 60
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "Enter player name"
+
+[node name="ColorRect" type="ColorRect" parent="NinePatchRect/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 2
+color = Color(0, 0, 0, 0.196078)
+
+[node name="TextEdit" type="TextEdit" parent="NinePatchRect/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 30)
+layout_mode = 2
+placeholder_text = "Player name"
+
+[connection signal="gui_input" from="NinePatchRect/MarginContainer/VBoxContainer/TextEdit" to="." method="_on_text_edit_gui_input"]
+[connection signal="text_set" from="NinePatchRect/MarginContainer/VBoxContainer/TextEdit" to="." method="_on_text_edit_text_set"]

@@ -1,0 +1,78 @@
+[gd_resource type="Resource" script_class="HighScoreItems" load_steps=13 format=3]
+
+[ext_resource type="Script" path="res://scripts/highscores/storage/highscore_item.gd" id="1_e7nr4"]
+[ext_resource type="Script" path="res://scripts/highscores/storage/highscore_items.gd" id="2_0hr3b"]
+
+[sub_resource type="Resource" id="Resource_6tcs5"]
+script = ExtResource("1_e7nr4")
+num_of_coins = 730
+max_level = 13
+remaining_lives = 3
+player_name = "Johannes Harker"
+
+[sub_resource type="Resource" id="Resource_tx7t4"]
+script = ExtResource("1_e7nr4")
+num_of_coins = 650
+max_level = 12
+remaining_lives = 7
+player_name = "Celeste Nightshade"
+
+[sub_resource type="Resource" id="Resource_7lpr4"]
+script = ExtResource("1_e7nr4")
+num_of_coins = 570
+max_level = 11
+remaining_lives = 1
+player_name = "Gabriel Richter"
+
+[sub_resource type="Resource" id="Resource_jdmfu"]
+script = ExtResource("1_e7nr4")
+num_of_coins = 490
+max_level = 10
+remaining_lives = 3
+player_name = "Isabella Faust"
+
+[sub_resource type="Resource" id="Resource_f2gpn"]
+script = ExtResource("1_e7nr4")
+num_of_coins = 410
+max_level = 9
+remaining_lives = 1
+player_name = "Elias Blackwood"
+
+[sub_resource type="Resource" id="Resource_0mvx3"]
+script = ExtResource("1_e7nr4")
+num_of_coins = 330
+max_level = 8
+remaining_lives = 8
+player_name = "Seraphina Van Helsing"
+
+[sub_resource type="Resource" id="Resource_t8jek"]
+script = ExtResource("1_e7nr4")
+num_of_coins = 250
+max_level = 7
+remaining_lives = 3
+player_name = "Maximilian Cross"
+
+[sub_resource type="Resource" id="Resource_n7vnp"]
+script = ExtResource("1_e7nr4")
+num_of_coins = 170
+max_level = 6
+remaining_lives = 5
+player_name = "Lena Croft"
+
+[sub_resource type="Resource" id="Resource_iq2uh"]
+script = ExtResource("1_e7nr4")
+num_of_coins = 90
+max_level = 5
+remaining_lives = 7
+player_name = "Victor Alucard"
+
+[sub_resource type="Resource" id="Resource_jj2a2"]
+script = ExtResource("1_e7nr4")
+num_of_coins = 18
+max_level = 2
+remaining_lives = 0
+player_name = "Papa"
+
+[resource]
+script = ExtResource("2_0hr3b")
+items = Array[ExtResource("1_e7nr4")]([SubResource("Resource_6tcs5"), SubResource("Resource_tx7t4"), SubResource("Resource_7lpr4"), SubResource("Resource_jdmfu"), SubResource("Resource_f2gpn"), SubResource("Resource_0mvx3"), SubResource("Resource_t8jek"), SubResource("Resource_n7vnp"), SubResource("Resource_iq2uh"), SubResource("Resource_jj2a2")])
