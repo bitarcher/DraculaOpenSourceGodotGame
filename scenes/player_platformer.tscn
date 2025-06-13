@@ -309,9 +309,6 @@ hue_variation_min = -0.08
 hue_variation_max = 0.18
 anim_offset_max = 0.0367
 turbulence_enabled = true
-collision_mode = 1
-collision_friction = 0.0
-collision_bounce = 0.0
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 z_index = 5
