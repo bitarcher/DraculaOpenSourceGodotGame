@@ -1,3 +1,4 @@
+class_name GameManager
 extends Node
 
 @export var num_of_lives: int
@@ -78,11 +79,30 @@ func _process(_delta: float) -> void:
 func _goto_level():
 	level_start_ticks = Time.get_ticks_msec()
 	if(current_level >= NUM_OF_LEVELS):
-		print("END OF GAME : bravo")
+		end_of_game()
 	else:
 		print("NEW LEVEL IS " + str(current_level))
 		var scene_res = _levels_resources[current_level]
 		get_tree().change_scene_to_packed(scene_res)
+		
+func end_of_game():
+	print("END OF GAME : Victory")
+			
+	var prepare_highscore: PrepareHighscore = PrepareHighscore.new(self)
+	
+	prepare_highscore.level_const.victory_against_dracula_displayed.connect(_on_level_const_game_over_done.bind(prepare_highscore.level_const, prepare_highscore.context))
+	prepare_highscore.level_const.show_victory_against_dracula()
+	
+func _on_victory_against_dracula_displayed(level_const: LevelConst, maybe_saving_player_context: SavingPlayerContext):
+	print(_on_level_const_game_over_done)
+	
+	if(maybe_saving_player_context == null):
+		reset_counters()
+		return
+	
+	level_const.player_name_entered.connect(_on_level_const_player_name_entered.bind(level_const, maybe_saving_player_context))
+	level_const.show_enter_player_name()
+
 		
 func next_level():
 	num_of_coins_before_killed = num_of_coins
@@ -159,36 +179,50 @@ func killed():
 	
 	killed_timer.start()
 	
+class PrepareHighscore:
+	var highscore_items: HighScoreItems
+	var player_high_score_item: HighScoreItem
+	
+	var can_add: bool
+	
+	var context: SavingPlayerContext
+	
+	var level_const: LevelConst
+		
+	func _init(gm: GameManager):
+		print("total coins:" + str(gm.num_of_coins))
+		highscore_items = HighScoreItems.load()
+		
+		player_high_score_item = HighScoreItem.new("John Woo", 
+			gm.num_of_coins, gm.current_level, gm.num_of_lives)
+	
+		can_add = highscore_items.add_highscore_item_if_possible(player_high_score_item)
+	
+		if(can_add):
+			context = SavingPlayerContext.new()
+			context.highscore_items = highscore_items
+			context.player_highscore_item = player_high_score_item
+			gm.player_name_requested_for_saving_new_highscore.emit(context)
+			
+		level_const = gm.get_tree().get_first_node_in_group("LevelConst")
+		
 func game_over():
 	print("game over")
-	print("total coins:" + str(num_of_coins))
 	
-	var highscore_items: HighScoreItems = HighScoreItems.load()
-	var player_high_score_item: HighScoreItem = HighScoreItem.new("John Woo", num_of_coins, current_level, num_of_lives)
+	var prepare_highscore: PrepareHighscore = PrepareHighscore.new(self)
 	
-	var can_add = highscore_items.add_highscore_item_if_possible(player_high_score_item)
-	
-	var context: SavingPlayerContext = null
-	
-	if(can_add):
-		context = SavingPlayerContext.new()
-		context.highscore_items = highscore_items
-		context.player_highscore_item = player_high_score_item
-		player_name_requested_for_saving_new_highscore.emit(context)
-		
-	var level_const: LevelConst = get_tree().get_first_node_in_group("LevelConst")
-	level_const.game_over_done.connect(_on_level_const_game_over_done.bind(level_const, context))
-	level_const.show_game_over()
+	prepare_highscore.level_const.game_over_done.connect(_on_level_const_game_over_done.bind(prepare_highscore.level_const, prepare_highscore.context))
+	prepare_highscore.level_const.show_game_over()
 
-func _on_level_const_game_over_done(level_const: LevelConst, maybeSavingPlayerContext: SavingPlayerContext):
+func _on_level_const_game_over_done(level_const: LevelConst, maybe_saving_playe_context: SavingPlayerContext):
 	print(_on_level_const_game_over_done)
 	
-	if(maybeSavingPlayerContext == null):
+	if(maybe_saving_playe_context == null):
 		reset_counters()
 		show_menu(false)
 		return
 	
-	level_const.player_name_entered.connect(_on_level_const_player_name_entered.bind(level_const, maybeSavingPlayerContext))
+	level_const.player_name_entered.connect(_on_level_const_player_name_entered.bind(level_const, maybe_saving_playe_context))
 	level_const.show_enter_player_name()
 
 func _on_level_const_player_name_entered(player_name: String, level_const: LevelConst, savingPlayerContext: SavingPlayerContext):

@@ -2,6 +2,7 @@ class_name LevelConst
 extends Node2D
 
 signal game_over_done()
+signal victory_against_dracula_displayed()
 
 signal player_name_entered(player_name: String)
 
@@ -36,6 +37,28 @@ func show_enter_player_name():
 	
 	# Ajouter l'entité au canvas_layer
 	canvas_layer.add_child(enter_player_name)
+	
+func show_victory_against_dracula():
+	var victory_scene: PackedScene = preload("res://scenes/highscores/ui/victory.tscn")
+	
+	var victory_entity: Victory = victory_scene.instantiate()
+	
+	#Définir la position
+	victory_entity.position = Vector2(584, 328)
+	
+	# Définir l'échelle (scale)
+	victory_entity.scale = Vector2(3.0, 3.0)
+	victory_entity.z_index = -1
+	
+	victory_entity.victory_displayed.connect(_on_victory_displayed)
+	
+	# Ajouter l'entité au canvas_layer
+	canvas_layer.add_child(victory_entity)
+
+
+func _on_victory_displayed():
+	$CanvasLayer/LevelUi.queue_free()
+	victory_against_dracula_displayed.emit()
 	
 func _on_game_over_finished_to_display():
 	game_over_done.emit()

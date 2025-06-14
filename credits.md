@@ -1,7 +1,7 @@
 **Main participations**
 
 - Programmer : Michel Strasser
-- Game design : Romy Strasser Muller
+- Level design : Romy Strasser Muller (aka Mini Razmotte)
 - Art direction : Romy Strasser Muller
 
 This program is released under GPL license
@@ -45,6 +45,7 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 - game start: FoxBoyTails, https://pixabay.com/fr/users/foxboytails-49447089/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=317318, https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=317318
 - game end: Universfield https://pixabay.com/fr/users/universfield-28281460/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=276688, https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=276688
 - diamond found: Liecio, https://pixabay.com/fr/sound-effects/diamond-found-190255/
+- orchestral win: u_it78ck90s3, https://pixabay.com/fr/sound-effects/orchestral-win-331233/
 
 pixabay licensing rules: https://pixabay.com/fr/service/license-summary/
 

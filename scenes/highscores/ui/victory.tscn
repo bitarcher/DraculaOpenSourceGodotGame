@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://5abkmnj5fvvp"]
+
+[ext_resource type="Script" uid="uid://c23sc4u3n48t8" path="res://scripts/highscores/ui/victory.gd" id="1_4nv7h"]
+[ext_resource type="Texture2D" uid="uid://bcfoywudsq05q" path="res://assets/sprites/victory_against_dracula.png" id="2_7rheb"]
+[ext_resource type="AudioStream" uid="uid://cqyv3fqa1v0s3" path="res://assets/sounds/orchestral-win-331233.mp3" id="3_r0fr1"]
+
+[node name="Victory" type="Node2D"]
+script = ExtResource("1_4nv7h")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_7rheb")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_r0fr1")
+autoplay = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
