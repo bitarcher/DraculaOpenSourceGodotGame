@@ -28,7 +28,7 @@ var _menu_resource: Resource
 var _highscore_resource: Resource
 var _credits_resource: Resource
 
-const NUM_OF_LEVELS: int = 2
+const NUM_OF_LEVELS: int = 14
 
 func _init_level_resources():
 	_levels_resources = [

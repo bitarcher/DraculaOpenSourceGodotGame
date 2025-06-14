@@ -275,7 +275,7 @@ radius = 5.0
 height = 16.0
 
 [sub_resource type="Curve" id="Curve_u6mks"]
-_data = [Vector2(0, 0.370787), 0.0, 0.0, 0, 0, Vector2(0.443946, 0.483146), 0.0, 0.0, 0, 0, Vector2(1, 0.134832), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 0.370787), 0.0, 0.0, 0, 0, Vector2(0.461883, 0.337079), 0.0, 0.0, 0, 0, Vector2(1, 0.134832), 0.0, 0.0, 0, 0]
 point_count = 3
 
 [sub_resource type="CurveTexture" id="CurveTexture_r2f70"]
@@ -300,8 +300,8 @@ emission_ring_radius = 1.0
 emission_ring_inner_radius = 0.0
 emission_ring_cone_angle = 90.0
 spread = 152.143
-initial_velocity_min = 18.52
-initial_velocity_max = 42.15
+initial_velocity_min = 50.0
+initial_velocity_max = 55.56
 gravity = Vector3(0, 98, 0)
 scale_curve = SubResource("CurveTexture_r2f70")
 scale_over_velocity_curve = SubResource("CurveTexture_h60gl")
@@ -351,6 +351,13 @@ current_life_counter = 30.0
 [node name="BloodParticles" type="GPUParticles2D" parent="."]
 unique_name_in_owner = true
 emitting = false
+amount = 17
 texture = ExtResource("6_u6mks")
 one_shot = true
+preprocess = 0.15
+speed_scale = 1.45
+explosiveness = 0.61
+trail_lifetime = 8.52
+trail_sections = 19
+trail_section_subdivisions = 19
 process_material = SubResource("ParticleProcessMaterial_1gb8q")

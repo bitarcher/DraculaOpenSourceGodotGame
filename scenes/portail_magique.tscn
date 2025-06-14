@@ -1,12 +1,9 @@
-[gd_scene load_steps=22 format=3 uid="uid://0khi164sjtqt"]
+[gd_scene load_steps=27 format=3 uid="uid://0khi164sjtqt"]
 
 [ext_resource type="Texture2D" uid="uid://dlmdjnwi87b4e" path="res://assets/sprites/portail_magique.png" id="1_0jhvt"]
 [ext_resource type="Script" uid="uid://cros36wqqtpcw" path="res://scripts/portail_magique.gd" id="1_0ril3"]
 [ext_resource type="AudioStream" uid="uid://g75oj5d87fbb" path="res://assets/sounds/8-bit-video-game-win-level-sound-version-1-145827.mp3" id="3_3ibfv"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0ril3"]
-atlas = ExtResource("1_0jhvt")
-region = Rect2(0, 0, 43, 50)
+[ext_resource type="Texture2D" uid="uid://b6gftkn6mdbya" path="res://assets/sprites/blood_drop.png" id="4_g8pu4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3ibfv"]
 atlas = ExtResource("1_0jhvt")
@@ -72,9 +69,6 @@ region = Rect2(301, 50, 43, 50)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0ril3")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_3ibfv")
 }, {
 "duration": 1.0,
@@ -127,6 +121,36 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_mlu1v"]
 radius = 22.0
 
+[sub_resource type="Gradient" id="Gradient_laypu"]
+offsets = PackedFloat32Array(0, 0.549254, 1)
+colors = PackedColorArray(6.73831e-07, 0, 0.812647, 1, 0.164179, 0.164179, 0.164179, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_k4ykk"]
+gradient = SubResource("Gradient_laypu")
+
+[sub_resource type="Curve" id="Curve_tjmpu"]
+_data = [Vector2(0, 0.37961), 0.0, 0.0, 0, 0, Vector2(0.98892, 0.0482647), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_omgvn"]
+curve = SubResource("Curve_tjmpu")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5hkko"]
+particle_flag_disable_z = true
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 18.0
+emission_ring_inner_radius = 0.0
+emission_ring_cone_angle = 90.0
+orbit_velocity_min = 0.2
+orbit_velocity_max = 0.35
+gravity = Vector3(0, 0.1, 0)
+radial_accel_min = -100.0
+radial_accel_max = -11.57
+scale_curve = SubResource("CurveTexture_omgvn")
+color_ramp = SubResource("GradientTexture1D_k4ykk")
+
 [node name="PortailMagique" type="Area2D"]
 z_index = 4
 collision_mask = 2
@@ -139,11 +163,28 @@ autoplay = "vortex"
 frame = 6
 frame_progress = 0.394669
 
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.509804, 1, 1, 0.596078)
+position = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_f3oil")
+animation = &"vortex"
+autoplay = "vortex"
+frame = 6
+frame_progress = 0.394669
+speed_scale = 1.1
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("CircleShape2D_mlu1v")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_3ibfv")
 volume_db = -17.333
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+modulate = Color(1, 1, 1, 0.270588)
+amount = 31
+texture = ExtResource("4_g8pu4")
+process_material = SubResource("ParticleProcessMaterial_5hkko")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

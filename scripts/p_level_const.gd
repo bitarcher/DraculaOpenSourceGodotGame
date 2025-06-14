@@ -55,10 +55,10 @@ func show_victory_against_dracula():
 	# Ajouter l'entité au canvas_layer
 	canvas_layer.add_child(victory_entity)
 
-
 func _on_victory_displayed():
 	$CanvasLayer/LevelTime.queue_free()
 	$CanvasLayer/LevelUi.queue_free()
+	$CanvasLayer/LevelName.queue_free()
 	victory_against_dracula_displayed.emit()
 	
 func _on_game_over_finished_to_display():
