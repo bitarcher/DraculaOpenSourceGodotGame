@@ -19,7 +19,7 @@ scale = Vector2(0.3, 0.3)
 position = Vector2(16, 600)
 scale = Vector2(0.3, 0.3)
 
-[node name="LevelName2" parent="CanvasLayer" instance=ExtResource("4_mfnrs")]
+[node name="LevelTime" parent="CanvasLayer" instance=ExtResource("4_mfnrs")]
 position = Vector2(960, 15)
 scale = Vector2(0.3, 0.3)
 

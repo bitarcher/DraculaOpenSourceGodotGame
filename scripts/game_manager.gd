@@ -21,12 +21,14 @@ signal player_name_requested_for_saving_new_highscore(context: SavingPlayerConte
 var immunity_lost_timer: Timer
 var killed_timer: Timer
 
-const NUM_OF_LEVELS: int = 14
+
 
 var _levels_resources: Array[Resource] = []
 var _menu_resource: Resource
 var _highscore_resource: Resource
 var _credits_resource: Resource
+
+const NUM_OF_LEVELS: int = 2
 
 func _init_level_resources():
 	_levels_resources = [
@@ -219,7 +221,6 @@ func _on_level_const_game_over_done(level_const: LevelConst, maybe_saving_playe_
 	
 	if(maybe_saving_playe_context == null):
 		reset_counters()
-		show_menu(false)
 		return
 	
 	level_const.player_name_entered.connect(_on_level_const_player_name_entered.bind(level_const, maybe_saving_playe_context))

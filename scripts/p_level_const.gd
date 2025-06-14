@@ -57,6 +57,7 @@ func show_victory_against_dracula():
 
 
 func _on_victory_displayed():
+	$CanvasLayer/LevelTime.queue_free()
 	$CanvasLayer/LevelUi.queue_free()
 	victory_against_dracula_displayed.emit()
 	
