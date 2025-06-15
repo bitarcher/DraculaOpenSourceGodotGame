@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://686qsh4bmth6"]
+
+[ext_resource type="Script" uid="uid://0qw5354t8tmg" path="res://scripts/lava.gd" id="1_a5s42"]
+
+[sub_resource type="Gradient" id="Gradient_dw3wf"]
+colors = PackedColorArray(1, 0.270588, 0, 1, 1, 1, 0.419608, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_lkrqy"]
+frequency = 0.004
+fractal_type = 3
+fractal_octaves = 2
+fractal_lacunarity = 1.4
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_a5s42"]
+in_3d_space = true
+color_ramp = SubResource("Gradient_dw3wf")
+noise = SubResource("FastNoiseLite_lkrqy")
+
+[node name="Lava" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_a5s42")
+speed = Vector3(0, 50, 10)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+unique_name_in_owner = true
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("NoiseTexture2D_a5s42")
