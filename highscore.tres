@@ -17,6 +17,13 @@ max_level = 14
 remaining_lives = 7
 player_name = "Michel the best"
 
+[sub_resource type="Resource" id="Resource_t8jek"]
+script = ExtResource("1_e7nr4")
+num_of_coins = 773
+max_level = 13
+remaining_lives = 0
+player_name = "Razmotte"
+
 [sub_resource type="Resource" id="Resource_n7vnp"]
 script = ExtResource("1_e7nr4")
 num_of_coins = 754
@@ -66,13 +73,6 @@ max_level = 8
 remaining_lives = 8
 player_name = "Seraphina Van Helsing"
 
-[sub_resource type="Resource" id="Resource_t8jek"]
-script = ExtResource("1_e7nr4")
-num_of_coins = 250
-max_level = 7
-remaining_lives = 3
-player_name = "Maximilian Cross"
-
 [resource]
 script = ExtResource("2_0hr3b")
-items = Array[ExtResource("1_e7nr4")]([SubResource("Resource_0hr3b"), SubResource("Resource_e7nr4"), SubResource("Resource_n7vnp"), SubResource("Resource_6tcs5"), SubResource("Resource_tx7t4"), SubResource("Resource_7lpr4"), SubResource("Resource_jdmfu"), SubResource("Resource_f2gpn"), SubResource("Resource_0mvx3"), SubResource("Resource_t8jek")])
+items = Array[ExtResource("1_e7nr4")]([SubResource("Resource_0hr3b"), SubResource("Resource_e7nr4"), SubResource("Resource_t8jek"), SubResource("Resource_n7vnp"), SubResource("Resource_6tcs5"), SubResource("Resource_tx7t4"), SubResource("Resource_7lpr4"), SubResource("Resource_jdmfu"), SubResource("Resource_f2gpn"), SubResource("Resource_0mvx3")])

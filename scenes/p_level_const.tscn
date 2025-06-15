@@ -1,13 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://d062hkuxa4g7y"]
+[gd_scene load_steps=7 format=3 uid="uid://d062hkuxa4g7y"]
 
-[ext_resource type="Script" uid="uid://3c5e38a6a81m" path="res://scripts/p_level_const.gd" id="1_mfnrs"]
+[ext_resource type="Script" uid="uid://315hcfqmecrd" path="res://scripts/persist/platforms_delayed_serializable_component.gd" id="1_h7ect"]
 [ext_resource type="PackedScene" uid="uid://c8fgcnhdy6mk2" path="res://scenes/level_ui.tscn" id="2_hlhvv"]
 [ext_resource type="PackedScene" uid="uid://wodbsbtp5pxn" path="res://scenes/level_name.tscn" id="4_hlhvv"]
 [ext_resource type="PackedScene" uid="uid://dhypwyvccqm4w" path="res://scenes/level_time.tscn" id="4_mfnrs"]
 [ext_resource type="AudioStream" uid="uid://cynabvs3utiyo" path="res://assets/sounds/game-start-317318.mp3" id="5_mfnrs"]
+[ext_resource type="PackedScene" uid="uid://013rcgdilhcp" path="res://scenes/persist/platforms_delayed_serializable_component.tscn" id="6_m06n5"]
 
 [node name="LevelConst" type="Node2D" groups=["LevelConst"]]
-script = ExtResource("1_mfnrs")
+script = ExtResource("1_h7ect")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -26,3 +27,5 @@ scale = Vector2(0.3, 0.3)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_mfnrs")
 autoplay = true
+
+[node name="PlatformsDelayedSerializableComponent" parent="." instance=ExtResource("6_m06n5")]

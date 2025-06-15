@@ -86,6 +86,9 @@ func load_game(address: String = DEFAULT_STORE_PATH):
 				var serializable_component = node as ASerializableComponent
 				assert(serializable_component != null)
 				serializable_component.on_load_game(item)
+		else:
+			#TODO
+			pass
 
 	for sd in saved_game.saved_datas:
 		if sd is PlayerPlatformerSavedData:

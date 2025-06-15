@@ -43,6 +43,7 @@ version_control/autoload_on_startup=true
 Player=""
 Serializable="for all*SerializableComponent"
 LevelConst=""
+PlatformDelayed=""
 
 [gui]
 

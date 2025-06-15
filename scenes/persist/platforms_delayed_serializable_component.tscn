@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://013rcgdilhcp"]
+
+[ext_resource type="Script" uid="uid://315hcfqmecrd" path="res://scripts/persist/platforms_delayed_serializable_component.gd" id="1_g3gbr"]
+
+[node name="PlatformsDelayedSerializableComponent" type="Node2D" groups=["Serializable"]]
+script = ExtResource("1_g3gbr")
