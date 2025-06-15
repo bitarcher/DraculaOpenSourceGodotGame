@@ -1,12 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://686qsh4bmth6"]
+[gd_scene load_steps=7 format=3 uid="uid://686qsh4bmth6"]
 
 [ext_resource type="Script" uid="uid://0qw5354t8tmg" path="res://scripts/lava.gd" id="1_a5s42"]
+[ext_resource type="PackedScene" uid="uid://bqhlm5rolw1xo" path="res://scenes/injury_zone.tscn" id="2_dw3wf"]
 
 [sub_resource type="Gradient" id="Gradient_dw3wf"]
-colors = PackedColorArray(1, 0.270588, 0, 1, 1, 1, 0.419608, 1)
+offsets = PackedFloat32Array(0, 0.234829, 0.883905, 1)
+colors = PackedColorArray(0.324857, 0.13087, 0.0849618, 1, 0.779305, 0.177488, 0, 0.956863, 1, 1, 0.419608, 1, 1, 1, 1, 1)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_lkrqy"]
 frequency = 0.004
+offset = Vector3(0, 3767.68, 753.599)
 fractal_type = 3
 fractal_octaves = 2
 fractal_lacunarity = 1.4
@@ -16,7 +19,11 @@ in_3d_space = true
 color_ramp = SubResource("Gradient_dw3wf")
 noise = SubResource("FastNoiseLite_lkrqy")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dw3wf"]
+size = Vector2(510, 510)
+
 [node name="Lava" type="Control"]
+z_index = 12
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_a5s42")
@@ -27,3 +34,9 @@ unique_name_in_owner = true
 offset_right = 40.0
 offset_bottom = 40.0
 texture = SubResource("NoiseTexture2D_a5s42")
+
+[node name="InjuryZone" parent="TextureRect" instance=ExtResource("2_dw3wf")]
+position = Vector2(254, 255)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/InjuryZone"]
+shape = SubResource("RectangleShape2D_dw3wf")
