@@ -15,6 +15,9 @@ var _initial_life_counter : float
 
 @export var initial_life_counter : float = 100.0: # Use 100.0 for float literal clarity
 	set(value):
+		if(value < 1):
+			value = 100.0
+		
 		# Ensure initial_life_counter is not negative
 		_initial_life_counter = max(0.0, value)
 		# Update progress_bar.max_value only if the progress_bar node is ready
@@ -42,7 +45,7 @@ var _current_life_counter : float
 			if life_value_label: # Check if label reference is valid too
 				# THIS IS WHERE THE LABEL TEXT IS SET
 				# It will show an integer (no decimal) because of round() and str()
-				life_value_label.text = str(_current_life_counter as int)
+				life_value_label.text = str(roundi(_current_life_counter))
 				# Optional: For debugging, print what's being set
 				print(name, ": Label text updated to: ", life_value_label.text)
 

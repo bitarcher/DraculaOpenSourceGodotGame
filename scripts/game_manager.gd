@@ -2,7 +2,6 @@ class_name GameManager
 extends Node
 
 @export var num_of_lives: int
-@export var num_of_injuries_allowed: int
 @export var num_of_coins: int 
 @export var num_of_diamonds: int = 50
 
@@ -13,15 +12,15 @@ var num_of_blue_diamonds_before_killed: int = 0
 
 var immunity: bool = false
 
-
+@export var health: float = INITIAL_HEALTH
+ 
+signal health_changed(new_health: float)
 signal player_injured(strength: float) 
 signal player_killed() 
-signal player_name_requested_for_saving_new_highscore(context: SavingPlayerContext)
+#signal player_name_requested_for_saving_new_highscore(context: SavingPlayerContext)
 
 var immunity_lost_timer: Timer
 var killed_timer: Timer
-
-
 
 var _levels_resources: Array[Resource] = []
 var _menu_resource: Resource
@@ -29,6 +28,7 @@ var _highscore_resource: Resource
 var _credits_resource: Resource
 
 const NUM_OF_LEVELS: int = 16
+const INITIAL_HEALTH: float = 100.0
 
 func _init_level_resources():
 	_levels_resources = [
@@ -70,9 +70,11 @@ func _ready() -> void:
 	killed_timer.wait_time = 2.0
 	killed_timer.ignore_time_scale = true
 	killed_timer.connect("timeout", _on_killed_timer_timeout)
+	
+func _get_defense_factor():
+	return 1.0
 
 const INITIAL_NUM_OF_LIVES = 5
-const INITIAL_NUM_OF_INJURIES_ALLOWED = 3
 
 var current_level = 1
 @onready var level_1 = preload("res://scripts/p_level_1.gd")
@@ -109,6 +111,7 @@ func _on_victory_against_dracula_displayed(level_const: LevelConst, maybe_saving
 
 		
 func next_level():
+	health = INITIAL_HEALTH
 	num_of_coins_before_killed = num_of_coins
 	num_of_blue_diamonds_before_killed = num_of_diamonds
 	if(num_of_lives < 2):
@@ -125,12 +128,12 @@ func load_level(level: int):
 	_goto_level()
 	
 func reset_counters():
+	health = INITIAL_HEALTH
 	num_of_coins_before_killed = 0
 	num_of_blue_diamonds_before_killed = 0
 	num_of_diamonds = 0
 	num_of_coins = 0
 	num_of_lives = INITIAL_NUM_OF_LIVES
-	num_of_injuries_allowed = INITIAL_NUM_OF_INJURIES_ALLOWED
 	
 func resume_game():
 	#_goto_level()
@@ -160,16 +163,23 @@ func new_game():
 func injured(strength: float):
 	if(immunity):
 		return
-		
-	num_of_injuries_allowed -= 1
 	
-	if(num_of_injuries_allowed <= 0):
+	var level = strength / _get_defense_factor()
+	
+	health -= level
+	
+	if (health  <= 0.0):
+		health = 0.0
+		
+		player_injured.emit(strength)
+		health_changed.emit(health)
 		killed()
 	else:
 		print("start of immunity")
 		immunity = true
 		immunity_lost_timer.start()
 		player_injured.emit(strength)
+		health_changed.emit(health)
 		
 func killed():
 	Engine.time_scale = 0.3
@@ -177,7 +187,6 @@ func killed():
 	num_of_coins = num_of_coins_before_killed
 	num_of_diamonds = num_of_blue_diamonds_before_killed
 	num_of_lives -= 1
-	num_of_injuries_allowed = INITIAL_NUM_OF_INJURIES_ALLOWED
 	
 	emit_signal("player_killed")
 	
@@ -228,7 +237,7 @@ func _on_level_const_game_over_done(level_const: LevelConst, maybe_saving_playe_
 	level_const.player_name_entered.connect(_on_level_const_player_name_entered.bind(level_const, maybe_saving_playe_context))
 	level_const.show_enter_player_name()
 
-func _on_level_const_player_name_entered(player_name: String, level_const: LevelConst, savingPlayerContext: SavingPlayerContext):
+func _on_level_const_player_name_entered(player_name: String,_level_const: LevelConst, savingPlayerContext: SavingPlayerContext):
 	print("_on_level_const_player_name_entered")
 	savingPlayerContext.player_highscore_item.player_name = player_name
 	savingPlayerContext.highscore_items.save()
@@ -250,6 +259,7 @@ func _on_killed_timer_timeout() -> void:
 		game_over()
 	else:
 		get_tree().reload_current_scene()
+		health = INITIAL_HEALTH
 
 func show_highscore():
 	get_tree().change_scene_to_packed(_highscore_resource)

@@ -345,7 +345,6 @@ current = true
 
 [node name="DamageReceiverComponent" parent="." instance=ExtResource("5_vsirv")]
 position = Vector2(-8, -18)
-initial_life_counter = 90.0
 current_life_counter = 30.0
 
 [node name="BloodParticles" type="GPUParticles2D" parent="."]

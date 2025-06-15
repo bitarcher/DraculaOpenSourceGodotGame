@@ -315,7 +315,7 @@ _data = {
 &"move": SubResource("Animation_7o06k")
 }
 
-[node name="PLevel13" type="Node2D"]
+[node name="PLevel15" type="Node2D"]
 position = Vector2(-286, 15)
 script = ExtResource("1_i6kqm")
 
