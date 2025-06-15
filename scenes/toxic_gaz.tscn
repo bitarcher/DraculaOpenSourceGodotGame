@@ -54,6 +54,7 @@ frame = 3
 frame_progress = 0.79904
 
 [node name="InjuryZone" parent="AnimatedSprite2D" instance=ExtResource("2_sexf0")]
+injury_strength = 25.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/InjuryZone"]
 position = Vector2(-6, 4)
