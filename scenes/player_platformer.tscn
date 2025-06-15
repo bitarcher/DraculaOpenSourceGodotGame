@@ -316,6 +316,7 @@ collision_layer = 2
 script = ExtResource("1_e5rie")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_u6mks")
 animation = &"run"
 autoplay = "idle"

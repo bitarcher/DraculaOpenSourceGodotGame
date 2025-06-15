@@ -47,6 +47,39 @@ func _get_global_camera() -> Camera2D:
 func _get_player_camera() -> Camera2D:
 	var camera = ToolsSingleton.get_node_from_class(self, "Camera2D")
 	return camera
+	
+@onready var animated_sprite: AnimatedSprite2D = %AnimatedSprite2D
+
+func _fade_out_animated_player():
+	# Vérifie si le nœud AnimatedSprite2D est valide
+	if not animated_sprite:
+		push_error("AnimatedSprite2D n'est pas trouvé ou configuré.")
+		return
+
+	# Crée un nouveau Tween pour l'animation
+	var tween = create_tween()
+	
+	# S'assure que le Tween n'est pas tué prématurément si un autre tween est créé sur le même objet.
+	# Le mode default "Tween.TWEEN_MODE_RESTART" est souvent bon pour cela.
+	# Si vous voulez s'assurer qu'aucun autre tween ne perturbe celui-ci, utilisez TWEEN_MODE_EXCLUSIVE
+	# tween.set_tween_mode(Tween.TWEEN_MODE_EXCLUSIVE) 
+
+	# Configure la propriété à animer :
+	# Object: animated_sprite
+	# Property: "modulate:a" (le canal alpha de la couleur modulate)
+	# Target Value: 0.0 (totalement transparent)
+	# Duration: 0.3 (secondes, soit 300 ms)
+	tween.tween_property(animated_sprite, "modulate:a", 0.0, 0.1)
+	
+	# Optionnel: Définir la courbe d'animation (Ease)
+	# tween.set_ease(Tween.EASE_OUT)
+	# tween.set_trans(Tween.TRANS_QUAD)
+
+	# Optionnel: Attendre la fin du tween
+	# await tween.finished
+	# print("Le fondu de l'AnimatedSprite2D est terminé.")
+	# Vous pouvez détruire le nœud ici, par exemple:
+	# animated_sprite.queue_free()
 
 func stop_following_player():
 	var player_camera: Camera2D = _get_player_camera()
@@ -61,7 +94,8 @@ func stop_following_player():
 			global_camera.global_position = player_camera.global_position
 			global_camera.zoom = player_camera.zoom # Copie aussi le zoom
 			# Si vous utilisez des rotations sur la caméra, copiez aussi global_rotation
-			# global_camera.global_rotation = player_camera.global_rotation
+			global_camera.global_rotation = player_camera.global_rotation
+			global_camera.offset = player_camera.offset
 			
 		# 2. Désactiver la caméra du joueur et son traitement
 		player_camera.enabled = false # Godot 4
@@ -76,7 +110,7 @@ func stop_following_player():
 			push_warning("La GlobalCamera n'a pas été trouvée ! Le suivi a été arrêté mais aucune autre caméra n'est active.")
 	elif not player_camera:
 		push_warning("La PlayerCamera n'est pas configurée ou introuvable.")
-
+	_fade_out_animated_player()
 	
 func get_out_from_vortex():
 	animated_sprite_2d.rotation_degrees = 0
