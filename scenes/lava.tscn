@@ -9,7 +9,7 @@ colors = PackedColorArray(0.324857, 0.13087, 0.0849618, 1, 0.779305, 0.177488, 0
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_lkrqy"]
 frequency = 0.004
-offset = Vector3(0, 5679.31, 1135.84)
+offset = Vector3(0, 25673, 5133.05)
 fractal_type = 3
 fractal_octaves = 2
 fractal_lacunarity = 1.4
@@ -31,11 +31,13 @@ speed = Vector3(0, 50, 10)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 unique_name_in_owner = true
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = SubResource("NoiseTexture2D_a5s42")
 
 [node name="Killzone" parent="TextureRect" instance=ExtResource("2_dw3wf")]
+camera_should_stop_following_player = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Killzone"]
 position = Vector2(254, 255)

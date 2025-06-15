@@ -22,6 +22,7 @@ func on_save_game(saved_data: Array[SavedData]):
 	
 func on_before_load_game():
 	pass
+	
 
 func on_load_game(saved_data: SavedData):
 	var platforms_delayed: Array[Node] = _get_platforms_delayed()

@@ -36,6 +36,48 @@ func _on_player_killed() -> void:
 func enter_vortex():
 	$AnimatedSprite2D/AnimationPlayer.play("enter_vortex")
 	
+func _get_global_camera() -> Camera2D:
+	var global_cameras = ToolsSingleton.get_nodes_in_group_from_node(get_tree().current_scene, "GlobalCamera")
+	
+	if(len(global_cameras) > 0):
+		return global_cameras[0]
+	else:
+		return null
+		
+func _get_player_camera() -> Camera2D:
+	var camera = ToolsSingleton.get_node_from_class(self, "Camera2D")
+	return camera
+
+func stop_following_player():
+	var player_camera: Camera2D = _get_player_camera()
+	var global_camera: Camera2D = _get_global_camera()
+	
+	
+	
+	if player_camera and player_camera.is_current():
+		# 1. Copier la position globale (et la rotation/zoom si nécessaire) de la caméra du joueur
+		# vers la caméra globale AVANT de changer de caméra.
+		if global_camera:
+			global_camera.global_position = player_camera.global_position
+			global_camera.zoom = player_camera.zoom # Copie aussi le zoom
+			# Si vous utilisez des rotations sur la caméra, copiez aussi global_rotation
+			# global_camera.global_rotation = player_camera.global_rotation
+			
+		# 2. Désactiver la caméra du joueur et son traitement
+		player_camera.enabled = false # Godot 4
+		player_camera.set_process_mode(Node.PROCESS_MODE_DISABLED) # Si elle avait un script qui déplace/ajuste
+
+		# 3. Activer la caméra globale
+		if global_camera:
+			global_camera.enabled = true # Godot 4
+			global_camera.make_current() # Rend cette caméra la caméra active
+			print("La caméra du joueur a été désactivée, la caméra globale est active à la position du joueur.")
+		else:
+			push_warning("La GlobalCamera n'a pas été trouvée ! Le suivi a été arrêté mais aucune autre caméra n'est active.")
+	elif not player_camera:
+		push_warning("La PlayerCamera n'est pas configurée ou introuvable.")
+
+	
 func get_out_from_vortex():
 	animated_sprite_2d.rotation_degrees = 0
 	animated_sprite_2d.scale = Vector2(1.0, 1.0)

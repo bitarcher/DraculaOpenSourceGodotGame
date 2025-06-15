@@ -29,3 +29,7 @@ stream = ExtResource("5_mfnrs")
 autoplay = true
 
 [node name="PlatformsDelayedSerializableComponent" parent="." instance=ExtResource("6_m06n5")]
+
+[node name="GlobalCamera" type="Camera2D" parent="." groups=["GlobalCamera"]]
+unique_name_in_owner = true
+enabled = false
