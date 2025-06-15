@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://bak673jogwixo"]
+[gd_scene load_steps=36 format=3 uid="uid://bak673jogwixo"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_ubjx6"]
 [ext_resource type="Texture2D" uid="uid://doyfrmal4p0kn" path="res://assets/clouds/cloud0.png" id="2_pmbes"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://7r7xqq1udtgj" path="res://scenes/coins_5x5.tscn" id="22_8x704"]
 [ext_resource type="PackedScene" uid="uid://j3hd2b06ok3d" path="res://scenes/coin.tscn" id="23_sie33"]
 [ext_resource type="PackedScene" uid="uid://c2rxg4yil67wj" path="res://scenes/blue_diamond.tscn" id="24_mrdai"]
+[ext_resource type="PackedScene" uid="uid://uexabi8p1p55" path="res://scenes/lava_bubble.tscn" id="25_wy5iy"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pfjqn"]
 
@@ -708,3 +709,28 @@ libraries = {
 &"": SubResource("AnimationLibrary_2svmo")
 }
 autoplay = "move"
+
+[node name="LavaBubble" parent="." instance=ExtResource("25_wy5iy")]
+z_index = 10
+position = Vector2(159, -91)
+
+[node name="LavaBubble2" parent="." instance=ExtResource("25_wy5iy")]
+z_index = 10
+position = Vector2(96, -65)
+
+[node name="LavaBubble4" parent="." instance=ExtResource("25_wy5iy")]
+z_index = 10
+position = Vector2(624, -92)
+scale = Vector2(1.2, 1.2)
+
+[node name="LavaBubble3" parent="." instance=ExtResource("25_wy5iy")]
+z_index = 10
+position = Vector2(383, -127)
+scale = Vector2(0.3, 0.3)
+amount = 25
+
+[node name="LavaBubble5" parent="." instance=ExtResource("25_wy5iy")]
+z_index = 10
+position = Vector2(785, -113)
+scale = Vector2(0.3, 0.3)
+amount = 25

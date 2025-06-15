@@ -9,6 +9,7 @@ const JUMP_VELOCITY = -350.0
 
 @export var air_rotation_return_speed: float = 5 # Degrees per second, adjust as needed
 @export var air_rotation_speed: float = 20 
+@onready var damage_receiver_component: DamageReceiverComponent = $DamageReceiverComponent
 
 func _ready() -> void:
 	GameManagerSingleton.connect("player_injured", _on_player_injured)
@@ -70,6 +71,7 @@ func _fade_out_animated_player():
 	# Target Value: 0.0 (totalement transparent)
 	# Duration: 0.3 (secondes, soit 300 ms)
 	tween.tween_property(animated_sprite, "modulate:a", 0.0, 0.1)
+	tween.tween_property(damage_receiver_component, "modulate:a", 0.0, 0.1)
 	
 	# Optionnel: Définir la courbe d'animation (Ease)
 	# tween.set_ease(Tween.EASE_OUT)
