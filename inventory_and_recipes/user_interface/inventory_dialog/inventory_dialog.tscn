@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://6r4rm2hswvtu"]
 
-[ext_resource type="Script" path="res://user_interface/inventory_dialog/inventory_dialog.gd" id="1_uehr3"]
-[ext_resource type="PackedScene" uid="uid://cna2r3rric5yl" path="res://user_interface/item_slot/item_slot.tscn" id="2_l2s8o"]
-[ext_resource type="PackedScene" uid="uid://d1efscup5qx56" path="res://user_interface/item_grid/item_grid.tscn" id="3_nxv4r"]
+[ext_resource type="Script" uid="uid://dj8n7em8k21sn" path="res://inventory_and_recipes/user_interface/inventory_dialog/inventory_dialog.gd" id="1_uehr3"]
+[ext_resource type="PackedScene" uid="uid://cna2r3rric5yl" path="res://inventory_and_recipes/user_interface/item_slot/item_slot.tscn" id="2_l2s8o"]
+[ext_resource type="PackedScene" uid="uid://d1efscup5qx56" path="res://inventory_and_recipes/user_interface/item_grid/item_grid.tscn" id="3_nxv4r"]
 
 [node name="InventoryDialog" type="PanelContainer"]
 anchors_preset = 15
@@ -34,5 +34,6 @@ text = " X "
 [node name="GridContainer" parent="VBoxContainer" instance=ExtResource("3_nxv4r")]
 unique_name_in_owner = true
 layout_mode = 2
+script = null
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/CloseButton" to="." method="_on_close_button_pressed"]
