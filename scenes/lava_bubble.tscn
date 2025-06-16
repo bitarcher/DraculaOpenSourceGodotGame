@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://dtmxyauvdg8kx" path="res://assets/sprites/bubble32.png" id="1_s5yf2"]
 
 [sub_resource type="Gradient" id="Gradient_s5yf2"]
-offsets = PackedFloat32Array(0, 0.984043)
-colors = PackedColorArray(0.923444, 0.45421, 0.1582, 0.72549, 1, 1, 1, 0.501961)
+offsets = PackedFloat32Array(0, 0.781915, 0.984043)
+colors = PackedColorArray(0.923444, 0.45421, 0.1582, 0.72549, 1, 1, 1, 0.509804, 1, 1, 1, 0.501961)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_pjddm"]
 gradient = SubResource("Gradient_s5yf2")

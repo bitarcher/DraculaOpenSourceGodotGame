@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b5geq5n0tlmfj" path="res://scenes/killzone.tscn" id="7_g1sy6"]
 [ext_resource type="Texture2D" uid="uid://bhnmlt1xwr8rl" path="res://assets/brackey/sprites/world_tileset.png" id="8_8x704"]
 [ext_resource type="PackedScene" uid="uid://d062hkuxa4g7y" path="res://scenes/p_level_const.tscn" id="9_sie33"]
-[ext_resource type="AudioStream" uid="uid://c01qgw58dwiv5" path="res://assets/music/moonlight-walzer-gothic-and-vampiric-piano-music-247460.mp3" id="10_mrdai"]
+[ext_resource type="AudioStream" uid="uid://bpckn4yv1iipf" path="res://assets/music/psychedelic-rock-108787.mp3" id="10_wy5iy"]
 [ext_resource type="PackedScene" uid="uid://db0m6md1wl07b" path="res://scenes/rotating_platform.tscn" id="11_kxnfv"]
 [ext_resource type="PackedScene" uid="uid://686qsh4bmth6" path="res://scenes/lava.tscn" id="12_6i45f"]
 [ext_resource type="PackedScene" uid="uid://c52etx4cornmc" path="res://scenes/trap.tscn" id="13_1y7x0"]
@@ -212,6 +212,21 @@ texture = ExtResource("8_8x704")
 physics_layer_0/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_bs2ip")
 
+[sub_resource type="Animation" id="Animation_04g3w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-13, 37)]
+}
+
 [sub_resource type="Animation" id="Animation_mx3oa"]
 resource_name = "move"
 length = 9.0
@@ -229,7 +244,13 @@ tracks/0/keys = {
 "values": [Vector2(-13, 37), Vector2(-13, 301)]
 }
 
-[sub_resource type="Animation" id="Animation_04g3w"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6aic3"]
+_data = {
+&"RESET": SubResource("Animation_04g3w"),
+&"move": SubResource("Animation_mx3oa")
+}
+
+[sub_resource type="Animation" id="Animation_s7767"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -241,13 +262,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-13, 37)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_6aic3"]
-_data = {
-&"RESET": SubResource("Animation_04g3w"),
-&"move": SubResource("Animation_mx3oa")
+"values": [Vector2(1989, -132)]
 }
 
 [sub_resource type="Animation" id="Animation_ynn0j"]
@@ -264,21 +279,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(1989, -132), Vector2(3514, -102)]
-}
-
-[sub_resource type="Animation" id="Animation_s7767"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1989, -132)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2svmo"]
@@ -375,8 +375,8 @@ layer_1/tile_data = PackedInt32Array(-720901, 393218, 1, -786429, 393218, 1, -78
 [node name="LevelConst" parent="." instance=ExtResource("9_sie33")]
 
 [node name="MusicAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("10_mrdai")
-volume_db = -23.602
+stream = ExtResource("10_wy5iy")
+volume_db = -10.429
 autoplay = true
 parameters/looping = true
 
@@ -717,6 +717,11 @@ position = Vector2(159, -91)
 [node name="LavaBubble2" parent="." instance=ExtResource("25_wy5iy")]
 z_index = 10
 position = Vector2(96, -65)
+
+[node name="LavaBubble6" parent="." instance=ExtResource("25_wy5iy")]
+z_index = 10
+position = Vector2(456, 261)
+scale = Vector2(0.5, 0.5)
 
 [node name="LavaBubble4" parent="." instance=ExtResource("25_wy5iy")]
 z_index = 10

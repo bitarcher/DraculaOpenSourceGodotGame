@@ -63,3 +63,18 @@ func get_node_from_class(node: Node, search_class_name: String) -> Node:
 		return nodes[0]
 	else:
 		return null
+		
+func get_player_platformer() -> PlayerPlatformer:
+	var root = get_tree().current_scene
+	var nodes = get_nodes_in_group_from_node(root, "Player")
+	
+	if(len(nodes) > 0):
+		var node = nodes[0]
+		if ( node is PlayerPlatformer):
+			return node as PlayerPlatformer
+		else:
+			print("Player is not PlayerPlatformer")
+			return null
+	else:
+		print("no PlayerPlatformer found")
+		return null

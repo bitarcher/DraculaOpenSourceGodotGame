@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d062hkuxa4g7y"]
+[gd_scene load_steps=12 format=3 uid="uid://d062hkuxa4g7y"]
 
 [ext_resource type="Script" uid="uid://315hcfqmecrd" path="res://scripts/persist/platforms_delayed_serializable_component.gd" id="1_h7ect"]
 [ext_resource type="PackedScene" uid="uid://c8fgcnhdy6mk2" path="res://scenes/level_ui.tscn" id="2_hlhvv"]
@@ -6,6 +6,18 @@
 [ext_resource type="PackedScene" uid="uid://dhypwyvccqm4w" path="res://scenes/level_time.tscn" id="4_mfnrs"]
 [ext_resource type="AudioStream" uid="uid://cynabvs3utiyo" path="res://assets/sounds/game-start-317318.mp3" id="5_mfnrs"]
 [ext_resource type="PackedScene" uid="uid://013rcgdilhcp" path="res://scenes/persist/platforms_delayed_serializable_component.tscn" id="6_m06n5"]
+[ext_resource type="Script" uid="uid://buqs8ls3i558h" path="res://inventory_and_recipes/user_interface/ui_root/ui_root.gd" id="7_m06n5"]
+[ext_resource type="Script" uid="uid://d3pdv3dj3m88g" path="res://addons/godot_resource_groups/resource_group.gd" id="8_o6kju"]
+[ext_resource type="PackedScene" uid="uid://6r4rm2hswvtu" path="res://inventory_and_recipes/user_interface/inventory_dialog/inventory_dialog.tscn" id="9_l4kck"]
+[ext_resource type="PackedScene" uid="uid://d2eutmynpisem" path="res://inventory_and_recipes/user_interface/crafting_dialog/crafting_dialog.tscn" id="10_8l2as"]
+
+[sub_resource type="Resource" id="Resource_7ibwm"]
+script = ExtResource("8_o6kju")
+base_folder = "res://inventory_and_recipes/data/recipes/"
+includes = Array[String](["*.tres"])
+excludes = Array[String]([])
+paths = Array[String]([])
+metadata/_custom_type_script = "uid://d3pdv3dj3m88g"
 
 [node name="LevelConst" type="Node2D" groups=["LevelConst"]]
 script = ExtResource("1_h7ect")
@@ -33,3 +45,25 @@ autoplay = true
 [node name="GlobalCamera" type="Camera2D" parent="." groups=["GlobalCamera"]]
 unique_name_in_owner = true
 enabled = false
+
+[node name="UiRoot" type="CanvasLayer" parent="."]
+script = ExtResource("7_m06n5")
+all_recipes = SubResource("Resource_7ibwm")
+
+[node name="CraftingDialog" parent="UiRoot" instance=ExtResource("10_8l2as")]
+unique_name_in_owner = true
+visible = false
+offset_left = 88.0
+offset_top = 54.0
+offset_right = -666.0
+offset_bottom = -471.0
+
+[node name="InventoryDialog" parent="UiRoot" instance=ExtResource("9_l4kck")]
+unique_name_in_owner = true
+visible = false
+offset_left = 32.0
+offset_top = 136.0
+offset_right = -914.0
+offset_bottom = -484.0
+size_flags_horizontal = 6
+size_flags_vertical = 6

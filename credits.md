@@ -34,7 +34,7 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 - moonlight-walzer-gothic-and-vampiric-piano-music-247460 : JoelFazhari https://pixabay.com/fr/music/classique-moderne-moonlight-walzer-gothic-and-vampiric-piano-music-247460/
 - one-thousand-years-ago-victorian-gothic-piano-music-loopable-241137: JoelFazhari https://pixabay.com/fr/music/classique-moderne-one-thousand-years-ago-victorian-gothic-piano-music-loopable-241137/
 - night-dies-with-us-gothic-and-vampiric-piano-music-247462 : JoelFazhari https://pixabay.com/fr/music/classique-moderne-night-dies-with-us-gothic-and-vampiric-piano-music-247462/
-
+- psychedelik rok : Leandro Sarno Leandro (leandro73baldocchi), https://pixabay.com/fr/music/roche-psychedelic-rock-108787/
 
 *Audios*
 
@@ -46,6 +46,7 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 - game end: Universfield https://pixabay.com/fr/users/universfield-28281460/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=276688, https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=276688
 - diamond found: Liecio, https://pixabay.com/fr/sound-effects/diamond-found-190255/
 - orchestral win: u_it78ck90s3, https://pixabay.com/fr/sound-effects/orchestral-win-331233/
+- ok: SergeQuadrado, https://pixabay.com/fr/sound-effects/dad-says-ok-2-113121/
 
 pixabay licensing rules: https://pixabay.com/fr/service/license-summary/
 
@@ -53,3 +54,4 @@ pixabay licensing rules: https://pixabay.com/fr/service/license-summary/
 
 * Special thanks also for other youtube tutorial providers: *
 - Saving and loading games with Godot https://www.youtube.com/watch?v=43BZsLZheA4 but in the program in is used via ASerializableComponent
+- Data models : https://www.youtube.com/watch?v=4vAkTHeoORk

@@ -11,7 +11,10 @@ const JUMP_VELOCITY = -350.0
 @export var air_rotation_speed: float = 20 
 @onready var damage_receiver_component: DamageReceiverComponent = $DamageReceiverComponent
 
+@export var inventory: Inventory = Inventory.new()
+
 func _ready() -> void:
+	
 	GameManagerSingleton.connect("player_injured", _on_player_injured)
 	GameManagerSingleton.connect("health_changed", _on_health_changed)
 	GameManagerSingleton.connect("player_killed", _on_player_killed)
@@ -82,6 +85,10 @@ func _fade_out_animated_player():
 	# print("Le fondu de l'AnimatedSprite2D est terminé.")
 	# Vous pouvez détruire le nœud ici, par exemple:
 	# animated_sprite.queue_free()
+
+func on_item_picked_up(item: Item):
+	print(item.name + " picked up")
+	inventory.add_item(item)
 
 func stop_following_player():
 	var player_camera: Camera2D = _get_player_camera()
