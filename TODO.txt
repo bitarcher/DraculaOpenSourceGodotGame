@@ -1,8 +1,17 @@
-les doléances de Romy la directrice artistique :
-- dans la lave, quand on meurt, faire une mort différente (arrêt de la caméra)  
-- faire des bulles pour la lave
+les doléances de Michel:
+- sauvegarde de baby platforms* et platform_delayed
+
+les doléances de la directrice artistique :
+
+- 
+
 - 
 
 
+# fait:
+- enlever le bug des pv (n°2)
+- dans la lave, quand on meurt, faire une mort différente (arrêt de la caméra) (n°3)
+- faire des bulles pour la lave (n°4)
 
-
+# peut rien faire:
+- fermer ta grande gueule (priorité n°1)
