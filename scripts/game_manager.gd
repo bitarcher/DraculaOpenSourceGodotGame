@@ -17,7 +17,7 @@ var immunity: bool = false
 signal health_changed(new_health: float)
 signal player_injured(strength: float) 
 signal player_killed() 
-#signal player_name_requested_for_saving_new_highscore(context: SavingPlayerContext)
+signal player_name_requested_for_saving_new_highscore(context: SavingPlayerContext)
 
 var immunity_lost_timer: Timer
 var killed_timer: Timer

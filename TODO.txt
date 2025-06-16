@@ -1,5 +1,5 @@
 les doléances de Michel:
-- sauvegarde de baby platforms* et platform_delayed (J'AI SUPPRIMÉ PlatformsDelayedSerializableComponent DE lEVELcONST CAR ÇA PLANTAIT AU GAMEOVER)
+- sauvegarde de baby platforms* et platform_delayed (J'AI SUPPRIMÉ PlatformsDelayedSerializableComponent DE lEVELcONST CAR ÇA PLANTAIT AU GAMEOVER, mais c'était peut-être parce que le script associé à LevelConst était pas le bon)
 
 les doléances de la directrice artistique :
 - faire une zone de protection dans la lave
