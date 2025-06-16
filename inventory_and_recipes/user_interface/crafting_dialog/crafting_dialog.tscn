@@ -60,7 +60,6 @@ text = "Ingredients"
 [node name="IngredientsContainer" parent="VBoxContainer/HBoxContainer2/VBoxContainer" instance=ExtResource("2_qf7rh")]
 unique_name_in_owner = true
 layout_mode = 2
-script = null
 
 [node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer2/VBoxContainer"]
 layout_mode = 2
@@ -70,7 +69,6 @@ text = "Results
 [node name="ResultsContainer" parent="VBoxContainer/HBoxContainer2/VBoxContainer" instance=ExtResource("2_qf7rh")]
 unique_name_in_owner = true
 layout_mode = 2
-script = null
 
 [node name="Control" type="Control" parent="VBoxContainer/HBoxContainer2/VBoxContainer"]
 layout_mode = 2
