@@ -11,7 +11,7 @@ func on_save_game(saved_data: Array[SavedData]):
 	my_data.position = _playerPlatformer.position
 	my_data.scene_path = ""
 	my_data.num_of_lives = GameManagerSingleton.num_of_lives
-	my_data.num_of_injuries_allowed = GameManagerSingleton.num_of_injuries_allowed
+	my_data.health = GameManagerSingleton.health
 	my_data.num_of_coins =  GameManagerSingleton.num_of_coins
 	my_data.level_start_ticks = GameManagerSingleton.level_start_ticks
 	my_data.num_of_coins_before_killed = GameManagerSingleton.num_of_coins_before_killed
