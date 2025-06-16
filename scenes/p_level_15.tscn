@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bktgr05jocuqt"]
+[gd_scene load_steps=30 format=3 uid="uid://bktgr05jocuqt"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_i6kqm"]
 [ext_resource type="Texture2D" uid="uid://doyfrmal4p0kn" path="res://assets/clouds/cloud0.png" id="2_d52lw"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://c52etx4cornmc" path="res://scenes/trap.tscn" id="13_0r6wd"]
 [ext_resource type="PackedScene" uid="uid://jyw84s43iw3w" path="res://scenes/platform.tscn" id="14_dbw10"]
 [ext_resource type="PackedScene" uid="uid://686qsh4bmth6" path="res://scenes/lava.tscn" id="15_7uabq"]
+[ext_resource type="PackedScene" uid="uid://uexabi8p1p55" path="res://scenes/lava_bubble.tscn" id="16_7o06k"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pfjqn"]
 
@@ -645,5 +646,71 @@ offset_top = 42.0
 offset_right = 1164.0
 offset_bottom = 42.0
 scale = Vector2(1, 0.09)
+
+[node name="bubbles" type="Node2D" parent="Lava"]
+
+[node name="LavaBubble" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
+z_index = 12
+position = Vector2(-580, 84)
+
+[node name="LavaBubble2" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
+z_index = 12
+position = Vector2(-457, 84)
+
+[node name="LavaBubble3" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
+z_index = 12
+position = Vector2(-327, 84)
+
+[node name="LavaBubble4" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
+z_index = 12
+position = Vector2(-191, 84)
+
+[node name="LavaBubble5" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
+z_index = 12
+position = Vector2(-58, 84)
+
+[node name="LavaBubble6" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
+z_index = 12
+position = Vector2(27, 84)
+
+[node name="LavaBubble7" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
+z_index = 12
+position = Vector2(160, 84)
+
+[node name="LavaBubble8" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
+z_index = 12
+position = Vector2(289, 84)
+
+[node name="LavaBubble9" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
+z_index = 12
+position = Vector2(425, 84)
+
+[node name="LavaBubble10" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
+z_index = 12
+position = Vector2(557, 84)
+
+[node name="LavaBubble11" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
+z_index = 12
+position = Vector2(686, 84)
+
+[node name="LavaBubble12" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
+z_index = 11
+position = Vector2(839, 84)
+
+[node name="LavaBubble13" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
+z_index = 11
+position = Vector2(1238, 55)
+
+[node name="LavaBubble14" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
+z_index = 11
+position = Vector2(1363, 56)
+
+[node name="LavaBubble15" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
+z_index = 11
+position = Vector2(1486, 56)
+
+[node name="LavaBubble16" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
+z_index = 11
+position = Vector2(1613, 56)
 
 [editable path="Lava/Lava8"]
