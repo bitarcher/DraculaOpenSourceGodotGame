@@ -29,7 +29,7 @@ func open(recipes:Array[Recipe], inventory:Inventory):
 
 func _on_close_button_pressed():
 	hide()
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	#Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 
 func _on_recipe_list_item_selected(index):
