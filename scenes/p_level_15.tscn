@@ -652,65 +652,81 @@ scale = Vector2(1, 0.09)
 [node name="LavaBubble" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
 z_index = 12
 position = Vector2(-580, 84)
+amount = 45
 
 [node name="LavaBubble2" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
 z_index = 12
 position = Vector2(-457, 84)
+amount = 40
 
 [node name="LavaBubble3" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
 z_index = 12
 position = Vector2(-327, 84)
+amount = 35
 
 [node name="LavaBubble4" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
 z_index = 12
 position = Vector2(-191, 84)
+amount = 20
 
 [node name="LavaBubble5" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
 z_index = 12
 position = Vector2(-58, 84)
+amount = 10
 
 [node name="LavaBubble6" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
 z_index = 12
 position = Vector2(27, 84)
+amount = 10
 
 [node name="LavaBubble7" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
 z_index = 12
 position = Vector2(160, 84)
+amount = 10
 
 [node name="LavaBubble8" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
 z_index = 12
 position = Vector2(289, 84)
+amount = 10
 
 [node name="LavaBubble9" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
 z_index = 12
 position = Vector2(425, 84)
+amount = 10
 
 [node name="LavaBubble10" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
 z_index = 12
 position = Vector2(557, 84)
+amount = 20
 
 [node name="LavaBubble11" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
 z_index = 12
 position = Vector2(686, 84)
+amount = 30
 
 [node name="LavaBubble12" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
 z_index = 11
 position = Vector2(839, 84)
+amount = 86
 
 [node name="LavaBubble13" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
 z_index = 11
 position = Vector2(1238, 55)
+amount = 20
 
 [node name="LavaBubble14" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
 z_index = 11
 position = Vector2(1363, 56)
+amount = 30
 
 [node name="LavaBubble15" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
 z_index = 11
 position = Vector2(1486, 56)
+amount = 30
 
 [node name="LavaBubble16" parent="Lava/bubbles" instance=ExtResource("16_7o06k")]
 z_index = 11
 position = Vector2(1613, 56)
+amount = 40
 
 [editable path="Lava/Lava8"]
