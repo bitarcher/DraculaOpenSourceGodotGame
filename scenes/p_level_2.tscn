@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://krs087n8yi0y"]
+[gd_scene load_steps=36 format=3 uid="uid://krs087n8yi0y"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_esw31"]
 [ext_resource type="Texture2D" uid="uid://doyfrmal4p0kn" path="res://assets/clouds/cloud0.png" id="3_6bqcr"]
@@ -20,6 +20,8 @@
 [ext_resource type="AudioStream" uid="uid://bhlh4nphgdd6o" path="res://assets/music/time_for_adventure.mp3" id="19_3jwsg"]
 [ext_resource type="PackedScene" uid="uid://cctwmuyah45p6" path="res://scenes/healing_vial.tscn" id="19_7humc"]
 [ext_resource type="PackedScene" uid="uid://c2rxg4yil67wj" path="res://scenes/blue_diamond.tscn" id="20_3jwsg"]
+[ext_resource type="PackedScene" uid="uid://v82xc5d3kigg" path="res://inventory_and_recipes/elements/pickup/pickup.tscn" id="21_6plo0"]
+[ext_resource type="Resource" uid="uid://d1aevf1mxmu28" path="res://inventory_and_recipes/data/items/hen.tres" id="22_nosd3"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pfjqn"]
 
@@ -608,3 +610,7 @@ position = Vector2(1221, -32)
 
 [node name="BlueDiamond2" parent="." instance=ExtResource("20_3jwsg")]
 position = Vector2(300, 49)
+
+[node name="Pickup" parent="." instance=ExtResource("21_6plo0")]
+position = Vector2(549, -269)
+item = ExtResource("22_nosd3")

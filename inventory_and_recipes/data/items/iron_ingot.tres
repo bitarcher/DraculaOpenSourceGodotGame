@@ -7,6 +7,6 @@
 script = ExtResource("1_8nqhr")
 name = "Iron Ingot"
 icon = ExtResource("1_je0qk")
-price = 70
+price = 60
 desired_width_px = 32.0
 desired_height_px = 32.0

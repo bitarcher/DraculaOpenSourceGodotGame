@@ -7,7 +7,7 @@
 script = ExtResource("1_u78gm")
 name = "Cow"
 icon = ExtResource("1_j4ou4")
-price = 50
+price = 200
 desired_width_px = 32.0
 desired_height_px = 32.0
 metadata/_custom_type_script = "uid://b6rtt5e2v7l2p"

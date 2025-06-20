@@ -7,7 +7,7 @@
 script = ExtResource("1_65st8")
 name = "Health potion"
 icon = ExtResource("1_yeg8d")
-price = 51
+price = 25
 desired_width_px = 32.0
 desired_height_px = 32.0
 metadata/_custom_type_script = "uid://b6rtt5e2v7l2p"

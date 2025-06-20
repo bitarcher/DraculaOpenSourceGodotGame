@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://pn3s2hcvet10"]
+[gd_scene load_steps=37 format=3 uid="uid://pn3s2hcvet10"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_eas7d"]
 [ext_resource type="Texture2D" uid="uid://doyfrmal4p0kn" path="res://assets/clouds/cloud0.png" id="3_rrvga"]
@@ -19,6 +19,10 @@
 [ext_resource type="PackedScene" uid="uid://d062hkuxa4g7y" path="res://scenes/p_level_const.tscn" id="17_hl06d"]
 [ext_resource type="PackedScene" uid="uid://0khi164sjtqt" path="res://scenes/portail_magique.tscn" id="18_wd3qt"]
 [ext_resource type="AudioStream" uid="uid://skhqynohyvro" path="res://assets/music/halloween-background-music-scary-horror-thriller-creepy-249667.mp3" id="19_p4qfb"]
+[ext_resource type="PackedScene" uid="uid://v82xc5d3kigg" path="res://inventory_and_recipes/elements/pickup/pickup.tscn" id="20_6sg7n"]
+[ext_resource type="Resource" uid="uid://dgwvax2yux8lm" path="res://inventory_and_recipes/data/items/cow.tres" id="21_dujf2"]
+[ext_resource type="Resource" uid="uid://71evqpdqpc8e" path="res://inventory_and_recipes/data/items/wood.tres" id="22_dujf2"]
+[ext_resource type="Resource" uid="uid://sco4ocl3m1h3" path="res://inventory_and_recipes/data/items/lavender.tres" id="23_1t62x"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pfjqn"]
 
@@ -617,9 +621,6 @@ position = Vector2(-123, -325)
 [node name="HealingVial" parent="Other" instance=ExtResource("17_2xc1v")]
 position = Vector2(291, 15)
 
-[node name="HealingVial2" parent="Other" instance=ExtResource("17_2xc1v")]
-position = Vector2(412, -147.96)
-
 [node name="HealingVial3" parent="Other" instance=ExtResource("17_2xc1v")]
 position = Vector2(809, -269.96)
 
@@ -633,3 +634,15 @@ stream = ExtResource("19_p4qfb")
 volume_db = -13.602
 autoplay = true
 parameters/looping = true
+
+[node name="Pickup" parent="." instance=ExtResource("20_6sg7n")]
+position = Vector2(275, -77)
+item = ExtResource("21_dujf2")
+
+[node name="Pickup2" parent="." instance=ExtResource("20_6sg7n")]
+position = Vector2(794, -189)
+item = ExtResource("22_dujf2")
+
+[node name="Pickup3" parent="." instance=ExtResource("20_6sg7n")]
+position = Vector2(418, -352)
+item = ExtResource("23_1t62x")

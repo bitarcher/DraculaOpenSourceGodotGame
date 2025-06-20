@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dt0scbtd8tmyn"]
+[gd_scene load_steps=34 format=3 uid="uid://dt0scbtd8tmyn"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_x2nyf"]
 [ext_resource type="Texture2D" uid="uid://doyfrmal4p0kn" path="res://assets/clouds/cloud0.png" id="4_egy2r"]
@@ -20,6 +20,9 @@
 [ext_resource type="PackedScene" uid="uid://cctwmuyah45p6" path="res://scenes/healing_vial.tscn" id="18_xb2ig"]
 [ext_resource type="AudioStream" uid="uid://cy3dmjrp18i3w" path="res://assets/music/halloween-303749.mp3" id="19_x5s2q"]
 [ext_resource type="PackedScene" uid="uid://c2rxg4yil67wj" path="res://scenes/blue_diamond.tscn" id="20_x5s2q"]
+[ext_resource type="PackedScene" uid="uid://v82xc5d3kigg" path="res://inventory_and_recipes/elements/pickup/pickup.tscn" id="21_q638w"]
+[ext_resource type="Resource" uid="uid://cmsagrxswgciq" path="res://inventory_and_recipes/data/items/carot.tres" id="22_2wx2f"]
+[ext_resource type="Resource" uid="uid://bs04rbmicblmd" path="res://inventory_and_recipes/data/items/iron_ore.tres" id="23_2wx2f"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pfjqn"]
 
@@ -476,7 +479,7 @@ position = Vector2(-412, -288)
 position = Vector2(-60, -242)
 
 [node name="Coin35" parent="Coins" instance=ExtResource("10_na31n")]
-position = Vector2(357, -449)
+position = Vector2(405, -418)
 
 [node name="Coin36" parent="Coins" instance=ExtResource("10_na31n")]
 position = Vector2(308, -226)
@@ -599,3 +602,11 @@ position = Vector2(609, 82)
 
 [node name="BlueDiamond2" parent="." instance=ExtResource("20_x5s2q")]
 position = Vector2(863, -751)
+
+[node name="Pickup" parent="." instance=ExtResource("21_q638w")]
+position = Vector2(642, -461)
+item = ExtResource("22_2wx2f")
+
+[node name="Pickup2" parent="." instance=ExtResource("21_q638w")]
+position = Vector2(515, -349)
+item = ExtResource("23_2wx2f")
