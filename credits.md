@@ -17,6 +17,9 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 - windmill: carchagui, https://www.deviantart.com/carchagui/art/Windmill-animation-sheet-875418472
 - oak woods: brullov, https://brullov.itch.io/oak-woods
 - torch: https://www.dreamstime.com/cartoon-pixelated-torch-fire-flame-animation-bit-pixel-art-game-vector-effect-burning-torchlight-sprite-frames-retro-video-ui-image237222162
+- feathers: saphattachat https://fr.pinterest.com/pin/678143656448052592/
+- slingshot: https://www.iconexperience.com/v_collection/icons/?icon=slingshot
+- duck, animated sprite, Ulti, FINISAUTEMPOTENTIAE ©, https://opengameart.org/content/character-spritesheet-duck
 
 *Assets*
 

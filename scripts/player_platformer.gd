@@ -13,6 +13,42 @@ const JUMP_VELOCITY = -350.0
 
 @export var inventory: Inventory = Inventory.new()
 
+enum EnumPlayerCharacter {
+	DEFAULT,
+	DIVINE_ARMOR,
+	CAMOUFLAGE
+}
+
+@export var current_player_character: EnumPlayerCharacter = EnumPlayerCharacter.DEFAULT 
+
+func get_jump_animation() -> String:
+	match current_player_character:
+		EnumPlayerCharacter.DIVINE_ARMOR:
+			return "jump_divine"
+		EnumPlayerCharacter.CAMOUFLAGE:
+			return "jump_duck"
+		_:	
+			return "jump"
+
+func get_run_animation() -> String:
+	match current_player_character:
+		EnumPlayerCharacter.DIVINE_ARMOR:
+			return "run_divine_armor"
+		EnumPlayerCharacter.CAMOUFLAGE:
+			return "run_duck"
+		_:	
+			return "run"
+
+func get_idle_animation() -> String:
+	match current_player_character:
+		EnumPlayerCharacter.DIVINE_ARMOR:
+			return "idle_divine"
+		EnumPlayerCharacter.CAMOUFLAGE:
+			return "idle_duck"
+		_:	
+			return "idle"
+
+			
 func _ready() -> void:
 	
 	GameManagerSingleton.connect("player_injured", _on_player_injured)
@@ -153,7 +189,7 @@ func _physics_process(delta: float) -> void:
 		animated_sprite_2d.flip_h = false
 
 	if not is_on_floor():
-		animated_sprite_2d.play("jump")
+		animated_sprite_2d.play(get_jump_animation())
 		##if(direction != 0):
 		#	animated_sprite_2d.rotate(air_rotation_speed * direction * delta)
 		#else:
@@ -162,9 +198,9 @@ func _physics_process(delta: float) -> void:
 		
 		animated_sprite_2d.rotation_degrees = 0
 		if direction == 0:
-			animated_sprite_2d.play("idle")
+			animated_sprite_2d.play(get_idle_animation())
 		else:
-			animated_sprite_2d.play("run")
+			animated_sprite_2d.play(get_run_animation())
 			
 	if direction:
 		velocity.x = direction * SPEED
