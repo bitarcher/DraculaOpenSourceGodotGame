@@ -13,6 +13,8 @@ var num_of_blue_diamonds_before_killed: int = 0
 var immunity: bool = false
 
 @export var health: float = INITIAL_HEALTH
+
+@export var inventory: Inventory = Inventory.new()
  
 signal health_changed(new_health: float)
 signal player_injured(strength: float) 

@@ -11,7 +11,9 @@ const JUMP_VELOCITY = -350.0
 @export var air_rotation_speed: float = 20 
 @onready var damage_receiver_component: DamageReceiverComponent = $DamageReceiverComponent
 
-@export var inventory: Inventory = Inventory.new()
+@export var inventory: Inventory:
+	get:
+		return GameManagerSingleton.inventory
 
 enum EnumPlayerCharacter {
 	DEFAULT,
