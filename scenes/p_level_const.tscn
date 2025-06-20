@@ -44,15 +44,15 @@ unique_name_in_owner = true
 visible = false
 offset_left = 48.0
 offset_top = 88.0
-offset_right = -425.0
-offset_bottom = -277.0
+offset_right = -56.0
+offset_bottom = -60.0
 
 [node name="InventoryDialog" parent="UiRoot" instance=ExtResource("9_l4kck")]
 unique_name_in_owner = true
 visible = false
 offset_left = 40.0
 offset_top = 80.0
-offset_right = -687.0
-offset_bottom = -460.0
+offset_right = -56.0
+offset_bottom = -64.0
 size_flags_horizontal = 6
 size_flags_vertical = 6
