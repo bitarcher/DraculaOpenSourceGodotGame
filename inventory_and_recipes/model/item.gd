@@ -27,6 +27,7 @@ func instantiate() -> Sprite2D:
 	if icon: # Assurez-vous qu'il y a une texture
 		var original_size = icon.get_size()
 		
+		
 		var scale_x = 1.0
 		if desired_width_px > 0 and original_size.x > 0:
 			scale_x = desired_width_px / original_size.x

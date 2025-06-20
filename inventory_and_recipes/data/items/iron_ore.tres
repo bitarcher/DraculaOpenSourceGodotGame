@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bs04rbmicblmd"]
 
-[ext_resource type="Texture2D" uid="uid://c1gxixr0q5n64" path="res://inventory_and_recipes/elements/rock/ore_icon.svg" id="1_25svu"]
+[ext_resource type="Texture2D" uid="uid://bo88k5easlhdc" path="res://inventory_and_recipes/elements/rock/ore_icon.png" id="1_kiixj"]
 [ext_resource type="Script" uid="uid://b6rtt5e2v7l2p" path="res://inventory_and_recipes/model/item.gd" id="1_ndd2y"]
 
 [resource]
 script = ExtResource("1_ndd2y")
 name = "Iron Ore"
-icon = ExtResource("1_25svu")
+icon = ExtResource("1_kiixj")
 price = 40
 desired_width_px = 32.0
 desired_height_px = 32.0

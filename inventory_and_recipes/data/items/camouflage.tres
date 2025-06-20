@@ -1,11 +1,13 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://wlcvvkgu0fgb"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://wlcvvkgu0fgb"]
 
+[ext_resource type="Texture2D" uid="uid://ccu7rij6awsqa" path="res://inventory_and_recipes/elements/camouflage/camouflage.png" id="1_i4u35"]
 [ext_resource type="Script" uid="uid://b6rtt5e2v7l2p" path="res://inventory_and_recipes/model/item.gd" id="1_u78gm"]
 
 [resource]
 script = ExtResource("1_u78gm")
-name = ""
-price = 5
+name = "Camouflage"
+icon = ExtResource("1_i4u35")
+price = 40
 desired_width_px = 32.0
 desired_height_px = 32.0
 metadata/_custom_type_script = "uid://b6rtt5e2v7l2p"

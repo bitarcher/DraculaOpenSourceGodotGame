@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bs4yeovt2tlf" path="res://inventory_and_recipes/user_interface/item_grid/item_grid.gd" id="1_kcnqi"]
 
 [node name="ItemGrid" type="GridContainer"]
+custom_minimum_size = Vector2(425, 80)
 columns = 5
 script = ExtResource("1_kcnqi")
 slot_scene = ExtResource("1_exs6d")

@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://1n06od3s53jv"]
 
 [ext_resource type="Script" uid="uid://b6rtt5e2v7l2p" path="res://inventory_and_recipes/model/item.gd" id="1_8nqhr"]
-[ext_resource type="Texture2D" uid="uid://6w7wmvfhl6y4" path="res://inventory_and_recipes/elements/ingot/ingot_icon.svg" id="1_qw811"]
+[ext_resource type="Texture2D" uid="uid://k28h88d56cc6" path="res://inventory_and_recipes/elements/ingot/ingot_icon.png" id="1_je0qk"]
 
 [resource]
 script = ExtResource("1_8nqhr")
 name = "Iron Ingot"
-icon = ExtResource("1_qw811")
+icon = ExtResource("1_je0qk")
 price = 70
 desired_width_px = 32.0
 desired_height_px = 32.0

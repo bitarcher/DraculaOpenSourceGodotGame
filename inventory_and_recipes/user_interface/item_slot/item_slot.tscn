@@ -4,9 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://cctvudyw38fc4" path="res://inventory_and_recipes/elements/sword/sword_icon.svg" id="1_xpdln"]
 
 [node name="PanelContainer" type="PanelContainer"]
+custom_minimum_size = Vector2(80, 80)
 script = ExtResource("1_8vouk")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 texture = ExtResource("1_xpdln")
