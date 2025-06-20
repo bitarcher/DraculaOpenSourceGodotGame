@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://b7hc3p1uypwjb"]
+
+[ext_resource type="Texture2D" uid="uid://wafx4u3lv8fg" path="res://inventory_and_recipes/elements/leather/leather.png" id="1_2ipdp"]
+[ext_resource type="Script" uid="uid://b6rtt5e2v7l2p" path="res://inventory_and_recipes/model/item.gd" id="1_u78gm"]
+
+[resource]
+script = ExtResource("1_u78gm")
+name = "Leather"
+icon = ExtResource("1_2ipdp")
+price = 20
+desired_width_px = 32.0
+desired_height_px = 32.0
+metadata/_custom_type_script = "uid://b6rtt5e2v7l2p"

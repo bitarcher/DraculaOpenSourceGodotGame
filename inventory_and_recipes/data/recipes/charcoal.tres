@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://clnhe8d35ccuc"]
+
+[ext_resource type="Script" uid="uid://b6rtt5e2v7l2p" path="res://inventory_and_recipes/model/item.gd" id="1_y4cfc"]
+[ext_resource type="Script" uid="uid://dnj2vptoeabi" path="res://inventory_and_recipes/model/recipe.gd" id="2_hnbcq"]
+[ext_resource type="Resource" uid="uid://71evqpdqpc8e" path="res://inventory_and_recipes/data/items/wood.tres" id="2_yrt52"]
+[ext_resource type="Resource" uid="uid://bbunwwth7os5p" path="res://inventory_and_recipes/data/items/charcoal.tres" id="3_48tih"]
+
+[resource]
+script = ExtResource("2_hnbcq")
+title = "Charcoal from wood"
+ingredients = Array[ExtResource("1_y4cfc")]([ExtResource("2_yrt52"), ExtResource("2_yrt52"), ExtResource("2_yrt52")])
+results = Array[ExtResource("1_y4cfc")]([ExtResource("3_48tih"), ExtResource("3_48tih")])
+metadata/_custom_type_script = "uid://dnj2vptoeabi"

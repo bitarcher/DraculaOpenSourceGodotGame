@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://5qh6sb5veo0e"]
+
+[ext_resource type="Texture2D" uid="uid://djgoldvdvx7ly" path="res://inventory_and_recipes/elements/rubber_band/rubber_band.png" id="1_7ukbo"]
+[ext_resource type="Script" uid="uid://b6rtt5e2v7l2p" path="res://inventory_and_recipes/model/item.gd" id="1_ltll4"]
+
+[resource]
+script = ExtResource("1_ltll4")
+name = "Rubber band"
+icon = ExtResource("1_7ukbo")
+price = 25
+desired_width_px = 32.0
+desired_height_px = 32.0
+metadata/_custom_type_script = "uid://b6rtt5e2v7l2p"

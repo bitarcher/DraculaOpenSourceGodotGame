@@ -1,11 +1,14 @@
-[gd_resource type="Resource" script_class="Recipe" load_steps=4 format=3 uid="uid://x03nr2slad1m"]
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://c0sl2nvr5clq6"]
 
-[ext_resource type="Script" path="res://model/recipe.gd" id="1_alpcj"]
-[ext_resource type="Resource" uid="uid://bs04rbmicblmd" path="res://data/items/iron_ore.tres" id="1_e52w2"]
-[ext_resource type="Resource" uid="uid://1n06od3s53jv" path="res://data/items/iron_ingot.tres" id="2_hk7ik"]
+[ext_resource type="Script" uid="uid://b6rtt5e2v7l2p" path="res://inventory_and_recipes/model/item.gd" id="1_44s14"]
+[ext_resource type="Script" uid="uid://dnj2vptoeabi" path="res://inventory_and_recipes/model/recipe.gd" id="2_cqw4y"]
+[ext_resource type="Resource" uid="uid://bs04rbmicblmd" path="res://inventory_and_recipes/data/items/iron_ore.tres" id="2_vmtq7"]
+[ext_resource type="Resource" uid="uid://bbunwwth7os5p" path="res://inventory_and_recipes/data/items/charcoal.tres" id="3_0xkpl"]
+[ext_resource type="Resource" uid="uid://1n06od3s53jv" path="res://inventory_and_recipes/data/items/iron_ingot.tres" id="4_k1d88"]
 
 [resource]
-script = ExtResource("1_alpcj")
-title = "Iron Ingot"
-ingredients = Array[Resource("res://model/item.gd")]([ExtResource("1_e52w2"), ExtResource("1_e52w2"), ExtResource("1_e52w2")])
-results = Array[Resource("res://model/item.gd")]([ExtResource("2_hk7ik"), ExtResource("2_hk7ik")])
+script = ExtResource("2_cqw4y")
+title = "Iron inglot"
+ingredients = Array[ExtResource("1_44s14")]([ExtResource("2_vmtq7"), ExtResource("2_vmtq7"), ExtResource("2_vmtq7"), ExtResource("3_0xkpl")])
+results = Array[ExtResource("1_44s14")]([ExtResource("4_k1d88"), ExtResource("4_k1d88")])
+metadata/_custom_type_script = "uid://dnj2vptoeabi"

@@ -7,4 +7,6 @@
 script = ExtResource("1_u78gm")
 name = "Sword"
 icon = ExtResource("1_kppa4")
-price = 10
+price = 400
+desired_width_px = 32.0
+desired_height_px = 32.0

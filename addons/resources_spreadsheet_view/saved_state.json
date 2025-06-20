@@ -11,10 +11,20 @@
     "res://example/Items/": {
       "resource_local_to_scene": true,
       "resource_name": true
+    },
+    "res://inventory_and_recipes/data/items/": {
+      "resource_local_to_scene": true,
+      "resource_name": true
+    },
+    "res://inventory_and_recipes/data/recipes/": {
+      "resource_local_to_scene": true,
+      "resource_name": true
     }
   },
   "recent_paths": [
-    "res://data/items/"
+    "res://data/items/",
+    "res://inventory_and_recipes/data/items/",
+    "res://inventory_and_recipes/data/recipes/"
   ],
   "table_functions": {
     "filter": [

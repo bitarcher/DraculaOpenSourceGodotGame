@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cfwf7shbl1b37"]
+
+[ext_resource type="Texture2D" uid="uid://dlmapmmp51b66" path="res://inventory_and_recipes/elements/divine_armor/divine_armor.png" id="1_j1rnd"]
+[ext_resource type="Script" uid="uid://b6rtt5e2v7l2p" path="res://inventory_and_recipes/model/item.gd" id="1_u78gm"]
+
+[resource]
+script = ExtResource("1_u78gm")
+name = "Divine armor"
+icon = ExtResource("1_j1rnd")
+price = 400
+desired_width_px = 32.0
+desired_height_px = 32.0
