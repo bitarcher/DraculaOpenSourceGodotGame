@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://0vbxov1gvxso"]
+
+[ext_resource type="Script" uid="uid://b6rtt5e2v7l2p" path="res://inventory_and_recipes/model/item.gd" id="1_33wll"]
+[ext_resource type="Resource" uid="uid://71evqpdqpc8e" path="res://inventory_and_recipes/data/items/wood.tres" id="2_o1rmq"]
+[ext_resource type="Resource" uid="uid://b7hc3p1uypwjb" path="res://inventory_and_recipes/data/items/leather.tres" id="3_2ppmx"]
+[ext_resource type="Resource" uid="uid://cfl2dy32p3y3n" path="res://inventory_and_recipes/data/items/feather.tres" id="4_5oewe"]
+[ext_resource type="Resource" uid="uid://j1ws2hgmrobm" path="res://inventory_and_recipes/data/items/winged_boots.tres" id="5_qd3xw"]
+[ext_resource type="Script" uid="uid://dnj2vptoeabi" path="res://inventory_and_recipes/model/recipe.gd" id="6_g1ssf"]
+
+[resource]
+script = ExtResource("6_g1ssf")
+title = "Winged boots"
+ingredients = Array[ExtResource("1_33wll")]([ExtResource("2_o1rmq"), ExtResource("3_2ppmx"), ExtResource("4_5oewe"), ExtResource("4_5oewe"), ExtResource("4_5oewe"), ExtResource("4_5oewe")])
+results = Array[ExtResource("1_33wll")]([ExtResource("5_qd3xw")])
+metadata/_custom_type_script = "uid://dnj2vptoeabi"
