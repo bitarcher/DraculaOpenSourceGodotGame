@@ -3,13 +3,6 @@
 [ext_resource type="Script" path="res://scripts/highscores/storage/highscore_item.gd" id="1_e7nr4"]
 [ext_resource type="Script" path="res://scripts/highscores/storage/highscore_items.gd" id="2_0hr3b"]
 
-[sub_resource type="Resource" id="Resource_0mvx3"]
-script = ExtResource("1_e7nr4")
-num_of_coins = 1138
-max_level = 15
-remaining_lives = 8
-player_name = "Mini"
-
 [sub_resource type="Resource" id="Resource_0hr3b"]
 script = ExtResource("1_e7nr4")
 num_of_coins = 871
@@ -68,11 +61,18 @@ player_name = "Isabella Faust"
 
 [sub_resource type="Resource" id="Resource_f2gpn"]
 script = ExtResource("1_e7nr4")
-num_of_coins = 466
-max_level = 7
-remaining_lives = 0
-player_name = "caca"
+num_of_coins = 410
+max_level = 9
+remaining_lives = 1
+player_name = "Elias Blackwood"
+
+[sub_resource type="Resource" id="Resource_0mvx3"]
+script = ExtResource("1_e7nr4")
+num_of_coins = 330
+max_level = 8
+remaining_lives = 8
+player_name = "Seraphina Van Helsing"
 
 [resource]
 script = ExtResource("2_0hr3b")
-items = Array[ExtResource("1_e7nr4")]([SubResource("Resource_0mvx3"), SubResource("Resource_0hr3b"), SubResource("Resource_e7nr4"), SubResource("Resource_t8jek"), SubResource("Resource_n7vnp"), SubResource("Resource_6tcs5"), SubResource("Resource_tx7t4"), SubResource("Resource_7lpr4"), SubResource("Resource_jdmfu"), SubResource("Resource_f2gpn")])
+items = Array[ExtResource("1_e7nr4")]([SubResource("Resource_0hr3b"), SubResource("Resource_e7nr4"), SubResource("Resource_t8jek"), SubResource("Resource_n7vnp"), SubResource("Resource_6tcs5"), SubResource("Resource_tx7t4"), SubResource("Resource_7lpr4"), SubResource("Resource_jdmfu"), SubResource("Resource_f2gpn"), SubResource("Resource_0mvx3")])

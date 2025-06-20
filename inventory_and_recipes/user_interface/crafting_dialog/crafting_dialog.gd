@@ -23,8 +23,9 @@ func open(recipes:Array[Recipe], inventory:Inventory):
 		var index = recipe_list.add_item(recipe.title)
 		recipe_list.set_item_metadata(index, recipe)
 		
-	recipe_list.select(0)
-	_on_recipe_list_item_selected(0)
+	if (len(recipes) > 0):
+		recipe_list.select(0)
+		_on_recipe_list_item_selected(0)
 	
 
 func _on_close_button_pressed():
