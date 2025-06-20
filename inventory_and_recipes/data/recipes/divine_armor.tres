@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=8 format=3 uid="uid://bmm6qw572l5j3"]
+
+[ext_resource type="Script" uid="uid://b6rtt5e2v7l2p" path="res://inventory_and_recipes/model/item.gd" id="1_2mgyt"]
+[ext_resource type="Script" uid="uid://dnj2vptoeabi" path="res://inventory_and_recipes/model/recipe.gd" id="2_hxf6m"]
+[ext_resource type="Resource" uid="uid://bbunwwth7os5p" path="res://inventory_and_recipes/data/items/charcoal.tres" id="2_t324j"]
+[ext_resource type="Resource" uid="uid://1n06od3s53jv" path="res://inventory_and_recipes/data/items/iron_ingot.tres" id="3_c336x"]
+[ext_resource type="Resource" uid="uid://cfl2dy32p3y3n" path="res://inventory_and_recipes/data/items/feather.tres" id="4_nxyh7"]
+[ext_resource type="Resource" uid="uid://b7hc3p1uypwjb" path="res://inventory_and_recipes/data/items/leather.tres" id="5_xhyd2"]
+[ext_resource type="Resource" uid="uid://cfwf7shbl1b37" path="res://inventory_and_recipes/data/items/divine_armor.tres" id="6_n3i84"]
+
+[resource]
+script = ExtResource("2_hxf6m")
+title = "Divine armor"
+ingredients = Array[ExtResource("1_2mgyt")]([ExtResource("2_t324j"), ExtResource("3_c336x"), ExtResource("3_c336x"), ExtResource("3_c336x"), ExtResource("4_nxyh7"), ExtResource("5_xhyd2")])
+results = Array[ExtResource("1_2mgyt")]([ExtResource("6_n3i84")])
+metadata/_custom_type_script = "uid://dnj2vptoeabi"

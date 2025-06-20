@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=8 format=3 uid="uid://brul8v6qy7hyw"]
+
+[ext_resource type="Script" uid="uid://b6rtt5e2v7l2p" path="res://inventory_and_recipes/model/item.gd" id="1_y5yvc"]
+[ext_resource type="Script" uid="uid://dnj2vptoeabi" path="res://inventory_and_recipes/model/recipe.gd" id="2_kp1xl"]
+[ext_resource type="Resource" uid="uid://71evqpdqpc8e" path="res://inventory_and_recipes/data/items/wood.tres" id="2_pjuit"]
+[ext_resource type="Resource" uid="uid://ca4wc8pfbndt2" path="res://inventory_and_recipes/data/items/bones.tres" id="3_yhaa0"]
+[ext_resource type="Resource" uid="uid://b7hc3p1uypwjb" path="res://inventory_and_recipes/data/items/leather.tres" id="4_l0t5r"]
+[ext_resource type="Resource" uid="uid://5qh6sb5veo0e" path="res://inventory_and_recipes/data/items/rubber_band.tres" id="5_7d7lr"]
+[ext_resource type="Resource" uid="uid://s11bwy351clv" path="res://inventory_and_recipes/data/items/slingshot.tres" id="6_ontms"]
+
+[resource]
+script = ExtResource("2_kp1xl")
+title = "Slingshot"
+ingredients = Array[ExtResource("1_y5yvc")]([ExtResource("2_pjuit"), ExtResource("3_yhaa0"), ExtResource("4_l0t5r"), ExtResource("5_7d7lr")])
+results = Array[ExtResource("1_y5yvc")]([ExtResource("6_ontms")])
+metadata/_custom_type_script = "uid://dnj2vptoeabi"

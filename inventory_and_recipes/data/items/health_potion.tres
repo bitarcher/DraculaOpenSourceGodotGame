@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://b2txcw1fpbeft"]
+
+[ext_resource type="Script" uid="uid://b6rtt5e2v7l2p" path="res://inventory_and_recipes/model/item.gd" id="1_65st8"]
+[ext_resource type="Texture2D" uid="uid://c6g234e06cw7b" path="res://inventory_and_recipes/elements/health_potion/health_potion.png" id="1_yeg8d"]
+
+[resource]
+script = ExtResource("1_65st8")
+name = "Health potion"
+icon = ExtResource("1_yeg8d")
+price = 51
+desired_width_px = 32.0
+desired_height_px = 32.0
+metadata/_custom_type_script = "uid://b6rtt5e2v7l2p"

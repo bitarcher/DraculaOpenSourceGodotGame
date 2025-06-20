@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://vd1vkh5eghfu"]
+
+[ext_resource type="Script" uid="uid://b6rtt5e2v7l2p" path="res://inventory_and_recipes/model/item.gd" id="1_7jysr"]
+[ext_resource type="Script" uid="uid://dnj2vptoeabi" path="res://inventory_and_recipes/model/recipe.gd" id="2_od1ep"]
+[ext_resource type="Resource" uid="uid://d1aevf1mxmu28" path="res://inventory_and_recipes/data/items/hen.tres" id="2_ugdos"]
+[ext_resource type="Resource" uid="uid://cg7xd2ikb13cs" path="res://inventory_and_recipes/data/items/meat.tres" id="3_82v2y"]
+[ext_resource type="Resource" uid="uid://ca4wc8pfbndt2" path="res://inventory_and_recipes/data/items/bones.tres" id="4_0qbew"]
+[ext_resource type="Resource" uid="uid://cfl2dy32p3y3n" path="res://inventory_and_recipes/data/items/feather.tres" id="5_p5jyh"]
+
+[resource]
+script = ExtResource("2_od1ep")
+title = "Hen slaughter"
+ingredients = Array[ExtResource("1_7jysr")]([ExtResource("2_ugdos")])
+results = Array[ExtResource("1_7jysr")]([ExtResource("3_82v2y"), ExtResource("3_82v2y"), ExtResource("4_0qbew"), ExtResource("5_p5jyh"), ExtResource("5_p5jyh")])
+metadata/_custom_type_script = "uid://dnj2vptoeabi"

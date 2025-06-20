@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://csqlfjqih2d0k"]
+
+[ext_resource type="Script" uid="uid://b6rtt5e2v7l2p" path="res://inventory_and_recipes/model/item.gd" id="1_i5173"]
+[ext_resource type="Script" uid="uid://dnj2vptoeabi" path="res://inventory_and_recipes/model/recipe.gd" id="2_tnctl"]
+[ext_resource type="Resource" uid="uid://dgwvax2yux8lm" path="res://inventory_and_recipes/data/items/cow.tres" id="2_vn7v7"]
+[ext_resource type="Resource" uid="uid://cg7xd2ikb13cs" path="res://inventory_and_recipes/data/items/meat.tres" id="3_mc8t8"]
+[ext_resource type="Resource" uid="uid://ca4wc8pfbndt2" path="res://inventory_and_recipes/data/items/bones.tres" id="4_hcywm"]
+[ext_resource type="Resource" uid="uid://b7hc3p1uypwjb" path="res://inventory_and_recipes/data/items/leather.tres" id="5_ryged"]
+
+[resource]
+script = ExtResource("2_tnctl")
+title = "Cow slaughter"
+ingredients = Array[ExtResource("1_i5173")]([ExtResource("2_vn7v7")])
+results = Array[ExtResource("1_i5173")]([ExtResource("3_mc8t8"), ExtResource("3_mc8t8"), ExtResource("3_mc8t8"), ExtResource("3_mc8t8"), ExtResource("3_mc8t8"), ExtResource("3_mc8t8"), ExtResource("4_hcywm"), ExtResource("4_hcywm"), ExtResource("4_hcywm"), ExtResource("5_ryged"), ExtResource("5_ryged")])
+metadata/_custom_type_script = "uid://dnj2vptoeabi"

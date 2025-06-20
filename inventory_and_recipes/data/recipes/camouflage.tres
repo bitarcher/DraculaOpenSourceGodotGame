@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=5 format=3 uid="uid://banvdfroistba"]
+
+[ext_resource type="Script" uid="uid://b6rtt5e2v7l2p" path="res://inventory_and_recipes/model/item.gd" id="1_dtq2f"]
+[ext_resource type="Resource" uid="uid://cfl2dy32p3y3n" path="res://inventory_and_recipes/data/items/feather.tres" id="2_je1w8"]
+[ext_resource type="Script" uid="uid://dnj2vptoeabi" path="res://inventory_and_recipes/model/recipe.gd" id="2_v275u"]
+[ext_resource type="Resource" uid="uid://b7hc3p1uypwjb" path="res://inventory_and_recipes/data/items/leather.tres" id="3_cny8t"]
+
+[resource]
+script = ExtResource("2_v275u")
+title = "Camouflage"
+ingredients = Array[ExtResource("1_dtq2f")]([ExtResource("2_je1w8"), ExtResource("2_je1w8"), ExtResource("2_je1w8"), ExtResource("2_je1w8"), ExtResource("2_je1w8"), ExtResource("2_je1w8"), ExtResource("3_cny8t")])
+results = Array[ExtResource("1_dtq2f")]([])
+metadata/_custom_type_script = "uid://dnj2vptoeabi"

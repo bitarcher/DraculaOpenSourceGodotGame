@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=8 format=3 uid="uid://bxpx60ab8f6qw"]
+
+[ext_resource type="Script" uid="uid://b6rtt5e2v7l2p" path="res://inventory_and_recipes/model/item.gd" id="1_ewd3l"]
+[ext_resource type="Resource" uid="uid://cmsagrxswgciq" path="res://inventory_and_recipes/data/items/carot.tres" id="2_7g350"]
+[ext_resource type="Script" uid="uid://dnj2vptoeabi" path="res://inventory_and_recipes/model/recipe.gd" id="2_gyjcw"]
+[ext_resource type="Resource" uid="uid://sco4ocl3m1h3" path="res://inventory_and_recipes/data/items/lavender.tres" id="3_4eh0a"]
+[ext_resource type="Resource" uid="uid://cg7xd2ikb13cs" path="res://inventory_and_recipes/data/items/meat.tres" id="4_vc53p"]
+[ext_resource type="Resource" uid="uid://71evqpdqpc8e" path="res://inventory_and_recipes/data/items/wood.tres" id="5_b26d5"]
+[ext_resource type="Resource" uid="uid://b2txcw1fpbeft" path="res://inventory_and_recipes/data/items/health_potion.tres" id="6_yf8mc"]
+
+[resource]
+script = ExtResource("2_gyjcw")
+title = "Health potion"
+ingredients = Array[ExtResource("1_ewd3l")]([ExtResource("2_7g350"), ExtResource("3_4eh0a"), ExtResource("4_vc53p"), ExtResource("5_b26d5")])
+results = Array[ExtResource("1_ewd3l")]([ExtResource("6_yf8mc")])
+metadata/_custom_type_script = "uid://dnj2vptoeabi"
