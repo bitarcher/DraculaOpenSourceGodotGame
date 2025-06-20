@@ -13,6 +13,7 @@ func on_save_game(saved_data: Array[SavedData]):
 	my_data.num_of_lives = GameManagerSingleton.num_of_lives
 	my_data.health = GameManagerSingleton.health
 	my_data.num_of_coins =  GameManagerSingleton.num_of_coins
+	my_data.inventory_items = GameManagerSingleton.inventory.get_items()
 	my_data.level_start_ticks = GameManagerSingleton.level_start_ticks
 	my_data.num_of_coins_before_killed = GameManagerSingleton.num_of_coins_before_killed
 	my_data.pause_ticks = Time.get_ticks_msec()
@@ -28,10 +29,11 @@ func on_load_game(saved_data: SavedData):
 	if(saved_data is PlayerPlatformerSavedData):
 		var my_data = saved_data as PlayerPlatformerSavedData
 		GameManagerSingleton.num_of_lives = my_data.num_of_lives
-		GameManagerSingleton.num_of_injuries_allowed = my_data.num_of_injuries_allowed
+		GameManagerSingleton.health = my_data.health
 		GameManagerSingleton.num_of_coins = my_data.num_of_coins
 		var now_ticks = Time.get_ticks_msec()
 		var diff_ticks = my_data.pause_ticks - my_data.level_start_ticks
 		GameManagerSingleton.level_start_ticks = now_ticks - diff_ticks
 		GameManagerSingleton.num_of_coins_before_killed = my_data.num_of_coins_before_killed
+		GameManagerSingleton.inventory.set_items(my_data.inventory_items) 
 		

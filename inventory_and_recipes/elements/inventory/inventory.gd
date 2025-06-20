@@ -14,6 +14,10 @@ func remove_item(to_remove:Item):
 ## Returns all items in this inventory.	
 func get_items() -> Array[Item]:
 	return _content
+	
+# used for restoring (load game)
+func set_items(items: Array[Item]):
+	_content = items
 
 func has_all(items:Array[Item]) -> bool:
 	var needed:Array[Item] = items.duplicate()
