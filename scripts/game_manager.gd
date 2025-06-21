@@ -8,7 +8,7 @@ extends Node
 @export var level_start_ticks: int
 var num_of_coins_before_killed : int = 0
 var num_of_blue_diamonds_before_killed: int = 0
-
+var inventory_items_before_killed: Array[Item] = []
 
 var immunity: bool = false
 
@@ -116,6 +116,7 @@ func next_level():
 	health = INITIAL_HEALTH
 	num_of_coins_before_killed = num_of_coins
 	num_of_blue_diamonds_before_killed = num_of_diamonds
+	inventory_items_before_killed = inventory.get_items().duplicate(true)
 	if(num_of_lives < 2):
 		num_of_lives += 1
 	
@@ -133,6 +134,7 @@ func reset_counters():
 	health = INITIAL_HEALTH
 	num_of_coins_before_killed = 0
 	num_of_blue_diamonds_before_killed = 0
+	inventory_items_before_killed = []
 	num_of_diamonds = 0
 	num_of_coins = 0
 	num_of_lives = INITIAL_NUM_OF_LIVES
@@ -188,6 +190,7 @@ func killed():
 	print("killed using game manager")
 	num_of_coins = num_of_coins_before_killed
 	num_of_diamonds = num_of_blue_diamonds_before_killed
+	inventory.set_items(inventory_items_before_killed.duplicate(true))
 	num_of_lives -= 1
 	
 	emit_signal("player_killed")
