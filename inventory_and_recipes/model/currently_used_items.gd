@@ -9,6 +9,9 @@ func add_cu_item(cu_item: CurrentlyUsedItem):
 	cu_items.append(cu_item)
 	cu_items_changed.emit()
 	
+func get_cu_items() -> Array[CurrentlyUsedItem]:
+	return cu_items
+	
 func add_item(item: Item):
 	var cu_item = CurrentlyUsedItem.new_from_item(item)
 	

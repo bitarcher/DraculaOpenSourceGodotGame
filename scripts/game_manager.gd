@@ -15,6 +15,8 @@ var immunity: bool = false
 @export var health: float = INITIAL_HEALTH
 
 @export var inventory: Inventory = Inventory.new()
+
+@export var currently_used_items: CurrentlyUsedItems = CurrentlyUsedItems.new()
  
 signal health_changed(new_health: float)
 signal player_injured(strength: float) 

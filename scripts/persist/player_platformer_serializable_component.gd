@@ -18,6 +18,12 @@ func on_save_game(saved_data: Array[SavedData]):
 	my_data.level_start_ticks = GameManagerSingleton.level_start_ticks
 	my_data.num_of_coins_before_killed = GameManagerSingleton.num_of_coins_before_killed
 	my_data.pause_ticks = Time.get_ticks_msec()
+	my_data.currently_used_items_saved_data = []
+	
+	for cui in GameManagerSingleton.currently_used_items.get_cu_items():
+		var cuisd = CurrentlyUsedItemSavedData.new()
+		cuisd.from_currently_used_item(cui)
+		my_data.currently_used_items_saved_data.append(cuisd)
 	
 	saved_data.append(my_data)
 	
@@ -38,4 +44,8 @@ func on_load_game(saved_data: SavedData):
 		GameManagerSingleton.num_of_coins_before_killed = my_data.num_of_coins_before_killed
 		var inventory_items_copy = my_data.inventory_items.duplicate(true)
 		GameManagerSingleton.inventory.set_items(inventory_items_copy) 
+		GameManagerSingleton.currently_used_items.clear()
 		
+		for cuisd: CurrentlyUsedItemSavedData in my_data.currently_used_items_saved_data:
+			var cui: CurrentlyUsedItem = cuisd.to_currently_used_item()
+			GameManagerSingleton.currently_used_items.add_cu_item(cui)

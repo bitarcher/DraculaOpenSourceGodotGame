@@ -9,3 +9,5 @@ extends SavedData
 @export var pause_ticks: int
 
 @export var inventory_items : Array[Item]
+
+@export var currently_used_items_saved_data: Array[CurrentlyUsedItemSavedData]
