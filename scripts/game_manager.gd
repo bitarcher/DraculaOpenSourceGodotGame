@@ -156,7 +156,7 @@ func live_fetched():
 	num_of_lives += 1
 	
 func blue_diamond_fetched():
-	num_of_diamonds += 1
+	num_of_diamonds += 10
 	
 func new_game():
 	print("NEW GAME REQUESTED")

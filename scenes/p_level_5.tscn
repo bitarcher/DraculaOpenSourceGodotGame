@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://itb5rfqkwus"]
+[gd_scene load_steps=26 format=3 uid="uid://itb5rfqkwus"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_v65e4"]
 [ext_resource type="Texture2D" uid="uid://doyfrmal4p0kn" path="res://assets/clouds/cloud0.png" id="2_220f6"]
@@ -20,6 +20,7 @@
 [ext_resource type="AudioStream" uid="uid://cy3dmjrp18i3w" path="res://assets/music/halloween-303749.mp3" id="18_220f6"]
 [ext_resource type="PackedScene" uid="uid://v82xc5d3kigg" path="res://inventory_and_recipes/elements/pickup/pickup.tscn" id="19_4tf7c"]
 [ext_resource type="Resource" uid="uid://d1aevf1mxmu28" path="res://inventory_and_recipes/data/items/hen.tres" id="20_7xstj"]
+[ext_resource type="Resource" uid="uid://sco4ocl3m1h3" path="res://inventory_and_recipes/data/items/lavender.tres" id="21_7xstj"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pfjqn"]
 
@@ -330,7 +331,7 @@ position = Vector2(737, 64)
 position = Vector2(739, 47)
 
 [node name="BlueDiamond" parent="." instance=ExtResource("11_d50ti")]
-position = Vector2(746, -2)
+position = Vector2(745, -8)
 
 [node name="Trap" parent="." instance=ExtResource("13_1ov2n")]
 position = Vector2(897, 13)
@@ -392,3 +393,7 @@ parameters/looping = true
 [node name="Pickup" parent="." instance=ExtResource("19_4tf7c")]
 position = Vector2(370, -13)
 item = ExtResource("20_7xstj")
+
+[node name="Pickup2" parent="." instance=ExtResource("19_4tf7c")]
+position = Vector2(747, 1)
+item = ExtResource("21_7xstj")

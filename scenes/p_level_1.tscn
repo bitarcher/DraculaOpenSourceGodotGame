@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://dfjkxjjym532g"]
+[gd_scene load_steps=32 format=3 uid="uid://dfjkxjjym532g"]
 
 [ext_resource type="Texture2D" uid="uid://cvh3qfx5hoimn" path="res://assets/sun.png" id="1_0a5ag"]
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_1ofay"]
@@ -18,9 +18,6 @@
 [ext_resource type="PackedScene" uid="uid://d062hkuxa4g7y" path="res://scenes/p_level_const.tscn" id="17_oqhks"]
 [ext_resource type="AudioStream" uid="uid://bhlh4nphgdd6o" path="res://assets/music/time_for_adventure.mp3" id="18_7771x"]
 [ext_resource type="PackedScene" uid="uid://cctwmuyah45p6" path="res://scenes/healing_vial.tscn" id="18_dv5ru"]
-[ext_resource type="PackedScene" uid="uid://v82xc5d3kigg" path="res://inventory_and_recipes/elements/pickup/pickup.tscn" id="19_8iftl"]
-[ext_resource type="Resource" uid="uid://cmsagrxswgciq" path="res://inventory_and_recipes/data/items/carot.tres" id="20_p4pfp"]
-[ext_resource type="Resource" uid="uid://bs04rbmicblmd" path="res://inventory_and_recipes/data/items/iron_ore.tres" id="21_aliqe"]
 
 [sub_resource type="Animation" id="Animation_1ofay"]
 length = 0.001
@@ -507,6 +504,7 @@ position = Vector2(1342, -64)
 position = Vector2(225, -34)
 
 [node name="LevelConst" parent="." instance=ExtResource("17_oqhks")]
+position = Vector2(-16, -179)
 
 [node name="AnimatedPlatforms" type="Node" parent="."]
 
@@ -533,14 +531,3 @@ stream = ExtResource("18_7771x")
 volume_db = -13.602
 autoplay = true
 parameters/looping = true
-
-[node name="PickupCarrot" parent="." instance=ExtResource("19_8iftl")]
-z_index = 11
-position = Vector2(432, 17)
-item = ExtResource("20_p4pfp")
-
-[node name="PickupIronOre" parent="." instance=ExtResource("19_8iftl")]
-position = Vector2(869, -158)
-item = ExtResource("21_aliqe")
-
-[editable path="PickupCarrot"]

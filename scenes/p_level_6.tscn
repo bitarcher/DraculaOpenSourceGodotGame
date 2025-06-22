@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://cfg40f7tjot7e"]
+[gd_scene load_steps=35 format=4 uid="uid://cfg40f7tjot7e"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_dniw7"]
 [ext_resource type="PackedScene" uid="uid://d062hkuxa4g7y" path="res://scenes/p_level_const.tscn" id="2_4ig4f"]
@@ -23,6 +23,8 @@
 [ext_resource type="PackedScene" uid="uid://bmvp7280t0att" path="res://scenes/moon/brush.tscn" id="13_sphp0"]
 [ext_resource type="PackedScene" uid="uid://c50xxeppc76hx" path="res://scenes/loup_garou.tscn" id="17_4ig4f"]
 [ext_resource type="PackedScene" uid="uid://j3hd2b06ok3d" path="res://scenes/coin.tscn" id="19_5p1gx"]
+[ext_resource type="PackedScene" uid="uid://v82xc5d3kigg" path="res://inventory_and_recipes/elements/pickup/pickup.tscn" id="24_35q7p"]
+[ext_resource type="Resource" uid="uid://d1aevf1mxmu28" path="res://inventory_and_recipes/data/items/hen.tres" id="25_xm12d"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6pu31"]
 distance = 29.0
@@ -725,3 +727,7 @@ position = Vector2(5770, -298)
 
 [node name="Platform4" parent="." instance=ExtResource("8_qk33k")]
 position = Vector2(5827, 173)
+
+[node name="Pickup" parent="." instance=ExtResource("24_35q7p")]
+position = Vector2(2043, -330)
+item = ExtResource("25_xm12d")
