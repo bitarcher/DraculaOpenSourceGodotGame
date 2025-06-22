@@ -13,4 +13,5 @@ script = ExtResource("2_gyjcw")
 title = "Health potion"
 ingredients = Array[ExtResource("1_ewd3l")]([ExtResource("2_7g350"), ExtResource("3_4eh0a"), ExtResource("4_vc53p"), ExtResource("5_b26d5")])
 results = Array[ExtResource("1_ewd3l")]([ExtResource("6_yf8mc")])
+description = "Get 100% health and then a some better defense during a small amount of time"
 metadata/_custom_type_script = "uid://dnj2vptoeabi"

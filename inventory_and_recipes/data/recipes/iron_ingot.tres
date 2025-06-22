@@ -11,4 +11,5 @@ script = ExtResource("2_cqw4y")
 title = "Iron ingot from ore"
 ingredients = Array[ExtResource("1_44s14")]([ExtResource("2_vmtq7"), ExtResource("2_vmtq7"), ExtResource("2_vmtq7"), ExtResource("3_0xkpl")])
 results = Array[ExtResource("1_44s14")]([ExtResource("4_k1d88"), ExtResource("4_k1d88")])
+description = "Needed for metalurgy"
 metadata/_custom_type_script = "uid://dnj2vptoeabi"

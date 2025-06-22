@@ -13,4 +13,5 @@ script = ExtResource("2_kp1xl")
 title = "Slingshot"
 ingredients = Array[ExtResource("1_y5yvc")]([ExtResource("2_pjuit"), ExtResource("3_yhaa0"), ExtResource("4_l0t5r"), ExtResource("5_7d7lr")])
 results = Array[ExtResource("1_y5yvc")]([ExtResource("6_ontms")])
+description = "A simple weapon that can be used to attack at a certain distance"
 metadata/_custom_type_script = "uid://dnj2vptoeabi"

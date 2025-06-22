@@ -13,4 +13,5 @@ script = ExtResource("2_hxf6m")
 title = "Divine armor"
 ingredients = Array[ExtResource("1_2mgyt")]([ExtResource("2_t324j"), ExtResource("3_c336x"), ExtResource("3_c336x"), ExtResource("3_c336x"), ExtResource("4_nxyh7"), ExtResource("5_xhyd2")])
 results = Array[ExtResource("1_2mgyt")]([ExtResource("6_n3i84")])
+description = "Get more defense"
 metadata/_custom_type_script = "uid://dnj2vptoeabi"

@@ -18,7 +18,7 @@ func on_save_game(saved_data: Array[SavedData]):
 	my_data.level_start_ticks = GameManagerSingleton.level_start_ticks
 	my_data.num_of_coins_before_killed = GameManagerSingleton.num_of_coins_before_killed
 	my_data.pause_ticks = Time.get_ticks_msec()
-	my_data.currently_used_items_saved_data = []
+	my_data.currently_used_items_saved_data.clear()
 	
 	for cui in GameManagerSingleton.currently_used_items.get_cu_items():
 		var cuisd = CurrentlyUsedItemSavedData.new()

@@ -10,4 +10,6 @@ icon = ExtResource("1_yeg8d")
 price = 25
 desired_width_px = 32.0
 desired_height_px = 32.0
+duration_in_seconds = 5.0
+usable = true
 metadata/_custom_type_script = "uid://b6rtt5e2v7l2p"

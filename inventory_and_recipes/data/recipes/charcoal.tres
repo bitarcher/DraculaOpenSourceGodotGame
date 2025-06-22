@@ -10,4 +10,5 @@ script = ExtResource("2_hnbcq")
 title = "Charcoal from wood"
 ingredients = Array[ExtResource("1_y4cfc")]([ExtResource("2_yrt52"), ExtResource("2_yrt52"), ExtResource("2_yrt52")])
 results = Array[ExtResource("1_y4cfc")]([ExtResource("3_48tih"), ExtResource("3_48tih")])
+description = "Needed for metalurgy"
 metadata/_custom_type_script = "uid://dnj2vptoeabi"

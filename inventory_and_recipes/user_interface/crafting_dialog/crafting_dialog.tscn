@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2eutmynpisem"]
+[gd_scene load_steps=4 format=3 uid="uid://d2eutmynpisem"]
 
 [ext_resource type="Script" uid="uid://doa1cmy4c4kh3" path="res://inventory_and_recipes/user_interface/crafting_dialog/crafting_dialog.gd" id="1_5t0ny"]
 [ext_resource type="PackedScene" uid="uid://d1efscup5qx56" path="res://inventory_and_recipes/user_interface/item_grid/item_grid.tscn" id="2_qf7rh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5k13a"]
+font_size = 12
+outline_color = Color(0.247059, 0.247059, 0.247059, 0.764706)
 
 [node name="CraftingDialog" type="PanelContainer"]
 anchors_preset = 15
@@ -75,6 +79,11 @@ text = "Results
 [node name="ResultsContainer" parent="VBoxContainer/HBoxContainer2/VBoxContainer" instance=ExtResource("2_qf7rh")]
 unique_name_in_owner = true
 layout_mode = 2
+
+[node name="DescriptionLabel" type="Label" parent="VBoxContainer/HBoxContainer2/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+label_settings = SubResource("LabelSettings_5k13a")
 
 [node name="Control" type="Control" parent="VBoxContainer/HBoxContainer2/VBoxContainer"]
 layout_mode = 2

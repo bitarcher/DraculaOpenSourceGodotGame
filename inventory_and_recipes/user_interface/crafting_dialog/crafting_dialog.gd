@@ -7,6 +7,7 @@ extends PanelContainer
 @onready var ingredients_container = %IngredientsContainer
 @onready var results_container = %ResultsContainer
 @onready var craft_button:Button = %CraftButton
+@onready var description_label: Label = %DescriptionLabel
 
 var _inventory:Inventory
 var _selected_recipe:Recipe
@@ -38,7 +39,7 @@ func _on_recipe_list_item_selected(index):
 	ingredients_container.display(_selected_recipe.ingredients)
 	results_container.display(_selected_recipe.results)
 	craft_button.disabled = not _inventory.has_all(_selected_recipe.ingredients)
-	
+	description_label.text = _selected_recipe.description
 	
 	
 func _on_craft_button_pressed():

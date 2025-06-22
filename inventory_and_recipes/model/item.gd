@@ -18,6 +18,8 @@ extends Resource
 
 @export var duration_in_seconds: float = 60.0
 
+@export var usable: bool = false
+
 ## Instantiates the 2d representation and initializes it with the 
 ## current item
 func instantiate() -> Sprite2D:

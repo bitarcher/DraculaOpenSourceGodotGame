@@ -12,4 +12,5 @@ script = ExtResource("6_g1ssf")
 title = "Winged boots"
 ingredients = Array[ExtResource("1_33wll")]([ExtResource("2_o1rmq"), ExtResource("3_2ppmx"), ExtResource("4_5oewe"), ExtResource("4_5oewe"), ExtResource("4_5oewe"), ExtResource("4_5oewe")])
 results = Array[ExtResource("1_33wll")]([ExtResource("5_qd3xw")])
+description = "Double jumps"
 metadata/_custom_type_script = "uid://dnj2vptoeabi"

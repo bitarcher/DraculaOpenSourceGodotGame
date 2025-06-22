@@ -12,4 +12,5 @@ script = ExtResource("2_tnctl")
 title = "Cow slaughter"
 ingredients = Array[ExtResource("1_i5173")]([ExtResource("2_vn7v7")])
 results = Array[ExtResource("1_i5173")]([ExtResource("3_mc8t8"), ExtResource("3_mc8t8"), ExtResource("3_mc8t8"), ExtResource("3_mc8t8"), ExtResource("3_mc8t8"), ExtResource("3_mc8t8"), ExtResource("4_hcywm"), ExtResource("4_hcywm"), ExtResource("4_hcywm"), ExtResource("5_ryged"), ExtResource("5_ryged")])
+description = "Poor animal, have you ever considered making a friend ?"
 metadata/_custom_type_script = "uid://dnj2vptoeabi"

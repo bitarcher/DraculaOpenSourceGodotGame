@@ -11,4 +11,5 @@ script = ExtResource("2_v275u")
 title = "Camouflage"
 ingredients = Array[ExtResource("1_dtq2f")]([ExtResource("2_je1w8"), ExtResource("2_je1w8"), ExtResource("2_je1w8"), ExtResource("2_je1w8"), ExtResource("2_je1w8"), ExtResource("2_je1w8"), ExtResource("3_cny8t")])
 results = Array[ExtResource("1_dtq2f")]([ExtResource("4_cny8t")])
+description = "Character ennemies won't see neither attack you"
 metadata/_custom_type_script = "uid://dnj2vptoeabi"
