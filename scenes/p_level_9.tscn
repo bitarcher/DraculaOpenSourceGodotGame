@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://b8qcxh3n62ioc"]
+[gd_scene load_steps=28 format=3 uid="uid://b8qcxh3n62ioc"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_o2uke"]
 [ext_resource type="PackedScene" uid="uid://d062hkuxa4g7y" path="res://scenes/p_level_const.tscn" id="2_l7025"]
@@ -18,8 +18,11 @@
 [ext_resource type="PackedScene" uid="uid://cctwmuyah45p6" path="res://scenes/healing_vial.tscn" id="19_umvk4"]
 [ext_resource type="AudioStream" uid="uid://bisk8lrbaapkf" path="res://assets/music/night-dies-with-us-gothic-and-vampiric-piano-music-247462.mp3" id="19_un8ah"]
 [ext_resource type="PackedScene" uid="uid://hkis3pmnouwy" path="res://scenes/coins_3x3.tscn" id="20_18xqd"]
+[ext_resource type="PackedScene" uid="uid://v82xc5d3kigg" path="res://inventory_and_recipes/elements/pickup/pickup.tscn" id="21_o2uke"]
 [ext_resource type="PackedScene" uid="uid://j3hd2b06ok3d" path="res://scenes/coin.tscn" id="21_pmd1o"]
 [ext_resource type="PackedScene" uid="uid://c2rxg4yil67wj" path="res://scenes/blue_diamond.tscn" id="22_800ld"]
+[ext_resource type="Resource" uid="uid://cmsagrxswgciq" path="res://inventory_and_recipes/data/items/carot.tres" id="22_l7025"]
+[ext_resource type="Resource" uid="uid://sco4ocl3m1h3" path="res://inventory_and_recipes/data/items/lavender.tres" id="23_l7025"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pfjqn"]
 
@@ -473,3 +476,11 @@ position = Vector2(-718, -370)
 
 [node name="ToxicGaz6" parent="." instance=ExtResource("14_l2qk6")]
 position = Vector2(-780, -371)
+
+[node name="Pickup" parent="." instance=ExtResource("21_o2uke")]
+position = Vector2(-4, -96)
+item = ExtResource("22_l7025")
+
+[node name="Pickup2" parent="." instance=ExtResource("21_o2uke")]
+position = Vector2(-754, -368)
+item = ExtResource("23_l7025")

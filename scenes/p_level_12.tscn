@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://l5yew617cbxi"]
+[gd_scene load_steps=57 format=3 uid="uid://l5yew617cbxi"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_l8tqb"]
 [ext_resource type="PackedScene" uid="uid://d062hkuxa4g7y" path="res://scenes/p_level_const.tscn" id="2_w1tme"]
@@ -17,7 +17,11 @@
 [ext_resource type="PackedScene" uid="uid://jyw84s43iw3w" path="res://scenes/platform.tscn" id="17_mu5sa"]
 [ext_resource type="PackedScene" uid="uid://cfcrm7kedeekn" path="res://scenes/dwarf.tscn" id="18_eywbu"]
 [ext_resource type="PackedScene" uid="uid://0khi164sjtqt" path="res://scenes/portail_magique.tscn" id="19_7gy0f"]
+[ext_resource type="PackedScene" uid="uid://v82xc5d3kigg" path="res://inventory_and_recipes/elements/pickup/pickup.tscn" id="19_cee6y"]
+[ext_resource type="Resource" uid="uid://d1aevf1mxmu28" path="res://inventory_and_recipes/data/items/hen.tres" id="20_086rh"]
 [ext_resource type="PackedScene" uid="uid://cctwmuyah45p6" path="res://scenes/healing_vial.tscn" id="20_mlivy"]
+[ext_resource type="Resource" uid="uid://cmsagrxswgciq" path="res://inventory_and_recipes/data/items/carot.tres" id="21_bdwk6"]
+[ext_resource type="Resource" uid="uid://dgwvax2yux8lm" path="res://inventory_and_recipes/data/items/cow.tres" id="22_0k67b"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pfjqn"]
 
@@ -951,3 +955,15 @@ libraries = {
 &"": SubResource("AnimationLibrary_flu0i")
 }
 autoplay = "move"
+
+[node name="Pickup" parent="." instance=ExtResource("19_cee6y")]
+position = Vector2(-620, -461)
+item = ExtResource("20_086rh")
+
+[node name="Pickup2" parent="." instance=ExtResource("19_cee6y")]
+position = Vector2(-253, -157)
+item = ExtResource("21_bdwk6")
+
+[node name="Pickup3" parent="." instance=ExtResource("19_cee6y")]
+position = Vector2(-1181, -109)
+item = ExtResource("22_0k67b")

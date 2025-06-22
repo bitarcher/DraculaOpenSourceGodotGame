@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://codk1ksxa3yui"]
+[gd_scene load_steps=38 format=3 uid="uid://codk1ksxa3yui"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_o8gpq"]
 [ext_resource type="Texture2D" uid="uid://doyfrmal4p0kn" path="res://assets/clouds/cloud0.png" id="2_vwmev"]
@@ -22,6 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://d062hkuxa4g7y" path="res://scenes/p_level_const.tscn" id="18_p0e6h"]
 [ext_resource type="PackedScene" uid="uid://c2rxg4yil67wj" path="res://scenes/blue_diamond.tscn" id="20_iso1u"]
 [ext_resource type="PackedScene" uid="uid://n3o5anvhaglu" path="res://scenes/windmill.tscn" id="22_wcle0"]
+[ext_resource type="PackedScene" uid="uid://v82xc5d3kigg" path="res://inventory_and_recipes/elements/pickup/pickup.tscn" id="23_soaow"]
+[ext_resource type="Resource" uid="uid://sco4ocl3m1h3" path="res://inventory_and_recipes/data/items/lavender.tres" id="24_inlax"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pfjqn"]
 
@@ -781,3 +783,7 @@ position = Vector2(-120, -160)
 
 [node name="Windmill" parent="." instance=ExtResource("22_wcle0")]
 position = Vector2(574, -195)
+
+[node name="Pickup" parent="." instance=ExtResource("23_soaow")]
+position = Vector2(901, -157)
+item = ExtResource("24_inlax")

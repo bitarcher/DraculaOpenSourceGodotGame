@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cklnykfty3mv3"]
+[gd_scene load_steps=29 format=3 uid="uid://cklnykfty3mv3"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_dstnm"]
 [ext_resource type="PackedScene" uid="uid://d062hkuxa4g7y" path="res://scenes/p_level_const.tscn" id="2_obevh"]
@@ -22,6 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://0khi164sjtqt" path="res://scenes/portail_magique.tscn" id="16_aovnt"]
 [ext_resource type="PackedScene" uid="uid://cfcrm7kedeekn" path="res://scenes/dwarf.tscn" id="18_f4yj1"]
 [ext_resource type="PackedScene" uid="uid://c2rxg4yil67wj" path="res://scenes/blue_diamond.tscn" id="22_qq3cs"]
+[ext_resource type="PackedScene" uid="uid://v82xc5d3kigg" path="res://inventory_and_recipes/elements/pickup/pickup.tscn" id="23_f4yj1"]
+[ext_resource type="Resource" uid="uid://dgwvax2yux8lm" path="res://inventory_and_recipes/data/items/cow.tres" id="24_qq3cs"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pfjqn"]
 
@@ -481,3 +483,7 @@ position = Vector2(-635, -81)
 
 [node name="BlueDiamond2" parent="." instance=ExtResource("22_qq3cs")]
 position = Vector2(354, -16)
+
+[node name="Pickup" parent="." instance=ExtResource("23_f4yj1")]
+position = Vector2(-814, -13)
+item = ExtResource("24_qq3cs")
