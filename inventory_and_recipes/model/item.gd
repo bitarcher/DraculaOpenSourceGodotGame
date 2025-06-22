@@ -16,6 +16,7 @@ extends Resource
 ## The desired pixel height for the Sprite2D. Use 0 for original size.
 @export var desired_height_px: float = 32.0 # Nouvelle propriété pour la hauteur souhaitée
 
+@export var duration_in_seconds: float = 60.0
 
 ## Instantiates the 2d representation and initializes it with the 
 ## current item
