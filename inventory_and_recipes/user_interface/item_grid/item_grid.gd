@@ -7,6 +7,16 @@ extends GridContainer
 
 signal selected_item_slot_changed(item_slot: ItemSlot)
 
+func get_maybe_selected_item_slot() -> ItemSlot:
+	for child in get_children():
+		if child is ItemSlot:
+			var item_slot = child as ItemSlot
+			
+			if item_slot.is_selected:
+				return item_slot
+	
+	return null
+
 func display(items:Array[Item]):
 	for child in get_children():
 		child.queue_free()
@@ -20,6 +30,7 @@ func display(items:Array[Item]):
 			slot.button_pressed.connect(on_slot_button_pressed)
 
 func on_slot_button_pressed(emitter: ItemSlot):
+	print("ItemGrid.on_slot_button_pressed")
 	for child in self.get_children():
 		if child is ItemSlot:
 			var item_slot = child as ItemSlot

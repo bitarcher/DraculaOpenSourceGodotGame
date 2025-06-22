@@ -9,6 +9,8 @@ var _is_selected: bool = false
 
 signal button_pressed(emitter: ItemSlot)
 
+@export var item: Item
+
 @export var is_selected: bool:
 	set(value):
 		_is_selected = value
@@ -24,10 +26,9 @@ signal button_pressed(emitter: ItemSlot)
 func display(item:Item):
 	_texture_rect.texture = item.icon
 	label.text = item.name
+	self.item = item 	
 	
-	
-	
-
 
 func _on_button_pressed() -> void:
-	pass # Replace with function body.
+	print("ItemSlot.button pressed")
+	button_pressed.emit(self)
