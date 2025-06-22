@@ -5,18 +5,32 @@
 
 [node name="PanelContainer" type="PanelContainer"]
 custom_minimum_size = Vector2(90, 90)
+offset_right = 128.0
+offset_bottom = 142.0
 script = ExtResource("1_8vouk")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="Button" type="Button" parent="."]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
+[node name="ColorRect" type="ColorRect" parent="Button"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_right = 128.0
+offset_bottom = 142.0
+color = Color(0.194349, 0.194349, 0.194349, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Button/ColorRect"]
+layout_mode = 2
+offset_right = 128.0
+offset_bottom = 142.0
+
+[node name="TextureRect" type="TextureRect" parent="Button/ColorRect/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 texture = ExtResource("1_xpdln")
 
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="Label" type="Label" parent="Button/ColorRect/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 9
@@ -24,3 +38,5 @@ text = "item name"
 horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
