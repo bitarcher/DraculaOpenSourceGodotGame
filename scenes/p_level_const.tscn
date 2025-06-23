@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://d062hkuxa4g7y"]
+[gd_scene load_steps=11 format=3 uid="uid://d062hkuxa4g7y"]
 
 [ext_resource type="Script" uid="uid://3c5e38a6a81m" path="res://scripts/p_level_const.gd" id="1_7ibwm"]
 [ext_resource type="PackedScene" uid="uid://c8fgcnhdy6mk2" path="res://scenes/level_ui.tscn" id="2_hlhvv"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://buqs8ls3i558h" path="res://inventory_and_recipes/user_interface/ui_root/ui_root.gd" id="7_m06n5"]
 [ext_resource type="PackedScene" uid="uid://6r4rm2hswvtu" path="res://inventory_and_recipes/user_interface/inventory_dialog/inventory_dialog.tscn" id="9_l4kck"]
 [ext_resource type="PackedScene" uid="uid://d2eutmynpisem" path="res://inventory_and_recipes/user_interface/crafting_dialog/crafting_dialog.tscn" id="10_8l2as"]
+[ext_resource type="PackedScene" uid="uid://cdibv0xhkx6x0" path="res://inventory_and_recipes/user_interface/currently_used_items_ui/currently_used_items_ui.tscn" id="10_l4kck"]
 
 [node name="LevelConst" type="Node2D" groups=["LevelConst"]]
 script = ExtResource("1_7ibwm")
@@ -56,3 +57,10 @@ offset_right = -56.0
 offset_bottom = -64.0
 size_flags_horizontal = 6
 size_flags_vertical = 6
+
+[node name="CurrentlyUsedItemsUi" parent="." instance=ExtResource("10_l4kck")]
+custom_minimum_size = Vector2(172, 172)
+offset_left = 955.112
+offset_top = 451.0
+offset_right = 1127.11
+offset_bottom = 623.0

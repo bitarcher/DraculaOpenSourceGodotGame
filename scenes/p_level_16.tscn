@@ -209,6 +209,21 @@ texture = ExtResource("8_t3owl")
 physics_layer_0/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_bs2ip")
 
+[sub_resource type="Animation" id="Animation_fss8y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-2058, -479)]
+}
+
 [sub_resource type="Animation" id="Animation_kpglm"]
 resource_name = "move"
 loop_mode = 2
@@ -225,7 +240,13 @@ tracks/0/keys = {
 "values": [Vector2(-2058, -479), Vector2(-2379, -479)]
 }
 
-[sub_resource type="Animation" id="Animation_fss8y"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r7i1n"]
+_data = {
+&"RESET": SubResource("Animation_fss8y"),
+&"move": SubResource("Animation_kpglm")
+}
+
+[sub_resource type="Animation" id="Animation_ojeux"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -237,13 +258,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-2058, -479)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_r7i1n"]
-_data = {
-&"RESET": SubResource("Animation_fss8y"),
-&"move": SubResource("Animation_kpglm")
+"values": [Vector2(-2328, -650)]
 }
 
 [sub_resource type="Animation" id="Animation_ldg8n"]
@@ -260,21 +275,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-2328, -650), Vector2(-651, -650)]
-}
-
-[sub_resource type="Animation" id="Animation_ojeux"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-2328, -650)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rbh2w"]
