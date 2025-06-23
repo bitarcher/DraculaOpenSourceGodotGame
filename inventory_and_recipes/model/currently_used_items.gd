@@ -12,6 +12,7 @@ const HEALTH_POTION: String = "Health potion"
 
 func add_cu_item(cu_item: CurrentlyUsedItem):
 	cu_items.append(cu_item)
+	cu_item.consumed.connect(_consumed)
 	cu_items_changed.emit()
 	
 func get_cu_items() -> Array[CurrentlyUsedItem]:
@@ -19,7 +20,6 @@ func get_cu_items() -> Array[CurrentlyUsedItem]:
 	
 func add_item(item: Item):
 	var cu_item = CurrentlyUsedItem.new_from_item(item)
-	cu_item.consumed.connect(_consumed)
 	
 	add_cu_item(cu_item)
 	
