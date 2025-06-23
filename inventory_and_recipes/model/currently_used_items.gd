@@ -3,6 +3,8 @@ extends Resource
 
 signal cu_items_changed()
 
+const WINGED_BOOTS: String = "Winged boots"
+
 @export var cu_items: Array[CurrentlyUsedItem]
 
 func add_cu_item(cu_item: CurrentlyUsedItem):
@@ -21,6 +23,15 @@ func add_item(item: Item):
 func _consumed(cu_item: CurrentlyUsedItem):
 	cu_items.erase(cu_item)
 	cu_items_changed.emit()
+	
+func can_rejump() -> bool:
+	var result = false
+	
+	for cu_item in cu_items:
+		if cu_item.item.name == WINGED_BOOTS:
+			result = true
+	
+	return result
 
 func clear():
 	cu_items.clear()

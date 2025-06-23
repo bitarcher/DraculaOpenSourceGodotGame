@@ -162,25 +162,30 @@ func stop_following_player():
 func get_out_from_vortex():
 	animated_sprite_2d.rotation_degrees = 0
 	animated_sprite_2d.scale = Vector2(1.0, 1.0)
+	
+var is_rejumping: bool = false
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	var is_jumping: bool 
+	
 
 	if Input.is_action_just_pressed("escape"):
 		GameManagerSingleton.show_menu()
 
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-		is_jumping = true
-	else:
-		is_jumping = false
-	
-
+	if Input.is_action_just_pressed("jump"):
+		
+		if is_on_floor():
+			velocity.y = JUMP_VELOCITY
+			is_rejumping = false
+		elif not is_rejumping:
+			if GameManagerSingleton.currently_used_items.can_rejump():
+				is_rejumping = true
+				velocity.y = JUMP_VELOCITY
+		
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("move_left", "move_right")
