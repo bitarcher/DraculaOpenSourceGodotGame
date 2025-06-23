@@ -28,6 +28,13 @@ scale = Vector2(0.3, 0.3)
 position = Vector2(960, 15)
 scale = Vector2(0.3, 0.3)
 
+[node name="CurrentlyUsedItemsUi" parent="CanvasLayer" instance=ExtResource("10_l4kck")]
+custom_minimum_size = Vector2(172, 172)
+offset_left = 765.111
+offset_top = 63.0
+offset_right = 937.109
+offset_bottom = -31.0
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_mfnrs")
 autoplay = true
@@ -57,10 +64,3 @@ offset_right = -56.0
 offset_bottom = -64.0
 size_flags_horizontal = 6
 size_flags_vertical = 6
-
-[node name="CurrentlyUsedItemsUi" parent="." instance=ExtResource("10_l4kck")]
-custom_minimum_size = Vector2(172, 172)
-offset_left = 955.112
-offset_top = 451.0
-offset_right = 1127.11
-offset_bottom = 623.0
