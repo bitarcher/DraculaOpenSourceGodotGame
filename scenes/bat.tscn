@@ -1,0 +1,113 @@
+[gd_scene load_steps=16 format=3 uid="uid://eohakdnrdwq3"]
+
+[ext_resource type="Script" uid="uid://cjvojr150dpgd" path="res://scripts/bat.gd" id="1_vjjhm"]
+[ext_resource type="PackedScene" uid="uid://bqhlm5rolw1xo" path="res://scenes/injury_zone.tscn" id="2_lv0ya"]
+[ext_resource type="Texture2D" uid="uid://d1m81i6qnmuby" path="res://assets/sprites/bat/bat_idle.png" id="3_n8eff"]
+[ext_resource type="Texture2D" uid="uid://drqaj38tdepg7" path="res://assets/sprites/bat/bat01.png" id="4_rrah6"]
+[ext_resource type="Texture2D" uid="uid://oixptdeief0l" path="res://assets/sprites/bat/bat02.png" id="5_drkvk"]
+[ext_resource type="Texture2D" uid="uid://b0e2clpvo6wwr" path="res://assets/sprites/bat/bat03.png" id="6_y1j7x"]
+[ext_resource type="Texture2D" uid="uid://bqiaejkfnp8ro" path="res://assets/sprites/bat/bat04.png" id="7_dk2sj"]
+[ext_resource type="Texture2D" uid="uid://dwrdn3cn78pb5" path="res://assets/sprites/bat/bat05.png" id="8_fjde2"]
+[ext_resource type="Texture2D" uid="uid://dh4k5xsbapaes" path="res://assets/sprites/bat/bat06.png" id="9_qyo3s"]
+[ext_resource type="Texture2D" uid="uid://pebtruayygiw" path="res://assets/sprites/bat/bat07.png" id="10_twcdg"]
+[ext_resource type="Texture2D" uid="uid://bav36lrsyjd3e" path="res://assets/sprites/bat/bat08.png" id="11_p43al"]
+[ext_resource type="Texture2D" uid="uid://bimbq7ikbfjhg" path="res://assets/sprites/bat/bat09.png" id="12_v45h3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c78co"]
+radius = 7.0
+height = 14.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j0w84"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_n8eff")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_rrah6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_drkvk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_y1j7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dk2sj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_fjde2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_qyo3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_twcdg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_p43al")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_v45h3")
+}],
+"loop": true,
+"name": &"move",
+"speed": 22.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vjjhm"]
+radius = 45.0
+height = 144.0
+
+[node name="Bat" type="Node2D"]
+script = ExtResource("1_vjjhm")
+
+[node name="InjuryZone" parent="." instance=ExtResource("2_lv0ya")]
+position = Vector2(0, 5)
+injury_strength = 10.0
+injury_zone_type = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InjuryZone"]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_c78co")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 6)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_j0w84")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="RayCastRightBottom" type="RayCast2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, 5)
+target_position = Vector2(16, 11)
+
+[node name="RayCastLeftBottom" type="RayCast2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, 5)
+target_position = Vector2(-16, 11)
+
+[node name="RayCastLeftTop" type="RayCast2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, 5)
+target_position = Vector2(-16, -13)
+
+[node name="RayCastRigthTop" type="RayCast2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, 5)
+target_position = Vector2(16, -13)
+
+[node name="DetectionZone" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionZone"]
+position = Vector2(-1, 62)
+shape = SubResource("CapsuleShape2D_vjjhm")
+
+[connection signal="body_entered" from="DetectionZone" to="." method="_on_detection_zone_body_entered"]

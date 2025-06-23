@@ -5,8 +5,7 @@ AU GAMEOVER, mais c'était peut-être parce que le script associé à LevelConst
 était pas le bon)
 
 les doléances de la directrice artistique :
-- enlever le bug : quand on inscrit son nom dans le high score a la fin du jeu 
-et qu'on met la lettre I ou C l'écran affiche respectivement l'inventaire ou le craft
+
 - 
 
 
@@ -19,6 +18,9 @@ items exploitables:
 - divine armor
 - camouflage
 - health potion
+
+- enlever le bug : quand on inscrit son nom dans le high score a la fin du jeu 
+et qu'on met la lettre I ou C l'écran affiche respectivement l'inventaire ou le craft
 
 ne peut rien faire:
 - fermer ta grande gueule (priorité n°1)

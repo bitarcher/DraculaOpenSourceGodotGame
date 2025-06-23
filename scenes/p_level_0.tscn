@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://b0crdc1ikff2q"]
+[gd_scene load_steps=40 format=3 uid="uid://b0crdc1ikff2q"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_kjeck"]
 [ext_resource type="Texture2D" uid="uid://cvh3qfx5hoimn" path="res://assets/sun.png" id="3_xgaoy"]
@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://v82xc5d3kigg" path="res://inventory_and_recipes/elements/pickup/pickup.tscn" id="19_xgaoy"]
 [ext_resource type="Resource" uid="uid://j1ws2hgmrobm" path="res://inventory_and_recipes/data/items/winged_boots.tres" id="20_rfw54"]
 [ext_resource type="Resource" uid="uid://b2txcw1fpbeft" path="res://inventory_and_recipes/data/items/health_potion.tres" id="25_6vw2f"]
+[ext_resource type="PackedScene" uid="uid://eohakdnrdwq3" path="res://scenes/bat.tscn" id="26_eyu3d"]
 
 [sub_resource type="Animation" id="Animation_1ofay"]
 length = 0.001
@@ -557,3 +558,15 @@ item = ExtResource("20_rfw54")
 [node name="Pickup2" parent="." instance=ExtResource("19_xgaoy")]
 position = Vector2(278, 49)
 item = ExtResource("25_6vw2f")
+
+[node name="Bat" parent="." instance=ExtResource("26_eyu3d")]
+position = Vector2(670, -50)
+
+[node name="Bat2" parent="." instance=ExtResource("26_eyu3d")]
+position = Vector2(630, -82)
+
+[node name="Bat3" parent="." instance=ExtResource("26_eyu3d")]
+position = Vector2(584, -98)
+
+[node name="Bat4" parent="." instance=ExtResource("26_eyu3d")]
+position = Vector2(606, -95)
