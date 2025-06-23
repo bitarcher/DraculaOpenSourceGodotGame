@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=4 uid="uid://cfg40f7tjot7e"]
+[gd_scene load_steps=39 format=4 uid="uid://cfg40f7tjot7e"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_dniw7"]
 [ext_resource type="PackedScene" uid="uid://d062hkuxa4g7y" path="res://scenes/p_level_const.tscn" id="2_4ig4f"]
@@ -27,6 +27,8 @@
 [ext_resource type="Resource" uid="uid://d1aevf1mxmu28" path="res://inventory_and_recipes/data/items/hen.tres" id="25_xm12d"]
 [ext_resource type="Resource" uid="uid://cfl2dy32p3y3n" path="res://inventory_and_recipes/data/items/feather.tres" id="26_sn0ih"]
 [ext_resource type="Resource" uid="uid://cmsagrxswgciq" path="res://inventory_and_recipes/data/items/carot.tres" id="27_ik5qr"]
+[ext_resource type="PackedScene" uid="uid://eohakdnrdwq3" path="res://scenes/bat.tscn" id="28_ik5qr"]
+[ext_resource type="PackedScene" uid="uid://01ydknqjtsii" path="res://scenes/enlightments/enlightment_center.tscn" id="29_t2jmr"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6pu31"]
 distance = 29.0
@@ -741,3 +743,28 @@ item = ExtResource("26_sn0ih")
 [node name="Pickup3" parent="." instance=ExtResource("24_35q7p")]
 position = Vector2(3671, 47)
 item = ExtResource("27_ik5qr")
+
+[node name="Bat" parent="." instance=ExtResource("28_ik5qr")]
+position = Vector2(5119, 28)
+
+[node name="Bat2" parent="." instance=ExtResource("28_ik5qr")]
+position = Vector2(5059, 31)
+go_left_once_awaken = false
+
+[node name="EnlightmentCenter" parent="." instance=ExtResource("29_t2jmr")]
+position = Vector2(5143, 406)
+
+[node name="EnlightmentCenter2" parent="." instance=ExtResource("29_t2jmr")]
+position = Vector2(5048, 406)
+
+[node name="EnlightmentCenter3" parent="." instance=ExtResource("29_t2jmr")]
+position = Vector2(5286, 406)
+
+[node name="EnlightmentCenter4" parent="." instance=ExtResource("29_t2jmr")]
+position = Vector2(5475, 404)
+
+[node name="EnlightmentCenter5" parent="." instance=ExtResource("29_t2jmr")]
+position = Vector2(5682, 404)
+
+[node name="Bat3" parent="." instance=ExtResource("28_ik5qr")]
+position = Vector2(5679, 407)
