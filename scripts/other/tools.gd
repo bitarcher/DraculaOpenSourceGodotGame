@@ -78,6 +78,11 @@ func get_player_platformer() -> PlayerPlatformer:
 	else:
 		print("no PlayerPlatformer found")
 		return null
+		
+func is_body_relative_to_player(body: Node2D) -> bool:
+	
+	return body  is PlayerPlatformer
+	
 
 func is_interactive_dialog_open_and_visible() -> bool:
 	var root = get_tree().current_scene

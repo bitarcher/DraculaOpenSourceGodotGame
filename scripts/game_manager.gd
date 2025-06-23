@@ -32,7 +32,7 @@ var _menu_resource: Resource
 var _highscore_resource: Resource
 var _credits_resource: Resource
 
-const NUM_OF_LEVELS: int = 19
+const NUM_OF_LEVELS: int = 20
 const INITIAL_HEALTH: float = 100.0
 
 func _init_level_resources():
@@ -56,6 +56,7 @@ func _init_level_resources():
 		preload("res://scenes/p_level_16.tscn"),
 		preload("res://scenes/p_level_17.tscn"),
 		preload("res://scenes/p_level_18.tscn"),
+		preload("res://scenes/p_level_19.tscn"),
 	]
 	print(str(_levels_resources.size()) + " levels loaded")
 

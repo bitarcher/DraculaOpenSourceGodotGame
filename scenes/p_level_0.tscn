@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://b0crdc1ikff2q"]
+[gd_scene load_steps=44 format=3 uid="uid://b0crdc1ikff2q"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_kjeck"]
 [ext_resource type="Texture2D" uid="uid://cvh3qfx5hoimn" path="res://assets/sun.png" id="3_xgaoy"]
@@ -26,6 +26,10 @@
 [ext_resource type="Resource" uid="uid://j1ws2hgmrobm" path="res://inventory_and_recipes/data/items/winged_boots.tres" id="20_rfw54"]
 [ext_resource type="Resource" uid="uid://b2txcw1fpbeft" path="res://inventory_and_recipes/data/items/health_potion.tres" id="25_6vw2f"]
 [ext_resource type="PackedScene" uid="uid://eohakdnrdwq3" path="res://scenes/bat.tscn" id="26_eyu3d"]
+[ext_resource type="PackedScene" uid="uid://d0aca6rxjqlip" path="res://scenes/stones/small/stone_small_a.tscn" id="27_oh6rx"]
+[ext_resource type="PackedScene" uid="uid://0f2u7rvj1j8t" path="res://scenes/stones/small/stone_small_b.tscn" id="28_3cumw"]
+[ext_resource type="PackedScene" uid="uid://bx5wopbk0e57e" path="res://scenes/stones/small/stone_small_e.tscn" id="29_ao783"]
+[ext_resource type="PackedScene" uid="uid://clvhr4y2650wt" path="res://scenes/stones/small/stone_small_f.tscn" id="30_npkut"]
 
 [sub_resource type="Animation" id="Animation_1ofay"]
 length = 0.001
@@ -570,3 +574,18 @@ position = Vector2(584, -98)
 
 [node name="Bat4" parent="." instance=ExtResource("26_eyu3d")]
 position = Vector2(606, -95)
+
+[node name="StoneA" parent="." instance=ExtResource("27_oh6rx")]
+position = Vector2(374, -103)
+
+[node name="StoneB" parent="." instance=ExtResource("28_3cumw")]
+position = Vector2(358, -231)
+
+[node name="StoneSmallE" parent="." instance=ExtResource("29_ao783")]
+position = Vector2(406, -239)
+
+[node name="StoneSmallF" parent="." instance=ExtResource("30_npkut")]
+position = Vector2(342, -143)
+
+[node name="StoneSmallE2" parent="." instance=ExtResource("29_ao783")]
+position = Vector2(454, -95)

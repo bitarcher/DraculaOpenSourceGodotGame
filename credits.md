@@ -20,6 +20,8 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 - feathers: saphattachat https://fr.pinterest.com/pin/678143656448052592/
 - slingshot: https://www.iconexperience.com/v_collection/icons/?icon=slingshot
 - duck, animated sprite, Ulti, FINISAUTEMPOTENTIAE ©, https://opengameart.org/content/character-spritesheet-duck
+- bat : https://fr.pinterest.com/pin/6333255717241088/
+- stones: macrovector https://www.freepik.com/free-vector/rocks-stones-elements_3792124.htm#fromView=keyword&page=1&position=0&uuid=aed28973-c093-4ace-8e8b-5b2821bafe56&query=Rock+Sprite
 
 *Assets*
 

@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyq7f6ke0m6ds"]
+
+[ext_resource type="Texture2D" uid="uid://bpe3uv4uipxxr" path="res://assets/sprites/stones.png" id="1_xncbn"]
+
+[node name="StoneA" type="RigidBody2D"]
+collision_layer = 3
+collision_mask = 3
+mass = 200.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xncbn")
+region_enabled = true
+region_rect = Rect2(5, 19, 60, 46)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, -21, -25, -15, -26, 2, -22, 12, -9, 20, 6, 21, 18, 14, 27, 5, 28, -9, 27, -15, 17, -21)

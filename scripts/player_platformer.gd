@@ -72,7 +72,11 @@ func _on_player_killed() -> void:
 	print("player killed callback")
 	#$AnimatedSprite2D/InjuredAnimationPlayer.play("injured")
 	$DyingAudioStreamPlayer.play()
-	$CollisionShape2D.queue_free()
+	
+	var collision_shape = $CollisionShape2D
+	
+	if collision_shape != null:
+		collision_shape.queue_free()
 	#$DamageReceiverComponent.take_damage(100000000000000000)
 	
 func enter_vortex():
