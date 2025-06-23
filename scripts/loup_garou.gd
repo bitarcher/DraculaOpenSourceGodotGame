@@ -16,8 +16,8 @@ enum State {
 	HOWLING
 }
 
-var current_state: State = State.WALKING
-var current_direction: int = initial_direction
+@export var current_state: State = State.WALKING
+@export var current_direction: int = initial_direction
 
 func _ready() -> void:
 	# Assurez-vous que l'animation de marche est jouée au démarrage
