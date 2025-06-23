@@ -27,7 +27,8 @@ func _on_use_button_pressed() -> void:
 		_inventory.remove_item(item)
 		
 		GameManagerSingleton.currently_used_items.add_item(item)
-
+		grid_container.display(_inventory.get_items())
+		use_button.disabled = true
 
 func _on_grid_container_selected_item_slot_changed(item_slot: ItemSlot) -> void:
 	use_button.disabled = item_slot == null or not item_slot.item.usable
