@@ -14,6 +14,8 @@ et qu'on met la lettre I ou C l'écran affiche respectivement l'inventaire ou le
 - enlever le bug des pv (n°2)
 - dans la lave, quand on meurt, faire une mort différente (arrêt de la caméra) (n°3)
 - faire des bulles pour la lave (n°4)
+items exploitables:
+- winged boots
 
-# peut rien faire:
+ne peut rien faire:
 - fermer ta grande gueule (priorité n°1)

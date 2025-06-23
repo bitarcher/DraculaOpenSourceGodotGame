@@ -78,8 +78,8 @@ func _ready() -> void:
 	killed_timer.ignore_time_scale = true
 	killed_timer.connect("timeout", _on_killed_timer_timeout)
 	
-func _get_defense_factor():
-	return 1.0
+func _get_defense_factor(injury_zone: InjuryZone):
+	return currently_used_items.get_defense_factor(injury_zone)
 
 const INITIAL_NUM_OF_LIVES = 5
 
@@ -169,11 +169,15 @@ func new_game():
 	current_level = 1
 	_goto_level()
 
-func injured(strength: float):
+func injured(injury_zone: InjuryZone, strength: float):
+	
 	if(immunity):
 		return
 	
-	var level = strength / _get_defense_factor()
+	var level = strength / _get_defense_factor(injury_zone)
+	
+	if level < 0.1:
+		return
 	
 	health -= level
 	

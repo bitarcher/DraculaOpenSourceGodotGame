@@ -4,6 +4,8 @@ extends Resource
 signal cu_items_changed()
 
 const WINGED_BOOTS: String = "Winged boots"
+const CAMOUFLAGE: String = "Camouflage"
+const DIVINE_ARMOR: String = "Divine armor"
 
 @export var cu_items: Array[CurrentlyUsedItem]
 
@@ -24,14 +26,6 @@ func _consumed(cu_item: CurrentlyUsedItem):
 	cu_items.erase(cu_item)
 	cu_items_changed.emit()
 	
-func can_rejump() -> bool:
-	var result = false
-	
-	for cu_item in cu_items:
-		if cu_item.item.name == WINGED_BOOTS:
-			result = true
-	
-	return result
 
 func clear():
 	cu_items.clear()
@@ -52,3 +46,46 @@ func check_and_consumed_currently_used_items():
 		
 	if found:
 		cu_items_changed.emit()
+
+
+func can_rejump() -> bool:
+	var result = false
+	
+	for cu_item in cu_items:
+		if cu_item.item.name == WINGED_BOOTS:
+			result = true
+	
+	return result
+	
+func has_divine_armor() -> bool:
+	var result = false
+	
+	for cu_item in cu_items:
+		if cu_item.item.name == DIVINE_ARMOR:
+			result = true
+	
+	return result
+	
+func has_camouflage() -> bool:
+	var result = false
+	
+	for cu_item in cu_items:
+		if cu_item.item.name == CAMOUFLAGE:
+			result = true
+	
+	return result
+	
+func get_defense_factor(injury_zone: InjuryZone) -> float:
+	var camouflage : bool = has_camouflage()
+	var divine_armor : bool = has_divine_armor()
+	
+	if camouflage:
+		var injury_zone_type = injury_zone.injury_zone_type
+		
+		if  injury_zone_type == InjuryZone.EnumInjuryZoneType.BEAST:
+			return 10000000.0
+			
+	if divine_armor:
+		return 3.0
+	
+	return 1.0

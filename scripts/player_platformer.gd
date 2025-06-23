@@ -165,12 +165,18 @@ func get_out_from_vortex():
 	
 var is_rejumping: bool = false
 
+func _process(delta: float) -> void:
+	if GameManagerSingleton.currently_used_items.has_camouflage():
+		current_player_character = EnumPlayerCharacter.CAMOUFLAGE
+	elif GameManagerSingleton.currently_used_items.has_divine_armor():
+		current_player_character = EnumPlayerCharacter.DIVINE_ARMOR
+	else:
+		current_player_character = EnumPlayerCharacter.DEFAULT
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-
-	
 
 	if Input.is_action_just_pressed("escape"):
 		GameManagerSingleton.show_menu()
