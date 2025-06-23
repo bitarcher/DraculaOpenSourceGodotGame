@@ -22,6 +22,11 @@ func _ready() -> void:
 		_direction_vector.x = 1
 		_direction_vector.y = 1
 
+func _keep_direction() -> bool:
+	var r = (randi() % 4) != 0
+	
+	return r
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
@@ -30,20 +35,22 @@ func _process(delta: float) -> void:
 		
 	animated_sprite.play("move")
 	
+	var keep_direction = _keep_direction()
+	
 	if(ray_cast_right_bottom.is_colliding()):
-		_direction_vector.x = 1
+		_direction_vector.x = 1 if keep_direction else -1
 		_direction_vector.y = -1
 		
 	if(ray_cast_rigth_top.is_colliding()):
-		_direction_vector.x = 1
+		_direction_vector.x = 1 if keep_direction else -1
 		_direction_vector.y = 1
 		
 	if(ray_cast_left_bottom.is_colliding()):
-		_direction_vector.x = -1
+		_direction_vector.x = -1 if keep_direction else 1
 		_direction_vector.y = -1
 		
 	if(ray_cast_left_top.is_colliding()):
-		_direction_vector.x = 1
+		_direction_vector.x = -1 if keep_direction else 1
 		_direction_vector.y = 1
 		
 	var normalized_vector = _direction_vector.normalized()
