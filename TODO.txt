@@ -16,6 +16,9 @@ et qu'on met la lettre I ou C l'écran affiche respectivement l'inventaire ou le
 - faire des bulles pour la lave (n°4)
 items exploitables:
 - winged boots
+- divine armor
+- camouflage
+- health potion
 
 ne peut rien faire:
 - fermer ta grande gueule (priorité n°1)

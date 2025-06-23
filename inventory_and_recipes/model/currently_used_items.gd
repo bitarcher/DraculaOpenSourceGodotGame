@@ -6,6 +6,7 @@ signal cu_items_changed()
 const WINGED_BOOTS: String = "Winged boots"
 const CAMOUFLAGE: String = "Camouflage"
 const DIVINE_ARMOR: String = "Divine armor"
+const HEALTH_POTION: String = "Health potion"
 
 @export var cu_items: Array[CurrentlyUsedItem]
 
@@ -21,6 +22,9 @@ func add_item(item: Item):
 	cu_item.consumed.connect(_consumed)
 	
 	add_cu_item(cu_item)
+	
+	if item.name == HEALTH_POTION:
+		GameManagerSingleton.set_health(100.0)
 	
 func _consumed(cu_item: CurrentlyUsedItem):
 	cu_items.erase(cu_item)
@@ -75,17 +79,32 @@ func has_camouflage() -> bool:
 	
 	return result
 	
+func has_health_potion() -> bool:
+	var result = false
+	
+	for cu_item in cu_items:
+		if cu_item.item.name == HEALTH_POTION:
+			result = true
+	
+	return result
+	
 func get_defense_factor(injury_zone: InjuryZone) -> float:
 	var camouflage : bool = has_camouflage()
 	var divine_armor : bool = has_divine_armor()
+	var health_potion : bool = has_health_potion()
+	
+	var result = 1.0
+	
+	if health_potion:
+		result *= 3.0
 	
 	if camouflage:
 		var injury_zone_type = injury_zone.injury_zone_type
 		
 		if  injury_zone_type == InjuryZone.EnumInjuryZoneType.BEAST:
-			return 10000000.0
+			result *= 100000.0
 			
 	if divine_armor:
-		return 3.0
+		result  *= 3
 	
-	return 1.0
+	return result

@@ -57,6 +57,10 @@ func _init_level_resources():
 		preload("res://scenes/p_level_18.tscn"),
 	]
 	print(str(_levels_resources.size()) + " levels loaded")
+
+func set_health(health: float) -> void:
+	self.health = health
+	health_changed.emit(health)
 	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
