@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bp4wth67tkg1y"]
+
+[ext_resource type="Script" uid="uid://c7gji2qi4yxjl" path="res://scripts/persist/bat_serializable_component.gd" id="1_nj864"]
+
+[node name="BatSerializableComponent" type="Node2D" groups=["Serializable"]]
+script = ExtResource("1_nj864")
