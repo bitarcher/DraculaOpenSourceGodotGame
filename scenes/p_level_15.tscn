@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://bktgr05jocuqt"]
+[gd_scene load_steps=44 format=3 uid="uid://bktgr05jocuqt"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_i6kqm"]
 [ext_resource type="Texture2D" uid="uid://doyfrmal4p0kn" path="res://assets/clouds/cloud0.png" id="2_d52lw"]
@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://0khi164sjtqt" path="res://scenes/portail_magique.tscn" id="21_cyuxb"]
 [ext_resource type="PackedScene" uid="uid://cctwmuyah45p6" path="res://scenes/healing_vial.tscn" id="22_lxp2y"]
 [ext_resource type="PackedScene" uid="uid://c2rxg4yil67wj" path="res://scenes/blue_diamond.tscn" id="23_khkpe"]
+[ext_resource type="PackedScene" uid="uid://eohakdnrdwq3" path="res://scenes/bat.tscn" id="24_i6kqm"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pfjqn"]
 
@@ -1019,5 +1020,8 @@ position = Vector2(-1, 168)
 
 [node name="BlueDiamond" parent="." instance=ExtResource("23_khkpe")]
 position = Vector2(-587, 368)
+
+[node name="Bat" parent="." instance=ExtResource("24_i6kqm")]
+position = Vector2(1085, 78)
 
 [editable path="Lava/Lava8"]

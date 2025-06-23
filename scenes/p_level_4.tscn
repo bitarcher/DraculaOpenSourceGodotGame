@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://pn3s2hcvet10"]
+[gd_scene load_steps=38 format=3 uid="uid://pn3s2hcvet10"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_eas7d"]
 [ext_resource type="Texture2D" uid="uid://doyfrmal4p0kn" path="res://assets/clouds/cloud0.png" id="3_rrvga"]
@@ -23,6 +23,7 @@
 [ext_resource type="Resource" uid="uid://dgwvax2yux8lm" path="res://inventory_and_recipes/data/items/cow.tres" id="21_dujf2"]
 [ext_resource type="Resource" uid="uid://71evqpdqpc8e" path="res://inventory_and_recipes/data/items/wood.tres" id="22_dujf2"]
 [ext_resource type="Resource" uid="uid://sco4ocl3m1h3" path="res://inventory_and_recipes/data/items/lavender.tres" id="23_1t62x"]
+[ext_resource type="PackedScene" uid="uid://eohakdnrdwq3" path="res://scenes/bat.tscn" id="24_kbgyv"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pfjqn"]
 
@@ -646,3 +647,9 @@ item = ExtResource("22_dujf2")
 [node name="Pickup3" parent="." instance=ExtResource("20_6sg7n")]
 position = Vector2(418, -352)
 item = ExtResource("23_1t62x")
+
+[node name="Bat" parent="." instance=ExtResource("24_kbgyv")]
+position = Vector2(485, -98)
+
+[node name="Bat2" parent="." instance=ExtResource("24_kbgyv")]
+position = Vector2(374, -274)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cfjoc4rebnaso"]
+[gd_scene load_steps=32 format=3 uid="uid://cfjoc4rebnaso"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_j10bp"]
 [ext_resource type="PackedScene" uid="uid://d062hkuxa4g7y" path="res://scenes/p_level_const.tscn" id="2_nm4hp"]
@@ -22,6 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://0khi164sjtqt" path="res://scenes/portail_magique.tscn" id="17_w6rwb"]
 [ext_resource type="AudioStream" uid="uid://bhlh4nphgdd6o" path="res://assets/music/time_for_adventure.mp3" id="18_437c8"]
 [ext_resource type="PackedScene" uid="uid://cfcrm7kedeekn" path="res://scenes/dwarf.tscn" id="18_kj6qh"]
+[ext_resource type="PackedScene" uid="uid://v82xc5d3kigg" path="res://inventory_and_recipes/elements/pickup/pickup.tscn" id="23_rqui2"]
+[ext_resource type="Resource" uid="uid://bbunwwth7os5p" path="res://inventory_and_recipes/data/items/charcoal.tres" id="24_wxuta"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pfjqn"]
 
@@ -584,3 +586,7 @@ position = Vector2(-479, -622)
 
 [node name="BlueDiamond2" parent="." instance=ExtResource("13_vjwcf")]
 position = Vector2(241, -551)
+
+[node name="Pickup" parent="." instance=ExtResource("23_rqui2")]
+position = Vector2(69, 34)
+item = ExtResource("24_wxuta")

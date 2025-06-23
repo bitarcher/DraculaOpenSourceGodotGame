@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bak673jogwixo"]
+[gd_scene load_steps=38 format=3 uid="uid://bak673jogwixo"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_ubjx6"]
 [ext_resource type="Texture2D" uid="uid://doyfrmal4p0kn" path="res://assets/clouds/cloud0.png" id="2_pmbes"]
@@ -25,6 +25,8 @@
 [ext_resource type="PackedScene" uid="uid://j3hd2b06ok3d" path="res://scenes/coin.tscn" id="23_sie33"]
 [ext_resource type="PackedScene" uid="uid://c2rxg4yil67wj" path="res://scenes/blue_diamond.tscn" id="24_mrdai"]
 [ext_resource type="PackedScene" uid="uid://uexabi8p1p55" path="res://scenes/lava_bubble.tscn" id="25_wy5iy"]
+[ext_resource type="PackedScene" uid="uid://v82xc5d3kigg" path="res://inventory_and_recipes/elements/pickup/pickup.tscn" id="26_jir8x"]
+[ext_resource type="Resource" uid="uid://bs04rbmicblmd" path="res://inventory_and_recipes/data/items/iron_ore.tres" id="27_g1sy6"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pfjqn"]
 
@@ -739,3 +741,7 @@ z_index = 10
 position = Vector2(785, -113)
 scale = Vector2(0.3, 0.3)
 amount = 25
+
+[node name="Pickup" parent="." instance=ExtResource("26_jir8x")]
+position = Vector2(165, 339)
+item = ExtResource("27_g1sy6")

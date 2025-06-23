@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://l5yew617cbxi"]
+[gd_scene load_steps=59 format=3 uid="uid://l5yew617cbxi"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_l8tqb"]
 [ext_resource type="PackedScene" uid="uid://d062hkuxa4g7y" path="res://scenes/p_level_const.tscn" id="2_w1tme"]
@@ -22,6 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://cctwmuyah45p6" path="res://scenes/healing_vial.tscn" id="20_mlivy"]
 [ext_resource type="Resource" uid="uid://cmsagrxswgciq" path="res://inventory_and_recipes/data/items/carot.tres" id="21_bdwk6"]
 [ext_resource type="Resource" uid="uid://dgwvax2yux8lm" path="res://inventory_and_recipes/data/items/cow.tres" id="22_0k67b"]
+[ext_resource type="Resource" uid="uid://bbunwwth7os5p" path="res://inventory_and_recipes/data/items/charcoal.tres" id="23_bdwk6"]
+[ext_resource type="Resource" uid="uid://bs04rbmicblmd" path="res://inventory_and_recipes/data/items/iron_ore.tres" id="24_0k67b"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pfjqn"]
 
@@ -967,3 +969,11 @@ item = ExtResource("21_bdwk6")
 [node name="Pickup3" parent="." instance=ExtResource("19_cee6y")]
 position = Vector2(-1181, -109)
 item = ExtResource("22_0k67b")
+
+[node name="Pickup4" parent="." instance=ExtResource("19_cee6y")]
+position = Vector2(-589, -109)
+item = ExtResource("23_bdwk6")
+
+[node name="Pickup5" parent="." instance=ExtResource("19_cee6y")]
+position = Vector2(-573, -141)
+item = ExtResource("24_0k67b")

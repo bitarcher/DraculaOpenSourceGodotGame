@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://cklnykfty3mv3"]
+[gd_scene load_steps=31 format=3 uid="uid://cklnykfty3mv3"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_dstnm"]
 [ext_resource type="PackedScene" uid="uid://d062hkuxa4g7y" path="res://scenes/p_level_const.tscn" id="2_obevh"]
@@ -24,6 +24,8 @@
 [ext_resource type="PackedScene" uid="uid://c2rxg4yil67wj" path="res://scenes/blue_diamond.tscn" id="22_qq3cs"]
 [ext_resource type="PackedScene" uid="uid://v82xc5d3kigg" path="res://inventory_and_recipes/elements/pickup/pickup.tscn" id="23_f4yj1"]
 [ext_resource type="Resource" uid="uid://dgwvax2yux8lm" path="res://inventory_and_recipes/data/items/cow.tres" id="24_qq3cs"]
+[ext_resource type="PackedScene" uid="uid://eohakdnrdwq3" path="res://scenes/bat.tscn" id="25_of4bq"]
+[ext_resource type="Resource" uid="uid://bs04rbmicblmd" path="res://inventory_and_recipes/data/items/iron_ore.tres" id="26_y6mxp"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pfjqn"]
 
@@ -487,3 +489,16 @@ position = Vector2(354, -16)
 [node name="Pickup" parent="." instance=ExtResource("23_f4yj1")]
 position = Vector2(-814, -13)
 item = ExtResource("24_qq3cs")
+
+[node name="Bat" parent="." instance=ExtResource("25_of4bq")]
+position = Vector2(-666, -179)
+
+[node name="Bat2" parent="." instance=ExtResource("25_of4bq")]
+position = Vector2(-542, -114)
+
+[node name="Bat3" parent="." instance=ExtResource("25_of4bq")]
+position = Vector2(276, -162)
+
+[node name="Pickup2" parent="." instance=ExtResource("23_f4yj1")]
+position = Vector2(335, -141)
+item = ExtResource("26_y6mxp")
