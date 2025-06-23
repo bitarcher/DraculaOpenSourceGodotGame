@@ -4,7 +4,7 @@
 [ext_resource type="Theme" uid="uid://dhrx32e2kxpct" path="res://themes/menu_button_theme.tres" id="1_uw7fa"]
 [ext_resource type="Texture2D" uid="uid://bhiaxb7cuq6if" path="res://assets/paper.png" id="2_13hv0"]
 
-[node name="EnterPlayerName" type="Panel"]
+[node name="EnterPlayerName" type="Panel" groups=["InteractiveDialog"]]
 anchors_preset = -1
 anchor_right = 0.432
 anchor_bottom = 0.338

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cna2r3rric5yl" path="res://inventory_and_recipes/user_interface/item_slot/item_slot.tscn" id="2_l2s8o"]
 [ext_resource type="PackedScene" uid="uid://d1efscup5qx56" path="res://inventory_and_recipes/user_interface/item_grid/item_grid.tscn" id="3_nxv4r"]
 
-[node name="InventoryDialog" type="PanelContainer"]
+[node name="InventoryDialog" type="PanelContainer" groups=["InteractiveDialog"]]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

@@ -12,6 +12,10 @@ func _ready():
 	all_recipes.load_all_into(_all_recipes)
 
 func _unhandled_input(event):
+	
+	if ToolsSingleton.is_interactive_dialog_open_and_visible():
+		return
+	
 	if event.is_action_released("inventory"):
 		inventory_dialog.open(player.inventory)
 		

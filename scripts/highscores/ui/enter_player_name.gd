@@ -29,3 +29,4 @@ func _on_text_edit_gui_input(event: InputEvent) -> void:
 				player_entered.emit(text_edit.text)
 				
 				return # Quitte la fonction après avoir traité l'événement
+		

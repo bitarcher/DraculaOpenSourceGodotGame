@@ -78,3 +78,23 @@ func get_player_platformer() -> PlayerPlatformer:
 	else:
 		print("no PlayerPlatformer found")
 		return null
+
+func is_interactive_dialog_open_and_visible() -> bool:
+	var root = get_tree().current_scene
+	var nodes = get_nodes_in_group_from_node(root, "InteractiveDialog")
+	
+	for node in nodes:
+		
+		if node is Control:
+			var control: Control = node as Control
+			
+			if control.visible:
+				return true
+		
+		if node is Node2D:
+			var node2D : Node2D = node as Node2D
+				
+			if node2D.visible:
+				return true
+					
+	return false
