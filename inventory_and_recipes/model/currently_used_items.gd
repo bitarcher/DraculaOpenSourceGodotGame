@@ -14,8 +14,13 @@ func get_cu_items() -> Array[CurrentlyUsedItem]:
 	
 func add_item(item: Item):
 	var cu_item = CurrentlyUsedItem.new_from_item(item)
+	cu_item.consumed.connect(_consumed)
 	
 	add_cu_item(cu_item)
+	
+func _consumed(cu_item: CurrentlyUsedItem):
+	cu_items.erase(cu_item)
+	cu_items_changed.emit()
 
 func clear():
 	cu_items.clear()
