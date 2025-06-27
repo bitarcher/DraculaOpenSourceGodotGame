@@ -7,7 +7,22 @@ const rotation_radian_angle: float = 0.1
 
 # ---
 func _ready() -> void:
-	pass
+	# Check if the parent is the player
+	var parent = get_parent()
+	if parent is PlayerPlatformer:
+		# Connect to the player's direction changed signal
+		parent.direction_changed.connect(_on_player_direction_changed)
+		
+func _on_player_direction_changed(_emitter: PlayerPlatformer, old_direction: int, new_direction: int) -> void:
+	print ("_on_player_direction_changed, old direction : " + str(old_direction) + ", new direction: " + str(new_direction))
+	
+	if new_direction < 0 and scale.x == 1:
+		rotation_degrees = 25
+		scale = Vector2(-1, 1)
+	elif new_direction > 0 and scale.x == -1:
+		rotation_degrees = -25
+		scale = Vector2(1, 1)
+	# If new_direction is 0, do nothing to keep the last orientation.
 
 # ---
 func _process(delta: float) -> void:
@@ -82,9 +97,19 @@ func _input(event: InputEvent) -> void:
 	elif event.is_action_pressed("attack_long"):
 		throw_projectile(EnumProjectileRange.LONG)
 		
+		
+func is_min_angle_reached() -> bool:
+	return rotation_degrees < -80
+
+func is_max_angle_reached() -> bool:
+	return rotation_degrees > 80
 # ---
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("attack_turn_angle_positive"):
-		rotate(-rotation_radian_angle)
+		print("rotartion degrees" + str(rotation_degrees))
+		if not is_min_angle_reached():
+			rotate(-rotation_radian_angle)
 	elif Input.is_action_pressed("attack_turn_angle_negative"):
-		rotate(rotation_radian_angle)
+		print("rotartion degrees" + str(rotation_degrees))
+		if not is_max_angle_reached():
+			rotate(rotation_radian_angle)

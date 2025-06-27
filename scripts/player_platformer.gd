@@ -11,6 +11,8 @@ const JUMP_VELOCITY = -350.0
 @export var air_rotation_speed: float = 20 
 @onready var damage_receiver_component: DamageReceiverComponent = $DamageReceiverComponent
 
+signal direction_changed(emiter: PlayerPlatformer, old_direction: int, new_direction: int)
+
 @export var inventory: Inventory:
 	get:
 		return GameManagerSingleton.inventory
@@ -177,6 +179,8 @@ func _process(delta: float) -> void:
 	else:
 		current_player_character = EnumPlayerCharacter.DEFAULT
 
+var _previous_direction: int = 0
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -199,6 +203,10 @@ func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("move_left", "move_right")
+	
+	if(direction != _previous_direction):
+		direction_changed.emit(self, _previous_direction, direction)
+	_previous_direction = direction
 	
 	if direction < 0:
 		animated_sprite_2d.flip_h = true
