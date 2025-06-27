@@ -88,7 +88,7 @@ func has_health_potion() -> bool:
 	
 	return result
 	
-func get_defense_factor(injury_zone: InjuryZone) -> float:
+func get_defense_factor(injury_zone_type: InjuryZone.EnumInjuryZoneType) -> float:
 	var camouflage : bool = has_camouflage()
 	var divine_armor : bool = has_divine_armor()
 	var health_potion : bool = has_health_potion()
@@ -99,8 +99,6 @@ func get_defense_factor(injury_zone: InjuryZone) -> float:
 		result *= 3.0
 	
 	if camouflage:
-		var injury_zone_type = injury_zone.injury_zone_type
-		
 		if  injury_zone_type == InjuryZone.EnumInjuryZoneType.BEAST:
 			result *= 100000.0
 			

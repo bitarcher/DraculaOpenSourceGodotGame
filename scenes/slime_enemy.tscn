@@ -50,6 +50,7 @@ script = ExtResource("1_fq0mw")
 
 [node name="InjuryZone" parent="." instance=ExtResource("2_fq0mw")]
 position = Vector2(0, 5)
+injury_strength = null
 injury_zone_type = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InjuryZone"]
