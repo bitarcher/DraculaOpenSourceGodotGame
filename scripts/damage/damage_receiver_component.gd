@@ -92,7 +92,7 @@ func _process(_delta: float) -> void:
 	pass
 
 
-func take_damage(damage_strength: float):
+func take_damage(injury_zone_type: InjuryZone.EnumInjuryZoneType, damage_strength: float):
 	# This will use the setter of current_life_counter, which handles:
 	# - Clamping the new value (0 to initial_life_counter)
 	# - Updating the ProgressBar and Label

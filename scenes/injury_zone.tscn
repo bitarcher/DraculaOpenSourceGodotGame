@@ -5,7 +5,5 @@
 [node name="InjuryZone" type="Area2D"]
 collision_mask = 2
 script = ExtResource("1_feiuo")
-injury_strength = null
-injury_zone_type = null
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

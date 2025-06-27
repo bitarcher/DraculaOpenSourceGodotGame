@@ -55,6 +55,7 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 - slingshot: https://pixabay.com/fr/sound-effects/086123-slingshot-81843/
 - bat chirp: coelhoigor, https://pixabay.com/fr/sound-effects/bat-chirp-close-up-29644/
 - stone dropping: alegemaate, https://pixabay.com/fr/sound-effects/stone-dropping-6843/
+- rock: u_xjrmmgxfru, https://pixabay.com/fr/sound-effects/hit-rock-02-266304/
 
 pixabay licensing rules: https://pixabay.com/fr/service/license-summary/
 

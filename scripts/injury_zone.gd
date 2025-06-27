@@ -14,7 +14,7 @@ enum EnumInjuryZoneType {
 @export var injury_zone_type: EnumInjuryZoneType = EnumInjuryZoneType.NATURE_ELEMENT
 
 func _on_body_entered(body: Node2D) -> void:
-	print(body.get_class() + " enterd injury zone " + self.get_class())
+	print(body.get_class() + " entered injury zone " + self.get_class())
 	
 	if ToolsSingleton.is_body_relative_to_player(body):
 		GameManagerSingleton.injured(injury_zone_type, injury_strength)
