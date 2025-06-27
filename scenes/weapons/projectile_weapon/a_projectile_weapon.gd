@@ -28,9 +28,6 @@ func _on_player_direction_changed(_emitter: PlayerPlatformer, old_direction: int
 func _process(delta: float) -> void:
 	pass
 
-func _activate_weapon():
-	pass
-
 # ---
 func get_projectile_scene() -> PackedScene:
 	var result = load("res://scenes/weapons/projectile/stone_projectile.tscn")
@@ -55,6 +52,12 @@ func get_next_projectile_available_duration_in_milliseconds(projectile_range: En
 		
 var next_projectile_available_ticks_in_ms = 0
 
+# This is the virtual method for weapon activation.
+# Subclasses can override this to add activation animations or delays.
+# By default, it completes immediately.
+func _activate_weapon() -> void:
+	pass
+
 func throw_projectile(projectile_range: EnumProjectileRange) -> void:
 	
 	var now = Time.get_ticks_msec()
@@ -63,7 +66,8 @@ func throw_projectile(projectile_range: EnumProjectileRange) -> void:
 		print("projectile not available yet")
 		return
 	
-	_activate_weapon()
+	# Await the activation animation/delay before proceeding
+	await _activate_weapon()
 	
 	next_projectile_available_ticks_in_ms = now + get_next_projectile_available_duration_in_milliseconds(projectile_range)
 	
@@ -94,6 +98,7 @@ func throw_projectile(projectile_range: EnumProjectileRange) -> void:
 		rigid_body.apply_central_impulse(launch_direction)
 	else:
 		push_error("Le RigidBody2D du projectile est introuvable ou nul.")
+
 	
 # ---
 func _input(event: InputEvent) -> void:

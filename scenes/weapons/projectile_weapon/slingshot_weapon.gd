@@ -13,6 +13,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	super._process(delta)
 	
-func _activate_weapon():
-	animation_player.play("activate")
+func _activate_weapon() -> void:
 	audio_stream_player.play()
+	animation_player.play("activate")
+	await animation_player.animation_finished
