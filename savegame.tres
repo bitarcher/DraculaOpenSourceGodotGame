@@ -317,7 +317,7 @@ scene_path = "res://scenes/coin.tscn"
 script = ExtResource("3_yxken")
 direction = -1
 flip_h = true
-position = Vector2(970.856, -20)
+position = Vector2(914.379, -20)
 scene_path = "res://scenes/slime_enemy.tscn"
 
 [sub_resource type="Resource" id="Resource_jm5od"]
@@ -332,7 +332,7 @@ script = ExtResource("4_bmlv7")
 go_left_once_awaken = true
 awake = true
 direction_vector = Vector2(1, 1)
-position = Vector2(343.932, -23.8041)
+position = Vector2(-230.022, -210.587)
 scene_path = "res://scenes/bat.tscn"
 
 [sub_resource type="Resource" id="Resource_epfi6"]
@@ -340,36 +340,36 @@ script = ExtResource("4_bmlv7")
 go_left_once_awaken = true
 awake = true
 direction_vector = Vector2(1, 1)
-position = Vector2(288.907, -39.5998)
+position = Vector2(2162.95, 1720.45)
 scene_path = "res://scenes/bat.tscn"
 
 [sub_resource type="Resource" id="Resource_82fub"]
 script = ExtResource("4_bmlv7")
 go_left_once_awaken = true
 awake = true
-direction_vector = Vector2(1, 1)
-position = Vector2(328.64, -51.1806)
+direction_vector = Vector2(-1, 1)
+position = Vector2(-1256.78, 1265.62)
 scene_path = "res://scenes/bat.tscn"
 
 [sub_resource type="Resource" id="Resource_tpq7v"]
 script = ExtResource("4_bmlv7")
 go_left_once_awaken = true
 awake = true
-direction_vector = Vector2(-1, 1)
-position = Vector2(-112.502, 68.4922)
+direction_vector = Vector2(-1, -1)
+position = Vector2(-31.1759, 28.1146)
 scene_path = "res://scenes/bat.tscn"
 
 [sub_resource type="Resource" id="Resource_7odul"]
 script = ExtResource("11_oa0kt")
 num_of_lives = 5
-health = 65.0
+health = 100.0
 num_of_coins = 0
-level_start_ticks = 618
+level_start_ticks = 653
 num_of_coins_before_killed = 0
-pause_ticks = 35453
+pause_ticks = 109153
 inventory_items = Array[ExtResource("6_kcjkb")]([ExtResource("7_le0g5"), ExtResource("8_70mnr"), ExtResource("9_ri03i"), ExtResource("10_7n2nk")])
 currently_used_items_saved_data = Array[ExtResource("5_l4488")]([])
-position = Vector2(343.925, 43.9337)
+position = Vector2(1128.54, -52.0662)
 scene_path = ""
 
 [resource]

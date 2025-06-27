@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cec6gdhoywtsm"]
+[gd_scene load_steps=6 format=3 uid="uid://cec6gdhoywtsm"]
 
 [ext_resource type="Script" uid="uid://cvhf0l4bfdmbc" path="res://scenes/weapons/projectile/stone_projectile.gd" id="1_btewc"]
 [ext_resource type="Texture2D" uid="uid://bpe3uv4uipxxr" path="res://assets/sprites/stones.png" id="2_tstwo"]
 [ext_resource type="AudioStream" uid="uid://drs300oxaishw" path="res://assets/sounds/stone-dropping-6843.mp3" id="3_xmjfd"]
 [ext_resource type="AudioStream" uid="uid://coccledt0bjue" path="res://assets/sounds/hit-rock-02-266304.mp3" id="4_clfrd"]
+[ext_resource type="PackedScene" uid="uid://gfrtgg6qugt3" path="res://scenes/damage/projectile_injury_zone.tscn" id="5_s2ex3"]
 
 [node name="StoneProjectile" type="Node2D"]
 script = ExtResource("1_btewc")
@@ -26,13 +27,17 @@ polygon = PackedVector2Array(-3, -1, -3, 1, 0, 2, 2, 2, 2, 1, 1, -1)
 unique_name_in_owner = true
 stream = ExtResource("3_xmjfd")
 
-[node name="InjuryArea2D" type="Area2D" parent="RigidBody2D"]
-
-[node name="InjuryCollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D/InjuryArea2D"]
-polygon = PackedVector2Array(-4, -2, -4, 2, 0, 3, 3, 2, 3, 1, 1, -2)
-
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="RigidBody2D"]
 unique_name_in_owner = true
 stream = ExtResource("4_clfrd")
 
-[connection signal="body_entered" from="RigidBody2D/InjuryArea2D" to="." method="_on_injury_area_2d_body_entered"]
+[node name="ProjectileInjuryZone" parent="." instance=ExtResource("5_s2ex3")]
+position = Vector2(-1, 0)
+collision_layer = 3
+collision_mask = 3
+
+[node name="InjuryCollisionPolygon2D" type="CollisionPolygon2D" parent="ProjectileInjuryZone"]
+position = Vector2(1, 0)
+polygon = PackedVector2Array(-4, -2, -4, 2, 0, 3, 3, 2, 3, 1, 1, -2)
+
+[connection signal="body_entered" from="ProjectileInjuryZone" to="." method="_on_projectile_injury_zone_body_entered"]

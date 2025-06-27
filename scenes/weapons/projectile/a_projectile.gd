@@ -13,7 +13,7 @@ func _on_projectile_injury_zone_entered(body: Node2D, speed: float) -> void:
 	
 	var injury_strength = _get_injury_strength(speed)
 	
-	print(body.get_class() + " entered injury zone of projectile " + self.get_class() + ", injury strength is " + str(injury_strength))
+	print(body.get_class() + " entered projectile injury zone of projectile " + self.get_class() + ", injury strength is " + str(injury_strength))
 	
 	if ToolsSingleton.is_body_relative_to_player(body):
 		GameManagerSingleton.injured(InjuryZone.EnumInjuryZoneType.PROJECTILE, injury_strength)

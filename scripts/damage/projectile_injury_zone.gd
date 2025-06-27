@@ -28,4 +28,4 @@ func _on_body_entered(body: Node2D) -> void:
 	var damage_strength = rigid_body.linear_velocity.length() * damage_factor
 
 	if damage_strength >= 6.0:
-		damage_receiver.take_damage(damage_strength)
+		damage_receiver.take_damage(InjuryZone.EnumInjuryZoneType.PROJECTILE, damage_strength)

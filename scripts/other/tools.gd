@@ -84,6 +84,9 @@ func is_body_relative_to_player(body: Node2D) -> bool:
 	return body  is PlayerPlatformer
 
 func get_damage_receiver_component_relative_to_body_if_exists(body: Node2D) -> DamageReceiverComponent:
+	if(body == null):
+		return null
+	
 	if(body is DamageReceiverComponent):
 		return body
 
@@ -91,6 +94,11 @@ func get_damage_receiver_component_relative_to_body_if_exists(body: Node2D) -> D
 	
 	if child != null:
 		return child
+		
+	var child2 = get_node_from_class(body.get_parent(), "DamageReceiverComponent")
+	
+	if child2 != null:
+		return child2
 	
 	return null
 
