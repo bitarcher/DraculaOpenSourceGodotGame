@@ -28,6 +28,9 @@ func _on_player_direction_changed(_emitter: PlayerPlatformer, old_direction: int
 func _process(delta: float) -> void:
 	pass
 
+func _activate_weapon():
+	pass
+
 # ---
 func get_projectile_scene() -> PackedScene:
 	var result = load("res://scenes/weapons/projectile/stone_projectile.tscn")
@@ -59,6 +62,8 @@ func throw_projectile(projectile_range: EnumProjectileRange) -> void:
 	if (now < next_projectile_available_ticks_in_ms):
 		print("projectile not available yet")
 		return
+	
+	_activate_weapon()
 	
 	next_projectile_available_ticks_in_ms = now + get_next_projectile_available_duration_in_milliseconds(projectile_range)
 	

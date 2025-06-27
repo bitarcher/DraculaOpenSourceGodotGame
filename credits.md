@@ -52,6 +52,7 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 - diamond found: Liecio, https://pixabay.com/fr/sound-effects/diamond-found-190255/
 - orchestral win: u_it78ck90s3, https://pixabay.com/fr/sound-effects/orchestral-win-331233/
 - ok: SergeQuadrado, https://pixabay.com/fr/sound-effects/dad-says-ok-2-113121/
+- slingshot: https://pixabay.com/fr/sound-effects/086123-slingshot-81843/
 
 pixabay licensing rules: https://pixabay.com/fr/service/license-summary/
 
