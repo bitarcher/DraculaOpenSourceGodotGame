@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4gkjw7faek48"]
+
+[ext_resource type="Script" uid="uid://c23133f4hydkb" path="res://scenes/weapons/projectile_weapon/a_projectile_weapon.gd" id="1_cug07"]
+[ext_resource type="Texture2D" uid="uid://bvq6t45fpsqo6" path="res://inventory_and_recipes/elements/slingshot/slingshot.png" id="2_yn0q4"]
+
+[node name="AProjectileWeapon" type="Node2D"]
+script = ExtResource("1_cug07")
+
+[node name="Representation" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(70, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Representation"]
+texture = ExtResource("2_yn0q4")
