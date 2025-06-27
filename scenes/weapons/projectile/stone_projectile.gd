@@ -2,16 +2,18 @@ class_name StoneProjectile
 extends AProjectile
 
 @onready var rigid_body_2d: RigidBody2D = %RigidBody2D
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = %AudioStreamPlayer2D
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+@export var high_speed_threshold: float = 100.0 # Adjust this value as needed
 
+var _previous_linear_velocity: Vector2 = Vector2.ZERO
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
+func _physics_process(delta: float) -> void:
+	_previous_linear_velocity = rigid_body_2d.linear_velocity
 
 func get_launchable_rigid_body_2D() -> RigidBody2D:
 	return rigid_body_2d
+
+func _on_injury_area_2d_body_entered(body: Node2D) -> void:
+	if _previous_linear_velocity.length() > high_speed_threshold:
+		audio_stream_player_2d.play()

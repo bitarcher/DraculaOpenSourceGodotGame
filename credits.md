@@ -54,6 +54,7 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 - ok: SergeQuadrado, https://pixabay.com/fr/sound-effects/dad-says-ok-2-113121/
 - slingshot: https://pixabay.com/fr/sound-effects/086123-slingshot-81843/
 - bat chirp: coelhoigor, https://pixabay.com/fr/sound-effects/bat-chirp-close-up-29644/
+- stone dropping: alegemaate, https://pixabay.com/fr/sound-effects/stone-dropping-6843/
 
 pixabay licensing rules: https://pixabay.com/fr/service/license-summary/
 
