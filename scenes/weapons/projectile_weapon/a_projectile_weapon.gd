@@ -78,11 +78,8 @@ func throw_projectile(projectile_range: EnumProjectileRange) -> void:
 	var projectile: AProjectile = projectile_scene.instantiate()
 	get_tree().current_scene.add_child(projectile)
 	
-	# Positionner le projectile à l'endroit où l'arme est (ou à la pointe de l'arme)
-	# 'global_position' est la position de ce nœud (AProjectileWeapon) dans le monde.
-	# Si vous voulez le faire apparaître à la pointe de votre "representation",
-	# vous devrez calculer cette position (representation.global_position + offset).
-	projectile.global_position = global_position
+	# Positionner le projectile à l'endroit où la représentation de l'arme est.
+	projectile.global_position = representation.global_position
 	
 	# Obtenir le RigidBody2D du projectile
 	var rigid_body: RigidBody2D = projectile.get_launchable_rigid_body_2D()
