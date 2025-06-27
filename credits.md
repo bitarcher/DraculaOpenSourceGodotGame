@@ -53,6 +53,7 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 - orchestral win: u_it78ck90s3, https://pixabay.com/fr/sound-effects/orchestral-win-331233/
 - ok: SergeQuadrado, https://pixabay.com/fr/sound-effects/dad-says-ok-2-113121/
 - slingshot: https://pixabay.com/fr/sound-effects/086123-slingshot-81843/
+- bat chirp: coelhoigor, https://pixabay.com/fr/sound-effects/bat-chirp-close-up-29644/
 
 pixabay licensing rules: https://pixabay.com/fr/service/license-summary/
 

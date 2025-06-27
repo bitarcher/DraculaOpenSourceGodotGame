@@ -13,6 +13,7 @@ var _direction_vector:Vector2 = Vector2.ONE
 @onready var ray_cast_left_bottom: RayCast2D = %RayCastLeftBottom
 @onready var ray_cast_left_top: RayCast2D = %RayCastLeftTop
 @onready var ray_cast_rigth_top: RayCast2D = %RayCastRigthTop
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = %AudioStreamPlayer2D
 
 func _ready() -> void:
 	if go_left_once_awaken:
@@ -32,6 +33,9 @@ func _process(delta: float) -> void:
 	
 	if not awake:
 		return
+		
+	if not audio_stream_player_2d.playing:
+		audio_stream_player_2d.play()
 		
 	animated_sprite.play("move")
 	

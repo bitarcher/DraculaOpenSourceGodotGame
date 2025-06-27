@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://eohakdnrdwq3"]
+[gd_scene load_steps=18 format=3 uid="uid://eohakdnrdwq3"]
 
 [ext_resource type="Script" uid="uid://cjvojr150dpgd" path="res://scripts/bat.gd" id="1_vjjhm"]
 [ext_resource type="PackedScene" uid="uid://bqhlm5rolw1xo" path="res://scenes/injury_zone.tscn" id="2_lv0ya"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bav36lrsyjd3e" path="res://assets/sprites/bat/bat08.png" id="11_p43al"]
 [ext_resource type="Texture2D" uid="uid://bimbq7ikbfjhg" path="res://assets/sprites/bat/bat09.png" id="12_v45h3"]
 [ext_resource type="PackedScene" uid="uid://bp4wth67tkg1y" path="res://scenes/persist/bat_serializable_component.tscn" id="13_n8eff"]
+[ext_resource type="AudioStream" uid="uid://bloisc07wnr2t" path="res://assets/sounds/bat-chirp-close-up-29644.mp3" id="14_rrah6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c78co"]
 radius = 7.0
@@ -112,5 +113,10 @@ position = Vector2(-1, 62)
 shape = SubResource("CapsuleShape2D_vjjhm")
 
 [node name="BatSerializableComponent" parent="." instance=ExtResource("13_n8eff")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("14_rrah6")
+max_distance = 800.0
 
 [connection signal="body_entered" from="DetectionZone" to="." method="_on_detection_zone_body_entered"]
