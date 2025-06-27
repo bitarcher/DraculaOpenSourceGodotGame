@@ -1,5 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bmlietiej0dyj"]
+[gd_scene load_steps=3 format=3 uid="uid://bmlietiej0dyj"]
 
 [ext_resource type="PackedScene" uid="uid://d4gkjw7faek48" path="res://scenes/weapons/projectile_weapon/a_projectile_weapon.tscn" id="1_th1bv"]
+[ext_resource type="Script" uid="uid://bphhaevngs0oq" path="res://scenes/weapons/projectile_weapon/slingshot_weapon.gd" id="2_fudc8"]
 
 [node name="AProjectileWeapon" instance=ExtResource("1_th1bv")]
+script = ExtResource("2_fudc8")
