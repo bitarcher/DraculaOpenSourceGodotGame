@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bvq6t45fpsqo6" path="res://inventory_and_recipes/elements/slingshot/slingshot.png" id="2_yn0q4"]
 
 [node name="AProjectileWeapon" type="Node2D"]
+rotation = -0.436332
 script = ExtResource("1_cug07")
 
 [node name="Representation" type="Node2D" parent="."]

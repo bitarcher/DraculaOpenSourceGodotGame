@@ -400,6 +400,7 @@ limit_bottom = 112
 position_smoothing_enabled = true
 
 [node name="AProjectileWeapon" parent="Player" instance=ExtResource("8_q6ndo")]
+rotation = 0.0
 
 [node name="Killzone" parent="." instance=ExtResource("8_sqtgf")]
 position = Vector2(50, 69)

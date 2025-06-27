@@ -5,3 +5,10 @@
 
 [node name="AProjectileWeapon" instance=ExtResource("1_th1bv")]
 script = ExtResource("2_fudc8")
+
+[node name="Representation" parent="." index="0"]
+position = Vector2(15, 0)
+
+[node name="Sprite2D" parent="Representation" index="0"]
+scale = Vector2(0.3, 0.3)
+flip_h = true
