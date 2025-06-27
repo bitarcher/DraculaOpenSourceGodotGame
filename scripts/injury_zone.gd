@@ -7,7 +7,8 @@ extends Area2D
 enum EnumInjuryZoneType {
 	BEAST,
 	NATURE_ELEMENT,
-	BOSS
+	BOSS,
+	PROJECTILE
 }
 
 @export var injury_zone_type: EnumInjuryZoneType = EnumInjuryZoneType.NATURE_ELEMENT

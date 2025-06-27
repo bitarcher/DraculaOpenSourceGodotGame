@@ -26,7 +26,7 @@ func _input(event: InputEvent) -> void:
 		assert(projectile_scene != null, "La scène du projectile ne doit pas être nulle !")
 		
 		var projectile: AProjectile = projectile_scene.instantiate()
-		get_tree().root.add_child(projectile)
+		get_tree().current_scene.add_child(projectile)
 		
 		# Positionner le projectile à l'endroit où l'arme est (ou à la pointe de l'arme)
 		# 'global_position' est la position de ce nœud (AProjectileWeapon) dans le monde.
@@ -45,7 +45,7 @@ func _input(event: InputEvent) -> void:
 			var launch_direction = global_transform.x.normalized() * PROJECTILE_SPEED
 			
 			# Appliquer l'impulsion au RigidBody2D
-			rigid_body.apply_central_impulse(-launch_direction)
+			rigid_body.apply_central_impulse(launch_direction)
 		else:
 			push_error("Le RigidBody2D du projectile est introuvable ou nul.")
 		
