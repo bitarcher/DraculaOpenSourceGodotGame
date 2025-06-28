@@ -123,11 +123,11 @@ attack_turn_angle_negative={
 
 [layer_names]
 
-2d_render/layer_1="Environnement"
-2d_render/layer_2="Player"
-2d_render/layer_4="Projectile injury zone"
-2d_render/layer_5="Projectile"
-2d_render/layer_6="Ennemy for being hit purpose"
+2d_physics/layer_1="Environnement"
+2d_physics/layer_2="Player"
+2d_physics/layer_4="Projectile injury zone"
+2d_physics/layer_5="projectile"
+2d_physics/layer_6="ennemy for being hit purpose"
 
 [rendering]
 
