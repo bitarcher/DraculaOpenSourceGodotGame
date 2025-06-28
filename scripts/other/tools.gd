@@ -90,6 +90,15 @@ func is_body_relative_to_player(body: Node2D) -> bool:
 	
 	return body  is PlayerPlatformer
 	
+func get_node_ariane_thread(node: Node):
+		if(node == null):
+			return "> "
+			
+		return get_node_ariane_thread(node.get_parent()) + " > " + node.name + ": " + node.get_class()
+		
+func print_node_ariane_thread(node: Node):
+	print(get_node_ariane_thread(node))
+	
 func get_first_ancestor_of_group(node: Node, group: String) -> Node:
 	if node == null:
 		return null
@@ -110,11 +119,6 @@ func get_damage_receiver_component_relative_to_body_if_exists(body: Node2D) -> D
 	
 	if child != null:
 		return child
-		
-	var child2 = get_node_in_group_from_node(body.get_parent(), "DamageReceiverComponent")
-	
-	if child2 != null:
-		return child2
 	
 	return null
 

@@ -27,6 +27,9 @@ func _on_body_entered(body: Node2D) -> void:
 	
 	if(damage_receiver_component != null):
 		print("damage receiver component found")
+		ToolsSingleton.print_node_ariane_thread(damage_receiver_component)
+		print("body is")
+		ToolsSingleton.print_node_ariane_thread(body)
 		damage_receiver_component.take_damage(InjuryZone.EnumInjuryZoneType.PROJECTILE, injury_strength)
 	else:
 		print("damage receiver not found")
