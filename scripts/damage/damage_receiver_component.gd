@@ -6,6 +6,7 @@ extends Node2D
 # otherwise, it should be a child of ProgressBar.
 @onready var life_value_label: Label = $Label # Assuming Label is a child of ProgressBar
 
+@export var wait_having_some_damage_before_displaying_label_and_progressbar: bool = true
 
 signal killed()
 signal damage_received(strength: float, new_life_counter: float)
@@ -34,6 +35,11 @@ var _current_life_counter : float
 
 @export var current_life_counter : float: # RE-ADDED GETTER AND SETTER
 	set(value):
+		if wait_having_some_damage_before_displaying_label_and_progressbar:
+			if life_value_label != null:
+				life_value_label.visible = true
+			if progress_bar != null:
+				progress_bar.visible = true
 		var old_life = _current_life_counter
 		# Clamp value between 0 and initial_life_counter
 		# Use clampf for floats
@@ -67,6 +73,8 @@ var _current_life_counter : float
 
 
 func _ready() -> void:
+	life_value_label.visible = not wait_having_some_damage_before_displaying_label_and_progressbar
+	progress_bar.visible = not wait_having_some_damage_before_displaying_label_and_progressbar
 	# Initialize UI elements using the exported properties.
 	# By assigning to `self.current_life_counter`, its setter is called,
 	# which correctly updates the ProgressBar and Label.
@@ -78,7 +86,7 @@ func _ready() -> void:
 
 	# Initialize current life. This will call the current_life_counter's setter,
 	# which in turn updates progress_bar.value and the life_value_label.
-	self.current_life_counter = initial_life_counter 
+	self._current_life_counter = initial_life_counter 
 
 	# --- IMPORTANT DEBUGGING STEP ---
 	# In the Godot editor, select your ProgressBar node.

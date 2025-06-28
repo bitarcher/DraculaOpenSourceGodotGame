@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://c7hhwsv2ywf8j"]
+[gd_scene load_steps=2 format=3 uid="uid://cyevln03fl80i"]
 
 [sub_resource type="GDScript" id="GDScript_ri4sw"]
 script/source = "class_name PlayerDamageReceiverComponent

@@ -544,6 +544,7 @@ current = true
 
 [node name="DamageReceiverComponent" parent="." instance=ExtResource("5_vsirv")]
 position = Vector2(-8, -18)
+wait_having_some_damage_before_displaying_label_and_progressbar = false
 current_life_counter = 30.0
 
 [node name="BloodParticles" type="GPUParticles2D" parent="."]
