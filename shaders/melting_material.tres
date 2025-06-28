@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://p1ter3tolqu3"]
+
+[ext_resource type="Shader" uid="uid://c7ot3n0wnrset" path="res://shaders/melting_effect.gdshader" id="1_8r8pe"]
+
+[resource]
+shader = ExtResource("1_8r8pe")
+shader_parameter/subdivisions = 2
+shader_parameter/movement = 0.0
