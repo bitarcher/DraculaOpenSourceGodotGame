@@ -10,14 +10,14 @@ func _on_body_entered(body: Node2D) -> void:
 	
 	print("projectile injury zone body entered " + body.name + " : " + body.get_class() )
 	
-	var projectile_parent = get_parent()
-	if not projectile_parent is AProjectile:
+	var projectile = ToolsSingleton.get_first_ancestor_of_group(self, "Projectile")
+	if not projectile is AProjectile:
 		push_error("ProjectileInjuryZone must be a child of a node inheriting from AProjectile.")
 		return
 	
-	print("projectile parent found")	
+	print("projectile found")	
 	
-	var injury_strength = projectile_parent.get_injury_strength()
+	var injury_strength = projectile.get_injury_strength()
 
 	if ToolsSingleton.is_body_relative_to_player(body):
 		GameManagerSingleton.injured(InjuryZone.EnumInjuryZoneType.PROJECTILE, injury_strength)

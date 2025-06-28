@@ -58,6 +58,7 @@ PlatformDelayed=""
 GlobalCamera=""
 InteractiveDialog=""
 DamageReceiverComponent=""
+Projectile=""
 
 [godot_resource_groups]
 

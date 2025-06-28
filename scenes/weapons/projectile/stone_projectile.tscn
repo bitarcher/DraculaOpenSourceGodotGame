@@ -6,7 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://coccledt0bjue" path="res://assets/sounds/hit-rock-02-266304.mp3" id="4_clfrd"]
 [ext_resource type="PackedScene" uid="uid://gfrtgg6qugt3" path="res://scenes/damage/projectile_injury_zone.tscn" id="5_s2ex3"]
 
-[node name="StoneProjectile" type="Node2D"]
+[node name="StoneProjectile" type="Node2D" groups=["Projectile"]]
 script = ExtResource("1_btewc")
 metadata/_custom_type_script = "uid://crobb4gye80bd"
 

@@ -89,6 +89,15 @@ func get_player_platformer() -> PlayerPlatformer:
 func is_body_relative_to_player(body: Node2D) -> bool:
 	
 	return body  is PlayerPlatformer
+	
+func get_first_ancestor_of_group(node: Node, group: String) -> Node:
+	if node == null:
+		return null
+		
+	if node.is_in_group(group):
+		return node
+		
+	return get_first_ancestor_of_group(node.get_parent(), group)
 
 func get_damage_receiver_component_relative_to_body_if_exists(body: Node2D) -> DamageReceiverComponent:
 	if(body == null):
