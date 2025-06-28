@@ -1,5 +1,5 @@
 class_name SlimeEnemy
-extends Node2D
+extends CharacterBody2D
 
 const SPEED = 10.0
 

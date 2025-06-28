@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b4p36kf7vor4c" path="res://scripts/damage/damage_receiver_component.gd" id="1_7puij"]
 
-[node name="DamageReceiverComponent" type="Node2D"]
+[node name="DamageReceiverComponent" type="Node2D" groups=["DamageReceiverComponent"]]
 script = ExtResource("1_7puij")
 
 [node name="Label" type="Label" parent="."]

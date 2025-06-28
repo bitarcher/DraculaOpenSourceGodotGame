@@ -20,7 +20,14 @@ func get_nodes_in_group_from_node(node: Node, group_name: String) -> Array[Node]
 			result.append(child)
 	
 	return result
+
+func get_node_in_group_from_node(node: Node, group_name: String) -> Node:
+	var nodes = get_nodes_in_group_from_node(node, group_name)
 	
+	if len(nodes) > 0:
+		return nodes[0]
+		
+	return null
 	
 func dump_scene_tree(node: Node = get_tree().root, indent_level: int = 0):
 	var indent = ""
@@ -90,12 +97,12 @@ func get_damage_receiver_component_relative_to_body_if_exists(body: Node2D) -> D
 	if(body is DamageReceiverComponent):
 		return body
 
-	var child = get_node_from_class(body, "DamageReceiverComponent")
+	var child = get_node_in_group_from_node(body, "DamageReceiverComponent")
 	
 	if child != null:
 		return child
 		
-	var child2 = get_node_from_class(body.get_parent(), "DamageReceiverComponent")
+	var child2 = get_node_in_group_from_node(body.get_parent(), "DamageReceiverComponent")
 	
 	if child2 != null:
 		return child2

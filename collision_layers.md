@@ -9,3 +9,6 @@ layer 4:
 
 layer 5:
 	projectile
+
+layer 6:
+	ennemy for being hit purpose

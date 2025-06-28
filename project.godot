@@ -57,6 +57,7 @@ LevelConst=""
 PlatformDelayed=""
 GlobalCamera=""
 InteractiveDialog=""
+DamageReceiverComponent=""
 
 [godot_resource_groups]
 

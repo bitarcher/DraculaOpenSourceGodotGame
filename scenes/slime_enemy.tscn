@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c5nscqmqpj63y"]
+[gd_scene load_steps=13 format=3 uid="uid://c5nscqmqpj63y"]
 
 [ext_resource type="Script" uid="uid://ckmil7o3jj64m" path="res://scripts/slime_enemy.gd" id="1_fq0mw"]
 [ext_resource type="PackedScene" uid="uid://bqhlm5rolw1xo" path="res://scenes/injury_zone.tscn" id="2_fq0mw"]
@@ -46,7 +46,12 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="SlimeEnemy" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hf6xp"]
+size = Vector2(14, 13)
+
+[node name="SlimeEnemy" type="CharacterBody2D"]
+collision_layer = 32
+collision_mask = 0
 script = ExtResource("1_fq0mw")
 
 [node name="InjuryZone" parent="." instance=ExtResource("2_fq0mw")]
@@ -77,3 +82,7 @@ target_position = Vector2(-7, 0)
 
 [node name="DamageReceiverComponent" parent="." instance=ExtResource("5_hf6xp")]
 position = Vector2(-8, -8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_hf6xp")

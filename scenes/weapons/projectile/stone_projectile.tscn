@@ -35,6 +35,7 @@ stream = ExtResource("4_clfrd")
 
 [node name="ProjectileInjuryZone" parent="RigidBody2D" instance=ExtResource("5_s2ex3")]
 position = Vector2(-1, 0)
+collision_mask = 47
 
 [node name="InjuryCollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D/ProjectileInjuryZone"]
 position = Vector2(1, 0)
