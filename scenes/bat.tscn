@@ -104,6 +104,8 @@ height = 144.0
 size = Vector2(18, 18.5)
 
 [node name="Bat" type="CharacterBody2D"]
+collision_layer = 32
+collision_mask = 0
 script = ExtResource("1_vjjhm")
 
 [node name="InjuryZone" parent="." instance=ExtResource("2_lv0ya")]

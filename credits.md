@@ -58,7 +58,7 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 - rock: u_xjrmmgxfru, https://pixabay.com/fr/sound-effects/hit-rock-02-266304/
 - slime splatter: floraphonic, https://pixabay.com/fr/sound-effects/slime-splatter-5-220265/
 - slime impact: universefield, https://pixabay.com/fr/sound-effects/search/slime/
-
+- wind blowing: JCI-21, https://pixabay.com/fr/sound-effects/wind-blowing-sfx-12809/
 
 pixabay licensing rules: https://pixabay.com/fr/service/license-summary/
 

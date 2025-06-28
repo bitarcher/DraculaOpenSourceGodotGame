@@ -1,6 +1,6 @@
-[gd_scene load_steps=37 format=3 uid="uid://dt0scbtd8tmyn"]
+[gd_scene load_steps=38 format=3 uid="uid://dt0scbtd8tmyn"]
 
-[ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_x2nyf"]
+[ext_resource type="Script" uid="uid://cxw86a4g0kpj" path="res://scripts/p_level_3.gd" id="1_na31n"]
 [ext_resource type="Texture2D" uid="uid://doyfrmal4p0kn" path="res://assets/clouds/cloud0.png" id="4_egy2r"]
 [ext_resource type="Texture2D" uid="uid://c60iqolxdbyr" path="res://assets/clouds/cloud1.png" id="5_q638w"]
 [ext_resource type="Texture2D" uid="uid://c7uv1xkqq7gyh" path="res://assets/clouds/cloud2.png" id="6_2wx2f"]
@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://eohakdnrdwq3" path="res://scenes/bat.tscn" id="24_4blg4"]
 [ext_resource type="Material" uid="uid://b4pf2jialba54" path="res://shaders/snowfall_material.tres" id="25_taomf"]
 [ext_resource type="Texture2D" uid="uid://ouajn1bw2ndj" path="res://assets/big_empty_image.png" id="26_eontf"]
+[ext_resource type="AudioStream" uid="uid://birg88m0rtf8n" path="res://assets/sounds/wind-blowing-sfx-12809.mp3" id="27_na31n"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pfjqn"]
 
@@ -291,7 +292,7 @@ sources/2 = SubResource("TileSetAtlasSource_bs2ip")
 
 [node name="PLevel3" type="Node2D"]
 position = Vector2(-286, 15)
-script = ExtResource("1_x2nyf")
+script = ExtResource("1_na31n")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 offset = Vector2(-436, -323.04)
@@ -656,3 +657,10 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource("26_eontf")
+
+[node name="WindAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("27_na31n")
+autoplay = true
+
+[connection signal="finished" from="WindAudioStreamPlayer" to="." method="_on_wind_audio_stream_player_finished"]

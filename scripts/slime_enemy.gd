@@ -10,6 +10,7 @@ const SPEED = 10.0
 @onready var blood_particles: GPUParticles2D = %BloodParticles
 @onready var injury_audio_stream_player_2d: AudioStreamPlayer2D = %InjuryAudioStreamPlayer2D
 @onready var killed_audio_stream_player_2d: AudioStreamPlayer2D = %KilledAudioStreamPlayer2D
+@onready var injury_zone: InjuryZone = %InjuryZone
 
 
 var killed = false
@@ -36,6 +37,7 @@ func _on_damage_receiver_component_damage_received(strength: float, new_life_cou
 
 
 func _on_damage_receiver_component_killed() -> void:
+	injury_zone.queue_free()
 	killed = true
 	animated_sprite.play("dying")
 	killed_audio_stream_player_2d.play()
