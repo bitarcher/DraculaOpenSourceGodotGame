@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://bimbq7ikbfjhg" path="res://assets/sprites/bat/bat09.png" id="12_v45h3"]
 [ext_resource type="PackedScene" uid="uid://bp4wth67tkg1y" path="res://scenes/persist/bat_serializable_component.tscn" id="13_n8eff"]
 [ext_resource type="AudioStream" uid="uid://bloisc07wnr2t" path="res://assets/sounds/bat-chirp-close-up-29644.mp3" id="14_rrah6"]
-[ext_resource type="Script" uid="uid://b4p36kf7vor4c" path="res://scripts/damage/damage_receiver_component.gd" id="15_drkvk"]
+[ext_resource type="PackedScene" uid="uid://gra5myrijv4y" path="res://scenes/damage/damage_receiver_component.tscn" id="16_dk2sj"]
 [ext_resource type="PackedScene" uid="uid://c0vqm5i8ior2w" path="res://scenes/blood_particles.tscn" id="16_y1j7x"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c78co"]
@@ -129,17 +129,16 @@ max_distance = 800.0
 position = Vector2(1, 3.25)
 shape = SubResource("RectangleShape2D_rrah6")
 
-[node name="DamageReceiverComponent" type="Node2D" parent="."]
-script = ExtResource("15_drkvk")
-initial_life_counter = 20.0
-metadata/_custom_type_script = "uid://b4p36kf7vor4c"
-
 [node name="BloodParticles" parent="." instance=ExtResource("16_y1j7x")]
 unique_name_in_owner = true
 
 [node name="RayCastDown" type="RayCast2D" parent="."]
 unique_name_in_owner = true
 target_position = Vector2(0, 12)
+
+[node name="DamageReceiverComponent" parent="." instance=ExtResource("16_dk2sj")]
+position = Vector2(-7, -12)
+initial_life_counter = 50.0
 
 [connection signal="body_entered" from="DetectionZone" to="." method="_on_detection_zone_body_entered"]
 [connection signal="damage_received" from="DamageReceiverComponent" to="." method="_on_damage_receiver_component_damage_received"]
