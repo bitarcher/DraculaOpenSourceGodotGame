@@ -3,6 +3,6 @@
 [ext_resource type="Script" uid="uid://bxyfhjcc5mdr1" path="res://scripts/damage/projectile_injury_zone.gd" id="1_abcde"]
 
 [node name="ProjectileInjuryZone" type="Area2D"]
-collision_layer = 3
+collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_abcde")

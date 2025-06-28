@@ -14,7 +14,6 @@ func _ready() -> void:
 		parent.direction_changed.connect(_on_player_direction_changed)
 		
 func _on_player_direction_changed(_emitter: PlayerPlatformer, old_direction: int, new_direction: int) -> void:
-	print ("_on_player_direction_changed, old direction : " + str(old_direction) + ", new direction: " + str(new_direction))
 	
 	if new_direction < 0 and scale.x == 1:
 		rotation_degrees = 25
@@ -113,10 +112,8 @@ func is_max_angle_reached() -> bool:
 # ---
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("attack_turn_angle_positive"):
-		print("rotartion degrees" + str(rotation_degrees))
 		if not is_min_angle_reached():
 			rotate(-rotation_radian_angle)
 	elif Input.is_action_pressed("attack_turn_angle_negative"):
-		print("rotartion degrees" + str(rotation_degrees))
 		if not is_max_angle_reached():
 			rotate(rotation_radian_angle)

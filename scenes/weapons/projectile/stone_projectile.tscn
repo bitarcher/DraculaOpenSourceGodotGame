@@ -12,6 +12,8 @@ metadata/_custom_type_script = "uid://crobb4gye80bd"
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 unique_name_in_owner = true
+collision_layer = 4
+collision_mask = 3
 mass = 0.2
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
@@ -33,8 +35,7 @@ stream = ExtResource("4_clfrd")
 
 [node name="ProjectileInjuryZone" parent="." instance=ExtResource("5_s2ex3")]
 position = Vector2(-1, 0)
-collision_layer = 3
-collision_mask = 3
+collision_layer = 4
 
 [node name="InjuryCollisionPolygon2D" type="CollisionPolygon2D" parent="ProjectileInjuryZone"]
 position = Vector2(1, 0)
