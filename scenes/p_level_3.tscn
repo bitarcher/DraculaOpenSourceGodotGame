@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://dt0scbtd8tmyn"]
+[gd_scene load_steps=37 format=3 uid="uid://dt0scbtd8tmyn"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_x2nyf"]
 [ext_resource type="Texture2D" uid="uid://doyfrmal4p0kn" path="res://assets/clouds/cloud0.png" id="4_egy2r"]
@@ -24,6 +24,8 @@
 [ext_resource type="Resource" uid="uid://cmsagrxswgciq" path="res://inventory_and_recipes/data/items/carot.tres" id="22_2wx2f"]
 [ext_resource type="Resource" uid="uid://bs04rbmicblmd" path="res://inventory_and_recipes/data/items/iron_ore.tres" id="23_2wx2f"]
 [ext_resource type="PackedScene" uid="uid://eohakdnrdwq3" path="res://scenes/bat.tscn" id="24_4blg4"]
+[ext_resource type="Material" uid="uid://b4pf2jialba54" path="res://shaders/snowfall_material.tres" id="25_taomf"]
+[ext_resource type="Texture2D" uid="uid://ouajn1bw2ndj" path="res://assets/big_empty_image.png" id="26_eontf"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pfjqn"]
 
@@ -638,3 +640,19 @@ position = Vector2(546, -546)
 
 [node name="Bat9" parent="." instance=ExtResource("24_4blg4")]
 position = Vector2(915, -642)
+
+[node name="SnowfallLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="SnowfallEffect" type="TextureRect" parent="SnowfallLayer"]
+visibility_layer = 255
+z_index = 2
+material = ExtResource("25_taomf")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("26_eontf")

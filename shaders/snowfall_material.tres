@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://b4pf2jialba54"]
+
+[ext_resource type="Shader" uid="uid://cbu7bk7njvqnw" path="res://shaders/snowfall_effect.gdshader" id="1_qrxfq"]
+
+[resource]
+shader = ExtResource("1_qrxfq")
+shader_parameter/spread = 0.5
+shader_parameter/size = 1.0
+shader_parameter/snow_color = Color(1, 1, 1, 1)
+shader_parameter/snow_transparency = 2.375e-08
+shader_parameter/speed = 0.5
+shader_parameter/wind = 0.0
+shader_parameter/num_of_layers = 100

@@ -44,6 +44,7 @@ unique_name_in_owner = true
 enabled = false
 
 [node name="UiRoot" type="CanvasLayer" parent="."]
+layer = 3
 script = ExtResource("7_m06n5")
 all_recipes = ExtResource("7_7ibwm")
 
