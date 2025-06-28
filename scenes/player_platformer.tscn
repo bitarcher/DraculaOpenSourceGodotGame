@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://byyyexo4e4kop"]
+[gd_scene load_steps=63 format=3 uid="uid://byyyexo4e4kop"]
 
 [ext_resource type="Texture2D" uid="uid://0asjwwjlao3i" path="res://assets/brackey/sprites/knight.png" id="1_10x2q"]
 [ext_resource type="Script" uid="uid://bdy8blwppg202" path="res://scripts/player_platformer.gd" id="1_e5rie"]
@@ -9,9 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://0d8u6e7j7g4j" path="res://assets/sprites/duck/Idle/Idle 001.png" id="5_uwvpj"]
 [ext_resource type="PackedScene" uid="uid://gra5myrijv4y" path="res://scenes/damage/damage_receiver_component.tscn" id="5_vsirv"]
 [ext_resource type="Texture2D" uid="uid://bgob888kl4rmw" path="res://assets/sprites/duck/Jumping/Jumping 001.png" id="6_asghg"]
-[ext_resource type="Texture2D" uid="uid://b6gftkn6mdbya" path="res://assets/sprites/blood_drop.png" id="6_u6mks"]
 [ext_resource type="Texture2D" uid="uid://d3xx71vd0xfn5" path="res://assets/sprites/duck/Walking-Running/Running 002.png" id="7_iwc6w"]
 [ext_resource type="Texture2D" uid="uid://cd72lxp0lwo8j" path="res://assets/sprites/duck/Walking-Running/Running 001.png" id="8_gponm"]
+[ext_resource type="PackedScene" uid="uid://c0vqm5i8ior2w" path="res://scenes/blood_particles.tscn" id="12_xvq54"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e5rie"]
 atlas = ExtResource("1_10x2q")
@@ -472,42 +472,6 @@ _data = {
 radius = 5.0
 height = 16.0
 
-[sub_resource type="Curve" id="Curve_u6mks"]
-_data = [Vector2(0, 0.370787), 0.0, 0.0, 0, 0, Vector2(0.461883, 0.337079), 0.0, 0.0, 0, 0, Vector2(1, 0.134832), 0.0, 0.0, 0, 0]
-point_count = 3
-
-[sub_resource type="CurveTexture" id="CurveTexture_r2f70"]
-width = 32
-curve = SubResource("Curve_u6mks")
-
-[sub_resource type="Curve" id="Curve_r2f70"]
-_limits = [0.539326, 0.977528, 0.0, 1.0]
-_data = [Vector2(0, 0.819972), 0.0, 0.0, 0, 0, Vector2(1, 0.539326), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="CurveTexture" id="CurveTexture_h60gl"]
-width = 32
-curve = SubResource("Curve_r2f70")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1gb8q"]
-particle_flag_disable_z = true
-emission_shape = 6
-emission_ring_axis = Vector3(0, 0, 1)
-emission_ring_height = 1.0
-emission_ring_radius = 1.0
-emission_ring_inner_radius = 0.0
-emission_ring_cone_angle = 90.0
-spread = 152.143
-initial_velocity_min = 50.0
-initial_velocity_max = 55.56
-gravity = Vector3(0, 98, 0)
-scale_curve = SubResource("CurveTexture_r2f70")
-scale_over_velocity_curve = SubResource("CurveTexture_h60gl")
-hue_variation_min = -0.08
-hue_variation_max = 0.18
-anim_offset_max = 0.0367
-turbulence_enabled = true
-
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 z_index = 5
 collision_layer = 2
@@ -547,16 +511,5 @@ position = Vector2(-8, -18)
 wait_having_some_damage_before_displaying_label_and_progressbar = false
 current_life_counter = 30.0
 
-[node name="BloodParticles" type="GPUParticles2D" parent="."]
+[node name="BloodParticles" parent="." instance=ExtResource("12_xvq54")]
 unique_name_in_owner = true
-emitting = false
-amount = 17
-texture = ExtResource("6_u6mks")
-one_shot = true
-preprocess = 0.15
-speed_scale = 1.45
-explosiveness = 0.61
-trail_lifetime = 8.52
-trail_sections = 19
-trail_section_subdivisions = 19
-process_material = SubResource("ParticleProcessMaterial_1gb8q")

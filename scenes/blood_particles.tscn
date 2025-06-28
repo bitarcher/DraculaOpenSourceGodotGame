@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://c0vqm5i8ior2w"]
+
+[ext_resource type="Texture2D" uid="uid://b6gftkn6mdbya" path="res://assets/sprites/blood_drop.png" id="1_hjwtm"]
+
+[sub_resource type="Curve" id="Curve_u6mks"]
+_data = [Vector2(0, 0.370787), 0.0, 0.0, 0, 0, Vector2(0.461883, 0.337079), 0.0, 0.0, 0, 0, Vector2(1, 0.134832), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_r2f70"]
+width = 32
+curve = SubResource("Curve_u6mks")
+
+[sub_resource type="Curve" id="Curve_r2f70"]
+_limits = [0.539326, 0.977528, 0.0, 1.0]
+_data = [Vector2(0, 0.819972), 0.0, 0.0, 0, 0, Vector2(1, 0.539326), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_h60gl"]
+width = 32
+curve = SubResource("Curve_r2f70")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1gb8q"]
+particle_flag_disable_z = true
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 1.0
+emission_ring_inner_radius = 0.0
+emission_ring_cone_angle = 90.0
+spread = 152.143
+initial_velocity_min = 50.0
+initial_velocity_max = 55.56
+gravity = Vector3(0, 98, 0)
+scale_curve = SubResource("CurveTexture_r2f70")
+scale_over_velocity_curve = SubResource("CurveTexture_h60gl")
+hue_variation_min = -0.08
+hue_variation_max = 0.18
+anim_offset_max = 0.0367
+turbulence_enabled = true
+
+[node name="BloodParticles" type="GPUParticles2D"]
+emitting = false
+amount = 17
+texture = ExtResource("1_hjwtm")
+one_shot = true
+preprocess = 0.15
+speed_scale = 1.45
+explosiveness = 0.61
+trail_lifetime = 8.52
+trail_sections = 19
+trail_section_subdivisions = 19
+process_material = SubResource("ParticleProcessMaterial_1gb8q")

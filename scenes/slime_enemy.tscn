@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://c5nscqmqpj63y"]
+[gd_scene load_steps=19 format=3 uid="uid://c5nscqmqpj63y"]
 
 [ext_resource type="Script" uid="uid://ckmil7o3jj64m" path="res://scripts/slime_enemy.gd" id="1_fq0mw"]
 [ext_resource type="PackedScene" uid="uid://bqhlm5rolw1xo" path="res://scenes/injury_zone.tscn" id="2_fq0mw"]
 [ext_resource type="Texture2D" uid="uid://by50umet3q5s" path="res://assets/brackey/sprites/slime_purple.png" id="3_hf6xp"]
 [ext_resource type="PackedScene" uid="uid://6hdn2b1ki1oc" path="res://scenes/persist/slide_enemy_serializable_component.tscn" id="4_2blxa"]
 [ext_resource type="PackedScene" uid="uid://gra5myrijv4y" path="res://scenes/damage/damage_receiver_component.tscn" id="5_hf6xp"]
+[ext_resource type="PackedScene" uid="uid://c0vqm5i8ior2w" path="res://scenes/blood_particles.tscn" id="6_c78co"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c78co"]
 radius = 5.0
@@ -26,6 +27,26 @@ region = Rect2(48, 24, 24, 24)
 atlas = ExtResource("3_hf6xp")
 region = Rect2(72, 24, 24, 24)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_c78co"]
+atlas = ExtResource("3_hf6xp")
+region = Rect2(0, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j0w84"]
+atlas = ExtResource("3_hf6xp")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4k86d"]
+atlas = ExtResource("3_hf6xp")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1p86q"]
+atlas = ExtResource("3_hf6xp")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ksd1l"]
+atlas = ExtResource("3_hf6xp")
+region = Rect2(0, 0, 24, 24)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_j0w84"]
 animations = [{
 "frames": [{
@@ -44,6 +65,26 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c78co")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j0w84")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4k86d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1p86q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ksd1l")
+}],
+"loop": false,
+"name": &"dying",
+"speed": 1.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hf6xp"]
@@ -66,9 +107,10 @@ shape = SubResource("CapsuleShape2D_c78co")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_j0w84")
+animation = &"dying"
 autoplay = "default"
-frame = 1
-frame_progress = 0.810745
+frame = 4
+frame_progress = 1.0
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
 position = Vector2(0, 5)
@@ -86,3 +128,9 @@ position = Vector2(-8, -8)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 5.5)
 shape = SubResource("RectangleShape2D_hf6xp")
+
+[node name="BloodParticles" parent="." instance=ExtResource("6_c78co")]
+unique_name_in_owner = true
+
+[connection signal="damage_received" from="DamageReceiverComponent" to="." method="_on_damage_receiver_component_damage_received"]
+[connection signal="killed" from="DamageReceiverComponent" to="." method="_on_damage_receiver_component_killed"]
