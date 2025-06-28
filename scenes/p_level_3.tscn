@@ -642,25 +642,15 @@ position = Vector2(546, -546)
 [node name="Bat9" parent="." instance=ExtResource("24_4blg4")]
 position = Vector2(915, -642)
 
-[node name="SnowfallLayer" type="CanvasLayer" parent="."]
-layer = 2
-
-[node name="SnowfallEffect" type="TextureRect" parent="SnowfallLayer"]
-visibility_layer = 255
-z_index = 2
-material = ExtResource("25_taomf")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("26_eontf")
-
 [node name="WindAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("27_na31n")
 autoplay = true
+
+[node name="SnowfallSprite2D" type="Sprite2D" parent="."]
+material = ExtResource("25_taomf")
+position = Vector2(213, -584)
+scale = Vector2(2, 2)
+texture = ExtResource("26_eontf")
 
 [connection signal="finished" from="WindAudioStreamPlayer" to="." method="_on_wind_audio_stream_player_finished"]
