@@ -34,6 +34,7 @@ unique_name_in_owner = true
 stream = ExtResource("4_clfrd")
 
 [node name="ProjectileInjuryZone" parent="RigidBody2D" instance=ExtResource("5_s2ex3")]
+unique_name_in_owner = true
 position = Vector2(-1, 0)
 collision_mask = 47
 
@@ -42,3 +43,4 @@ position = Vector2(1, 0)
 polygon = PackedVector2Array(-4, -2, -4, 2, 0, 3, 3, 2, 3, 1, 1, -2)
 
 [connection signal="body_entered" from="RigidBody2D/ProjectileInjuryZone" to="." method="_on_projectile_injury_zone_body_entered"]
+[connection signal="projectile_injury_zone_hurt_someone" from="RigidBody2D/ProjectileInjuryZone" to="." method="_on_projectile_injury_zone_projectile_injury_zone_hurt_someone"]

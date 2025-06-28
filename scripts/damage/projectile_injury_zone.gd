@@ -2,6 +2,7 @@ class_name ProjectileInjuryZone
 extends Area2D
 
 @export var damage_factor: float = 0.1
+signal projectile_injury_zone_hurt_someone(body: Node2D)
 
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)
@@ -17,10 +18,15 @@ func _on_body_entered(body: Node2D) -> void:
 	
 	print("projectile found")	
 	
+	if not projectile.is_projectile_active():
+		print("projectile is not active anymore")
+		return
+	
 	var injury_strength = projectile.get_injury_strength()
 
 	if ToolsSingleton.is_body_relative_to_player(body):
 		GameManagerSingleton.injured(InjuryZone.EnumInjuryZoneType.PROJECTILE, injury_strength)
+		projectile_injury_zone_hurt_someone.emit(body)
 		return
 	
 	var damage_receiver_component: DamageReceiverComponent = ToolsSingleton.get_damage_receiver_component_relative_to_body_if_exists(body)
@@ -31,6 +37,7 @@ func _on_body_entered(body: Node2D) -> void:
 		print("body is")
 		ToolsSingleton.print_node_ariane_thread(body)
 		damage_receiver_component.take_damage(InjuryZone.EnumInjuryZoneType.PROJECTILE, injury_strength)
+		projectile_injury_zone_hurt_someone.emit(body)
 	else:
 		print("damage receiver not found")
 	

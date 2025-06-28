@@ -8,6 +8,10 @@ const SPEED = 10.0
 @onready var ray_cast_left: RayCast2D = $RayCastLeft
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var blood_particles: GPUParticles2D = %BloodParticles
+@onready var injury_audio_stream_player_2d: AudioStreamPlayer2D = %InjuryAudioStreamPlayer2D
+@onready var killed_audio_stream_player_2d: AudioStreamPlayer2D = %KilledAudioStreamPlayer2D
+
+
 var killed = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -28,11 +32,13 @@ func _process(delta: float) -> void:
 
 func _on_damage_receiver_component_damage_received(strength: float, new_life_counter: float) -> void:
 	blood_particles.emitting = true
+	injury_audio_stream_player_2d.play()
 
 
 func _on_damage_receiver_component_killed() -> void:
 	killed = true
 	animated_sprite.play("dying")
+	killed_audio_stream_player_2d.play()
 	await animated_sprite.animation_finished
 
 	var tween = create_tween()

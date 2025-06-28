@@ -56,6 +56,9 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 - bat chirp: coelhoigor, https://pixabay.com/fr/sound-effects/bat-chirp-close-up-29644/
 - stone dropping: alegemaate, https://pixabay.com/fr/sound-effects/stone-dropping-6843/
 - rock: u_xjrmmgxfru, https://pixabay.com/fr/sound-effects/hit-rock-02-266304/
+- slime splatter: floraphonic, https://pixabay.com/fr/sound-effects/slime-splatter-5-220265/
+- slime impact: universefield, https://pixabay.com/fr/sound-effects/search/slime/
+
 
 pixabay licensing rules: https://pixabay.com/fr/service/license-summary/
 
