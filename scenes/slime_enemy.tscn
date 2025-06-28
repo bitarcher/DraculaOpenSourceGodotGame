@@ -132,6 +132,7 @@ shape = SubResource("RectangleShape2D_hf6xp")
 
 [node name="BloodParticles" parent="." instance=ExtResource("6_c78co")]
 unique_name_in_owner = true
+modulate = Color(0, 1, 0.32549, 1)
 
 [node name="InjuryAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
