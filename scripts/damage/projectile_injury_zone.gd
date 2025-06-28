@@ -7,6 +7,8 @@ func _ready() -> void:
 	body_entered.connect(_on_body_entered)
 
 func _on_body_entered(body: Node2D) -> void:
+	
+	print("projectile injury zone body entered " + body.name + " : " + body.get_class() )
 	# The projectile itself should not be damaged by its own zone
 	if body == get_parent():
 		return
