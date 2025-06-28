@@ -15,11 +15,13 @@ func _physics_process(delta: float) -> void:
 func get_launchable_rigid_body_2D() -> RigidBody2D:
 	return rigid_body_2d
 
+func _get_projectile_speed() -> float:
+	return _previous_linear_velocity.length()
+
+
 func _on_projectile_injury_zone_body_entered(body: Node2D) -> void:
-	if _previous_linear_velocity.length() > high_speed_threshold:
+	if _get_projectile_speed() > high_speed_threshold:
 		if (randi() % 2) == 0: 
 			audio_stream_player_2d.play()
 		else:
 			audio_stream_player_2d_2.play()
-		
-		_on_projectile_injury_zone_entered(body, _previous_linear_velocity.length())
