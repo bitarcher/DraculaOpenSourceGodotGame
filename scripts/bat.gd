@@ -1,5 +1,5 @@
 class_name Bat
-extends Node2D
+extends CharacterBody2D
 
 const SPEED = 25.0
 
@@ -14,6 +14,9 @@ var _direction_vector:Vector2 = Vector2.ONE
 @onready var ray_cast_left_top: RayCast2D = %RayCastLeftTop
 @onready var ray_cast_rigth_top: RayCast2D = %RayCastRigthTop
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = %AudioStreamPlayer2D
+@onready var injury_zone: InjuryZone = %InjuryZone
+@onready var blood_particles: GPUParticles2D = %BloodParticles
+@onready var ray_cast_down: RayCast2D = %RayCastDown
 
 func _ready() -> void:
 	if go_left_once_awaken:
@@ -61,8 +64,14 @@ func _process(delta: float) -> void:
 	position.x += delta * SPEED * normalized_vector.x
 	position.y += delta * SPEED * normalized_vector.y
 	
-
-
 func _on_detection_zone_body_entered(body: Node2D) -> void:
 	print("bat has detected intruder")
 	awake = true
+
+func _on_damage_receiver_component_damage_received(strength: float, new_life_counter: float) -> void:
+	awake = true
+	blood_particles.emitting = true
+
+func _on_damage_receiver_component_killed() -> void:
+	
+	injury_zone.queue_free()
