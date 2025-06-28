@@ -25,6 +25,38 @@ height = 14.0
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("4_rrah6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_drkvk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_y1j7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dk2sj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_fjde2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_qyo3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_twcdg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_p43al")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_v45h3")
+}],
+"loop": true,
+"name": &"dying",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("3_n8eff")
 }],
 "loop": true,
@@ -88,7 +120,7 @@ shape = SubResource("CapsuleShape2D_c78co")
 position = Vector2(0, 6)
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_j0w84")
-animation = &"idle"
+animation = &"dying"
 autoplay = "idle"
 
 [node name="RayCastRightBottom" type="RayCast2D" parent="."]
