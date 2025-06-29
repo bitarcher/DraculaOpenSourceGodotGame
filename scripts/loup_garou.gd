@@ -17,6 +17,7 @@ const SPEED = 50.0 # Augmenté un peu pour un mouvement plus visible
 @onready var injury_zone: InjuryZone = %InjuryZone
 @onready var being_hit_collision_shape_2d: CollisionShape2D = $BeingHitCollisionShape2D
 @onready var damage_receiver_component: DamageReceiverComponent = %DamageReceiverComponent
+@onready var pickup_scene: PackedScene = preload("res://inventory_and_recipes/elements/pickup/pickup.tscn")
 
 @export var health:float:
 	set(value):
@@ -136,6 +137,13 @@ func _change_state(new_state: State) -> void:
 			death_tween.tween_property(self, "position:y", position.y + sagging_offset_y, 0.5)
 			
 			await death_tween.finished
+
+			# Spawn pickup
+			var leather_item: Item = load("res://inventory_and_recipes/data/items/leather.tres")
+			var pickup_instance: Pickup = pickup_scene.instantiate()
+			get_tree().current_scene.add_child(pickup_instance)
+			pickup_instance.global_position = global_position
+			pickup_instance.item = leather_item
 
 			# Fade out Tween
 			var fade_tween = create_tween()
