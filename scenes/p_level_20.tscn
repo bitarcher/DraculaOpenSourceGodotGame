@@ -200,7 +200,6 @@ physics_layer_0/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_bs2ip")
 
 [node name="p_level20" type="Node2D"]
-position = Vector2(-286, 15)
 script = ExtResource("1_11kwd")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]

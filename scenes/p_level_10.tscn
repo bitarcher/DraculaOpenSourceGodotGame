@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://cfgbsq2hho047"]
+[gd_scene load_steps=40 format=4 uid="uid://cfgbsq2hho047"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_o2uke"]
 [ext_resource type="PackedScene" uid="uid://d062hkuxa4g7y" path="res://scenes/p_level_const.tscn" id="2_l7025"]
@@ -28,6 +28,11 @@
 [ext_resource type="PackedScene" uid="uid://0khi164sjtqt" path="res://scenes/portail_magique.tscn" id="24_0x8ap"]
 [ext_resource type="PackedScene" uid="uid://n3o5anvhaglu" path="res://scenes/windmill.tscn" id="25_e1rqi"]
 [ext_resource type="Texture2D" uid="uid://dqw76yo602t5f" path="res://assets/moon_graveyard/Tiles.png" id="27_ngd67"]
+[ext_resource type="AudioStream" uid="uid://d32iflx0o6cmx" path="res://assets/sounds/hunted-mystery-horror-sounds-8396.mp3" id="29_sg88h"]
+[ext_resource type="PackedScene" uid="uid://v82xc5d3kigg" path="res://inventory_and_recipes/elements/pickup/pickup.tscn" id="30_1l2xj"]
+[ext_resource type="Resource" uid="uid://bbunwwth7os5p" path="res://inventory_and_recipes/data/items/charcoal.tres" id="31_q2dak"]
+[ext_resource type="Resource" uid="uid://71evqpdqpc8e" path="res://inventory_and_recipes/data/items/wood.tres" id="31_x5p1w"]
+[ext_resource type="Resource" uid="uid://bs04rbmicblmd" path="res://inventory_and_recipes/data/items/iron_ore.tres" id="32_5s25j"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6pu31"]
 distance = 29.0
@@ -242,7 +247,6 @@ _data = {
 }
 
 [node name="PLevel6" type="Node2D"]
-position = Vector2(-286, 15)
 script = ExtResource("1_o2uke")
 
 [node name="LevelConst" parent="." instance=ExtResource("2_l7025")]
@@ -299,9 +303,25 @@ shape = SubResource("WorldBoundaryShape2D_6pu31")
 
 [node name="Traps" type="Node" parent="."]
 
+[node name="Trap" parent="Traps" instance=ExtResource("12_q2dak")]
+position = Vector2(2472.72, 651.738)
+scale = Vector2(0.5, 0.5)
+
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Other" type="Node" parent="."]
+
+[node name="Pickup" parent="Other" instance=ExtResource("30_1l2xj")]
+position = Vector2(-176, 7)
+item = ExtResource("31_x5p1w")
+
+[node name="Pickup2" parent="Other" instance=ExtResource("30_1l2xj")]
+position = Vector2(2530, 714)
+item = ExtResource("32_5s25j")
+
+[node name="Pickup3" parent="Other" instance=ExtResource("30_1l2xj")]
+position = Vector2(2547, 714)
+item = ExtResource("31_q2dak")
 
 [node name="MusicAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_buymg")
@@ -747,7 +767,7 @@ position = Vector2(2534, 627)
 position = Vector2(2635, 692)
 
 [node name="HealingVial2" parent="TileMaps" instance=ExtResource("21_sw5ym")]
-position = Vector2(2476, 639)
+position = Vector2(2472, 643)
 
 [node name="Trap4" parent="TileMaps" instance=ExtResource("12_q2dak")]
 position = Vector2(2040, 155)
@@ -835,3 +855,10 @@ position = Vector2(311, 172)
 
 [node name="EnlightmentCenter" parent="." instance=ExtResource("18_jbl4c")]
 position = Vector2(704, 462)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(232.678, 642.016)
+stream = ExtResource("29_sg88h")
+autoplay = true
+max_distance = 1000.0
+parameters/looping = true
