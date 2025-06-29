@@ -7,8 +7,14 @@ const WINGED_BOOTS: String = "Winged boots"
 const CAMOUFLAGE: String = "Camouflage"
 const DIVINE_ARMOR: String = "Divine armor"
 const HEALTH_POTION: String = "Health potion"
+const SLINGSHOT: String = "Slingshot"
 
 @export var cu_items: Array[CurrentlyUsedItem]
+
+@export var weapon_checker: WeaponChecker
+
+func _init() -> void:
+	weapon_checker = WeaponChecker.new(self)
 
 func add_cu_item(cu_item: CurrentlyUsedItem):
 	cu_items.append(cu_item)
@@ -69,6 +75,17 @@ func has_divine_armor() -> bool:
 			result = true
 	
 	return result
+	
+func has_slingshot() -> bool:
+	var result = false
+	
+	for cu_item in cu_items:
+		if cu_item.item.name == SLINGSHOT:
+			result = true
+	
+	return result
+	
+
 	
 func has_camouflage() -> bool:
 	var result = false

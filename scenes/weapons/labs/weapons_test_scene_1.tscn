@@ -22,8 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://0khi164sjtqt" path="res://scenes/portail_magique.tscn" id="20_3bslm"]
 [ext_resource type="PackedScene" uid="uid://cctwmuyah45p6" path="res://scenes/healing_vial.tscn" id="21_lmfrt"]
 [ext_resource type="PackedScene" uid="uid://d062hkuxa4g7y" path="res://scenes/p_level_const.tscn" id="22_3t7gy"]
+[ext_resource type="Resource" uid="uid://s11bwy351clv" path="res://inventory_and_recipes/data/items/slingshot.tres" id="23_q6ndo"]
 [ext_resource type="AudioStream" uid="uid://bhlh4nphgdd6o" path="res://assets/music/time_for_adventure.mp3" id="23_rapon"]
-[ext_resource type="Resource" uid="uid://j1ws2hgmrobm" path="res://inventory_and_recipes/data/items/winged_boots.tres" id="24_5smqt"]
 [ext_resource type="Resource" uid="uid://b2txcw1fpbeft" path="res://inventory_and_recipes/data/items/health_potion.tres" id="25_j06sf"]
 [ext_resource type="PackedScene" uid="uid://eohakdnrdwq3" path="res://scenes/bat.tscn" id="26_sjfbc"]
 [ext_resource type="PackedScene" uid="uid://c50xxeppc76hx" path="res://scenes/loup_garou.tscn" id="27_6qbvr"]
@@ -401,7 +401,6 @@ limit_bottom = 112
 position_smoothing_enabled = true
 
 [node name="AProjectileWeapon" parent="Player" instance=ExtResource("8_q6ndo")]
-rotation = 0.0
 
 [node name="Killzone" parent="." instance=ExtResource("8_sqtgf")]
 position = Vector2(50, 69)
@@ -554,7 +553,7 @@ parameters/looping = true
 
 [node name="Pickup" parent="." instance=ExtResource("14_4ywqt")]
 position = Vector2(310, 49)
-item = ExtResource("24_5smqt")
+item = ExtResource("23_q6ndo")
 
 [node name="Pickup2" parent="." instance=ExtResource("14_4ywqt")]
 position = Vector2(278, 49)

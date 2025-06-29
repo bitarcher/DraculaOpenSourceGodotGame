@@ -1,5 +1,5 @@
 class_name AProjectileWeapon
-extends Node2D
+extends AWeapon
 
 @onready var representation: Node2D = %Representation
 
@@ -96,13 +96,12 @@ func throw_projectile(projectile_range: EnumProjectileRange) -> void:
 		push_error("Le RigidBody2D du projectile est introuvable ou nul.")
 
 	
-# ---
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("attack_short"):
-		throw_projectile(EnumProjectileRange.SHORT)
-	elif event.is_action_pressed("attack_long"):
-		throw_projectile(EnumProjectileRange.LONG)
-		
+func attack_short():
+	throw_projectile(EnumProjectileRange.SHORT)
+	
+func attack_long():
+	throw_projectile(EnumProjectileRange.LONG)
+	
 		
 func is_min_angle_reached() -> bool:
 	return rotation_degrees < -80
