@@ -145,6 +145,12 @@ func _change_state(new_state: State) -> void:
 			pickup_instance.global_position = global_position
 			pickup_instance.item = leather_item
 
+			# Spawn second pickup 50 pixels to the right
+			var second_pickup_instance: Pickup = pickup_scene.instantiate()
+			get_tree().current_scene.add_child(second_pickup_instance)
+			second_pickup_instance.global_position = global_position + Vector2(30, 0)
+			second_pickup_instance.item = leather_item
+
 			# Fade out Tween
 			var fade_tween = create_tween()
 			fade_tween.tween_property(animated_sprite, "modulate:a", 0.0, 3.0)
