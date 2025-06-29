@@ -1,5 +1,5 @@
 class_name LoupGarou
-extends Node2D
+extends CharacterBody2D
 
 const SPEED = 50.0 # Augmenté un peu pour un mouvement plus visible
 
