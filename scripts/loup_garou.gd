@@ -10,12 +10,17 @@ const SPEED = 50.0 # Augmenté un peu pour un mouvement plus visible
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var audio_stream_player_2d_howling: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var breathing_audio_stream_player_2d: AudioStreamPlayer2D = $BreathingAudioStreamPlayer2D
+@onready var injury_audio_stream_player_2d_2: AudioStreamPlayer2D = %InjuryAudioStreamPlayer2D2
+@onready var blood_particles: GPUParticles2D = %BloodParticles
+@onready var injury_zone: InjuryZone = %InjuryZone
 
 enum State {
 	WALKING,
-	HOWLING
+	HOWLING,
+	INJURED
 }
 
+@export var previous_not_injured_state: State = State.WALKING
 @export var current_state: State = State.WALKING
 @export var current_direction: int = initial_direction
 
@@ -31,6 +36,8 @@ func _process(delta: float) -> void:
 		State.HOWLING:
 			# Rien à faire dans _process pendant le hurlement,
 			# le changement d'état sera géré par le signal finished du son.
+			pass
+		State.INJURED:
 			pass
 
 func _handle_walking(delta: float) -> void:
@@ -49,9 +56,15 @@ func _handle_walking(delta: float) -> void:
 		position.x += delta * SPEED * current_direction
 
 func _change_state(new_state: State) -> void:
+	if(current_state != State.INJURED):
+		previous_not_injured_state = current_state
 	current_state = new_state
 
 	match current_state:
+		State.INJURED:
+			animated_sprite.stop()
+			blood_particles.emitting = true
+			injury_audio_stream_player_2d_2.play()		
 		State.WALKING:
 			# ICI LE CHANGEMENT : On relance l'animation de marche
 			animated_sprite.play("walk")
@@ -84,8 +97,11 @@ func _update_sprite_direction():
 
 
 func _on_damage_receiver_component_killed() -> void:
-	pass # Replace with function body.
+	injury_zone.queue_free()
 
 
 func _on_damage_receiver_component_damage_received(strength: float, new_life_counter: float) -> void:
-	pass # Replace with function body.
+	_change_state(State.INJURED)
+
+func _on_injury_audio_stream_player_2d_2_finished() -> void:
+	_change_state(previous_not_injured_state)

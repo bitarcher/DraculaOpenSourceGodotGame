@@ -61,6 +61,7 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 - wind blowing: JCI-21, https://pixabay.com/fr/sound-effects/wind-blowing-sfx-12809/
 - horror sound: JuliusH, https://pixabay.com/fr/sound-effects/hunted-mystery-horror-sounds-8396/
 - yodel: freesound_community, https://pixabay.com/fr/sound-effects/yodel-66869/
+- dog howm: Stu9, P F, https://pixabay.com/fr/sound-effects/dog-howl-352680/
 
 
 pixabay licensing rules: https://pixabay.com/fr/service/license-summary/
