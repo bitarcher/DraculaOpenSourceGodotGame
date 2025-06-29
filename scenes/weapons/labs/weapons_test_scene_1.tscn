@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://b54x6oritht4o"]
+[gd_scene load_steps=40 format=3 uid="uid://b54x6oritht4o"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_63muv"]
 [ext_resource type="Texture2D" uid="uid://cvh3qfx5hoimn" path="res://assets/sun.png" id="2_lpnj6"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://c7uv1xkqq7gyh" path="res://assets/clouds/cloud2.png" id="5_lldha"]
 [ext_resource type="Texture2D" uid="uid://bdr0tgbf1emmg" path="res://assets/clouds/cloud3.png" id="6_bqc4l"]
 [ext_resource type="PackedScene" uid="uid://byyyexo4e4kop" path="res://scenes/player_platformer.tscn" id="7_oseko"]
-[ext_resource type="PackedScene" uid="uid://bmlietiej0dyj" path="res://scenes/weapons/projectile_weapon/slingshot_weapon.tscn" id="8_q6ndo"]
 [ext_resource type="PackedScene" uid="uid://b5geq5n0tlmfj" path="res://scenes/killzone.tscn" id="8_sqtgf"]
 [ext_resource type="PackedScene" uid="uid://j3hd2b06ok3d" path="res://scenes/coin.tscn" id="9_jofht"]
 [ext_resource type="PackedScene" uid="uid://jyw84s43iw3w" path="res://scenes/platform.tscn" id="10_ru1yp"]
@@ -399,8 +398,6 @@ position = Vector2(-6, -7)
 zoom = Vector2(4, 4)
 limit_bottom = 112
 position_smoothing_enabled = true
-
-[node name="AProjectileWeapon" parent="Player" instance=ExtResource("8_q6ndo")]
 
 [node name="Killzone" parent="." instance=ExtResource("8_sqtgf")]
 position = Vector2(50, 69)

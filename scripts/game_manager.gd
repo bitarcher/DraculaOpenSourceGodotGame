@@ -92,10 +92,7 @@ const INITIAL_NUM_OF_LIVES = 5
 
 var current_level = 1
 @onready var level_1 = preload("res://scripts/p_level_1.gd")
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
-	
+		
 func _goto_level():
 	level_start_ticks = Time.get_ticks_msec()
 	if(current_level >= NUM_OF_LEVELS):

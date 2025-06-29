@@ -59,6 +59,7 @@ GlobalCamera=""
 InteractiveDialog=""
 DamageReceiverComponent=""
 Projectile=""
+Weapon=""
 
 [godot_resource_groups]
 

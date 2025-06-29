@@ -15,3 +15,7 @@ func _input(event: InputEvent) -> void:
 		attack_short()
 	elif event.is_action_pressed("attack_long"):
 		attack_long()
+		
+func get_weapon_name() -> String:
+	push_warning("get_weapon not implemented for " + ToolsSingleton.get_node_ariane_thread(self))
+	return ""

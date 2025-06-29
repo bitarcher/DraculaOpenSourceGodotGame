@@ -172,6 +172,8 @@ func get_out_from_vortex():
 var is_rejumping: bool = false
 
 func _process(delta: float) -> void:
+	GameManagerSingleton.currently_used_items.weapon_checker.sync_weapons(self)
+	
 	if GameManagerSingleton.currently_used_items.has_camouflage():
 		current_player_character = EnumPlayerCharacter.CAMOUFLAGE
 	elif GameManagerSingleton.currently_used_items.has_divine_armor():
