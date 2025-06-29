@@ -645,6 +645,7 @@ position = Vector2(915, -642)
 [node name="WindAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("27_na31n")
+volume_db = -10.4
 autoplay = true
 
 [node name="SnowfallSprite2D" type="Sprite2D" parent="."]
