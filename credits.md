@@ -59,6 +59,9 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 - slime splatter: floraphonic, https://pixabay.com/fr/sound-effects/slime-splatter-5-220265/
 - slime impact: universefield, https://pixabay.com/fr/sound-effects/search/slime/
 - wind blowing: JCI-21, https://pixabay.com/fr/sound-effects/wind-blowing-sfx-12809/
+- horror sound: JuliusH, https://pixabay.com/fr/sound-effects/hunted-mystery-horror-sounds-8396/
+- yodel: freesound_community, https://pixabay.com/fr/sound-effects/yodel-66869/
+
 
 pixabay licensing rules: https://pixabay.com/fr/service/license-summary/
 

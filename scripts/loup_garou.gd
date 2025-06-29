@@ -81,3 +81,11 @@ func _on_audio_finished() -> void:
 
 func _update_sprite_direction():
 	animated_sprite.flip_h = (current_direction == -1)
+
+
+func _on_damage_receiver_component_killed() -> void:
+	pass # Replace with function body.
+
+
+func _on_damage_receiver_component_damage_received(strength: float, new_life_counter: float) -> void:
+	pass # Replace with function body.

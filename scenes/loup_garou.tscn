@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://c50xxeppc76hx"]
+[gd_scene load_steps=22 format=3 uid="uid://c50xxeppc76hx"]
 
 [ext_resource type="Script" uid="uid://bs7i1bnk2jta1" path="res://scripts/loup_garou.gd" id="1_3q3ya"]
 [ext_resource type="PackedScene" uid="uid://bqhlm5rolw1xo" path="res://scenes/injury_zone.tscn" id="2_qdy35"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cm307wgnonjp8" path="res://scenes/persist/loup_garou_serializable_component.tscn" id="4_3q3ya"]
 [ext_resource type="AudioStream" uid="uid://b1ktp14rm73h0" path="res://assets/sounds/wolf-howling-140235.mp3" id="5_qdy35"]
 [ext_resource type="AudioStream" uid="uid://ci8n2qudba5df" path="res://assets/sounds/werewolf-breathing-and-sniffing-73868.mp3" id="7_mwge8"]
+[ext_resource type="PackedScene" uid="uid://gra5myrijv4y" path="res://scenes/damage/damage_receiver_component.tscn" id="8_h34o4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c78co"]
 radius = 16.0
@@ -105,7 +106,12 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="LoupGarou" type="Node2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xs27a"]
+height = 42.0
+
+[node name="LoupGarou" type="CharacterBody2D"]
+collision_layer = 32
+collision_mask = 0
 script = ExtResource("1_3q3ya")
 
 [node name="InjuryZone" parent="." instance=ExtResource("2_qdy35")]
@@ -135,9 +141,19 @@ target_position = Vector2(-24, 0)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_qdy35")
-max_distance = 900.0
+max_distance = 400.0
 
 [node name="BreathingAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_mwge8")
-max_distance = 500.0
+max_distance = 200.0
 parameters/looping = true
+
+[node name="BeingHitCollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_xs27a")
+
+[node name="DamageReceiverComponent" parent="." instance=ExtResource("8_h34o4")]
+position = Vector2(-9, -33)
+initial_life_counter = 150.0
+
+[connection signal="damage_received" from="DamageReceiverComponent" to="." method="_on_damage_receiver_component_damage_received"]
+[connection signal="killed" from="DamageReceiverComponent" to="." method="_on_damage_receiver_component_killed"]

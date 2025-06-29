@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://b54x6oritht4o"]
+[gd_scene load_steps=41 format=3 uid="uid://b54x6oritht4o"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_63muv"]
 [ext_resource type="Texture2D" uid="uid://cvh3qfx5hoimn" path="res://assets/sun.png" id="2_lpnj6"]
@@ -26,6 +26,7 @@
 [ext_resource type="Resource" uid="uid://j1ws2hgmrobm" path="res://inventory_and_recipes/data/items/winged_boots.tres" id="24_5smqt"]
 [ext_resource type="Resource" uid="uid://b2txcw1fpbeft" path="res://inventory_and_recipes/data/items/health_potion.tres" id="25_j06sf"]
 [ext_resource type="PackedScene" uid="uid://eohakdnrdwq3" path="res://scenes/bat.tscn" id="26_sjfbc"]
+[ext_resource type="PackedScene" uid="uid://c50xxeppc76hx" path="res://scenes/loup_garou.tscn" id="27_6qbvr"]
 
 [sub_resource type="Animation" id="Animation_1ofay"]
 length = 0.001
@@ -570,3 +571,6 @@ position = Vector2(584, -98)
 
 [node name="Bat4" parent="." instance=ExtResource("26_sjfbc")]
 position = Vector2(606, -95)
+
+[node name="LoupGarou" parent="." instance=ExtResource("27_6qbvr")]
+position = Vector2(517, -45)
