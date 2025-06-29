@@ -171,6 +171,7 @@ unique_name_in_owner = true
 target_position = Vector2(0, 12)
 
 [node name="DamageReceiverComponent" parent="." instance=ExtResource("16_dk2sj")]
+unique_name_in_owner = true
 position = Vector2(-7, -12)
 initial_life_counter = 50.0
 

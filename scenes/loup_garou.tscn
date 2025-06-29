@@ -155,6 +155,7 @@ parameters/looping = true
 shape = SubResource("CapsuleShape2D_xs27a")
 
 [node name="DamageReceiverComponent" parent="." instance=ExtResource("8_h34o4")]
+unique_name_in_owner = true
 position = Vector2(-9, -33)
 initial_life_counter = 150.0
 

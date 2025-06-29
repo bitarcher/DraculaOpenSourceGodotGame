@@ -20,6 +20,13 @@ var is_dying: bool = false
 @onready var ray_cast_down: RayCast2D = %RayCastDown
 @onready var being_hit_collision_shape_2d: CollisionShape2D = $BeingHitCollisionShape2D
 @onready var detection_zone: Area2D = $DetectionZone
+@onready var damage_receiver_component: DamageReceiverComponent = %DamageReceiverComponent
+
+@export var health:float:
+	set(value):
+		damage_receiver_component.current_life_counter = value
+	get:
+		return damage_receiver_component.current_life_counter
 
 func _ready() -> void:
 	if go_left_once_awaken:

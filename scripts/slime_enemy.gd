@@ -11,9 +11,15 @@ const SPEED = 10.0
 @onready var injury_audio_stream_player_2d: AudioStreamPlayer2D = %InjuryAudioStreamPlayer2D
 @onready var killed_audio_stream_player_2d: AudioStreamPlayer2D = %KilledAudioStreamPlayer2D
 @onready var injury_zone: InjuryZone = %InjuryZone
+@onready var damage_receiver_component: DamageReceiverComponent = %DamageReceiverComponent
 
+@export var health:float:
+	set(value):
+		damage_receiver_component.current_life_counter = value
+	get:
+		return damage_receiver_component.current_life_counter
 
-var killed = false
+@export var killed = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

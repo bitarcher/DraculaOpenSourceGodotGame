@@ -125,6 +125,7 @@ target_position = Vector2(-7, 0)
 [node name="SlideEnemySerializableComponent" parent="." instance=ExtResource("4_2blxa")]
 
 [node name="DamageReceiverComponent" parent="." instance=ExtResource("5_hf6xp")]
+unique_name_in_owner = true
 position = Vector2(-8, -8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

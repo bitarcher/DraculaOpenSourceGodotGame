@@ -5,7 +5,7 @@ const SPEED = 50.0 # Augmenté un peu pour un mouvement plus visible
 
 @export var initial_direction: int = 1 # 1 pour droite, -1 pour gauche
 
-var is_dying: bool = false
+@export var is_dying: bool = false
 
 @onready var ray_cast_right: RayCast2D = $RayCastRight
 @onready var ray_cast_left: RayCast2D = $RayCastLeft
@@ -16,6 +16,13 @@ var is_dying: bool = false
 @onready var blood_particles: GPUParticles2D = %BloodParticles
 @onready var injury_zone: InjuryZone = %InjuryZone
 @onready var being_hit_collision_shape_2d: CollisionShape2D = $BeingHitCollisionShape2D
+@onready var damage_receiver_component: DamageReceiverComponent = %DamageReceiverComponent
+
+@export var health:float:
+	set(value):
+		damage_receiver_component.current_life_counter = value
+	get:
+		return damage_receiver_component.current_life_counter
 
 enum State {
 	WALKING,

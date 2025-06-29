@@ -6,6 +6,10 @@ func _get_bat() -> Bat:
 	
 func on_save_game(saved_datas):
 	var bat : Bat = _get_bat()
+	
+	if(bat.is_dying):
+		return
+	
 	var my_data = BatSavedData.new()
 	my_data.scene_path = "res://scenes/bat.tscn"
 	my_data.position = bat.global_position
@@ -13,6 +17,7 @@ func on_save_game(saved_datas):
 	my_data.direction_vector.y  = bat._direction_vector.y
 	my_data.awake = bat.awake
 	my_data.go_left_once_awaken = bat.go_left_once_awaken
+	my_data.health = bat.health
 	
 	saved_datas.append(my_data)
 	
@@ -33,4 +38,5 @@ func on_load_game(saved_data):
 		bat._direction_vector.y = my_data.direction_vector.y
 		bat.awake = my_data.awake
 		bat.go_left_once_awaken = my_data.go_left_once_awaken
+		bat.health = my_data.health
 	
