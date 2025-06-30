@@ -200,6 +200,9 @@ func _physics_process(delta: float) -> void:
 			if _jump_positions.size() > 4:
 				_jump_positions.remove_at(0)
 			_jump_position_timer = 0.0
+	else:
+		_jump_positions.clear()
+		_jump_position_timer = 0.0
 
 	if Input.is_action_just_pressed("escape"):
 		GameManagerSingleton.show_menu()
