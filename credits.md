@@ -66,6 +66,7 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 - dog howm: Stu9, P F, https://pixabay.com/fr/sound-effects/dog-howl-352680/
 - arrow swish: DjartMusic, https://pixabay.com/fr/sound-effects/arrow-swish-03-306040/
 - arrow impact: DennisH18, https://pixabay.com/fr/sound-effects/arrow-wood-impact-146418/
+- bow loading:  EminYILDIRIM, freesound_community,  https://pixabay.com/fr/sound-effects/bow-loading-38752/
 
 pixabay licensing rules: https://pixabay.com/fr/service/license-summary/
 

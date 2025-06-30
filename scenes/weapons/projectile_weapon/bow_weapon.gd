@@ -4,6 +4,9 @@ extends AProjectileWeapon
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
 @onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
 @export var arrow_type: ArrowProjectile.ArrowType = ArrowProjectile.ArrowType.NORMAL
+@onready var animated_sprite_2d: AnimatedSprite2D = %AnimatedSprite2D
+@onready var sprite_2d: Sprite2D = $Representation/Sprite2D
+@onready var bow_loading_audio_stream_player_2d: AudioStreamPlayer2D = %BowLoadingAudioStreamPlayer2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -19,9 +22,12 @@ func _process(delta: float) -> void:
 	super._process(delta)
 	
 func _activate_weapon() -> void:
-	animation_player.play("activate")
-	await animation_player.animation_finished
+	bow_loading_audio_stream_player_2d.play()
+	sprite_2d.visible = false
+	animated_sprite_2d.play("launch")
+	animated_sprite_2d.animation_finished
 	audio_stream_player.play()
+	
 
 func get_weapon_name() -> String:
 	return CurrentlyUsedItems.BOW
