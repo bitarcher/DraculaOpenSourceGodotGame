@@ -21,6 +21,11 @@ signal direction_changed(emiter: PlayerPlatformer, old_direction: int, new_direc
 # Calque de collision des pierres (à ajuster si différent)
 @export var stone_layer: int = 3
 
+var _last_positions_for_stuck_detection: Array[Vector2] = []
+var _time_since_last_position_capture: float = 0.0
+@export var _position_capture_interval: float = 1.0 # Capture une position toutes les secondes
+@export var _area_threshold_for_stuck: float = 1.0 # Seuil pour l'aire du quadrilatère (ajuster si nécessaire)
+
 enum EnumPlayerCharacter {
 	DEFAULT,
 	DIVINE_ARMOR,
@@ -244,6 +249,7 @@ func _physics_process(delta: float) -> void:
 	if not is_instance_valid(player_collision_shape) or player_collision_shape.shape == null:
 		return
 
+	
 	# Détection d'ensevelissement
 	if is_buried_under_stones():
 		print("Je suis enseveli sous les pierres !")
@@ -254,18 +260,4 @@ func is_buried_under_stones() -> bool:
 	if not is_instance_valid(player_collision_shape) or player_collision_shape.shape == null:
 		return false
 
-	var space_state = get_world_2d().direct_space_state
-
-	var query_shape = PhysicsShapeQueryParameters2D.new()
-	var enlarged_shape = player_collision_shape.shape.duplicate()
-	if enlarged_shape is CapsuleShape2D:
-		enlarged_shape.radius *= 1.2 # Agrandir le rayon de 20%
-		enlarged_shape.height *= 1.2 # Agrandir la hauteur de 20%
-	query_shape.set_shape(enlarged_shape) # Utilise la forme de collision du joueur agrandie
-	query_shape.transform = global_transform # Position et rotation du joueur
-	query_shape.collision_mask = 1 << (stone_layer - 1) # Détecte uniquement les pierres
-	query_shape.exclude = [self] # Exclut le joueur lui-même
-
-	var result = space_state.intersect_shape(query_shape)
-
-	return not result.is_empty()
+	return false
