@@ -29,3 +29,9 @@ func get_weapon_name() -> String:
 func get_projectile_scene() -> PackedScene:
 	var result = load("res://scenes/weapons/projectile/arrow_projectile.tscn")
 	return result
+	
+func get_projectile_speed(projectile_range: EnumProjectileRange) -> float:
+	if projectile_range == EnumProjectileRange.SHORT:
+		return 500.0
+	else:
+		return 700.0

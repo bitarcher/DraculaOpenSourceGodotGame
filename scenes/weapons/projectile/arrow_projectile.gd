@@ -24,8 +24,6 @@ func set_arrow_texture():
 	#FIXME
 	return
 	
-	
-	
 	_arrow_texture_set = true
 	match arrow_type:
 		ArrowType.NORMAL:
@@ -62,6 +60,15 @@ func get_launchable_rigid_body_2D() -> RigidBody2D:
 func _get_projectile_speed() -> float:
 	return _previous_linear_velocity.length()
 
+func _get_injury_strength(speed: float) -> float:
+	
+	var extra_factor: float = 1.0
+	
+	match arrow_type:
+		ArrowType.POISONED:
+			extra_factor = 1.3
+	
+	return speed * 0.4 * extra_factor
 
 func _on_projectile_injury_zone_body_entered(body: Node2D) -> void:
 	if _get_projectile_speed() > high_speed_threshold:
