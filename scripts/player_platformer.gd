@@ -21,10 +21,8 @@ signal direction_changed(emiter: PlayerPlatformer, old_direction: int, new_direc
 # Calque de collision des pierres (à ajuster si différent)
 @export var stone_layer: int = 3
 
-var _last_positions_for_stuck_detection: Array[Vector2] = []
-var _time_since_last_position_capture: float = 0.0
-@export var _position_capture_interval: float = 1.0 # Capture une position toutes les secondes
-@export var _area_threshold_for_stuck: float = 1.0 # Seuil pour l'aire du quadrilatère (ajuster si nécessaire)
+var _jump_positions: Array[Vector2] = []
+var _jump_position_timer: float = 0.0
 
 enum EnumPlayerCharacter {
 	DEFAULT,
@@ -196,6 +194,12 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+		_jump_position_timer += delta
+		if _jump_position_timer >= 1.0:
+			_jump_positions.append(global_position)
+			if _jump_positions.size() > 4:
+				_jump_positions.remove_at(0)
+			_jump_position_timer = 0.0
 
 	if Input.is_action_just_pressed("escape"):
 		GameManagerSingleton.show_menu()
@@ -255,9 +259,19 @@ func _physics_process(delta: float) -> void:
 		print("Je suis enseveli sous les pierres !")
 		# TODO: Ajoutez ici votre logique de gestion de l'ensevelissement (dégâts, mort, etc.)
 
+
 func is_buried_under_stones() -> bool:
-	# Assurez-vous que la forme de collision du joueur est valide
-	if not is_instance_valid(player_collision_shape) or player_collision_shape.shape == null:
+	if _jump_positions.size() < 3:
 		return false
 
-	return false
+	var area: float = 0.0
+	var n: int = _jump_positions.size()
+
+	for i in range(n):
+		var p1: Vector2 = _jump_positions[i]
+		var p2: Vector2 = _jump_positions[(i + 1) % n] # Wrap around to the first point for the last segment
+		area += (p1.x * p2.y) - (p1.y * p2.x)
+
+	var real_area = abs(area) / 2.0
+	
+	return real_area < 300
