@@ -6,6 +6,7 @@ const JUMP_VELOCITY = -350.0
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var blood_particles: GPUParticles2D = %BloodParticles
+@onready var player_collision_shape: CollisionShape2D = $CollisionShape2D # Ajout de la référence au CollisionShape2D du joueur
 
 @export var air_rotation_return_speed: float = 5 # Degrees per second, adjust as needed
 @export var air_rotation_speed: float = 20 
@@ -16,6 +17,9 @@ signal direction_changed(emiter: PlayerPlatformer, old_direction: int, new_direc
 @export var inventory: Inventory:
 	get:
 		return GameManagerSingleton.inventory
+
+# Calque de collision des pierres (à ajuster si différent)
+@export var stone_layer: int = 3
 
 enum EnumPlayerCharacter {
 	DEFAULT,
@@ -77,7 +81,7 @@ func _on_player_killed() -> void:
 	
 	var collision_shape = $CollisionShape2D
 	
-	if collision_shape != null:
+	if is_instance_valid(collision_shape):
 		collision_shape.queue_free()
 	#$DamageReceiverComponent.take_damage(100000000000000000)
 	
@@ -235,3 +239,33 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+	# Vérification pour éviter l'erreur si la forme de collision a été supprimée
+	if not is_instance_valid(player_collision_shape) or player_collision_shape.shape == null:
+		return
+
+	# Détection d'ensevelissement
+	if is_buried_under_stones():
+		print("Je suis enseveli sous les pierres !")
+		# TODO: Ajoutez ici votre logique de gestion de l'ensevelissement (dégâts, mort, etc.)
+
+func is_buried_under_stones() -> bool:
+	# Assurez-vous que la forme de collision du joueur est valide
+	if not is_instance_valid(player_collision_shape) or player_collision_shape.shape == null:
+		return false
+
+	var space_state = get_world_2d().direct_space_state
+
+	var query_shape = PhysicsShapeQueryParameters2D.new()
+	var enlarged_shape = player_collision_shape.shape.duplicate()
+	if enlarged_shape is CapsuleShape2D:
+		enlarged_shape.radius *= 1.2 # Agrandir le rayon de 20%
+		enlarged_shape.height *= 1.2 # Agrandir la hauteur de 20%
+	query_shape.set_shape(enlarged_shape) # Utilise la forme de collision du joueur agrandie
+	query_shape.transform = global_transform # Position et rotation du joueur
+	query_shape.collision_mask = 1 << (stone_layer - 1) # Détecte uniquement les pierres
+	query_shape.exclude = [self] # Exclut le joueur lui-même
+
+	var result = space_state.intersect_shape(query_shape)
+
+	return not result.is_empty()
