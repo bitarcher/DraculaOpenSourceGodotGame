@@ -1,11 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://p8psdrwowtb8"]
+[gd_scene load_steps=3 format=3 uid="uid://p8psdrwowtb8"]
 
 [ext_resource type="Texture2D" uid="uid://bpe3uv4uipxxr" path="res://assets/sprites/stones.png" id="1_j7bho"]
+[ext_resource type="Script" uid="uid://b7ysdfj3fh54w" path="res://scenes/stones/stone.gd" id="1_wlj27"]
 
 [node name="StoneC" type="RigidBody2D"]
 collision_layer = 3
 collision_mask = 3
 mass = 200.0
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_wlj27")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_j7bho")
@@ -14,3 +18,5 @@ region_rect = Rect2(160, 2, 73, 70)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(0, -32, -24, -32, -30, -23, -13, 25, -2, 33, 11, 33, 22, 29, 30, 6, 33, -18, 31, -24, 16, -30)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
