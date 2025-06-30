@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://ca2d8rt3j058t"]
+
+[ext_resource type="Script" uid="uid://b6rtt5e2v7l2p" path="res://inventory_and_recipes/model/item.gd" id="1_cbp2t"]
+[ext_resource type="Script" uid="uid://dnj2vptoeabi" path="res://inventory_and_recipes/model/recipe.gd" id="2_edak2"]
+[ext_resource type="Resource" uid="uid://71evqpdqpc8e" path="res://inventory_and_recipes/data/items/wood.tres" id="2_nqu6d"]
+[ext_resource type="Resource" uid="uid://1n06od3s53jv" path="res://inventory_and_recipes/data/items/iron_ingot.tres" id="3_bk3ck"]
+[ext_resource type="Resource" uid="uid://cfl2dy32p3y3n" path="res://inventory_and_recipes/data/items/feather.tres" id="4_u06y4"]
+[ext_resource type="Resource" uid="uid://dx4v305ow3hk3" path="res://inventory_and_recipes/data/items/bow.tres" id="5_25c4e"]
+
+[resource]
+script = ExtResource("2_edak2")
+title = "Bow"
+ingredients = Array[ExtResource("1_cbp2t")]([ExtResource("2_nqu6d"), ExtResource("2_nqu6d"), ExtResource("2_nqu6d"), ExtResource("2_nqu6d"), ExtResource("2_nqu6d"), ExtResource("3_bk3ck"), ExtResource("3_bk3ck"), ExtResource("4_u06y4"), ExtResource("4_u06y4")])
+results = Array[ExtResource("1_cbp2t")]([ExtResource("5_25c4e")])
+description = "A semi durable that throws dangerous long range arrows"
+metadata/_custom_type_script = "uid://dnj2vptoeabi"

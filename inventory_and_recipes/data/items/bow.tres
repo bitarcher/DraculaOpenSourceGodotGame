@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dx4v305ow3hk3"]
+
+[ext_resource type="Texture2D" uid="uid://1o4ah8755xvd" path="res://inventory_and_recipes/elements/bow/bow.png" id="1_ihoy3"]
+[ext_resource type="Script" uid="uid://b6rtt5e2v7l2p" path="res://inventory_and_recipes/model/item.gd" id="1_kyacr"]
+
+[resource]
+script = ExtResource("1_kyacr")
+name = "Bow"
+icon = ExtResource("1_ihoy3")
+price = 100
+desired_width_px = 32.0
+desired_height_px = 32.0
+duration_in_seconds = 600.0
+usable = true
+metadata/_custom_type_script = "uid://b6rtt5e2v7l2p"

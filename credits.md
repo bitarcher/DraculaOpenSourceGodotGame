@@ -22,6 +22,7 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 - duck, animated sprite, Ulti, FINISAUTEMPOTENTIAE ©, https://opengameart.org/content/character-spritesheet-duck
 - bat : https://fr.pinterest.com/pin/6333255717241088/
 - stones: macrovector https://www.freepik.com/free-vector/rocks-stones-elements_3792124.htm#fromView=keyword&page=1&position=0&uuid=aed28973-c093-4ace-8e8b-5b2821bafe56&query=Rock+Sprite
+- bow:  OpenClipart-Vectors, https://pixabay.com/vectors/archery-arrow-bow-quiver-weapon-2028031/
 
 *Assets*
 
