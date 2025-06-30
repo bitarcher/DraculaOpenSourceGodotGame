@@ -64,7 +64,8 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 - horror sound: JuliusH, https://pixabay.com/fr/sound-effects/hunted-mystery-horror-sounds-8396/
 - yodel: freesound_community, https://pixabay.com/fr/sound-effects/yodel-66869/
 - dog howm: Stu9, P F, https://pixabay.com/fr/sound-effects/dog-howl-352680/
-
+- arrow swish: DjartMusic, https://pixabay.com/fr/sound-effects/arrow-swish-03-306040/
+- arrow impact: DennisH18, https://pixabay.com/fr/sound-effects/arrow-wood-impact-146418/
 
 pixabay licensing rules: https://pixabay.com/fr/service/license-summary/
 

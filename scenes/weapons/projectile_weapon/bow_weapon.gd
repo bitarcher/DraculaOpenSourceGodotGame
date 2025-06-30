@@ -19,9 +19,9 @@ func _process(delta: float) -> void:
 	super._process(delta)
 	
 func _activate_weapon() -> void:
-	audio_stream_player.play()
 	animation_player.play("activate")
 	await animation_player.animation_finished
+	audio_stream_player.play()
 
 func get_weapon_name() -> String:
 	return CurrentlyUsedItems.BOW
