@@ -7,6 +7,9 @@ func _init(currently_used_items: CurrentlyUsedItems) -> void:
 	self.currently_used_items = currently_used_items
 
 func get_current_weapon_that_should_be_used_or_empty() -> String:
+	if currently_used_items.has_poisoned_bow():
+		return CurrentlyUsedItems.POISONED_BOW
+	
 	if currently_used_items.has_bow():
 		return CurrentlyUsedItems.BOW
 	
@@ -31,6 +34,8 @@ func _add_weapon(player_platformer: PlayerPlatformer, weapon_type_that_should_be
 	var packed_scene: PackedScene = null
 	
 	match weapon_type_that_should_be_used:
+		CurrentlyUsedItems.POISONED_BOW:
+			packed_scene = load("res://scenes/weapons/projectile_weapon/bow_weapon.tscn")
 		CurrentlyUsedItems.BOW:
 			packed_scene = load("res://scenes/weapons/projectile_weapon/bow_weapon.tscn")
 		CurrentlyUsedItems.SLINGSHOT:
@@ -44,6 +49,12 @@ func _add_weapon(player_platformer: PlayerPlatformer, weapon_type_that_should_be
 		return
 	
 	var instanciated: AWeapon = packed_scene.instantiate()
+
+	match weapon_type_that_should_be_used:
+		CurrentlyUsedItems.POISONED_BOW:
+			var bow: BowWeapon = instanciated as BowWeapon
+			bow.arrow_type = ArrowProjectile.ArrowType.POISONED	
+	
 	player_platformer.add_child(instanciated) 
 	
 func sync_weapons(player_platformer: PlayerPlatformer) -> bool:

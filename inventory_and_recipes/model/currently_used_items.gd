@@ -9,6 +9,7 @@ const DIVINE_ARMOR: String = "Divine armor"
 const HEALTH_POTION: String = "Health potion"
 const SLINGSHOT: String = "Slingshot"
 const BOW: String = "Bow"
+const POISONED_BOW: String = "Poisoned bow"
 
 @export var cu_items: Array[CurrentlyUsedItem]
 
@@ -73,6 +74,15 @@ func has_divine_armor() -> bool:
 	
 	for cu_item in cu_items:
 		if cu_item.item.name == DIVINE_ARMOR:
+			result = true
+	
+	return result
+
+func has_poisoned_bow() -> bool:
+	var result = false
+	
+	for cu_item in cu_items:
+		if cu_item.item.name == POISONED_BOW:
 			result = true
 	
 	return result

@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://b54x6oritht4o"]
+[gd_scene load_steps=42 format=3 uid="uid://b54x6oritht4o"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_63muv"]
 [ext_resource type="Texture2D" uid="uid://cvh3qfx5hoimn" path="res://assets/sun.png" id="2_lpnj6"]
@@ -26,7 +26,8 @@
 [ext_resource type="Resource" uid="uid://b2txcw1fpbeft" path="res://inventory_and_recipes/data/items/health_potion.tres" id="25_j06sf"]
 [ext_resource type="PackedScene" uid="uid://eohakdnrdwq3" path="res://scenes/bat.tscn" id="26_sjfbc"]
 [ext_resource type="PackedScene" uid="uid://c50xxeppc76hx" path="res://scenes/loup_garou.tscn" id="27_6qbvr"]
-[ext_resource type="Resource" uid="uid://dx4v305ow3hk3" path="res://inventory_and_recipes/data/items/bow.tres" id="27_trdfg"]
+[ext_resource type="Resource" uid="uid://bsv8jgfocgneb" path="res://inventory_and_recipes/data/items/poisoned_bow.tres" id="27_trdfg"]
+[ext_resource type="Resource" uid="uid://dx4v305ow3hk3" path="res://inventory_and_recipes/data/items/bow.tres" id="28_trdfg"]
 
 [sub_resource type="Animation" id="Animation_1ofay"]
 length = 0.001
@@ -578,3 +579,7 @@ position = Vector2(1238, -50)
 [node name="Pickup3" parent="." instance=ExtResource("14_4ywqt")]
 position = Vector2(340, 49)
 item = ExtResource("27_trdfg")
+
+[node name="Pickup4" parent="." instance=ExtResource("14_4ywqt")]
+position = Vector2(299, 38)
+item = ExtResource("28_trdfg")

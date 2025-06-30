@@ -33,9 +33,6 @@ max_contacts_reported = 1
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
 unique_name_in_owner = true
 scale = Vector2(0.333, 0.333)
-texture = ExtResource("2_e0jf0")
-region_enabled = true
-region_rect = Rect2(0, 106, 38, 94)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="RigidBody2D"]
 unique_name_in_owner = true

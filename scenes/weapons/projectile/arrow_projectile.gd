@@ -19,6 +19,7 @@ var _arrow_texture_set: bool = false
 var is_stuck: bool = false # Variable d'état pour savoir si la flèche est plantée
 
 func _ready() -> void:
+	set_arrow_texture()
 	# On connecte le signal du RigidBody2D à notre fonction de logique de collision
 	rigid_body_2d.body_entered.connect(_on_rigid_body_2d_body_entered)
 
@@ -61,9 +62,6 @@ func set_arrow_texture():
 	if _arrow_texture_set:
 		return
 	
-	#FIXME
-	return
-	
 	_arrow_texture_set = true
 	match arrow_type:
 		ArrowType.NORMAL:
@@ -73,10 +71,8 @@ func set_arrow_texture():
 		_:
 			_arrow_texture_set = false
 			
-	if _arrow_texture_set:
-		print("arrow tecture set")
-	else:
-		push_error("arrow tecture not set")
+	if not _arrow_texture_set:
+		push_error("arrow texture not set for type: " + str(arrow_type))
 
 enum ArrowType {
 	NORMAL,
@@ -84,7 +80,7 @@ enum ArrowType {
 }
 
 func _process(delta: float) -> void:
-	set_arrow_texture()
+	pass
 	
 var _previous_linear_velocity: Vector2 = Vector2.ZERO
 
