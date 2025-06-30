@@ -7,6 +7,9 @@ func _init(currently_used_items: CurrentlyUsedItems) -> void:
 	self.currently_used_items = currently_used_items
 
 func get_current_weapon_that_should_be_used_or_empty() -> String:
+	if currently_used_items.has_bow():
+		return CurrentlyUsedItems.BOW
+	
 	if currently_used_items.has_slingshot():
 		return CurrentlyUsedItems.SLINGSHOT
 		
@@ -28,6 +31,8 @@ func _add_weapon(player_platformer: PlayerPlatformer, weapon_type_that_should_be
 	var packed_scene: PackedScene = null
 	
 	match weapon_type_that_should_be_used:
+		CurrentlyUsedItems.BOW:
+			packed_scene = load("res://scenes/weapons/projectile_weapon/bow_weapon.tscn")
 		CurrentlyUsedItems.SLINGSHOT:
 			packed_scene = load("res://scenes/weapons/projectile_weapon/slingshot_weapon.tscn")
 		_:

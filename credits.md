@@ -23,6 +23,7 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 - bat : https://fr.pinterest.com/pin/6333255717241088/
 - stones: macrovector https://www.freepik.com/free-vector/rocks-stones-elements_3792124.htm#fromView=keyword&page=1&position=0&uuid=aed28973-c093-4ace-8e8b-5b2821bafe56&query=Rock+Sprite
 - bow:  OpenClipart-Vectors, https://pixabay.com/vectors/archery-arrow-bow-quiver-weapon-2028031/
+- arrows: freepik, https://www.freepik.com/free-vector/set-ethnic-colored-arrows_1075319.htm#fromView=search&page=1&position=42&uuid=de04ab92-30b3-40de-b465-c583f412066f&query=knight+Arrow
 
 *Assets*
 
@@ -69,6 +70,7 @@ pixabay licensing rules: https://pixabay.com/fr/service/license-summary/
 
 *Tutorials*
 
-* Special thanks also for other youtube tutorial providers: *
-- Saving and loading games with Godot https://www.youtube.com/watch?v=43BZsLZheA4 but in the program in is used via ASerializableComponent
-- Data models : https://www.youtube.com/watch?v=4vAkTHeoORk
+* Special thanks also for youtube tutorial providers: *
+- "How to make a Video Game - Godot Beginner Tutorial" Brackleys, https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
+- "Saving and loading games with Godot" https://www.youtube.com/watch?v=43BZsLZheA4 but in the program in is used via ASerializableComponent
+- "Data models" (items and recipes): https://www.youtube.com/watch?v=4vAkTHeoORk

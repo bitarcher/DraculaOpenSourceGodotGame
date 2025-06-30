@@ -56,6 +56,14 @@ var next_projectile_available_ticks_in_ms = 0
 # By default, it completes immediately.
 func _activate_weapon() -> void:
 	pass
+	
+func _edit_projectile_before_adding_to_scene(projectile: AProjectile):
+	# by default do nothing, but for example for arrow, will edit projectile type (normal, poined, etc...)
+	pass
+	
+func _edit_projectile_after_adding_to_scene(projectile: AProjectile):
+	# by default do nothing, but for example for arrow, will edit projectile type (normal, poined, etc...)
+	pass
 
 func throw_projectile(projectile_range: EnumProjectileRange) -> void:
 	
@@ -75,7 +83,9 @@ func throw_projectile(projectile_range: EnumProjectileRange) -> void:
 	assert(projectile_scene != null, "La scène du projectile ne doit pas être nulle !")
 	
 	var projectile: AProjectile = projectile_scene.instantiate()
+	_edit_projectile_before_adding_to_scene(projectile)
 	get_tree().current_scene.add_child(projectile)
+	_edit_projectile_after_adding_to_scene(projectile)
 	
 	# Positionner le projectile à l'endroit où la représentation de l'arme est.
 	projectile.global_position = representation.global_position
