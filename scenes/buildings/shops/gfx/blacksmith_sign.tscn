@@ -7,8 +7,10 @@
 
 [node name="Label" parent="." index="1"]
 anchors_preset = 8
-offset_top = 67.0
-offset_bottom = 83.0
+offset_left = 26.0
+offset_top = 64.0
+offset_right = 116.0
+offset_bottom = 80.0
 text = "Blacksmith"
 
 [node name="Sprite2D2" parent="." index="2"]

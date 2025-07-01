@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxmpu8aqekhut"]
+
+[ext_resource type="PackedScene" uid="uid://b8abbdwe5cu8j" path="res://scenes/buildings/shops/gfx/a_shop.tscn" id="1_c3q1f"]
+[ext_resource type="PackedScene" uid="uid://dmgokqw4tgshj" path="res://scenes/buildings/shops/gfx/grocery_sign.tscn" id="2_2xgk1"]
+
+[node name="AShop" instance=ExtResource("1_c3q1f")]
+
+[node name="GrocerySign" parent="." index="6" instance=ExtResource("2_2xgk1")]
+position = Vector2(194, 96)
+scale = Vector2(0.4, 0.4)
