@@ -24,6 +24,7 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 - stones: macrovector https://www.freepik.com/free-vector/rocks-stones-elements_3792124.htm#fromView=keyword&page=1&position=0&uuid=aed28973-c093-4ace-8e8b-5b2821bafe56&query=Rock+Sprite
 - bow:  OpenClipart-Vectors, https://pixabay.com/vectors/archery-arrow-bow-quiver-weapon-2028031/
 - arrows: freepik, https://www.freepik.com/free-vector/set-ethnic-colored-arrows_1075319.htm#fromView=search&page=1&position=42&uuid=de04ab92-30b3-40de-b465-c583f412066f&query=knight+Arrow
+- medieval house sprite: https://stablediffusionweb.com/fr/image/34473023-medieval-house-sprites
 
 *Assets*
 
@@ -67,6 +68,7 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 - arrow swish: DjartMusic, https://pixabay.com/fr/sound-effects/arrow-swish-03-306040/
 - arrow impact: DennisH18, https://pixabay.com/fr/sound-effects/arrow-wood-impact-146418/
 - bow loading:  EminYILDIRIM, freesound_community,  https://pixabay.com/fr/sound-effects/bow-loading-38752/
+
 
 pixabay licensing rules: https://pixabay.com/fr/service/license-summary/
 

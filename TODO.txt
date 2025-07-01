@@ -6,6 +6,8 @@ AU GAMEOVER, mais c'était peut-être parce que le script associé à LevelConst
 
 les doléances de la directrice artistique :
 - fait un ou deux niveau dark
+- quand on rentre dans un shop, il faut que la caméra zoom sur la porte, puis 
+dézzome sur l'intérieur du magasin
 
 
 # fait:

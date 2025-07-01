@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmgokqw4tgshj"]
+
+[ext_resource type="Texture2D" uid="uid://b0fvdlhbfabqm" path="res://assets/sprites/buildings/shops/sign.png" id="1_jt14g"]
+[ext_resource type="Texture2D" uid="uid://c8w76c015tejm" path="res://assets/sprites/buildings/shops/grocery.png" id="2_2ijaa"]
+
+[node name="GrocerySign" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(64, 64)
+texture = ExtResource("1_jt14g")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 25.0
+offset_top = 69.0
+offset_right = 115.0
+offset_bottom = 85.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 8
+text = "Grocery"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(71, 102)
+texture = ExtResource("2_2ijaa")

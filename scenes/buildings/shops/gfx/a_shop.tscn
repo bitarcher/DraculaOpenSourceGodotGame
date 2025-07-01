@@ -1,0 +1,107 @@
+[gd_scene load_steps=7 format=3 uid="uid://b8abbdwe5cu8j"]
+
+[ext_resource type="Texture2D" uid="uid://cynq2m80ng0ov" path="res://assets/sprites/buildings/shops/shop_building.png" id="1_8sild"]
+[ext_resource type="Script" uid="uid://cavgidsnwkb2b" path="res://scenes/buildings/shops/gfx/a_shop.gd" id="1_nldgl"]
+[ext_resource type="Theme" uid="uid://dhrx32e2kxpct" path="res://themes/menu_button_theme.tres" id="3_ws58i"]
+[ext_resource type="Texture2D" uid="uid://bhiaxb7cuq6if" path="res://assets/paper.png" id="4_c14cc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nldgl"]
+size = Vector2(114, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ws58i"]
+size = Vector2(30, 32)
+
+[node name="AShop" type="Node2D"]
+z_index = 1
+script = ExtResource("1_nldgl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(98, 104)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_8sild")
+
+[node name="DoorPolygon2D" type="Polygon2D" parent="."]
+unique_name_in_owner = true
+visible = false
+position = Vector2(-3, 3)
+scale = Vector2(0.7, 0.7)
+color = Color(0, 0, 1, 0.517647)
+polygon = PackedVector2Array(97, 231, 82, 225, 70, 227, 62, 230, 59, 232, 58, 234, 57, 237, 57, 285, 97, 285)
+
+[node name="CameraCenterPointNode2D" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(52, 183.06)
+
+[node name="NearArea2D" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NearArea2D"]
+position = Vector2(49, 167)
+shape = SubResource("RectangleShape2D_nldgl")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = -1
+anchor_right = 0.069
+anchor_bottom = 0.111
+offset_left = 322.0
+offset_top = 470.0
+offset_right = 737.512
+offset_bottom = 559.072
+theme = ExtResource("3_ws58i")
+texture = ExtResource("4_c14cc")
+patch_margin_left = 60
+patch_margin_top = 60
+patch_margin_right = 60
+patch_margin_bottom = 60
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/NinePatchRect/MarginContainer"]
+layout_mode = 2
+
+[node name="QuestionLabel" type="Label" parent="CanvasLayer/NinePatchRect/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "Enter venture ?"
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/NinePatchRect/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 2
+color = Color(0, 0, 0, 0.196078)
+
+[node name="YesButton" type="Button" parent="CanvasLayer/NinePatchRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Yes (y)"
+
+[node name="InFrontOfTTheDoorArea2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InFrontOfTTheDoorArea2D"]
+position = Vector2(52, 190)
+shape = SubResource("RectangleShape2D_ws58i")
+
+[connection signal="body_entered" from="NearArea2D" to="." method="_on_near_area_2d_body_entered"]
+[connection signal="body_exited" from="NearArea2D" to="." method="_on_near_area_2d_body_exited"]
+[connection signal="pressed" from="CanvasLayer/NinePatchRect/MarginContainer/VBoxContainer/YesButton" to="." method="_on_yes_button_pressed"]
+[connection signal="body_entered" from="InFrontOfTTheDoorArea2D" to="." method="_on_in_front_of_t_the_door_area_2d_body_entered"]
+[connection signal="body_exited" from="InFrontOfTTheDoorArea2D" to="." method="_on_in_front_of_t_the_door_area_2d_body_exited"]
