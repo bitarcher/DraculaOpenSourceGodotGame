@@ -30,6 +30,16 @@ enum EnumPlayerCharacter {
 	CAMOUFLAGE
 }
 
+const NUM_OF_TICKS_DELAY_IN_MSEC_FOR_THE_PLAYER_TO_UNBURY_HIMSELF = 10000
+
+signal unbury_timer_started(start_ticks_in_msec: int, end_ticks_in_msec: int)
+signal unbury_timer_progress(current_ticks_in_msec: int)
+signal unbury_timer_stopped()
+
+var _unbury_timer_active: bool = false
+var _unbury_start_time: int = 0
+var _unbury_end_time: int = 0
+
 @export var current_player_character: EnumPlayerCharacter = EnumPlayerCharacter.DEFAULT 
 
 func get_jump_animation() -> String:
@@ -259,9 +269,23 @@ func _physics_process(delta: float) -> void:
 	
 	# Détection d'ensevelissement
 	if is_buried_under_stones():
-		print("Je suis enseveli sous les pierres !")
-		# TODO: Ajoutez ici votre logique de gestion de l'ensevelissement (dégâts, mort, etc.)
-
+		if not _unbury_timer_active:
+			_unbury_timer_active = true
+			_unbury_start_time = Time.get_ticks_msec()
+			_unbury_end_time = _unbury_start_time + NUM_OF_TICKS_DELAY_IN_MSEC_FOR_THE_PLAYER_TO_UNBURY_HIMSELF
+			unbury_timer_started.emit(_unbury_start_time, _unbury_end_time)
+		else:
+			var current_time = Time.get_ticks_msec()
+			unbury_timer_progress.emit(current_time)
+			if current_time >= _unbury_end_time:
+				_unbury_timer_active = false
+				unbury_timer_stopped.emit()
+				GameManagerSingleton.injured(InjuryZone.EnumInjuryZoneType.PHYSICAL, 100000000000000000) # High strength to ensure death
+				
+	else:
+		if _unbury_timer_active:
+			_unbury_timer_active = false
+			unbury_timer_stopped.emit()
 
 func is_buried_under_stones() -> bool:
 	if _jump_positions.size() < 3:

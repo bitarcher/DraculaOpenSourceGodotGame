@@ -7,7 +7,8 @@ enum EnumInjuryZoneType {
 	BEAST,
 	NATURE_ELEMENT,
 	BOSS,
-	PROJECTILE
+	PROJECTILE,
+	PHYSICAL, # burried by stones, can't move while jumping
 }
 
 

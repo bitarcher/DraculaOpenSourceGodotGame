@@ -935,17 +935,14 @@ rotation = 3.90954
 [node name="StoneB4" parent="LandSlide2" instance=ExtResource("28_7sm8c")]
 position = Vector2(2471.14, 69.0756)
 rotation = 0.0872666
-scale = Vector2(1, 1)
 
 [node name="StoneSmallA4" parent="LandSlide2" instance=ExtResource("27_g7r1f")]
 position = Vector2(2487.65, 4.40353)
 rotation = 0.0872666
-scale = Vector2(1, 1)
 
 [node name="StoneSmallF4" parent="LandSlide2" instance=ExtResource("14_5xvng")]
 position = Vector2(2493.07, 80.164)
 rotation = 0.0872666
-scale = Vector2(1, 1)
 
 [node name="Area2DAtTheBeginning" type="Area2D" parent="."]
 collision_mask = 7

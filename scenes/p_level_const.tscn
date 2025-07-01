@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://d062hkuxa4g7y"]
+[gd_scene load_steps=12 format=3 uid="uid://d062hkuxa4g7y"]
 
 [ext_resource type="Script" uid="uid://3c5e38a6a81m" path="res://scripts/p_level_const.gd" id="1_7ibwm"]
 [ext_resource type="PackedScene" uid="uid://c8fgcnhdy6mk2" path="res://scenes/level_ui.tscn" id="2_hlhvv"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://6r4rm2hswvtu" path="res://inventory_and_recipes/user_interface/inventory_dialog/inventory_dialog.tscn" id="9_l4kck"]
 [ext_resource type="PackedScene" uid="uid://d2eutmynpisem" path="res://inventory_and_recipes/user_interface/crafting_dialog/crafting_dialog.tscn" id="10_8l2as"]
 [ext_resource type="PackedScene" uid="uid://cdibv0xhkx6x0" path="res://inventory_and_recipes/user_interface/currently_used_items_ui/currently_used_items_ui.tscn" id="10_l4kck"]
+[ext_resource type="PackedScene" uid="uid://c6wfu2mm3vjsn" path="res://scenes/ui/hurry_up.tscn" id="11_8l2as"]
 
 [node name="LevelConst" type="Node2D" groups=["LevelConst"]]
 script = ExtResource("1_7ibwm")
@@ -34,6 +35,12 @@ offset_left = 888.0
 offset_top = 64.0
 offset_right = 948.224
 offset_bottom = -24.0
+
+[node name="HurryUp" parent="CanvasLayer" instance=ExtResource("11_8l2as")]
+offset_left = 18.0
+offset_top = 123.0
+offset_right = 18.0
+offset_bottom = 123.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_mfnrs")
