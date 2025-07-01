@@ -448,6 +448,12 @@ layer_1/tile_data = PackedInt32Array(-393138, 458754, 1, -458673, 458754, 1, -58
 
 [node name="Coins" type="Node" parent="."]
 
+[node name="Coin" parent="Coins" instance=ExtResource("21_ftles")]
+position = Vector2(2900.1, 230.606)
+
+[node name="Coin2" parent="Coins" instance=ExtResource("21_ftles")]
+position = Vector2(3030.49, 191.657)
+
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Traps" type="Node" parent="."]
@@ -561,12 +567,6 @@ libraries = {
 &"": SubResource("AnimationLibrary_uu5yp")
 }
 autoplay = "move"
-
-[node name="Coin" parent="PlatformDelayed2/AnimationPlayer" instance=ExtResource("21_ftles")]
-position = Vector2(2900.1, 230.606)
-
-[node name="Coin" parent="PlatformDelayed2/AnimationPlayer/Coin" instance=ExtResource("21_ftles")]
-position = Vector2(130.394, -38.9487)
 
 [node name="PlatformDelayed3" parent="." instance=ExtResource("16_igcdu")]
 position = Vector2(4027, -51)

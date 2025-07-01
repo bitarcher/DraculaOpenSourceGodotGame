@@ -5,8 +5,7 @@ AU GAMEOVER, mais c'était peut-être parce que le script associé à LevelConst
 était pas le bon)
 
 les doléances de la directrice artistique :
-
-- 
+- fait un ou deux niveau dark
 
 
 # fait:
