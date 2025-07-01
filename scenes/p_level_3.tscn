@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://dt0scbtd8tmyn"]
+[gd_scene load_steps=39 format=3 uid="uid://dt0scbtd8tmyn"]
 
 [ext_resource type="Script" uid="uid://cxw86a4g0kpj" path="res://scripts/p_level_3.gd" id="1_na31n"]
 [ext_resource type="Texture2D" uid="uid://doyfrmal4p0kn" path="res://assets/clouds/cloud0.png" id="4_egy2r"]
@@ -27,6 +27,7 @@
 [ext_resource type="Material" uid="uid://b4pf2jialba54" path="res://shaders/snowfall_material.tres" id="25_taomf"]
 [ext_resource type="Texture2D" uid="uid://ouajn1bw2ndj" path="res://assets/big_empty_image.png" id="26_eontf"]
 [ext_resource type="AudioStream" uid="uid://birg88m0rtf8n" path="res://assets/sounds/wind-blowing-sfx-12809.mp3" id="27_na31n"]
+[ext_resource type="PackedScene" uid="uid://c7riqes7jl6ee" path="res://scenes/climbable_trees/PineSnow.tscn" id="28_w1tsg"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pfjqn"]
 
@@ -653,5 +654,9 @@ material = ExtResource("25_taomf")
 position = Vector2(213, -584)
 scale = Vector2(2, 2)
 texture = ExtResource("26_eontf")
+
+[node name="PineSnow" parent="." instance=ExtResource("28_w1tsg")]
+position = Vector2(472, -422)
+scale = Vector2(0.5, 0.5)
 
 [connection signal="finished" from="WindAudioStreamPlayer" to="." method="_on_wind_audio_stream_player_finished"]

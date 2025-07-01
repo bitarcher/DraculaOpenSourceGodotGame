@@ -104,6 +104,7 @@ height = 144.0
 size = Vector2(18, 18.5)
 
 [node name="Bat" type="CharacterBody2D"]
+z_index = 4
 collision_layer = 32
 collision_mask = 0
 script = ExtResource("1_vjjhm")
