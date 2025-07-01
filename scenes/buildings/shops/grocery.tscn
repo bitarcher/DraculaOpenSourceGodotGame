@@ -1,10 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://dxmpu8aqekhut"]
+[gd_scene load_steps=4 format=3 uid="uid://dxmpu8aqekhut"]
 
 [ext_resource type="PackedScene" uid="uid://b8abbdwe5cu8j" path="res://scenes/buildings/shops/gfx/a_shop.tscn" id="1_c3q1f"]
 [ext_resource type="PackedScene" uid="uid://dmgokqw4tgshj" path="res://scenes/buildings/shops/gfx/grocery_sign.tscn" id="2_2xgk1"]
 
-[node name="AShop" instance=ExtResource("1_c3q1f")]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2xgk1"]
+size = Vector2(54, 20)
+
+[node name="Grocery" instance=ExtResource("1_c3q1f")]
 
 [node name="GrocerySign" parent="." index="6" instance=ExtResource("2_2xgk1")]
 position = Vector2(194, 96)
 scale = Vector2(0.4, 0.4)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." index="10"]
+position = Vector2(218, 117)
+shape = SubResource("RectangleShape2D_2xgk1")
+one_way_collision = true

@@ -1,5 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://51u03cbqosgm"]
+[gd_scene load_steps=3 format=3 uid="uid://51u03cbqosgm"]
 
 [ext_resource type="PackedScene" uid="uid://b8abbdwe5cu8j" path="res://scenes/buildings/shops/gfx/a_shop.tscn" id="1_7nnne"]
+[ext_resource type="PackedScene" uid="uid://bpch4heyc6fwa" path="res://scenes/buildings/shops/gfx/apothecary_sign.tscn" id="2_6220t"]
 
-[node name="AShop" instance=ExtResource("1_7nnne")]
+[node name="Apothecary" instance=ExtResource("1_7nnne")]
+shop_type = 2
+
+[node name="ApothecarySign" parent="." index="6" instance=ExtResource("2_6220t")]
+z_index = 15
+offset_left = 61.0
+offset_top = 103.0
+offset_right = 61.0
+offset_bottom = 103.0
+scale = Vector2(0.4, 0.4)

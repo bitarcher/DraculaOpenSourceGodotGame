@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7riqes7jl6ee"]
+
+[ext_resource type="PackedScene" uid="uid://0kdj5lfh7hsj" path="res://scenes/climbable_trees/Pine.tscn" id="1_j8gi1"]
+[ext_resource type="Texture2D" uid="uid://bmg2hlhw7vhbi" path="res://assets/sprites/trees/pine/Tree-PineSnow04.png" id="2_88tv2"]
+
+[node name="PineSnow" instance=ExtResource("1_j8gi1")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_88tv2")

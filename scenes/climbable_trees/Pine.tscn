@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://0kdj5lfh7hsj"]
+
+[ext_resource type="Texture2D" uid="uid://ciaicprc1paem" path="res://assets/sprites/trees/pine/Tree-Pine04.png" id="1_r03sn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h5omd"]
+size = Vector2(69.3262, 19.0871)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f64iv"]
+size = Vector2(41, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8q2f0"]
+size = Vector2(28.5566, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qslr5"]
+size = Vector2(37.1045, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_apeur"]
+size = Vector2(42, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rnfns"]
+size = Vector2(23, 20)
+
+[node name="Pine" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_r03sn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(24.1761, 88.3134)
+rotation = 0.560251
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_h5omd")
+one_way_collision = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-19, 63)
+rotation = -0.225147
+shape = SubResource("RectangleShape2D_f64iv")
+one_way_collision = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(14, 47)
+rotation = 0.111701
+shape = SubResource("RectangleShape2D_8q2f0")
+one_way_collision = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(-17.5488, 30.0616)
+rotation = -0.111701
+shape = SubResource("RectangleShape2D_qslr5")
+one_way_collision = true
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 0)
+shape = SubResource("RectangleShape2D_apeur")
+one_way_collision = true
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
+position = Vector2(-4.5, -24)
+shape = SubResource("RectangleShape2D_rnfns")
+one_way_collision = true

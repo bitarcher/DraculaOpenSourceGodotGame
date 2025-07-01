@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b8abbdwe5cu8j"]
+[gd_scene load_steps=8 format=3 uid="uid://b8abbdwe5cu8j"]
 
 [ext_resource type="Texture2D" uid="uid://cynq2m80ng0ov" path="res://assets/sprites/buildings/shops/shop_building.png" id="1_8sild"]
 [ext_resource type="Script" uid="uid://cavgidsnwkb2b" path="res://scenes/buildings/shops/gfx/a_shop.gd" id="1_nldgl"]
@@ -11,8 +11,12 @@ size = Vector2(114, 80)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ws58i"]
 size = Vector2(30, 32)
 
-[node name="AShop" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c14cc"]
+size = Vector2(187, 14)
+
+[node name="AShop" type="StaticBody2D"]
 z_index = 1
+collision_mask = 2
 script = ExtResource("1_nldgl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -99,6 +103,19 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InFrontOfTTheDoorArea2D"]
 position = Vector2(52, 190)
 shape = SubResource("RectangleShape2D_ws58i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(97.5, 131)
+shape = SubResource("RectangleShape2D_c14cc")
+one_way_collision = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(94, 65, 79, 77, 82, 105, 105, 106, 107, 78)
+one_way_collision = true
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(60, 35, 60, 11, 78, 11, 79, 32, 140, 32, 142, 2, 161, 2, 161, 32, 196, 32, 195, 56, 0, 56, 0, 33)
+one_way_collision = true
 
 [connection signal="body_entered" from="NearArea2D" to="." method="_on_near_area_2d_body_entered"]
 [connection signal="body_exited" from="NearArea2D" to="." method="_on_near_area_2d_body_exited"]

@@ -1,5 +1,5 @@
 class_name AShop
-extends Node2D
+extends StaticBody2D
 
 @onready var question_label: Label = %QuestionLabel
 

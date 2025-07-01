@@ -25,8 +25,9 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 - bow:  OpenClipart-Vectors, https://pixabay.com/vectors/archery-arrow-bow-quiver-weapon-2028031/
 - arrows: freepik, https://www.freepik.com/free-vector/set-ethnic-colored-arrows_1075319.htm#fromView=search&page=1&position=42&uuid=de04ab92-30b3-40de-b465-c583f412066f&query=knight+Arrow
 - medieval house sprite: https://stablediffusionweb.com/fr/image/34473023-medieval-house-sprites
+- pine trees: KnoblePersona, https://opengameart.org/content/pine-tree-pack
 
-*Assets*
+*Assets pack*
 
 - moon graveyard: https://anokolisa.itch.io/moon-graveyard
 
