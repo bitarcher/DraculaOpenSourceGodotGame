@@ -120,17 +120,39 @@ func _on_victory_against_dracula_displayed(level_const: LevelConst, maybe_saving
 	level_const.player_name_entered.connect(_on_level_const_player_name_entered.bind(level_const, maybe_saving_player_context))
 	level_const.show_enter_player_name()
 
+var _scene_before_shop: Node
+
+func _on_inside_shop_exited(emiter: InsideShop) -> void:
+	if _scene_before_shop:
+		_scene_before_shop.process_mode = Node.PROCESS_MODE_INHERIT
+	
+	if emiter:
+		emiter.queue_free()
+
+	_scene_before_shop = null
+	
+	var camera = ToolsSingleton.get_player_platformer_camera_2D()
+	var player_platformer = ToolsSingleton.get_player_platformer()
+	assert(camera != null)
+	
+	var tween = create_tween()
+	tween.tween_property(camera, "zoom", Vector2(4, 4), 1.3)
+	var tween2 = create_tween()
+	tween2.tween_property(player_platformer, "modulate", Color.WHITE, 1)
+	
+
 func _enter_shop_now(shop: AShop) -> void:
 	
 	var inside_shop_scene = load("res://scenes/buildings/shops/gfx/inside_shop.tscn")
 	var inside_shop_instance: InsideShop = inside_shop_scene.instantiate()
 	
-	var current_scene = get_tree().current_scene
-	if current_scene:
-		current_scene.process_mode = Node.PROCESS_MODE_DISABLED
+	_scene_before_shop = get_tree().current_scene
+	if _scene_before_shop:
+		_scene_before_shop.process_mode = Node.PROCESS_MODE_DISABLED
 		
 	get_tree().root.add_child(inside_shop_instance)
 	inside_shop_instance.shop = shop
+	inside_shop_instance.inside_shop_exited.connect(_on_inside_shop_exited)
 
 func enter_shop(shop: AShop) -> void:
 	var camera = ToolsSingleton.get_player_platformer_camera_2D()

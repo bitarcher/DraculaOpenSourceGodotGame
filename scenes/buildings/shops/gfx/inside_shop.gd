@@ -11,19 +11,30 @@ signal inside_shop_exited(emiter: InsideShop)
 @onready var door_animation_player: AnimationPlayer = %DoorAnimationPlayer
 @onready var door_audio_stream_player: AudioStreamPlayer = %DoorAudioStreamPlayer
 
+var _shop_type: AShop.EnumShopType = AShop.EnumShopType.GROCERY
+
+@export var shop_type: AShop.EnumShopType:
+	set(value):
+		_shop_type = value
+	get():
+		return _shop_type
+
 @export var shop: AShop:
 	set(value):
 		_shop = value
-		if value != null:
-			match value.shop_type:
-				AShop.EnumShopType.BLACKSMITH:
-					front_of_shop_and_door_node_2d_container.scale.x = -1
-				_:
-					front_of_shop_and_door_node_2d_container.scale.x = 1
+		shop_type = value.shop_type
 		
 	get():
 		return _shop
 
+func _process(delta: float) -> void:
+	match _shop_type:
+		AShop.EnumShopType.BLACKSMITH:
+			front_of_shop_and_door_node_2d_container.scale.x = -1
+			front_of_shop_and_door_node_2d_container.position.x = 1152
+		_:
+			front_of_shop_and_door_node_2d_container.scale.x = 1
+			front_of_shop_and_door_node_2d_container.position.x = 0
 
 func show_menu():
 	nine_patch_rect.visible = true
