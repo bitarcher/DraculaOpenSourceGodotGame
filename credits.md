@@ -44,6 +44,8 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 - one-thousand-years-ago-victorian-gothic-piano-music-loopable-241137: JoelFazhari https://pixabay.com/fr/music/classique-moderne-one-thousand-years-ago-victorian-gothic-piano-music-loopable-241137/
 - night-dies-with-us-gothic-and-vampiric-piano-music-247462 : JoelFazhari https://pixabay.com/fr/music/classique-moderne-night-dies-with-us-gothic-and-vampiric-piano-music-247462/
 - psychedelik rok : Leandro Sarno Leandro (leandro73baldocchi), https://pixabay.com/fr/music/roche-psychedelic-rock-108787/
+- relaxing jazz (for inside shops) : Denis-Pavlov-Music, https://pixabay.com/fr/music/jazz-traditionnel-relaxing-jazz-podcast-coffee-shop-music-192283/
+
 
 *Audios*
 
@@ -69,7 +71,7 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 - arrow swish: DjartMusic, https://pixabay.com/fr/sound-effects/arrow-swish-03-306040/
 - arrow impact: DennisH18, https://pixabay.com/fr/sound-effects/arrow-wood-impact-146418/
 - bow loading:  EminYILDIRIM, freesound_community,  https://pixabay.com/fr/sound-effects/bow-loading-38752/
-
+- door: Zeinel, https://pixabay.com/fr/sound-effects/door-43633/
 
 pixabay licensing rules: https://pixabay.com/fr/service/license-summary/
 

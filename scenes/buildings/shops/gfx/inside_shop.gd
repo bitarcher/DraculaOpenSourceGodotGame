@@ -3,6 +3,13 @@ class_name InsideShop
 
 var _shop: AShop
 @onready var front_of_shop_and_door_node_2d_container: Node2D = %FrontOfShopAndDoorNode2DContainer
+@onready var nine_patch_rect: NinePatchRect = %NinePatchRect
+
+signal inside_shop_exited(emiter: InsideShop)
+@onready var background_animation_player: AnimationPlayer = %BackgroundAnimationPlayer
+@onready var front_of_shop_animation_player: AnimationPlayer = %FrontOfShopAnimationPlayer
+@onready var door_animation_player: AnimationPlayer = %DoorAnimationPlayer
+@onready var door_audio_stream_player: AudioStreamPlayer = %DoorAudioStreamPlayer
 
 @export var shop: AShop:
 	set(value):
@@ -17,11 +24,18 @@ var _shop: AShop
 	get():
 		return _shop
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+
+func show_menu():
+	nine_patch_rect.visible = true
+
+func hide_menu():
+	nine_patch_rect.visible = false
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_exit_button_pressed() -> void:
+	door_audio_stream_player.play()
+	background_animation_player.play_backwards("zoom")
+	front_of_shop_animation_player.play_backwards("zoom")
+	door_animation_player.play_backwards("open_door")
+	await background_animation_player.animation_finished
+	inside_shop_exited.emit(self)

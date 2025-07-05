@@ -1,37 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://iiw0kgvo7tot"]
+[gd_scene load_steps=18 format=3 uid="uid://iiw0kgvo7tot"]
 
 [ext_resource type="Script" uid="uid://bhtib75jo0ffq" path="res://scenes/buildings/shops/gfx/inside_shop.gd" id="1_h6s73"]
 [ext_resource type="Texture2D" uid="uid://dkqv3j7whxs1n" path="res://assets/sprites/buildings/shops/backgrounds/blacksmith_2.png" id="2_0mjko"]
 [ext_resource type="Texture2D" uid="uid://ct1usowobmuf6" path="res://assets/sprites/buildings/shops/front_of_shop.png" id="2_ap4v8"]
 [ext_resource type="Texture2D" uid="uid://bsqo40msb1nf7" path="res://assets/sprites/buildings/shops/door_alone.png" id="3_0mjko"]
-
-[sub_resource type="Animation" id="Animation_g4jxx"]
-resource_name = "zoom"
-length = 1.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(592, 395), Vector2(575, 253)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0.5, 0.5), Vector2(1.3, 1.3)]
-}
+[ext_resource type="Theme" uid="uid://dhrx32e2kxpct" path="res://themes/menu_button_theme.tres" id="5_xxrqf"]
+[ext_resource type="Texture2D" uid="uid://bhiaxb7cuq6if" path="res://assets/paper.png" id="6_yuac5"]
+[ext_resource type="AudioStream" uid="uid://da6y6sch6366c" path="res://assets/sounds/door-43633.mp3" id="7_yuac5"]
+[ext_resource type="AudioStream" uid="uid://s6ognxt1mqms" path="res://assets/music/relaxing-jazz-podcast-coffee-shop-music-192283.mp3" id="8_g4jxx"]
 
 [sub_resource type="Animation" id="Animation_fd0t2"]
 length = 0.001
@@ -60,10 +36,82 @@ tracks/1/keys = {
 "values": [Vector2(0.5, 0.5)]
 }
 
+[sub_resource type="Animation" id="Animation_g4jxx"]
+resource_name = "zoom"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(592, 395), Vector2(575, 253)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(1.3, 1.3)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.73333, 1.86667),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"hide_menu"
+}, {
+"args": [],
+"method": &"show_menu"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_y0es0"]
 _data = {
 &"RESET": SubResource("Animation_fd0t2"),
 &"zoom": SubResource("Animation_g4jxx")
+}
+
+[sub_resource type="Animation" id="Animation_yuac5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_xxrqf"]
@@ -94,7 +142,13 @@ tracks/1/keys = {
 "values": [Vector2(0, 0), Vector2(-1735, -1158)]
 }
 
-[sub_resource type="Animation" id="Animation_yuac5"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g4jxx"]
+_data = {
+&"RESET": SubResource("Animation_yuac5"),
+&"zoom": SubResource("Animation_xxrqf")
+}
+
+[sub_resource type="Animation" id="Animation_0mjko"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -106,7 +160,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1, 1)]
+"values": [Vector2(8.1, 8.1)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -118,13 +172,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_g4jxx"]
-_data = {
-&"RESET": SubResource("Animation_yuac5"),
-&"zoom": SubResource("Animation_xxrqf")
+"values": [Vector2(578, 401)]
 }
 
 [sub_resource type="Animation" id="Animation_ap4v8"]
@@ -155,33 +203,6 @@ tracks/1/keys = {
 "values": [Vector2(578, 401), Vector2(800, 401)]
 }
 
-[sub_resource type="Animation" id="Animation_0mjko"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(8.1, 8.1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(578, 401)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xxrqf"]
 _data = {
 &"RESET": SubResource("Animation_0mjko"),
@@ -198,7 +219,8 @@ position = Vector2(592, 395)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_0mjko")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/BackgroundSprite2D"]
+[node name="BackgroundAnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/BackgroundSprite2D"]
+unique_name_in_owner = true
 libraries = {
 &"": SubResource("AnimationLibrary_y0es0")
 }
@@ -209,7 +231,8 @@ unique_name_in_owner = true
 
 [node name="FrontOfShopAndDoorNode2D" type="Node2D" parent="CanvasLayer/FrontOfShopAndDoorNode2DContainer"]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/FrontOfShopAndDoorNode2DContainer/FrontOfShopAndDoorNode2D"]
+[node name="FrontOfShopAnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/FrontOfShopAndDoorNode2DContainer/FrontOfShopAndDoorNode2D"]
+unique_name_in_owner = true
 libraries = {
 &"": SubResource("AnimationLibrary_g4jxx")
 }
@@ -220,7 +243,8 @@ position = Vector2(578, 401)
 scale = Vector2(8.1, 8.1)
 texture = ExtResource("3_0mjko")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/FrontOfShopAndDoorNode2DContainer/FrontOfShopAndDoorNode2D/DoorSprite2D"]
+[node name="DoorAnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/FrontOfShopAndDoorNode2DContainer/FrontOfShopAndDoorNode2D/DoorSprite2D"]
+unique_name_in_owner = true
 libraries = {
 &"": SubResource("AnimationLibrary_xxrqf")
 }
@@ -230,3 +254,91 @@ autoplay = "open_door"
 position = Vector2(574.5, 328.5)
 scale = Vector2(8.1, 8.1)
 texture = ExtResource("2_ap4v8")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = -1
+anchor_right = 0.069
+anchor_bottom = 0.111
+offset_left = 512.0
+offset_top = 346.0
+offset_right = 1074.51
+offset_bottom = 536.072
+theme = ExtResource("5_xxrqf")
+texture = ExtResource("6_yuac5")
+patch_margin_left = 60
+patch_margin_top = 60
+patch_margin_right = 60
+patch_margin_bottom = 60
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/NinePatchRect/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/NinePatchRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "Vendor: Hello, how can I help you?"
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/NinePatchRect/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 2
+color = Color(0, 0, 0, 0.196078)
+
+[node name="Label2" type="Label" parent="CanvasLayer/NinePatchRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+
+[node name="Label3" type="Label" parent="CanvasLayer/NinePatchRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "Player: "
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/NinePatchRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 114
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/NinePatchRect/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="BuyButton" type="Button" parent="CanvasLayer/NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "1) I want to buy stuff"
+alignment = 0
+
+[node name="SellButton" type="Button" parent="CanvasLayer/NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "2) I want to sell stuff"
+alignment = 0
+
+[node name="ExitButton" type="Button" parent="CanvasLayer/NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "3) I have to go now!"
+alignment = 0
+
+[node name="DoorAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("7_yuac5")
+autoplay = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_g4jxx")
+autoplay = true
+parameters/looping = true
+
+[connection signal="pressed" from="CanvasLayer/NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
