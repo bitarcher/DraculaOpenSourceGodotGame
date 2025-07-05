@@ -134,11 +134,14 @@ func _enter_shop_now(shop: AShop) -> void:
 
 func enter_shop(shop: AShop) -> void:
 	var camera = ToolsSingleton.get_player_platformer_camera_2D()
-	
+	var player_platformer = ToolsSingleton.get_player_platformer()
 	assert(camera != null)
 	
 	var tween = create_tween()
-	tween.tween_property(camera, "zoom", Vector2(13, 13), 2)
+	tween.tween_property(camera, "zoom", Vector2(10, 10), 1.3)
+	var tween2 = create_tween()
+	tween2.tween_property(player_platformer, "modulate", Color.TRANSPARENT, 1)
+	
 	await tween.finished
 	print("entered in shop")
 	
