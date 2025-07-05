@@ -86,6 +86,18 @@ func get_player_platformer() -> PlayerPlatformer:
 		print("no PlayerPlatformer found")
 		return null
 		
+func get_player_platformer_camera_2D() -> Camera2D:
+	var player = get_player_platformer()
+	
+	if player == null:
+		return null
+	
+	for child in player.get_children():
+		if child is Camera2D:
+			return child
+	
+	return null
+		
 func is_body_relative_to_player(body: Node2D) -> bool:
 	
 	return body  is PlayerPlatformer

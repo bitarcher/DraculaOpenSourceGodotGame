@@ -1,343 +1,343 @@
 [gd_resource type="Resource" script_class="SavedGame" load_steps=70 format=3]
 
-[ext_resource type="Script" path="res://scripts/persist/saved_data.gd" id="1_s0uye"]
-[ext_resource type="Script" path="res://scripts/persist/trap_saved_data.gd" id="3_wg0a7"]
-[ext_resource type="Script" path="res://scripts/persist/slime_enemy_saved_data.gd" id="4_kth4n"]
-[ext_resource type="Script" path="res://scripts/persist/currently_used_item_saved_data.gd" id="5_62fp6"]
-[ext_resource type="Script" path="res://inventory_and_recipes/model/item.gd" id="6_p724h"]
-[ext_resource type="Script" path="res://scripts/persist/player_platformer_saved_data.gd" id="7_yxken"]
-[ext_resource type="Script" path="res://scripts/persist/saved_game.gd" id="8_bmlv7"]
+[ext_resource type="Script" path="res://scripts/persist/saved_data.gd" id="1_ovts1"]
+[ext_resource type="Script" path="res://scripts/persist/trap_saved_data.gd" id="2_s0uye"]
+[ext_resource type="Script" path="res://scripts/persist/slime_enemy_saved_data.gd" id="3_y5jvc"]
+[ext_resource type="Script" path="res://scripts/persist/currently_used_item_saved_data.gd" id="4_wg0a7"]
+[ext_resource type="Script" path="res://inventory_and_recipes/model/item.gd" id="5_kth4n"]
+[ext_resource type="Script" path="res://scripts/persist/player_platformer_saved_data.gd" id="6_62fp6"]
+[ext_resource type="Script" path="res://scripts/persist/saved_game.gd" id="7_p724h"]
 
-[sub_resource type="Resource" id="Resource_ovts1"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_yxken"]
+script = ExtResource("1_ovts1")
 position = Vector2(-98, -28)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_s0uye"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_bmlv7"]
+script = ExtResource("1_ovts1")
 position = Vector2(-340, -95)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_y5jvc"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_l4488"]
+script = ExtResource("1_ovts1")
 position = Vector2(615, -58)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_wg0a7"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_kcjkb"]
+script = ExtResource("1_ovts1")
 position = Vector2(9, -253)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_kth4n"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_le0g5"]
+script = ExtResource("1_ovts1")
 position = Vector2(322, -174)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_62fp6"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_70mnr"]
+script = ExtResource("1_ovts1")
 position = Vector2(564, -181)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_p724h"]
-script = ExtResource("3_wg0a7")
+[sub_resource type="Resource" id="Resource_ri03i"]
+script = ExtResource("2_s0uye")
 consumed = false
 position = Vector2(-54, -242)
 scene_path = "res://scenes/trap.tscn"
 
-[sub_resource type="Resource" id="Resource_yxken"]
-script = ExtResource("3_wg0a7")
+[sub_resource type="Resource" id="Resource_7n2nk"]
+script = ExtResource("2_s0uye")
 consumed = false
 position = Vector2(506, -62)
 scene_path = "res://scenes/trap.tscn"
 
-[sub_resource type="Resource" id="Resource_bmlv7"]
-script = ExtResource("3_wg0a7")
+[sub_resource type="Resource" id="Resource_oa0kt"]
+script = ExtResource("2_s0uye")
 consumed = false
 position = Vector2(429, -103)
 scene_path = "res://scenes/trap.tscn"
 
-[sub_resource type="Resource" id="Resource_l4488"]
-script = ExtResource("3_wg0a7")
+[sub_resource type="Resource" id="Resource_56h6r"]
+script = ExtResource("2_s0uye")
 consumed = false
 position = Vector2(-97, -262)
 scene_path = "res://scenes/trap.tscn"
 
-[sub_resource type="Resource" id="Resource_kcjkb"]
-script = ExtResource("3_wg0a7")
+[sub_resource type="Resource" id="Resource_1m5yl"]
+script = ExtResource("2_s0uye")
 consumed = false
 position = Vector2(-142, -285)
 scene_path = "res://scenes/trap.tscn"
 
-[sub_resource type="Resource" id="Resource_le0g5"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_uk4s6"]
+script = ExtResource("1_ovts1")
 position = Vector2(-340, -366)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_70mnr"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_vnpuv"]
+script = ExtResource("1_ovts1")
 position = Vector2(-340, -382)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_ri03i"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_x21a1"]
+script = ExtResource("1_ovts1")
 position = Vector2(-340, -398)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_7n2nk"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_b72gn"]
+script = ExtResource("1_ovts1")
 position = Vector2(-340, -414)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_oa0kt"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_xtq0e"]
+script = ExtResource("1_ovts1")
 position = Vector2(-340, -430)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_56h6r"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_x47m2"]
+script = ExtResource("1_ovts1")
 position = Vector2(-340, -446)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_1m5yl"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_b11eu"]
+script = ExtResource("1_ovts1")
 position = Vector2(-324, -367)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_uk4s6"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_0dhtm"]
+script = ExtResource("1_ovts1")
 position = Vector2(-324, -383)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_vnpuv"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_bwbp8"]
+script = ExtResource("1_ovts1")
 position = Vector2(-324, -399)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_x21a1"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_4yles"]
+script = ExtResource("1_ovts1")
 position = Vector2(-324, -415)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_b72gn"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_luk6w"]
+script = ExtResource("1_ovts1")
 position = Vector2(-324, -431)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_xtq0e"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_g6di6"]
+script = ExtResource("1_ovts1")
 position = Vector2(-324, -447)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_x47m2"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_gxir8"]
+script = ExtResource("1_ovts1")
 position = Vector2(-307, -367)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_b11eu"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_xh4q2"]
+script = ExtResource("1_ovts1")
 position = Vector2(-307, -383)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_0dhtm"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_g4dra"]
+script = ExtResource("1_ovts1")
 position = Vector2(-307, -399)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_bwbp8"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_8l3q3"]
+script = ExtResource("1_ovts1")
 position = Vector2(-307, -415)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_4yles"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_b2m5b"]
+script = ExtResource("1_ovts1")
 position = Vector2(-307, -431)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_luk6w"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_nxwjf"]
+script = ExtResource("1_ovts1")
 position = Vector2(-307, -447)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_g6di6"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_ofljg"]
+script = ExtResource("1_ovts1")
 position = Vector2(-290, -367)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_gxir8"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_qhjm5"]
+script = ExtResource("1_ovts1")
 position = Vector2(-290, -383)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_xh4q2"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_i1ge8"]
+script = ExtResource("1_ovts1")
 position = Vector2(-290, -399)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_g4dra"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_e0215"]
+script = ExtResource("1_ovts1")
 position = Vector2(-290, -415)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_8l3q3"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_jo48r"]
+script = ExtResource("1_ovts1")
 position = Vector2(-290, -431)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_b2m5b"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_p8yff"]
+script = ExtResource("1_ovts1")
 position = Vector2(-290, -447)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_nxwjf"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_2mjxg"]
+script = ExtResource("1_ovts1")
 position = Vector2(-274, -376)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_ofljg"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_p8n6d"]
+script = ExtResource("1_ovts1")
 position = Vector2(-274, -392)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_qhjm5"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_gjgl2"]
+script = ExtResource("1_ovts1")
 position = Vector2(-274, -408)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_i1ge8"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_ajldq"]
+script = ExtResource("1_ovts1")
 position = Vector2(-274, -424)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_e0215"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_ocus5"]
+script = ExtResource("1_ovts1")
 position = Vector2(-274, -440)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_jo48r"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_72tji"]
+script = ExtResource("1_ovts1")
 position = Vector2(-274, -456)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_p8yff"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_j1txa"]
+script = ExtResource("1_ovts1")
 position = Vector2(-256, -385)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_2mjxg"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_63whr"]
+script = ExtResource("1_ovts1")
 position = Vector2(-256, -401)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_p8n6d"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_jvusq"]
+script = ExtResource("1_ovts1")
 position = Vector2(-256, -417)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_gjgl2"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_r4wny"]
+script = ExtResource("1_ovts1")
 position = Vector2(-256, -433)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_ajldq"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_0y6i0"]
+script = ExtResource("1_ovts1")
 position = Vector2(-256, -449)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_ocus5"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_dqy6q"]
+script = ExtResource("1_ovts1")
 position = Vector2(-256, -465)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_72tji"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_cltoa"]
+script = ExtResource("1_ovts1")
 position = Vector2(-238, -395)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_j1txa"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_yi0ga"]
+script = ExtResource("1_ovts1")
 position = Vector2(-238, -411)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_63whr"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_bl7ou"]
+script = ExtResource("1_ovts1")
 position = Vector2(-238, -427)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_jvusq"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_o5ta6"]
+script = ExtResource("1_ovts1")
 position = Vector2(-238, -443)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_r4wny"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_b1vjx"]
+script = ExtResource("1_ovts1")
 position = Vector2(-238, -459)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_0y6i0"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_gbjtg"]
+script = ExtResource("1_ovts1")
 position = Vector2(-238, -475)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_dqy6q"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_l4f6b"]
+script = ExtResource("1_ovts1")
 position = Vector2(-222, -398)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_cltoa"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_87brk"]
+script = ExtResource("1_ovts1")
 position = Vector2(-222, -414)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_yi0ga"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_dcgy8"]
+script = ExtResource("1_ovts1")
 position = Vector2(-222, -430)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_bl7ou"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_c51pb"]
+script = ExtResource("1_ovts1")
 position = Vector2(-222, -446)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_o5ta6"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_ox1kh"]
+script = ExtResource("1_ovts1")
 position = Vector2(-222, -462)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_b1vjx"]
-script = ExtResource("1_s0uye")
+[sub_resource type="Resource" id="Resource_7dmdo"]
+script = ExtResource("1_ovts1")
 position = Vector2(-222, -478)
 scene_path = "res://scenes/coin.tscn"
 
-[sub_resource type="Resource" id="Resource_gbjtg"]
-script = ExtResource("4_kth4n")
-direction = 1
-flip_h = false
+[sub_resource type="Resource" id="Resource_6vycp"]
+script = ExtResource("3_y5jvc")
+direction = -1
+flip_h = true
 health = 100.0
-position = Vector2(915.823, -20)
+position = Vector2(951.066, -20)
 scene_path = "res://scenes/slime_enemy.tscn"
 
-[sub_resource type="Resource" id="Resource_l4f6b"]
-script = ExtResource("4_kth4n")
+[sub_resource type="Resource" id="Resource_4y8tn"]
+script = ExtResource("3_y5jvc")
 direction = 0
 flip_h = false
 health = 0.0
 position = Vector2(-61, -19)
 scene_path = "res://scenes/healing_vial.tscn"
 
-[sub_resource type="Resource" id="Resource_87brk"]
-script = ExtResource("7_yxken")
-num_of_lives = 3
+[sub_resource type="Resource" id="Resource_n4g5a"]
+script = ExtResource("6_62fp6")
+num_of_lives = 5
 health = 100.0
 num_of_coins = 0
-level_start_ticks = 8138
+level_start_ticks = 44138
 num_of_coins_before_killed = 0
-pause_ticks = 140925
-inventory_items = Array[ExtResource("6_p724h")]([])
-currently_used_items_saved_data = Array[ExtResource("5_62fp6")]([])
+pause_ticks = 286713
+inventory_items = Array[ExtResource("5_kth4n")]([])
+currently_used_items_saved_data = Array[ExtResource("4_wg0a7")]([])
 position = Vector2(284, 43.9917)
 scene_path = ""
 
 [resource]
-script = ExtResource("8_bmlv7")
+script = ExtResource("7_p724h")
 current_level = 1
-saved_datas = Array[ExtResource("1_s0uye")]([SubResource("Resource_ovts1"), SubResource("Resource_s0uye"), SubResource("Resource_y5jvc"), SubResource("Resource_wg0a7"), SubResource("Resource_kth4n"), SubResource("Resource_62fp6"), SubResource("Resource_p724h"), SubResource("Resource_yxken"), SubResource("Resource_bmlv7"), SubResource("Resource_l4488"), SubResource("Resource_kcjkb"), SubResource("Resource_le0g5"), SubResource("Resource_70mnr"), SubResource("Resource_ri03i"), SubResource("Resource_7n2nk"), SubResource("Resource_oa0kt"), SubResource("Resource_56h6r"), SubResource("Resource_1m5yl"), SubResource("Resource_uk4s6"), SubResource("Resource_vnpuv"), SubResource("Resource_x21a1"), SubResource("Resource_b72gn"), SubResource("Resource_xtq0e"), SubResource("Resource_x47m2"), SubResource("Resource_b11eu"), SubResource("Resource_0dhtm"), SubResource("Resource_bwbp8"), SubResource("Resource_4yles"), SubResource("Resource_luk6w"), SubResource("Resource_g6di6"), SubResource("Resource_gxir8"), SubResource("Resource_xh4q2"), SubResource("Resource_g4dra"), SubResource("Resource_8l3q3"), SubResource("Resource_b2m5b"), SubResource("Resource_nxwjf"), SubResource("Resource_ofljg"), SubResource("Resource_qhjm5"), SubResource("Resource_i1ge8"), SubResource("Resource_e0215"), SubResource("Resource_jo48r"), SubResource("Resource_p8yff"), SubResource("Resource_2mjxg"), SubResource("Resource_p8n6d"), SubResource("Resource_gjgl2"), SubResource("Resource_ajldq"), SubResource("Resource_ocus5"), SubResource("Resource_72tji"), SubResource("Resource_j1txa"), SubResource("Resource_63whr"), SubResource("Resource_jvusq"), SubResource("Resource_r4wny"), SubResource("Resource_0y6i0"), SubResource("Resource_dqy6q"), SubResource("Resource_cltoa"), SubResource("Resource_yi0ga"), SubResource("Resource_bl7ou"), SubResource("Resource_o5ta6"), SubResource("Resource_b1vjx"), SubResource("Resource_gbjtg"), SubResource("Resource_l4f6b"), SubResource("Resource_87brk")])
+saved_datas = Array[ExtResource("1_ovts1")]([SubResource("Resource_yxken"), SubResource("Resource_bmlv7"), SubResource("Resource_l4488"), SubResource("Resource_kcjkb"), SubResource("Resource_le0g5"), SubResource("Resource_70mnr"), SubResource("Resource_ri03i"), SubResource("Resource_7n2nk"), SubResource("Resource_oa0kt"), SubResource("Resource_56h6r"), SubResource("Resource_1m5yl"), SubResource("Resource_uk4s6"), SubResource("Resource_vnpuv"), SubResource("Resource_x21a1"), SubResource("Resource_b72gn"), SubResource("Resource_xtq0e"), SubResource("Resource_x47m2"), SubResource("Resource_b11eu"), SubResource("Resource_0dhtm"), SubResource("Resource_bwbp8"), SubResource("Resource_4yles"), SubResource("Resource_luk6w"), SubResource("Resource_g6di6"), SubResource("Resource_gxir8"), SubResource("Resource_xh4q2"), SubResource("Resource_g4dra"), SubResource("Resource_8l3q3"), SubResource("Resource_b2m5b"), SubResource("Resource_nxwjf"), SubResource("Resource_ofljg"), SubResource("Resource_qhjm5"), SubResource("Resource_i1ge8"), SubResource("Resource_e0215"), SubResource("Resource_jo48r"), SubResource("Resource_p8yff"), SubResource("Resource_2mjxg"), SubResource("Resource_p8n6d"), SubResource("Resource_gjgl2"), SubResource("Resource_ajldq"), SubResource("Resource_ocus5"), SubResource("Resource_72tji"), SubResource("Resource_j1txa"), SubResource("Resource_63whr"), SubResource("Resource_jvusq"), SubResource("Resource_r4wny"), SubResource("Resource_0y6i0"), SubResource("Resource_dqy6q"), SubResource("Resource_cltoa"), SubResource("Resource_yi0ga"), SubResource("Resource_bl7ou"), SubResource("Resource_o5ta6"), SubResource("Resource_b1vjx"), SubResource("Resource_gbjtg"), SubResource("Resource_l4f6b"), SubResource("Resource_87brk"), SubResource("Resource_dcgy8"), SubResource("Resource_c51pb"), SubResource("Resource_ox1kh"), SubResource("Resource_7dmdo"), SubResource("Resource_6vycp"), SubResource("Resource_4y8tn"), SubResource("Resource_n4g5a")])

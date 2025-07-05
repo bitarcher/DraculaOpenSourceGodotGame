@@ -28,7 +28,6 @@ texture = ExtResource("1_r03sn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(24.1761, 88.3134)
 rotation = 0.560251
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_h5omd")
 one_way_collision = true
 

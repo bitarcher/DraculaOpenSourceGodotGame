@@ -120,7 +120,18 @@ func _on_victory_against_dracula_displayed(level_const: LevelConst, maybe_saving
 	level_const.player_name_entered.connect(_on_level_const_player_name_entered.bind(level_const, maybe_saving_player_context))
 	level_const.show_enter_player_name()
 
-		
+func enter_shop(shop: AShop) -> void:
+	var camera = ToolsSingleton.get_player_platformer_camera_2D()
+	
+	assert(camera != null)
+	
+	var tween = create_tween()
+	tween.tween_property(camera, "zoom", Vector2(30, 30), 1)
+	await tween.finished
+	print("entered in shop")
+	
+	
+
 func next_level():
 	health = INITIAL_HEALTH
 	num_of_coins_before_killed = num_of_coins

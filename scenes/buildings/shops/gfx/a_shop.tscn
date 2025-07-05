@@ -18,6 +18,7 @@ size = Vector2(187, 14)
 z_index = 1
 collision_mask = 2
 script = ExtResource("1_nldgl")
+shop_type = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(98, 104)
