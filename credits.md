@@ -32,6 +32,7 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 - moon graveyard: https://anokolisa.itch.io/moon-graveyard
 
 *Music*
+
 - vampire-290006 : Syouki_Takahashi https://pixabay.com/fr/music/construire-des-scenes-vampire-290006/
 - vampire-189047.mp3 : https://pixabay.com/fr/music/mystere-vampire-189047/
 - thetower-328520 : WelbornWorks https://pixabay.com/fr/music/ambiant-thetower-328520/
@@ -45,7 +46,8 @@ https://youtu.be/LOhfqjmasi0?si=0YMZDfIecVQHdQNh
 - night-dies-with-us-gothic-and-vampiric-piano-music-247462 : JoelFazhari https://pixabay.com/fr/music/classique-moderne-night-dies-with-us-gothic-and-vampiric-piano-music-247462/
 - psychedelik rok : Leandro Sarno Leandro (leandro73baldocchi), https://pixabay.com/fr/music/roche-psychedelic-rock-108787/
 - relaxing jazz (for inside shops) : Denis-Pavlov-Music, https://pixabay.com/fr/music/jazz-traditionnel-relaxing-jazz-podcast-coffee-shop-music-192283/
-
+- blacksmith: nakaradaalexander, https://pixabay.com/fr/music/populaire-blacksmith-241786/
+- grocery spot: PaoloArgento, https://pixabay.com/fr/music/optimiste-grocery-spot-268719/
 
 *Audios*
 

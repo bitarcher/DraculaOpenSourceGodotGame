@@ -590,6 +590,7 @@ item = ExtResource("28_trdfg")
 
 [node name="Grocey" parent="." instance=ExtResource("29_eg2hy")]
 position = Vector2(-46, -144)
+character_id = 1
 
 [node name="Blacksmith" parent="." instance=ExtResource("30_ybw2x")]
 position = Vector2(-297, -144)

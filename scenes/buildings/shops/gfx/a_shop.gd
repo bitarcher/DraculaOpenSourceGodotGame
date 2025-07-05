@@ -15,7 +15,7 @@ enum EnumShopType {
 
 @export var shop_type: EnumShopType = EnumShopType.GROCERY
 
-
+@export_range(0, 2, 1) var character_id: int
 
 var _is_player_plaformer_inside: bool = false
 
