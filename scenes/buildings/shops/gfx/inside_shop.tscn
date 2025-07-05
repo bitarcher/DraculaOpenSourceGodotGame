@@ -8,7 +8,6 @@
 [sub_resource type="Animation" id="Animation_g4jxx"]
 resource_name = "zoom"
 length = 1.5
-loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -70,7 +69,6 @@ _data = {
 [sub_resource type="Animation" id="Animation_xxrqf"]
 resource_name = "zoom"
 length = 1.5
-loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -132,7 +130,6 @@ _data = {
 [sub_resource type="Animation" id="Animation_ap4v8"]
 resource_name = "open_door"
 length = 1.5
-loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true

@@ -1,4 +1,5 @@
 extends Node2D
+class_name InsideShop
 
 var _shop: AShop
 @onready var front_of_shop_and_door_node_2d_container: Node2D = %FrontOfShopAndDoorNode2DContainer

@@ -120,16 +120,29 @@ func _on_victory_against_dracula_displayed(level_const: LevelConst, maybe_saving
 	level_const.player_name_entered.connect(_on_level_const_player_name_entered.bind(level_const, maybe_saving_player_context))
 	level_const.show_enter_player_name()
 
+func _enter_shop_now(shop: AShop) -> void:
+	
+	var inside_shop_scene = load("res://scenes/buildings/shops/gfx/inside_shop.tscn")
+	var inside_shop_instance: InsideShop = inside_shop_scene.instantiate()
+	
+	var current_scene = get_tree().current_scene
+	if current_scene:
+		current_scene.process_mode = Node.PROCESS_MODE_DISABLED
+		
+	get_tree().root.add_child(inside_shop_instance)
+	inside_shop_instance.shop = shop
+
 func enter_shop(shop: AShop) -> void:
 	var camera = ToolsSingleton.get_player_platformer_camera_2D()
 	
 	assert(camera != null)
 	
 	var tween = create_tween()
-	tween.tween_property(camera, "zoom", Vector2(30, 30), 1)
+	tween.tween_property(camera, "zoom", Vector2(13, 13), 2)
 	await tween.finished
 	print("entered in shop")
 	
+	_enter_shop_now(shop)
 	
 
 func next_level():
