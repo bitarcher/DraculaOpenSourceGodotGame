@@ -17,7 +17,7 @@ enum EnumShopType {
 
 @export_range(0, 2, 1) var character_id: int
 
-@export_range(10, 500, 1, "suffix: %") var trade_margin: int = 50
+@export_range(2, 500, 1, "suffix: %") var trade_margin: int = 5
 
 var _is_player_plaformer_inside: bool = false
 

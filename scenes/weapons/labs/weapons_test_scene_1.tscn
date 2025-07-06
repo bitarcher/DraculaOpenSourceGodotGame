@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://b54x6oritht4o"]
+[gd_scene load_steps=47 format=3 uid="uid://b54x6oritht4o"]
 
 [ext_resource type="Script" uid="uid://bsiqiop3rtut" path="res://scripts/p_level_1.gd" id="1_63muv"]
 [ext_resource type="Texture2D" uid="uid://cvh3qfx5hoimn" path="res://assets/sun.png" id="2_lpnj6"]
@@ -32,6 +32,7 @@
 [ext_resource type="PackedScene" uid="uid://d2ympuqdefvj3" path="res://scenes/buildings/shops/blacksmith.tscn" id="30_ybw2x"]
 [ext_resource type="PackedScene" uid="uid://51u03cbqosgm" path="res://scenes/buildings/shops/apothecary.tscn" id="31_noq60"]
 [ext_resource type="PackedScene" uid="uid://0kdj5lfh7hsj" path="res://scenes/climbable_trees/Pine.tscn" id="32_ybw2x"]
+[ext_resource type="PackedScene" uid="uid://c2rxg4yil67wj" path="res://scenes/blue_diamond.tscn" id="33_noq60"]
 
 [sub_resource type="Animation" id="Animation_1ofay"]
 length = 0.001
@@ -601,3 +602,45 @@ position = Vector2(-487, -144)
 [node name="Pine" parent="." instance=ExtResource("32_ybw2x")]
 position = Vector2(-599, -194)
 scale = Vector2(2, 2)
+
+[node name="BlueDiamond" parent="." instance=ExtResource("33_noq60")]
+position = Vector2(177, 32)
+
+[node name="BlueDiamond2" parent="." instance=ExtResource("33_noq60")]
+position = Vector2(177, 43)
+
+[node name="BlueDiamond3" parent="." instance=ExtResource("33_noq60")]
+position = Vector2(188, 31)
+
+[node name="BlueDiamond4" parent="." instance=ExtResource("33_noq60")]
+position = Vector2(190, 42)
+
+[node name="BlueDiamond5" parent="." instance=ExtResource("33_noq60")]
+position = Vector2(199, 31)
+
+[node name="BlueDiamond6" parent="." instance=ExtResource("33_noq60")]
+position = Vector2(202, 41)
+
+[node name="BlueDiamond7" parent="." instance=ExtResource("33_noq60")]
+position = Vector2(212, 31)
+
+[node name="BlueDiamond8" parent="." instance=ExtResource("33_noq60")]
+position = Vector2(212, 43)
+
+[node name="BlueDiamond9" parent="." instance=ExtResource("33_noq60")]
+position = Vector2(224, 30)
+
+[node name="BlueDiamond10" parent="." instance=ExtResource("33_noq60")]
+position = Vector2(225, 42)
+
+[node name="BlueDiamond11" parent="." instance=ExtResource("33_noq60")]
+position = Vector2(163, 33)
+
+[node name="BlueDiamond12" parent="." instance=ExtResource("33_noq60")]
+position = Vector2(160, 45)
+
+[node name="BlueDiamond13" parent="." instance=ExtResource("33_noq60")]
+position = Vector2(167, 19)
+
+[node name="BlueDiamond14" parent="." instance=ExtResource("33_noq60")]
+position = Vector2(179, 18)

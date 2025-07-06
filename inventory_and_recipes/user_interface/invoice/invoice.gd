@@ -80,7 +80,7 @@ func _update_totals() -> void:
 	for sub_total in subtotal_container.get_children():
 		var quantity = sub_total.quantity_spinbox.value
 		var unit_price = sub_total.sell_price if quantity > 0 else sub_total.buy_price
-		total += unit_price * abs(quantity)
+		total += unit_price * quantity
 	
 	total_value_label.text = str(total)
 	
