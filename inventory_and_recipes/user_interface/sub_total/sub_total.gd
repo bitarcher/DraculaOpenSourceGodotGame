@@ -2,7 +2,7 @@ class_name SubTotal
 extends Control
 
 @export var item: Item
-@onready var invoice: Invoice = get_parent().get_parent()
+@export var invoice: Invoice
 
 @onready var item_icon: TextureRect = $HBoxContainer/ItemIcon
 @onready var item_name: Label = $HBoxContainer/ItemName
@@ -11,12 +11,14 @@ extends Control
 @onready var quantity_spinbox: SpinBox = $HBoxContainer/Quantity
 @onready var subtotal_label: Label = $HBoxContainer/SubTotalValue
 
+signal quantity_changed(item: Item, new_quantity: int)
+
 var sell_price: float
 var buy_price: float
 
 func _ready() -> void:
 	if item:
-		item_icon.texture = item.texture
+		item_icon.texture = item.icon
 		item_name.text = item.name
 		
 		sell_price = invoice.get_sell_price(item)
@@ -25,7 +27,7 @@ func _ready() -> void:
 		sell_price_label.text = str(sell_price)
 		buy_price_label.text = str(buy_price)
 		
-		var game_manager = get_node("/root/GameManager")
+		var game_manager = GameManagerSingleton
 		var player_inventory = game_manager.inventory
 		var item_quantity_in_inventory = player_inventory.get_item_quantity(item)
 		quantity_spinbox.min_value = -item_quantity_in_inventory
@@ -35,7 +37,7 @@ func _ready() -> void:
 
 func _on_quantity_changed(new_quantity: float) -> void:
 	update_subtotal()
-	emit_signal("quantity_changed", item, new_quantity)
+	quantity_changed.emit(item, new_quantity)
 
 func update_subtotal() -> void:
 	var quantity = quantity_spinbox.value

@@ -3,7 +3,15 @@ extends Control
 
 signal closed(emiter)
 
-@export var inside_shop: InsideShop
+var _inside_shop: InsideShop
+
+@export var inside_shop: InsideShop:
+	set(value):
+		_inside_shop = value
+		if _inside_shop != null and is_inside_tree():
+			_populate_invoice()
+	get:
+		return _inside_shop
 
 @onready var title_label: Label = $PanelContainer/VBoxContainer/TitleLabel
 @onready var subtotal_container: VBoxContainer = $PanelContainer/VBoxContainer/ScrollContainer/SubTotalContainer
@@ -30,11 +38,16 @@ func _ready() -> void:
 		_populate_invoice()
 
 func _populate_invoice() -> void:
+	# Clear previous items
+	for child in subtotal_container.get_children():
+		child.queue_free()
+	
 	_set_title()
 	var items = _get_item_list_for_shop()
 	for item in items:
 		var sub_total_instance = sub_total_scene.instantiate()
 		sub_total_instance.item = item
+		sub_total_instance.invoice = self # Assign the invoice instance
 		sub_total_instance.quantity_changed.connect(_on_sub_total_quantity_changed)
 		subtotal_container.add_child(sub_total_instance)
 	
@@ -92,11 +105,10 @@ func _on_ok_pressed() -> void:
 		elif quantity < 0:
 			game_manager.inventory.remove_items(item, abs(quantity))
 
-	inside_shop.hide_menu()
+	
 	closed.emit(self)
 
 func _on_cancel_pressed() -> void:
-	inside_shop.hide_menu()
 	closed.emit(self)
 
 func get_sell_price(item: Item) -> float:
