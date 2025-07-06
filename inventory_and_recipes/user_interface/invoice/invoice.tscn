@@ -34,6 +34,38 @@ horizontal_alignment = 1
 [node name="HSeparator" type="HSeparator" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 
+[node name="HeaderHBox" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="IconHeader" type="Label" parent="PanelContainer/VBoxContainer/HeaderHBox"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="NameHeader" type="Label" parent="PanelContainer/VBoxContainer/HeaderHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Name"
+
+[node name="SellPriceHeader" type="Label" parent="PanelContainer/VBoxContainer/HeaderHBox"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Sell Price"
+
+[node name="BuyPriceHeader" type="Label" parent="PanelContainer/VBoxContainer/HeaderHBox"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Buy Price"
+
+[node name="QuantityHeader" type="Label" parent="PanelContainer/VBoxContainer/HeaderHBox"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Quantity"
+
+[node name="SubTotalHeader" type="Label" parent="PanelContainer/VBoxContainer/HeaderHBox"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "SubTotal"
+
 [node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
