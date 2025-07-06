@@ -38,7 +38,6 @@ text = "Buy Price"
 [node name="Quantity" type="SpinBox" parent="HBoxContainer"]
 layout_mode = 2
 min_value = -100.0
-max_value = 100.0
 allow_greater = true
 allow_lesser = true
 

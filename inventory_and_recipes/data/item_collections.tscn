@@ -1,6 +1,47 @@
-[gd_scene load_steps=2 format=3 uid="uid://dt8iniw7eywdg"]
+[gd_scene load_steps=25 format=3 uid="uid://dt8iniw7eywdg"]
 
 [ext_resource type="Script" uid="uid://c2e2kdthndye5" path="res://inventory_and_recipes/data/item_collections.gd" id="1_lcpt2"]
+[ext_resource type="Script" uid="uid://b6rtt5e2v7l2p" path="res://inventory_and_recipes/model/item.gd" id="2_d56co"]
+[ext_resource type="Resource" uid="uid://ca4wc8pfbndt2" path="res://inventory_and_recipes/data/items/bones.tres" id="3_whebn"]
+[ext_resource type="Resource" uid="uid://dx4v305ow3hk3" path="res://inventory_and_recipes/data/items/bow.tres" id="4_vtvt1"]
+[ext_resource type="Resource" uid="uid://bbunwwth7os5p" path="res://inventory_and_recipes/data/items/charcoal.tres" id="5_phg8w"]
+[ext_resource type="Resource" uid="uid://cfwf7shbl1b37" path="res://inventory_and_recipes/data/items/divine_armor.tres" id="6_27yjy"]
+[ext_resource type="Resource" uid="uid://cfl2dy32p3y3n" path="res://inventory_and_recipes/data/items/feather.tres" id="7_4wg5m"]
+[ext_resource type="Resource" uid="uid://1n06od3s53jv" path="res://inventory_and_recipes/data/items/iron_ingot.tres" id="8_vjuya"]
+[ext_resource type="Resource" uid="uid://bs04rbmicblmd" path="res://inventory_and_recipes/data/items/iron_ore.tres" id="9_s33p6"]
+[ext_resource type="Resource" uid="uid://b7hc3p1uypwjb" path="res://inventory_and_recipes/data/items/leather.tres" id="10_g8pvj"]
+[ext_resource type="Resource" uid="uid://bsv8jgfocgneb" path="res://inventory_and_recipes/data/items/poisoned_bow.tres" id="11_hy5ov"]
+[ext_resource type="Resource" uid="uid://5qh6sb5veo0e" path="res://inventory_and_recipes/data/items/rubber_band.tres" id="12_bbght"]
+[ext_resource type="Resource" uid="uid://s11bwy351clv" path="res://inventory_and_recipes/data/items/slingshot.tres" id="13_3nn3m"]
+[ext_resource type="Resource" uid="uid://71evqpdqpc8e" path="res://inventory_and_recipes/data/items/wood.tres" id="14_ouln8"]
+[ext_resource type="Script" uid="uid://c5fkc4b3o5xg" path="res://inventory_and_recipes/model/item_collection.gd" id="15_x24jb"]
+[ext_resource type="Resource" uid="uid://cmsagrxswgciq" path="res://inventory_and_recipes/data/items/carot.tres" id="16_q2a55"]
+[ext_resource type="Resource" uid="uid://dgwvax2yux8lm" path="res://inventory_and_recipes/data/items/cow.tres" id="17_t7c6i"]
+[ext_resource type="Resource" uid="uid://d1aevf1mxmu28" path="res://inventory_and_recipes/data/items/hen.tres" id="18_incu5"]
+[ext_resource type="Resource" uid="uid://cg7xd2ikb13cs" path="res://inventory_and_recipes/data/items/meat.tres" id="19_lbpwn"]
+[ext_resource type="Resource" uid="uid://b2txcw1fpbeft" path="res://inventory_and_recipes/data/items/health_potion.tres" id="20_mnah4"]
+[ext_resource type="Resource" uid="uid://sco4ocl3m1h3" path="res://inventory_and_recipes/data/items/lavender.tres" id="21_4msu1"]
+
+[sub_resource type="Resource" id="Resource_dupqb"]
+script = ExtResource("15_x24jb")
+name = "blacksmith"
+items = Array[ExtResource("2_d56co")]([ExtResource("3_whebn"), ExtResource("4_vtvt1"), ExtResource("5_phg8w"), ExtResource("6_27yjy"), ExtResource("7_4wg5m"), ExtResource("8_vjuya"), ExtResource("9_s33p6"), ExtResource("10_g8pvj"), ExtResource("11_hy5ov"), ExtResource("12_bbght"), ExtResource("13_3nn3m"), ExtResource("14_ouln8")])
+metadata/_custom_type_script = "uid://c5fkc4b3o5xg"
+
+[sub_resource type="Resource" id="Resource_w36dw"]
+script = ExtResource("15_x24jb")
+name = "grocery"
+items = Array[ExtResource("2_d56co")]([ExtResource("3_whebn"), ExtResource("16_q2a55"), ExtResource("5_phg8w"), ExtResource("17_t7c6i"), ExtResource("7_4wg5m"), ExtResource("18_incu5"), ExtResource("19_lbpwn"), ExtResource("12_bbght"), ExtResource("14_ouln8")])
+metadata/_custom_type_script = "uid://c5fkc4b3o5xg"
+
+[sub_resource type="Resource" id="Resource_b5d7h"]
+script = ExtResource("15_x24jb")
+name = "apothecary"
+items = Array[ExtResource("2_d56co")]([ExtResource("16_q2a55"), ExtResource("7_4wg5m"), ExtResource("20_mnah4"), ExtResource("21_4msu1"), ExtResource("21_4msu1")])
+metadata/_custom_type_script = "uid://c5fkc4b3o5xg"
 
 [node name="ItemCollections" type="Node2D"]
 script = ExtResource("1_lcpt2")
+blacksmith_item_collection = SubResource("Resource_dupqb")
+grocery_item_collection = SubResource("Resource_w36dw")
+apothecary_item_collection = SubResource("Resource_b5d7h")

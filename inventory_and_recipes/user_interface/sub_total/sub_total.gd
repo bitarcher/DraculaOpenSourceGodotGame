@@ -25,6 +25,11 @@ func _ready() -> void:
 		sell_price_label.text = str(sell_price)
 		buy_price_label.text = str(buy_price)
 		
+		var game_manager = get_node("/root/GameManager")
+		var player_inventory = game_manager.inventory
+		var item_quantity_in_inventory = player_inventory.get_item_quantity(item)
+		quantity_spinbox.min_value = -item_quantity_in_inventory
+		
 		quantity_spinbox.value_changed.connect(_on_quantity_changed)
 		update_subtotal()
 

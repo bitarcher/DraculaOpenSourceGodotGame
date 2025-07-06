@@ -1,15 +1,17 @@
 class_name Invoice
 extends Control
 
+signal closed(emiter)
+
 @export var inside_shop: InsideShop
 
-@onready var title_label: Label = $VBoxContainer/TitleLabel
-@onready var subtotal_container: VBoxContainer = $VBoxContainer/ScrollContainer/SubTotalContainer
-@onready var total_value_label: Label = $VBoxContainer/TotalsVBox/TotalHBox/TotalValueLabel
-@onready var diamonds_before_value_label: Label = $VBoxContainer/TotalsVBox/DiamondsBeforeHBox/DiamondsBeforeValueLabel
-@onready var diamonds_after_value_label: Label = $VBoxContainer/TotalsVBox/DiamondsAfterHBox/DiamondsAfterValueLabel
-@onready var ok_button: Button = $VBoxContainer/ButtonsHBox/OkButton
-@onready var cancel_button: Button = $VBoxContainer/ButtonsHBox/CancelButton
+@onready var title_label: Label = $PanelContainer/VBoxContainer/TitleLabel
+@onready var subtotal_container: VBoxContainer = $PanelContainer/VBoxContainer/ScrollContainer/SubTotalContainer
+@onready var total_value_label: Label = $PanelContainer/VBoxContainer/TotalsVBox/TotalHBox/TotalValueLabel
+@onready var diamonds_before_value_label: Label = $PanelContainer/VBoxContainer/TotalsVBox/DiamondsBeforeHBox/DiamondsBeforeValueLabel
+@onready var diamonds_after_value_label: Label = $PanelContainer/VBoxContainer/TotalsVBox/DiamondsAfterHBox/DiamondsAfterValueLabel
+@onready var ok_button: Button = $PanelContainer/VBoxContainer/ButtonsHBox/OkButton
+@onready var cancel_button: Button = $PanelContainer/VBoxContainer/ButtonsHBox/CancelButton
 
 var sub_total_scene = preload("res://inventory_and_recipes/user_interface/sub_total/sub_total.tscn")
 var item_collections_scene = preload("res://inventory_and_recipes/data/item_collections.tscn")
@@ -18,7 +20,7 @@ var game_manager
 var item_collections
 
 func _ready() -> void:
-	game_manager = get_node("/root/GameManager")
+	game_manager = GameManagerSingleton
 	item_collections = item_collections_scene.instantiate()
 
 	ok_button.pressed.connect(_on_ok_pressed)
@@ -86,14 +88,16 @@ func _on_ok_pressed() -> void:
 		var quantity = int(sub_total.quantity_spinbox.value)
 		var item = sub_total.item
 		if quantity > 0:
-			game_manager.inventory.add_item(item, quantity)
+			game_manager.inventory.add_items(item, quantity)
 		elif quantity < 0:
-			game_manager.inventory.remove_item(item, abs(quantity))
+			game_manager.inventory.remove_items(item, abs(quantity))
 
 	inside_shop.hide_menu()
+	closed.emit(self)
 
 func _on_cancel_pressed() -> void:
 	inside_shop.hide_menu()
+	closed.emit(self)
 
 func get_sell_price(item: Item) -> float:
 	assert(item != null)
