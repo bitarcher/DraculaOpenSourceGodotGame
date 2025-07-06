@@ -224,6 +224,13 @@ func live_fetched():
 	
 func blue_diamond_fetched():
 	num_of_diamonds += 10
+
+func get_num_of_diamonds() -> int:
+	return num_of_diamonds
+
+func set_num_of_diamonds(value: int) -> void:
+	num_of_diamonds = value
+
 	
 func new_game():
 	print("NEW GAME REQUESTED")
