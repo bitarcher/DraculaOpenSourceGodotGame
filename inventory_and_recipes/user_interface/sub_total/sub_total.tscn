@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmu02e07hc3pk"]
+
+[ext_resource type="Script" uid="uid://sc4p6ux42ibv" path="res://inventory_and_recipes/user_interface/sub_total/sub_total.gd" id="1_566x4"]
+
+[node name="SubTotal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_566x4")
