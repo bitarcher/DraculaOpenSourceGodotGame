@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://iiw0kgvo7tot"]
+[gd_scene load_steps=21 format=3 uid="uid://iiw0kgvo7tot"]
 
 [ext_resource type="Script" uid="uid://bhtib75jo0ffq" path="res://scenes/buildings/shops/gfx/inside_shop.gd" id="1_h6s73"]
 [ext_resource type="Texture2D" uid="uid://dkqv3j7whxs1n" path="res://assets/sprites/buildings/shops/backgrounds/blacksmith_2.png" id="2_0mjko"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bsqo40msb1nf7" path="res://assets/sprites/buildings/shops/door_alone.png" id="3_0mjko"]
 [ext_resource type="Theme" uid="uid://dhrx32e2kxpct" path="res://themes/menu_button_theme.tres" id="5_xxrqf"]
 [ext_resource type="Texture2D" uid="uid://bhiaxb7cuq6if" path="res://assets/paper.png" id="6_yuac5"]
+[ext_resource type="PackedScene" uid="uid://bbdeqj3ywomlr" path="res://inventory_and_recipes/user_interface/invoice/invoice.tscn" id="7_678eq"]
 [ext_resource type="AudioStream" uid="uid://da6y6sch6366c" path="res://assets/sounds/door-43633.mp3" id="7_yuac5"]
 [ext_resource type="AudioStream" uid="uid://s6ognxt1mqms" path="res://assets/music/relaxing-jazz-podcast-coffee-shop-music-192283.mp3" id="8_g4jxx"]
 [ext_resource type="AudioStream" uid="uid://bt81to7lpxn6a" path="res://assets/music/blacksmith-241786.mp3" id="9_y0es0"]
@@ -265,9 +266,9 @@ visible = false
 anchors_preset = -1
 anchor_right = 0.069
 anchor_bottom = 0.111
-offset_left = 512.0
-offset_top = 346.0
-offset_right = 1074.51
+offset_left = 481.0
+offset_top = 384.0
+offset_right = 1031.51
 offset_bottom = 536.072
 theme = ExtResource("5_xxrqf")
 texture = ExtResource("6_yuac5")
@@ -321,20 +322,18 @@ theme_override_constants/margin_left = 114
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/NinePatchRect/MarginContainer/VBoxContainer/MarginContainer"]
 layout_mode = 2
 
-[node name="BuyButton" type="Button" parent="CanvasLayer/NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+[node name="BuyOrSellButton" type="Button" parent="CanvasLayer/NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "1) I want to buy stuff"
-alignment = 0
-
-[node name="SellButton" type="Button" parent="CanvasLayer/NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "2) I want to sell stuff"
+text = "1) I want to buy or sell stuff"
 alignment = 0
 
 [node name="ExitButton" type="Button" parent="CanvasLayer/NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "3) I have to go now!"
+text = "2) I have to go now!"
 alignment = 0
+
+[node name="Invoice" parent="CanvasLayer" instance=ExtResource("7_678eq")]
+unique_name_in_owner = true
 
 [node name="DoorAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
@@ -356,4 +355,5 @@ unique_name_in_owner = true
 stream = ExtResource("10_678eq")
 parameters/looping = true
 
+[connection signal="pressed" from="CanvasLayer/NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/BuyOrSellButton" to="." method="_on_buy_or_sell_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bbdeqj3ywomlr"]
 
-[ext_resource type="Script" path="res://inventory_and_recipes/user_interface/invoice/invoice.gd" id="1_v2p0p"]
+[ext_resource type="Script" uid="uid://swg4tlcj5q63" path="res://inventory_and_recipes/user_interface/invoice/invoice.gd" id="1_v2p0p"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1"]
 bg_color = Color(0, 0, 0, 0.5)
@@ -21,10 +21,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
 theme_override_styles/panel = SubResource("StyleBoxFlat_1")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]

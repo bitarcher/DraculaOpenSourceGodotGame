@@ -15,6 +15,7 @@ signal inside_shop_exited(emiter: InsideShop)
 @onready var grocery_audio_stream_player: AudioStreamPlayer = %GroceryAudioStreamPlayer
 @onready var background_sprite_2d: Sprite2D = %BackgroundSprite2D
 @onready var invitation_label: Label = %InvitationLabel
+@onready var invoice: Invoice = %Invoice
 
 var _shop_type: AShop.EnumShopType = AShop.EnumShopType.GROCERY
 
@@ -24,11 +25,23 @@ var _shop_type: AShop.EnumShopType = AShop.EnumShopType.GROCERY
 	get():
 		return _shop_type
 
+var _is_invoice_initialized : bool = false
+
+func _initialize_invoice() -> void:
+	if _is_invoice_initialized:
+		return
+		
+	invoice.inside_shop = self
+
+func _on_invoice_closed(invoice: Invoice) -> void:
+	invoice.visible = false
+	nine_patch_rect.visible = true
+
 @export var shop: AShop:
 	set(value):
 		_shop = value
 		shop_type = value.shop_type
-		
+		_initialize_invoice()
 	get():
 		return _shop
 
@@ -140,4 +153,6 @@ class Character extends Resource:
 		
 		return result
 		
-	
+func _on_buy_or_sell_button_pressed() -> void:
+	invoice.visible = true
+	nine_patch_rect.visible = false
