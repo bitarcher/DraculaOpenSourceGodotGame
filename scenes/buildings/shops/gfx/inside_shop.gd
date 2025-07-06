@@ -32,6 +32,7 @@ func _initialize_invoice() -> void:
 		return
 		
 	invoice.inside_shop = self
+	invoice.closed.connect(_on_invoice_closed)
 
 func _on_invoice_closed(invoice: Invoice) -> void:
 	invoice.visible = false

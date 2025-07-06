@@ -334,6 +334,7 @@ alignment = 0
 
 [node name="Invoice" parent="CanvasLayer" instance=ExtResource("7_678eq")]
 unique_name_in_owner = true
+visible = false
 
 [node name="DoorAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
