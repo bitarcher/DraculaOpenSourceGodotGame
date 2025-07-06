@@ -28,7 +28,15 @@ func _ready() -> void:
 		var game_manager = GameManagerSingleton
 		var player_inventory = game_manager.inventory
 		var item_quantity_in_inventory = player_inventory.get_item_quantity(item)
+		
+		print("--- SubTotal Debug ---")
+		print("Item: ", item.name)
+		print("Player Inventory: ", player_inventory)
+		print("Quantity in Inventory for ", item.name, ": ", item_quantity_in_inventory)
+		
 		quantity_spinbox.min_value = -item_quantity_in_inventory
+		print("SpinBox min_value set to: ", quantity_spinbox.min_value)
+		print("----------------------")
 		
 		quantity_spinbox.value_changed.connect(_on_quantity_changed)
 		update_subtotal()

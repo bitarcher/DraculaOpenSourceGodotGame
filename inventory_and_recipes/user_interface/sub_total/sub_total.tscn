@@ -42,7 +42,6 @@ size_flags_horizontal = 2
 size_flags_vertical = 4
 min_value = -100.0
 allow_greater = true
-allow_lesser = true
 
 [node name="SubTotalValue" type="Label" parent="HBoxContainer"]
 layout_mode = 2
