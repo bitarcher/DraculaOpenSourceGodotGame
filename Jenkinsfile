@@ -38,7 +38,7 @@ pipeline {
                 echo 'Exportation pour Linux...'
                 // Exporte le projet en utilisant le preset "Linux/X11".
                 // Ce binaire fonctionnera à la fois sur les sessions X11 et Wayland (via XWayland).
-                sh "'${env.GODOT_EXECUTABLE}' --headless --export-release 'Linux/X11' '${env.BUILD_DIR}/linux_x11/Dracula.x86_64'"
+                sh "'${env.GODOT_EXECUTABLE}' --headless --export-release 'Linux' '${env.BUILD_DIR}/linux_x11/Dracula.x86_64'"
             }
         }
 
