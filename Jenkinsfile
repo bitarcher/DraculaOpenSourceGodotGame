@@ -55,8 +55,8 @@ pipeline {
     post {
         always {
             echo 'Pipeline terminé.'
-            // Nettoie l'espace de travail après le build
-            cleanWs()
+            // Nettoie l'espace de travail après le build - temporairement désactivé pour le débogage
+            // cleanWs()
         }
     }
 }
