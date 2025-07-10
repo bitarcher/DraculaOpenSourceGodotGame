@@ -16,7 +16,7 @@ pipeline {
         stage('Préparation') {
             steps {
                 // Nettoie l'espace de travail avant de commencer
-                cleanWs()
+                
 
                 // Crée le répertoire de build s'il n'existe pas
                 sh "mkdir -p ${env.BUILD_DIR}/windows"
