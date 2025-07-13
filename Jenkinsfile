@@ -21,6 +21,10 @@ pipeline {
                 // Crée le répertoire de build s'il n'existe pas
                 sh "mkdir -p ${env.BUILD_DIR}/windows"
                 sh "mkdir -p ${env.BUILD_DIR}/linux_x11"
+
+                // Copie les modèles d'exportation
+                sh "mkdir -p export_templates"
+                sh "cp -r /usr/local/share/godot/export_templates/* export_templates/"
             }
         }
 

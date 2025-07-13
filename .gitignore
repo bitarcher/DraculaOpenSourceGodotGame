@@ -42,3 +42,6 @@ addons/*/build/
 .idea/
 .vscode/
 Thumbs.db
+
+# Godot export templates
+export_templates/
