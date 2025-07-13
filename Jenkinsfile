@@ -28,8 +28,8 @@ pipeline {
                 sh "touch godot_portable/_sc_"
 
                 // Copie les modèles d'exportation
-                sh "mkdir -p export_templates/templates"
-                sh "cp -r /usr/local/share/godot/export_templates/4.4.1.stable/* export_templates/templates/"
+                sh "mkdir -p godot_portable/editor_data/export_templates/4.4.1.stable"
+                sh "cp -r /usr/local/share/godot/export_templates/4.4.1.stable/* godot_portable/editor_data/export_templates/4.4.1.stable/"
             }
         }
 
