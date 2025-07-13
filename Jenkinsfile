@@ -6,7 +6,7 @@ pipeline {
         // Chemin vers l'exécutable Godot 4 sur votre agent Jenkins.
         // Mettez le chemin complet si Godot n'est pas dans le PATH.
         // Par exemple : '/usr/local/bin/godot' ou 'C:\Godot\Godot.exe'
-        GODOT_EXECUTABLE = '/snap/bin/godot-4'
+        GODOT_EXECUTABLE = '/usr/local/bin/godot'
 
         // Le répertoire où les binaires seront créés.
         BUILD_DIR = 'builds'
