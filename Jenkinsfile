@@ -29,7 +29,7 @@ pipeline {
                 echo 'Exportation pour Windows...'
                 // Exporte le projet en utilisant le preset "Windows Desktop".
                 // L'option --headless est cruciale pour une exécution sur un serveur.
-                sh "'${env.GODOT_EXECUTABLE}' --headless --verbose --export-release WindowsDesktop '${env.BUILD_DIR}/windows/Dracula.exe'"
+                sh "'${env.GODOT_EXECUTABLE}' --headless --verbose --export-release "WindowsDesktop" '${env.BUILD_DIR}/windows/Dracula.exe'"
             }
         }
 
@@ -55,8 +55,6 @@ pipeline {
     post {
         always {
             echo 'Pipeline terminé.'
-            // Nettoie l'espace de travail après le build - temporairement désactivé pour le débogage
-            // cleanWs()
         }
     }
 }
