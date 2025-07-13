@@ -49,3 +49,7 @@ export_templates/
 # Godot Jenkins temp files
 .godot_jenkins/
 
+
+# Portable Godot for Jenkins
+godot_portable/
+
