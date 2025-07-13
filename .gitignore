@@ -45,3 +45,7 @@ Thumbs.db
 
 # Godot export templates
 export_templates/
+
+# Godot Jenkins temp files
+.godot_jenkins/
+
