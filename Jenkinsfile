@@ -91,7 +91,11 @@ pipeline {
                     withCredentials([string(credentialsId: 'GITHUB_TOKEN_DRACULA', variable: 'GH_TOKEN')]) {
                         // Exemple avec l'outil `gh` (GitHub CLI) si installé sur l'agent Jenkins:
                         // Assurez-vous que le dépôt est correctement configuré pour `gh` (e.g., `gh repo set-default owner/repo`)
-                        sh "gh release create v${now} --title \"Release ${now}\" --notes \"${changelog}\" ${env.BUILD_DIR}/windows/${newWindowsZipName} ${env.BUILD_DIR}/linux_x11/${newLinuxTarGzName}"
+                        // Écrire le changelog dans un fichier temporaire
+                        def changelogFile = "${env.WORKSPACE}/changelog.txt"
+                        writeFile(file: changelogFile, text: changelog)
+
+                        sh "gh release create v${now} --title \"Release ${now}\" --notes-file ${changelogFile} ${env.BUILD_DIR}/windows/${newWindowsZipName} ${env.BUILD_DIR}/linux_x11/${newLinuxTarGzName}"
                     }
 
                     echo "Fichiers renommés: ${newWindowsZipName} et ${newLinuxTarGzName}"
