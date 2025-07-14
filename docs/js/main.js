@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         langItem.setAttribute('title', lang.name);
 
         const img = document.createElement('img');
-        img.src = `../img/flags/${lang.code}.png`;
+        img.src = `img/flags/${lang.code}.png`;
         img.alt = lang.name;
         img.className = 'flag-icon';
 
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const loadLanguage = async (lang) => {
         try {
-            const response = await fetch(`../lang/${lang}.json`);
+            const response = await fetch(`lang/${lang}.json`);
             const translations = await response.json();
             document.querySelectorAll('[data-lang-key]').forEach(element => {
                 const key = element.getAttribute('data-lang-key');

@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
     if (document.getElementById('download-list')) {
         try {
-            const response = await fetch('../versions.json');
+            const response = await fetch('versions.json');
             const versions = await response.json();
 
             const downloadListDiv = document.getElementById('download-list');
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 document.addEventListener('languageChange', async (event) => {
     const lang = event.detail;
     try {
-        const response = await fetch(`../lang/${lang}.json`);
+        const response = await fetch(`lang/${lang}.json`);
         const translations = await response.json();
         document.querySelectorAll('[data-lang-key]').forEach(element => {
             const key = element.getAttribute('data-lang-key');

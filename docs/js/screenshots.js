@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const gallery = document.getElementById('screenshots-gallery');
 
     try {
-        const response = await fetch('../screenshots.json');
+        const response = await fetch('screenshots.json');
         const images = await response.json();
 
         if (images && images.length > 0) {
