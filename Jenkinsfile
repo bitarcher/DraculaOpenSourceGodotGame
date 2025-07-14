@@ -87,17 +87,15 @@ pipeline {
 
                     // --- PLACEHOLDER POUR LA CRÉATION DE RELEASE GITHUB ---
                     // Vous devriez utiliser le plugin GitHub de Jenkins pour une meilleure intégration.
-                    // Exemple avec l'outil `gh` (GitHub CLI) si installé sur l'agent Jenkins:
-                    sh "gh release create v${now} --title \"Release ${now}\" --notes \"${changelog}\" ${env.BUILD_DIR}/windows/${newWindowsZipName} ${env.BUILD_DIR}/linux_x11/${newLinuxTarGzName}"
-
-                    // Exemple avec curl (nécessite un token GitHub dans les credentials Jenkins):
-                    // def githubToken = credentials('YOUR_GITHUB_TOKEN_ID') // Remplacez par l'ID de votre credential Jenkins
-                    // sh "curl -X POST -H \"Accept: application/vnd.github.v3+json\" -H \"Authorization: token ${githubToken}\" https://api.github.com/repos/YOUR_USERNAME/YOUR_REPOSITORY/releases -d '{\"tag_name\":\"v${now}\",\"name\":\"Release ${now}\",\"body\":\"${changelog}\",\"draft\":false,\"prerelease\":false}'"
-                    // Après la création de la release, vous devrez uploader les assets séparément avec curl ou gh cli.
-                    // C'est pourquoi le plugin GitHub est fortement recommandé.
+                    // Utilisation de `withCredentials` pour injecter le token GitHub
+                    withCredentials([string(credentialsId: 'GITHUB_TOKEN_DRACULA', variable: 'GH_TOKEN')]) {
+                        // Exemple avec l'outil `gh` (GitHub CLI) si installé sur l'agent Jenkins:
+                        // Assurez-vous que le dépôt est correctement configuré pour `gh` (e.g., `gh repo set-default owner/repo`)
+                        sh "gh release create v${now} --title \"Release ${now}\" --notes \"${changelog}\" ${env.BUILD_DIR}/windows/${newWindowsZipName} ${env.BUILD_DIR}/linux_x11/${newLinuxTarGzName}"
+                    }
 
                     echo "Fichiers renommés: ${newWindowsZipName} et ${newLinuxTarGzName}"
-                    echo "Veuillez configurer la création de la release GitHub manuellement ou via le plugin Jenkins."
+                    echo "La tentative de création de release GitHub a été effectuée. Vérifiez GitHub pour le résultat."
                 }
             }
         }
