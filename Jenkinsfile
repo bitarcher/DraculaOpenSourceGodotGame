@@ -39,6 +39,8 @@ pipeline {
                 // Exporte le projet en utilisant le preset "Windows Desktop".
                 // L'option --headless est cruciale pour une exécution sur un serveur.
                 sh "'${env.GODOT_EXECUTABLE}' --headless --verbose --export-release WindowsDesktop '${env.BUILD_DIR}/windows/Dracula.exe'"
+                // Crée une archive ZIP pour Windows
+                sh "cd ${env.BUILD_DIR}/windows && zip -r Dracula_Windows.zip Dracula.exe Dracula.pck"
             }
         }
 
@@ -48,15 +50,17 @@ pipeline {
                 // Exporte le projet en utilisant le preset "Linux/X11".
                 // Ce binaire fonctionnera à la fois sur les sessions X11 et Wayland (via XWayland).
                 sh "'${env.GODOT_EXECUTABLE}' --headless --export-release 'Linux' '${env.BUILD_DIR}/linux_x11/Dracula.x86_64'"
+                // Crée une archive tar.gz pour Linux
+                sh "cd ${env.BUILD_DIR}/linux_x11 && tar -czvf Dracula_Linux.tar.gz Dracula.x86_64 Dracula.pck"
             }
         }
 
         stage('Archivage des binaires') {
             steps {
                 echo 'Archivage des binaires...'
-                // Archive tout le contenu du répertoire de build.
+                // Archive les fichiers ZIP et tar.gz créés.
                 // Les fichiers seront disponibles sur la page du build Jenkins.
-                archiveArtifacts artifacts: "${env.BUILD_DIR}/**", fingerprint: true
+                archiveArtifacts artifacts: "${env.BUILD_DIR}/windows/*.zip, ${env.BUILD_DIR}/linux_x11/*.tar.gz", fingerprint: true
             }
         }
     }
