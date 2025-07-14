@@ -88,7 +88,7 @@ pipeline {
                     // --- PLACEHOLDER POUR LA CRÉATION DE RELEASE GITHUB ---
                     // Vous devriez utiliser le plugin GitHub de Jenkins pour une meilleure intégration.
                     // Exemple avec l'outil `gh` (GitHub CLI) si installé sur l'agent Jenkins:
-                    // sh "gh release create v${now} --title \"Release ${now}\" --notes \"${changelog}\" ${env.BUILD_DIR}/windows/${newWindowsZipName} ${env.BUILD_DIR}/linux_x11/${newLinuxTarGzName}"
+                    sh "gh release create v${now} --title \"Release ${now}\" --notes \"${changelog}\" ${env.BUILD_DIR}/windows/${newWindowsZipName} ${env.BUILD_DIR}/linux_x11/${newLinuxTarGzName}"
 
                     // Exemple avec curl (nécessite un token GitHub dans les credentials Jenkins):
                     // def githubToken = credentials('YOUR_GITHUB_TOKEN_ID') // Remplacez par l'ID de votre credential Jenkins
