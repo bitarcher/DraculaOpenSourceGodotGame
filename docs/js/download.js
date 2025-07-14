@@ -1,8 +1,40 @@
 document.addEventListener('DOMContentLoaded', async () => {
     if (document.getElementById('download-list')) {
         try {
-            const response = await fetch('versions.json');
-            const versions = await response.json();
+            const response = await fetch('https://api.github.com/repos/bitarcher/DraculaOpenSourceGodotGame/releases');
+            const githubReleases = await response.json();
+
+            const versions = githubReleases.map(release => {
+                const releaseDate = new Date(release.published_at);
+                const formattedDate = releaseDate.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' });
+
+                const files = release.assets.map(asset => {
+                    let displayName = asset.name;
+                    let format = '';
+
+                    if (asset.name.includes('Windows')) {
+                        displayName = 'Windows Executable';
+                        format = 'ZIP';
+                    } else if (asset.name.includes('Linux')) {
+                        displayName = 'Linux Executable';
+                        format = 'TAR.GZ';
+                    }
+                    // Add more conditions for other platforms/formats if needed
+
+                    return {
+                        display_name: displayName,
+                        url: asset.browser_download_url,
+                        format: format
+                    };
+                });
+
+                return {
+                    version: release.tag_name,
+                    date: formattedDate,
+                    description: release.body || 'No description provided.',
+                    files: files
+                };
+            });
 
             const downloadListDiv = document.getElementById('download-list');
             downloadListDiv.innerHTML = ''; // Clear existing content
@@ -70,9 +102,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             document.dispatchEvent(event);
 
         } catch (error) {
-            console.error('Error loading versions.json:', error);
+            console.error('Error loading releases from GitHub API:', error);
             const downloadListDiv = document.getElementById('download-list');
-            downloadListDiv.innerHTML = '<p class="text-danger">Impossible de charger les informations de téléchargement.</p>';
+            downloadListDiv.innerHTML = '<p class="text-danger">Impossible de charger les informations de téléchargement depuis GitHub.</p>';
         }
     }
 });
