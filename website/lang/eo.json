@@ -1,0 +1,36 @@
+{
+  "common": {
+    "title": "Drakulo - La Ludo",
+    "download": "Elŝuti",
+    "screenshots": "Ekranbildoj",
+    "about": "Pri",
+    "home": "Hejmo",
+    "language": "Lingvo"
+  },
+  "home_page": {
+    "tagline": "Kaptiva malfermkoda platformludo",
+    "description": "Enprofundiĝu en la malhelan kaj misteran mondon de Drakulo, 2D-platformludo kie vi ludas kiel kuraĝa heroo alfrontanta terurajn estaĵojn. Esploru kompleksajn nivelojn, solvu enigmojn kaj alfrontu epopeajn estrojn en ĉi tiu ekscita aventuro.",
+    "features_title": "Ĉefaj trajtoj",
+    "feature_1": "Dinamika platformludado",
+    "feature_2": "Stiligitaj 2D-grafikaĵoj",
+    "feature_3": "Enigmoj kaj defioj",
+    "feature_4": "Intensaj estrobataloj",
+    "feature_5": "Malfermkoda kaj agordebla"
+  },
+  "download_page": {
+    "title": "Elŝuti Drakulon",
+    "latest_version": "Plej nova versio",
+    "other_versions": "Aliaj versioj",
+    "version": "Versio",
+    "date": "Dato",
+    "platform": "Platformo",
+    "download_button": "Elŝuti"
+  },
+  "screenshots_page": {
+    "title": "Ekranbildoj"
+  },
+  "about_page": {
+    "title": "Pri Drakulo",
+    "content": "Drakulo estas malfermkoda platformludo evoluigita per la Godot-motoro. Ĝi estis kreita kun pasio por oferti mergan kaj stimulan ludsperton. La projekto estas tute malfermkoda, kio signifas, ke vi povas esplori ĝian kodon, modifi ĝin kaj eĉ kontribui al ĝia evoluo. Ni esperas, ke vi ĝuos ĉi tiun aventuron!"
+  }
+}

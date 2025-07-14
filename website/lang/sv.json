@@ -1,0 +1,36 @@
+{
+  "common": {
+    "title": "Dracula - Spelet",
+    "download": "Ladda ner",
+    "screenshots": "Skärmdumpar",
+    "about": "Om",
+    "home": "Hem",
+    "language": "Språk"
+  },
+  "home_page": {
+    "tagline": "Ett fängslande plattformsspel med öppen källkod",
+    "description": "Dyk in i Draculas mörka och mystiska värld, ett 2D-plattformsspel där du spelar som en modig hjälte som möter skräckinjagande varelser. Utforska komplexa nivåer, lös pussel och möt episka bossar i detta spännande äventyr.",
+    "features_title": "Huvudfunktioner",
+    "feature_1": "Dynamiskt plattformsspel",
+    "feature_2": "Stiliserad 2D-grafik",
+    "feature_3": "Pussel och utmaningar",
+    "feature_4": "Intensiva bossstrider",
+    "feature_5": "Öppen källkod och anpassningsbar"
+  },
+  "download_page": {
+    "title": "Ladda ner Dracula",
+    "latest_version": "Senaste versionen",
+    "other_versions": "Andra versioner",
+    "version": "Version",
+    "date": "Datum",
+    "platform": "Plattform",
+    "download_button": "Ladda ner"
+  },
+  "screenshots_page": {
+    "title": "Skärmdumpar"
+  },
+  "about_page": {
+    "title": "Om Dracula",
+    "content": "Dracula är ett plattformsspel med öppen källkod utvecklat med Godot-motorn. Det skapades med passion för att erbjuda en uppslukande och stimulerande spelupplevelse. Projektet är helt öppen källkod, vilket innebär att du kan utforska dess kod, ändra den och till och med bidra till dess utveckling. Vi hoppas att du gillar detta äventyr!"
+  }
+}

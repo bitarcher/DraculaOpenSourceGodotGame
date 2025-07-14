@@ -1,0 +1,36 @@
+{
+  "common": {
+    "title": "Dracula - Jocul",
+    "download": "Descărcare",
+    "screenshots": "Capturi de ecran",
+    "about": "Despre",
+    "home": "Acasă",
+    "language": "Limbă"
+  },
+  "home_page": {
+    "tagline": "Un platformer open source captivant",
+    "description": "Scufundă-te în lumea întunecată și misterioasă a lui Dracula, un platformer 2D în care joci ca un erou curajos care se confruntă cu creaturi terifiante. Explorează niveluri complexe, rezolvă puzzle-uri și înfruntă șefi epici în această aventură palpitantă.",
+    "features_title": "Caracteristici principale",
+    "feature_1": "Gameplay de platformer dinamic",
+    "feature_2": "Grafică 2D stilizată",
+    "feature_3": "Puzzle-uri și provocări",
+    "feature_4": "Bătălii intense cu șefii",
+    "feature_5": "Open Source și personalizabil"
+  },
+  "download_page": {
+    "title": "Descarcă Dracula",
+    "latest_version": "Ultima versiune",
+    "other_versions": "Alte versiuni",
+    "version": "Versiune",
+    "date": "Data",
+    "platform": "Platformă",
+    "download_button": "Descărcare"
+  },
+  "screenshots_page": {
+    "title": "Capturi de ecran"
+  },
+  "about_page": {
+    "title": "Despre Dracula",
+    "content": "Dracula este un platformer open source dezvoltat cu motorul Godot. A fost creat cu pasiune pentru a oferi o experiență de joc imersivă și stimulantă. Proiectul este în întregime open source, ceea ce înseamnă că îi poți explora codul, îl poți modifica și chiar poți contribui la dezvoltarea sa. Sperăm să vă bucurați de această aventură!"
+  }
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "version": "1.0.0",
+    "date": "2025-07-03",
+    "description": "Première version stable du jeu avec de nouveaux niveaux et des améliorations de gameplay.",
+    "files": [
+      {"platform": "windows", "display_name": "Windows", "format": "zip", "url": "downloads/Dracula-1.0.0-win.zip"},
+      {"platform": "linux", "display_name": "Linux (Wayland - Flatpak)", "format": "flatpak", "environment": "wayland", "url": "downloads/Dracula-1.0.0-linux-wayland-flatpak.flatpak"},
+      {"platform": "linux", "display_name": "Linux (Wayland - .deb)", "format": "deb", "environment": "wayland", "url": "downloads/Dracula-1.0.0-linux-wayland.deb"},
+      {"platform": "linux", "display_name": "Linux (X11 - Flatpak)", "format": "flatpak", "environment": "x11", "url": "downloads/Dracula-1.0.0-linux-x11-flatpak.flatpak"},
+      {"platform": "linux", "display_name": "Linux (X11 - .deb)", "format": "deb", "environment": "x11", "url": "downloads/Dracula-1.0.0-linux-x11.deb"},
+      {"platform": "macos", "display_name": "macOS", "format": "zip", "url": "downloads/Dracula-1.0.0-mac.zip"}
+    ]
+  },
+  {
+    "version": "0.9.0",
+    "date": "2025-06-01",
+    "description": "Version bêta initiale avec les bases du jeu et quelques niveaux de démonstration.",
+    "files": [
+      {"platform": "windows", "display_name": "Windows", "format": "zip", "url": "downloads/Dracula-0.9.0-win.zip"},
+      {"platform": "linux", "display_name": "Linux (Wayland - Flatpak)", "format": "flatpak", "environment": "wayland", "url": "downloads/Dracula-0.9.0-linux-wayland-flatpak.flatpak"},
+      {"platform": "linux", "display_name": "Linux (Wayland - .deb)", "format": "deb", "environment": "wayland", "url": "downloads/Dracula-0.9.0-linux-wayland.deb"},
+      {"platform": "linux", "display_name": "Linux (X11 - Flatpak)", "format": "flatpak", "environment": "x11", "url": "downloads/Dracula-0.9.0-linux-x11-flatpak.flatpak"},
+      {"platform": "linux", "display_name": "Linux (X11 - .deb)", "format": "deb", "environment": "x11", "url": "downloads/Dracula-0.9.0-linux-x11.deb"},
+      {"platform": "macos", "display_name": "macOS", "format": "zip", "url": "downloads/Dracula-0.9.0-mac.zip"}
+    ]
+  }
+]

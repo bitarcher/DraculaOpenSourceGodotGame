@@ -1,0 +1,36 @@
+{
+  "common": {
+    "title": "Dracula - The Game",
+    "download": "Download",
+    "screenshots": "Screenshots",
+    "about": "About",
+    "home": "Home",
+    "language": "Language"
+  },
+  "home_page": {
+    "tagline": "A captivating open source platformer",
+    "description": "Dive into the dark and mysterious world of Dracula, a 2D platformer where you play as a brave hero facing terrifying creatures. Explore complex levels, solve puzzles, and confront epic bosses in this thrilling adventure.",
+    "features_title": "Main Features",
+    "feature_1": "Dynamic platformer gameplay",
+    "feature_2": "Stylized 2D graphics",
+    "feature_3": "Puzzles and challenges",
+    "feature_4": "Intense boss battles",
+    "feature_5": "Open Source and customizable"
+  },
+  "download_page": {
+    "title": "Download Dracula",
+    "latest_version": "Latest Version",
+    "other_versions": "Other Versions",
+    "version": "Version",
+    "date": "Date",
+    "platform": "Platform",
+    "download_button": "Download"
+  },
+  "screenshots_page": {
+    "title": "Screenshots"
+  },
+  "about_page": {
+    "title": "About Dracula",
+    "content": "Dracula is an open source platformer developed with the Godot engine. It was created with passion to offer an immersive and stimulating gaming experience. The project is entirely open source, which means you can explore its code, modify it, and even contribute to its development. We hope you enjoy this adventure!"
+  }
+}

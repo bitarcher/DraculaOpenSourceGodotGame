@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dracula - Le Jeu</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Dracula</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html" data-lang-key="common.home">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="download.html" data-lang-key="common.download">Télécharger</a></li>
+                <li class="nav-item"><a class="nav-link" href="screenshots.html" data-lang-key="common.screenshots">Captures d'écran</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html" data-lang-key="common.about">À propos</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <header class="jumbotron text-center" style="position: relative; overflow: hidden; background-image: url('../img/title_background.png'); background-size: cover; background-position: center;">
+        <div style="position: absolute; top: calc(10% + 100px); left: 5%; width: 100px; height: 100px;">
+            <img src="../img/svg/knight.svg" alt="Knight" style="width: 100%; height: 100%;">
+        </div>
+        <div style="position: absolute; top: 20%; right: 5%; width: 200px; height: 100px;">
+            <img src="../img/svg/bats.svg" alt="Bats" style="width: 100%; height: 100%;">
+        </div>
+        <h1 class="display-4" data-lang-key="common.title" style="color: white; text-shadow: 2px 2px 4px #000;">Dracula - Le Jeu</h1>
+        <p class="lead" data-lang-key="home_page.tagline" style="color: white; text-shadow: 1px 1px 2px #000;">Un jeu de plateforme open source captivant</p>
+        <a href="download.html" class="btn btn-primary btn-lg" data-lang-key="common.download">Télécharger</a>
+    </header>
+
+    <div class="container">
+        <section id="about-game" class="my-5">
+            <h2 data-lang-key="home_page.description">Plongez dans l'univers sombre et mystérieux de Dracula, un jeu de plateforme en 2D où vous incarnez un héros courageux face à des créatures terrifiantes. Explorez des niveaux complexes, résolvez des énigmes et affrontez des boss épiques dans cette aventure palpitante.</h2>
+        </section>
+
+        <section id="features" class="my-5">
+            <h2 data-lang-key="home_page.features_title">Caractéristiques principales</h2>
+            <ul>
+                <li data-lang-key="home_page.feature_1">Gameplay de plateforme dynamique</li>
+                <li data-lang-key="home_page.feature_2">Graphismes 2D stylisés</li>
+                <li data-lang-key="home_page.feature_3">Enigmes et défis</li>
+                <li data-lang-key="home_page.feature_4">Combats de boss intenses</li>
+                <li data-lang-key="home_page.feature_5">Open Source et personnalisable</li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

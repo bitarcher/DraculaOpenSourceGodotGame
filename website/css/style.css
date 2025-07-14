@@ -1,0 +1,67 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    padding-top: 56px; /* Adjust for fixed navbar */
+    padding-bottom: 60px; /* Adjust for fixed language selector at the bottom */
+}
+
+.jumbotron {
+    background-color: #f8f9fa;
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: .3rem;
+}
+
+#language-selector {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #343a40; /* Dark background like navbar */
+    color: white;
+    padding: 10px 0;
+    z-index: 1030; /* Above navbar */
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+}
+
+.lang-item {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.lang-item:hover {
+    background-color: #495057;
+    border-color: #6c757d;
+}
+
+.lang-item.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.lang-item.active .lang-code {
+    color: white;
+}
+
+.flag-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.lang-code {
+    font-weight: bold;
+    color: white;
+}

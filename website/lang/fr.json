@@ -1,0 +1,36 @@
+{
+  "common": {
+    "title": "Dracula - Le Jeu",
+    "download": "Télécharger",
+    "screenshots": "Captures d'écran",
+    "about": "À propos",
+    "home": "Accueil",
+    "language": "Langue"
+  },
+  "home_page": {
+    "tagline": "Un jeu de plateforme open source captivant",
+    "description": "Plongez dans l'univers sombre et mystérieux de Dracula, un jeu de plateforme en 2D où vous incarnez un héros courageux face à des créatures terrifiantes. Explorez des niveaux complexes, résolvez des énigmes et affrontez des boss épiques dans cette aventure palpitante.",
+    "features_title": "Caractéristiques principales",
+    "feature_1": "Gameplay de plateforme dynamique",
+    "feature_2": "Graphismes 2D stylisés",
+    "feature_3": "Enigmes et défis",
+    "feature_4": "Combats de boss intenses",
+    "feature_5": "Open Source et personnalisable"
+  },
+  "download_page": {
+    "title": "Télécharger Dracula",
+    "latest_version": "Dernière version",
+    "other_versions": "Autres versions",
+    "version": "Version",
+    "date": "Date",
+    "platform": "Plateforme",
+    "download_button": "Télécharger"
+  },
+  "screenshots_page": {
+    "title": "Captures d'écran"
+  },
+  "about_page": {
+    "title": "À propos de Dracula",
+    "content": "Dracula est un jeu de plateforme open source développé avec le moteur Godot. Il a été créé avec passion pour offrir une expérience de jeu immersive et stimulante. Le projet est entièrement open source, ce qui signifie que vous pouvez explorer son code, le modifier et même contribuer à son développement. Nous espérons que vous apprécierez cette aventure !"
+  }
+}
