@@ -63,6 +63,44 @@ pipeline {
                 archiveArtifacts artifacts: "${env.BUILD_DIR}/windows/*.zip, ${env.BUILD_DIR}/linux_x11/*.tar.gz", fingerprint: true
             }
         }
+
+        stage('Création de la Release GitHub') {
+            steps {
+                script {
+                    def now = new Date().format('yyyyMMdd_HHmmss')
+                    def windowsZip = "${env.BUILD_DIR}/windows/Dracula_Windows.zip"
+                    def linuxTarGz = "${env.BUILD_DIR}/linux_x11/Dracula_Linux.tar.gz"
+
+                    def newWindowsZipName = "Dracula_Windows_${now}.zip"
+                    def newLinuxTarGzName = "Dracula_Linux_${now}.tar.gz"
+
+                    sh "mv ${windowsZip} ${env.BUILD_DIR}/windows/${newWindowsZipName}"
+                    sh "mv ${linuxTarGz} ${env.BUILD_DIR}/linux_x11/${newLinuxTarGzName}"
+
+                    // Générer un changelog simple à partir des derniers commits
+                    def changelog = sh(returnStdout: true, script: 'git log --pretty=format:"- %s" --since="1 week ago"').trim()
+                    if (changelog.isEmpty()) {
+                        changelog = "No significant changes in the last week."
+                    }
+
+                    echo "Changelog:\n${changelog}"
+
+                    // --- PLACEHOLDER POUR LA CRÉATION DE RELEASE GITHUB ---
+                    // Vous devriez utiliser le plugin GitHub de Jenkins pour une meilleure intégration.
+                    // Exemple avec l'outil `gh` (GitHub CLI) si installé sur l'agent Jenkins:
+                    // sh "gh release create v${now} --title \"Release ${now}\" --notes \"${changelog}\" ${env.BUILD_DIR}/windows/${newWindowsZipName} ${env.BUILD_DIR}/linux_x11/${newLinuxTarGzName}"
+
+                    // Exemple avec curl (nécessite un token GitHub dans les credentials Jenkins):
+                    // def githubToken = credentials('YOUR_GITHUB_TOKEN_ID') // Remplacez par l'ID de votre credential Jenkins
+                    // sh "curl -X POST -H \"Accept: application/vnd.github.v3+json\" -H \"Authorization: token ${githubToken}\" https://api.github.com/repos/YOUR_USERNAME/YOUR_REPOSITORY/releases -d '{\"tag_name\":\"v${now}\",\"name\":\"Release ${now}\",\"body\":\"${changelog}\",\"draft\":false,\"prerelease\":false}'"
+                    // Après la création de la release, vous devrez uploader les assets séparément avec curl ou gh cli.
+                    // C'est pourquoi le plugin GitHub est fortement recommandé.
+
+                    echo "Fichiers renommés: ${newWindowsZipName} et ${newLinuxTarGzName}"
+                    echo "Veuillez configurer la création de la release GitHub manuellement ou via le plugin Jenkins."
+                }
+            }
+        }
     }
 
     post {
