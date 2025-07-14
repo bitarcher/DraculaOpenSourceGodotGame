@@ -53,7 +53,7 @@ FIRST_FILE=true
 find "$SCREENSHOTS_DIR" -maxdepth 1 -type f -name "*.png" | sort | while read -r FILE;
 do
   # Calculate relative path from the HTML directory
-  RELATIVE_PATH="$(realpath --relative-to="/home/michel-strasser/DraculaWebSite/html/" "$FILE")"
+  RELATIVE_PATH="$(realpath --relative-to="/home/michel-strasser/DraculaOpenSourceGodotGame/docs" "$FILE")"
   if [ "$FIRST_FILE" = true ]; then
     printf "  \"%s\"" "$RELATIVE_PATH" >> "$OUTPUT_JSON"
     FIRST_FILE=false
